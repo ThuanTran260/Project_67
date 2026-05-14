@@ -1,0 +1,287 @@
+[
+  {
+    "task_id": 1,
+    "text": "Viết hàm tính tổng các phần tử trong một danh sách số nguyên.",
+    "code": "def sum_list(lst):\n    return sum(lst)",
+    "topic": "list",
+    "public_tests": [
+      {"input": "[1, 2, 3]", "expected": "6"},
+      {"input": "[10, 20, 30]", "expected": "60"},
+      {"input": "[0, 0, 0]", "expected": "0"}
+    ],
+    "hidden_tests": [
+      {"input": "[]", "expected": "0"},
+      {"input": "[-1, -2, -3]", "expected": "-6"},
+      {"input": "[100]", "expected": "100"},
+      {"input": "[-5, 5]", "expected": "0"},
+      {"input": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]", "expected": "55"},
+      {"input": "[0]", "expected": "0"}
+    ]
+  },
+  {
+    "task_id": 2,
+    "text": "Viết hàm kiểm tra một số nguyên có phải số chẵn không. Trả về True nếu chẵn, False nếu lẻ.",
+    "code": "def is_even(n):\n    return n % 2 == 0",
+    "topic": "math",
+    "public_tests": [
+      {"input": "4", "expected": "True"},
+      {"input": "7", "expected": "False"},
+      {"input": "0", "expected": "True"}
+    ],
+    "hidden_tests": [
+      {"input": "-2", "expected": "True"},
+      {"input": "-3", "expected": "False"},
+      {"input": "1000000", "expected": "True"},
+      {"input": "1", "expected": "False"},
+      {"input": "-1", "expected": "False"},
+      {"input": "2", "expected": "True"}
+    ]
+  },
+  {
+    "task_id": 3,
+    "text": "Viết hàm đảo ngược một chuỗi ký tự.",
+    "code": "def reverse_string(s):\n    return s[::-1]",
+    "topic": "string",
+    "public_tests": [
+      {"input": "\"hello\"", "expected": "olleh"},
+      {"input": "\"python\"", "expected": "nohtyp"},
+      {"input": "\"abc\"", "expected": "cba"}
+    ],
+    "hidden_tests": [
+      {"input": "\"\"", "expected": ""},
+      {"input": "\"a\"", "expected": "a"},
+      {"input": "\"abba\"", "expected": "abba"},
+      {"input": "\"12345\"", "expected": "54321"},
+      {"input": "\" hi \"", "expected": " ih "},
+      {"input": "\"racecar\"", "expected": "racecar"}
+    ]
+  },
+  {
+    "task_id": 4,
+    "text": "Viết hàm tìm giá trị lớn nhất trong một danh sách số.",
+    "code": "def find_max(lst):\n    return max(lst)",
+    "topic": "list",
+    "public_tests": [
+      {"input": "[3, 1, 4, 1, 5]", "expected": "5"},
+      {"input": "[10, 20, 5]", "expected": "20"},
+      {"input": "[-1, -2, -3]", "expected": "-1"}
+    ],
+    "hidden_tests": [
+      {"input": "[1]", "expected": "1"},
+      {"input": "[0, 0, 0]", "expected": "0"},
+      {"input": "[-100, 0, 100]", "expected": "100"},
+      {"input": "[7, 7, 7]", "expected": "7"},
+      {"input": "[-5, -1, -10]", "expected": "-1"},
+      {"input": "[1000000, 999999]", "expected": "1000000"}
+    ]
+  },
+  {
+    "task_id": 5,
+    "text": "Viết hàm đếm số lần xuất hiện của một ký tự trong chuỗi.",
+    "code": "def count_char(s, c):\n    return s.count(c)",
+    "topic": "string",
+    "public_tests": [
+      {"input": "\"hello\", \"l\"", "expected": "2"},
+      {"input": "\"python\", \"p\"", "expected": "1"},
+      {"input": "\"aaa\", \"a\"", "expected": "3"}
+    ],
+    "hidden_tests": [
+      {"input": "\"\", \"a\"", "expected": "0"},
+      {"input": "\"hello\", \"z\"", "expected": "0"},
+      {"input": "\"aAbBaA\", \"a\"", "expected": "2"},
+      {"input": "\"   \", \" \"", "expected": "3"},
+      {"input": "\"abcabc\", \"c\"", "expected": "2"},
+      {"input": "\"x\", \"x\"", "expected": "1"}
+    ]
+  },
+  {
+    "task_id": 6,
+    "text": "Viết hàm tính giai thừa của một số nguyên không âm n.",
+    "code": "def factorial(n):\n    if n == 0:\n        return 1\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result",
+    "topic": "math",
+    "public_tests": [
+      {"input": "5", "expected": "120"},
+      {"input": "3", "expected": "6"},
+      {"input": "1", "expected": "1"}
+    ],
+    "hidden_tests": [
+      {"input": "0", "expected": "1"},
+      {"input": "2", "expected": "2"},
+      {"input": "6", "expected": "720"},
+      {"input": "10", "expected": "3628800"},
+      {"input": "4", "expected": "24"},
+      {"input": "7", "expected": "5040"}
+    ]
+  },
+  {
+    "task_id": 7,
+    "text": "Viết hàm kiểm tra một chuỗi có phải palindrome không (đọc xuôi ngược như nhau).",
+    "code": "def is_palindrome(s):\n    return s == s[::-1]",
+    "topic": "string",
+    "public_tests": [
+      {"input": "\"racecar\"", "expected": "True"},
+      {"input": "\"hello\"", "expected": "False"},
+      {"input": "\"level\"", "expected": "True"}
+    ],
+    "hidden_tests": [
+      {"input": "\"\"", "expected": "True"},
+      {"input": "\"a\"", "expected": "True"},
+      {"input": "\"ab\"", "expected": "False"},
+      {"input": "\"aba\"", "expected": "True"},
+      {"input": "\"abba\"", "expected": "True"},
+      {"input": "\"abcba\"", "expected": "True"}
+    ]
+  },
+  {
+    "task_id": 8,
+    "text": "Viết hàm loại bỏ các phần tử trùng lặp trong danh sách, giữ nguyên thứ tự.",
+    "code": "def remove_duplicates(lst):\n    seen = []\n    for x in lst:\n        if x not in seen:\n            seen.append(x)\n    return seen",
+    "topic": "list",
+    "public_tests": [
+      {"input": "[1, 2, 2, 3]", "expected": "[1, 2, 3]"},
+      {"input": "[1, 1, 1]", "expected": "[1]"},
+      {"input": "[1, 2, 3]", "expected": "[1, 2, 3]"}
+    ],
+    "hidden_tests": [
+      {"input": "[]", "expected": "[]"},
+      {"input": "[5]", "expected": "[5]"},
+      {"input": "[3, 1, 3, 2, 1]", "expected": "[3, 1, 2]"},
+      {"input": "[0, 0, 0, 0]", "expected": "[0]"},
+      {"input": "[-1, -1, 2, 2]", "expected": "[-1, 2]"},
+      {"input": "[1, 2, 1, 2, 3]", "expected": "[1, 2, 3]"}
+    ]
+  },
+  {
+    "task_id": 9,
+    "text": "Viết hàm tính trung bình cộng của các phần tử trong danh sách. Trả về 0 nếu danh sách rỗng.",
+    "code": "def average(lst):\n    if not lst:\n        return 0\n    return sum(lst) / len(lst)",
+    "topic": "math",
+    "public_tests": [
+      {"input": "[1, 2, 3]", "expected": "2.0"},
+      {"input": "[10, 20]", "expected": "15.0"},
+      {"input": "[5]", "expected": "5.0"}
+    ],
+    "hidden_tests": [
+      {"input": "[]", "expected": "0"},
+      {"input": "[0, 0, 0]", "expected": "0.0"},
+      {"input": "[-1, 1]", "expected": "0.0"},
+      {"input": "[100, 200, 300]", "expected": "200.0"},
+      {"input": "[-5, -10, -15]", "expected": "-10.0"},
+      {"input": "[7]", "expected": "7.0"}
+    ]
+  },
+  {
+    "task_id": 10,
+    "text": "Viết hàm chuyển đổi tất cả ký tự trong chuỗi thành chữ hoa.",
+    "code": "def to_uppercase(s):\n    return s.upper()",
+    "topic": "string",
+    "public_tests": [
+      {"input": "\"hello\"", "expected": "HELLO"},
+      {"input": "\"python\"", "expected": "PYTHON"},
+      {"input": "\"abc\"", "expected": "ABC"}
+    ],
+    "hidden_tests": [
+      {"input": "\"\"", "expected": ""},
+      {"input": "\"HELLO\"", "expected": "HELLO"},
+      {"input": "\"Hello World\"", "expected": "HELLO WORLD"},
+      {"input": "\"123abc\"", "expected": "123ABC"},
+      {"input": "\"a1b2c3\"", "expected": "A1B2C3"},
+      {"input": "\" \"", "expected": " "}
+    ]
+  },
+  {
+    "task_id": 11,
+    "text": "Viết hàm kiểm tra xem một số có phải số nguyên tố không.",
+    "code": "def is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True",
+    "topic": "math",
+    "public_tests": [
+      {"input": "7", "expected": "True"},
+      {"input": "4", "expected": "False"},
+      {"input": "2", "expected": "True"}
+    ],
+    "hidden_tests": [
+      {"input": "0", "expected": "False"},
+      {"input": "1", "expected": "False"},
+      {"input": "3", "expected": "True"},
+      {"input": "9", "expected": "False"},
+      {"input": "13", "expected": "True"},
+      {"input": "25", "expected": "False"}
+    ]
+  },
+  {
+    "task_id": 12,
+    "text": "Viết hàm tính tổng các số chẵn trong một danh sách.",
+    "code": "def sum_even(lst):\n    return sum(x for x in lst if x % 2 == 0)",
+    "topic": "list",
+    "public_tests": [
+      {"input": "[1, 2, 3, 4]", "expected": "6"},
+      {"input": "[1, 3, 5]", "expected": "0"},
+      {"input": "[2, 4, 6]", "expected": "12"}
+    ],
+    "hidden_tests": [
+      {"input": "[]", "expected": "0"},
+      {"input": "[0]", "expected": "0"},
+      {"input": "[-2, -4, 1]", "expected": "-6"},
+      {"input": "[10, 11, 12, 13]", "expected": "22"},
+      {"input": "[-1, -2, -3, -4]", "expected": "-6"},
+      {"input": "[100, 200, 301]", "expected": "300"}
+    ]
+  },
+  {
+    "task_id": 13,
+    "text": "Viết hàm tính số Fibonacci thứ n (bắt đầu từ n=0: 0, 1, 1, 2, 3, 5, ...).",
+    "code": "def fibonacci(n):\n    if n <= 0:\n        return 0\n    if n == 1:\n        return 1\n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b",
+    "topic": "math",
+    "public_tests": [
+      {"input": "5", "expected": "5"},
+      {"input": "6", "expected": "8"},
+      {"input": "1", "expected": "1"}
+    ],
+    "hidden_tests": [
+      {"input": "0", "expected": "0"},
+      {"input": "2", "expected": "1"},
+      {"input": "3", "expected": "2"},
+      {"input": "4", "expected": "3"},
+      {"input": "10", "expected": "55"},
+      {"input": "7", "expected": "13"}
+    ]
+  },
+  {
+    "task_id": 14,
+    "text": "Viết hàm đếm số từ trong một chuỗi (các từ phân cách nhau bởi khoảng trắng).",
+    "code": "def count_words(s):\n    if not s.strip():\n        return 0\n    return len(s.split())",
+    "topic": "string",
+    "public_tests": [
+      {"input": "\"hello world\"", "expected": "2"},
+      {"input": "\"python is great\"", "expected": "3"},
+      {"input": "\"one\"", "expected": "1"}
+    ],
+    "hidden_tests": [
+      {"input": "\"\"", "expected": "0"},
+      {"input": "\"   \"", "expected": "0"},
+      {"input": "\"a b c d\"", "expected": "4"},
+      {"input": "\"  hello  world  \"", "expected": "2"},
+      {"input": "\"single\"", "expected": "1"},
+      {"input": "\"one two three four five\"", "expected": "5"}
+    ]
+  },
+  {
+    "task_id": 15,
+    "text": "Viết hàm sắp xếp danh sách số nguyên theo thứ tự tăng dần.",
+    "code": "def sort_list(lst):\n    return sorted(lst)",
+    "topic": "list",
+    "public_tests": [
+      {"input": "[3, 1, 2]", "expected": "[1, 2, 3]"},
+      {"input": "[5, 4, 3, 2, 1]", "expected": "[1, 2, 3, 4, 5]"},
+      {"input": "[1]", "expected": "[1]"}
+    ],
+    "hidden_tests": [
+      {"input": "[]", "expected": "[]"},
+      {"input": "[0, 0, 0]", "expected": "[0, 0, 0]"},
+      {"input": "[-3, -1, -2]", "expected": "[-3, -2, -1]"},
+      {"input": "[-1, 0, 1]", "expected": "[-1, 0, 1]"},
+      {"input": "[5, 5, 1]", "expected": "[1, 5, 5]"},
+      {"input": "[100, 50, 75, 25]", "expected": "[25, 50, 75, 100]"}
+    ]
+  }
+]
