@@ -7,9 +7,9 @@ phản hồi lỗi cơ bản và đánh giá ảnh hưởng của số lượng 
 ## Thành viên
 | MSSV | Họ tên | Nhiệm vụ tuần 2 |
 |---|---|---|
-| 3124410356 | Trần Vĩnh Thuận | Đọc & phân tích dữ liệu, biểu đồ |
+| 3124410350 | Trần Vĩnh Thuận | Đọc & phân tích dữ liệu, biểu đồ |
 | 3124560085 | Nguyễn Lê Nhựt Thắng | Kỹ thuật & Baseline (runner) |
-| 3124410350 | Trần Bảo Tín | Tổng hợp, nhận xét, kế hoạch tuần 3 |
+| 3124410356 | Trần Bảo Tín | Tổng hợp, nhận xét, kế hoạch tuần 3 |
 
 ## Cấu trúc thư mục
 ```
