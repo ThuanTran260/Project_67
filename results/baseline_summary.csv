@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 task_id,func_name,topic,pub_pass,pub_total,pub_tpr,pub_SE,pub_WA,pub_RE,pub_TLE,hid_pass,hid_total,hid_tpr,hid_SE,hid_WA,hid_RE,hid_TLE,is_false_positive,avg_latency_hid,avg_latency_pub
 1,sum_list,list,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0368,0.0367
 2,is_even,math,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0387,0.0367
@@ -14,3 +15,21 @@ task_id,func_name,topic,pub_pass,pub_total,pub_tpr,pub_SE,pub_WA,pub_RE,pub_TLE,
 13,fibonacci,math,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0489,0.0508
 14,count_words,string,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0522,0.0456
 15,sort_list,list,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0492,0.0484
+=======
+task_id,func_name,topic,pub_pass,pub_total,pub_tpr,pub_SE,pub_WA,pub_RE,pub_TLE,hid_pass,hid_total,hid_tpr,hid_SE,hid_WA,hid_RE,hid_TLE,is_false_positive,avg_latency_hid,avg_latency_pub
+1,sum_list,list,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0368,0.0367
+2,is_even,math,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0387,0.0367
+3,reverse_string,string,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0361,0.0368
+4,find_max,list,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0331,0.034
+5,count_char,string,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0355,0.0337
+6,factorial,math,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0334,0.0363
+7,is_palindrome,string,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0342,0.0328
+8,remove_duplicates,list,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0332,0.0325
+9,average,math,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0356,0.0387
+10,to_uppercase,string,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0336,0.0325
+11,is_prime,math,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0334,0.0333
+12,sum_even,list,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0429,0.034
+13,fibonacci,math,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0489,0.0508
+14,count_words,string,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0522,0.0456
+15,sort_list,list,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0492,0.0484
+>>>>>>> 5fc707530c8b5cd381231670b5cc9430cc2a8100
