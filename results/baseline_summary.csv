@@ -1,0 +1,16 @@
+task_id,func_name,topic,pub_pass,pub_total,pub_tpr,pub_WA,pub_RE,pub_TLE,pub_SE,hid_pass,hid_total,hid_tpr,hid_WA,hid_RE,hid_TLE,hid_SE,is_false_positive,avg_latency_s
+1,sum_list,list,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0376
+2,is_even,math,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.036
+3,reverse_string,string,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0336
+4,find_max,list,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0344
+5,count_char,string,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0365
+6,factorial,math,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0341
+7,is_palindrome,string,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0332
+8,remove_duplicates,list,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0355
+9,average,math,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0349
+10,to_uppercase,string,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0335
+11,is_prime,math,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0327
+12,sum_even,list,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0358
+13,fibonacci,math,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0331
+14,count_words,string,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0342
+15,sort_list,list,3,3,100.0,0,0,0,0,6,6,100.0,0,0,0,0,False,0.0361
