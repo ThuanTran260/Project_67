@@ -1,12 +1,12 @@
 {
-  "so_bai": 15,
+  "so_bai": 50,
   "public_test_per_bai": 3,
   "hidden_test_per_bai": 6,
   "avg_TPR_public_%": 100.0,
   "avg_TPR_hidden_%": 100.0,
   "false_positive_count": 0,
   "FPR_%": 0.0,
-  "avg_latency_s": 0.0347,
+  "avg_latency_s": 0.0336,
   "error_public": {
     "SE": 0,
     "WA": 0,
