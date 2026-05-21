@@ -63,12 +63,12 @@ Project_67/
 │   └── error_stats.py             # Module thống kê lỗi tự động
 │
 ├── tuan1/                         # Tìm hiểu đề tài
-│   ├── bao_cao_tuan1.docx
-│   └── data/mbpp_subset.json
+│   └── bao_cao_tuan1.docx
+│   
 │
 ├── tuan2/                         # Baseline runner
 │   ├── bao_cao_tuan2.docx
-│   ├── data/raw/mbpp_15.json      # 15 bài, 3 public + 6 hidden test
+│   ├── data/raw/mbpp_subset.json     # 15 bài, 3 public + 6 hidden test
 │   ├── notebooks/
 │   │   ├── 01_load_data.ipynb
 │   │   ├── 02_baseline.ipynb
