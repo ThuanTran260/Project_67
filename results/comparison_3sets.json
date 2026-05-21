@@ -1,0 +1,873 @@
+{
+  "stats": {
+    "tong_submissions": 50,
+    "fp_count": 12,
+    "fpr_pct": 24.0,
+    "avg_tpr_public": 62.67,
+    "avg_tpr_hidden": 62.2,
+    "error_total_public": {
+      "SE": 3,
+      "WA": 51,
+      "RE": 2,
+      "TLE": 0
+    },
+    "error_total_hidden": {
+      "SE": 10,
+      "WA": 165,
+      "RE": 14,
+      "TLE": 0
+    },
+    "avg_latency_public": 0.038,
+    "avg_latency_hidden": 0.0381,
+    "per_topic": {
+      "list": {
+        "count": 23,
+        "fp": 6,
+        "pub_err": {
+          "SE": 0,
+          "WA": 25,
+          "RE": 0,
+          "TLE": 0
+        },
+        "hid_err": {
+          "SE": 0,
+          "WA": 80,
+          "RE": 1,
+          "TLE": 0
+        }
+      },
+      "math": {
+        "count": 15,
+        "fp": 4,
+        "pub_err": {
+          "SE": 3,
+          "WA": 14,
+          "RE": 2,
+          "TLE": 0
+        },
+        "hid_err": {
+          "SE": 10,
+          "WA": 53,
+          "RE": 12,
+          "TLE": 0
+        }
+      },
+      "string": {
+        "count": 12,
+        "fp": 2,
+        "pub_err": {
+          "SE": 0,
+          "WA": 12,
+          "RE": 0,
+          "TLE": 0
+        },
+        "hid_err": {
+          "SE": 0,
+          "WA": 32,
+          "RE": 1,
+          "TLE": 0
+        }
+      }
+    },
+    "false_positives": [
+      {
+        "sv_id": "SV003",
+        "task_id": 1,
+        "func": "sum_list",
+        "pub_rate": 100.0,
+        "hid_rate": 50.0,
+        "mo_ta_loi": "Hard-code kết quả bài test đầu tiên"
+      },
+      {
+        "sv_id": "SV013",
+        "task_id": 9,
+        "func": "average",
+        "pub_rate": 100.0,
+        "hid_rate": 90.0,
+        "mo_ta_loi": "Không xử lý danh sách rỗng — ZeroDivisionError"
+      },
+      {
+        "sv_id": "SV015",
+        "task_id": 11,
+        "func": "is_prime",
+        "pub_rate": 100.0,
+        "hid_rate": 70.0,
+        "mo_ta_loi": "Không xử lý n=0,n=1 — FP với public"
+      },
+      {
+        "sv_id": "SV016",
+        "task_id": 11,
+        "func": "is_prime",
+        "pub_rate": 100.0,
+        "hid_rate": 70.0,
+        "mo_ta_loi": "Thiếu kiểm tra n<2 nhưng có range đúng"
+      },
+      {
+        "sv_id": "SV022",
+        "task_id": 17,
+        "func": "has_negative",
+        "pub_rate": 100.0,
+        "hid_rate": 50.0,
+        "mo_ta_loi": "Kiểm tra <=0 thay vì <0, sai với 0"
+      },
+      {
+        "sv_id": "SV025",
+        "task_id": 21,
+        "func": "count_positive",
+        "pub_rate": 100.0,
+        "hid_rate": 60.0,
+        "mo_ta_loi": "Đếm >=0 thay vì >0, sai với 0"
+      },
+      {
+        "sv_id": "SV029",
+        "task_id": 26,
+        "func": "count_negative",
+        "pub_rate": 100.0,
+        "hid_rate": 60.0,
+        "mo_ta_loi": "Đếm <=0 thay vì <0"
+      },
+      {
+        "sv_id": "SV030",
+        "task_id": 27,
+        "func": "last_element",
+        "pub_rate": 100.0,
+        "hid_rate": 90.0,
+        "mo_ta_loi": "Không xử lý list rỗng — RE"
+      },
+      {
+        "sv_id": "SV039",
+        "task_id": 38,
+        "func": "is_all_digits",
+        "pub_rate": 100.0,
+        "hid_rate": 90.0,
+        "mo_ta_loi": "Không kiểm tra chuỗi rỗng — sai với ''"
+      },
+      {
+        "sv_id": "SV041",
+        "task_id": 41,
+        "func": "is_perfect",
+        "pub_rate": 100.0,
+        "hid_rate": 90.0,
+        "mo_ta_loi": "Không xử lý n<=1 — sai với 0,1"
+      },
+      {
+        "sv_id": "SV045",
+        "task_id": 47,
+        "func": "all_positive",
+        "pub_rate": 100.0,
+        "hid_rate": 90.0,
+        "mo_ta_loi": "Không xử lý list rỗng — sai với []"
+      },
+      {
+        "sv_id": "SV046",
+        "task_id": 49,
+        "func": "starts_with_upper",
+        "pub_rate": 100.0,
+        "hid_rate": 90.0,
+        "mo_ta_loi": "Không xử lý chuỗi rỗng — RE"
+      }
+    ]
+  },
+  "results": [
+    {
+      "sv_id": "SV001",
+      "task_id": 1,
+      "func": "sum_list",
+      "topic": "list",
+      "mo_ta_loi": "Cộng index thay vì giá trị — WA với mọi input",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 0.0,
+        "hidden_rate": 20.0
+      }
+    },
+    {
+      "sv_id": "SV002",
+      "task_id": 1,
+      "func": "sum_list",
+      "topic": "list",
+      "mo_ta_loi": "Quên return — trả None",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 0.0,
+        "hidden_rate": 0.0
+      }
+    },
+    {
+      "sv_id": "SV003",
+      "task_id": 1,
+      "func": "sum_list",
+      "topic": "list",
+      "mo_ta_loi": "Hard-code kết quả bài test đầu tiên",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": false,
+        "is_false_positive": true,
+        "public_rate": 100.0,
+        "hidden_rate": 50.0
+      }
+    },
+    {
+      "sv_id": "SV004",
+      "task_id": 2,
+      "func": "is_even",
+      "topic": "math",
+      "mo_ta_loi": "Syntax Error — thiếu dấu :",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 0.0,
+        "hidden_rate": 0.0
+      }
+    },
+    {
+      "sv_id": "SV005",
+      "task_id": 2,
+      "func": "is_even",
+      "topic": "math",
+      "mo_ta_loi": "Luôn trả True — pass public test chẵn",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 66.67,
+        "hidden_rate": 50.0
+      }
+    },
+    {
+      "sv_id": "SV006",
+      "task_id": 3,
+      "func": "reverse_string",
+      "topic": "string",
+      "mo_ta_loi": "Đảo ngược sai — thiếu -1 trong range",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 0.0,
+        "hidden_rate": 30.0
+      }
+    },
+    {
+      "sv_id": "SV007",
+      "task_id": 4,
+      "func": "find_max",
+      "topic": "list",
+      "mo_ta_loi": "Lấy phần tử đầu sorted thay vì cuối",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 0.0,
+        "hidden_rate": 50.0
+      }
+    },
+    {
+      "sv_id": "SV008",
+      "task_id": 4,
+      "func": "find_max",
+      "topic": "list",
+      "mo_ta_loi": "RE khi list rỗng — hidden test bắt được",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": true,
+        "is_false_positive": false,
+        "public_rate": 100.0,
+        "hidden_rate": 100.0
+      }
+    },
+    {
+      "sv_id": "SV009",
+      "task_id": 6,
+      "func": "factorial",
+      "topic": "math",
+      "mo_ta_loi": "Không xử lý n=0 — fail hidden test(0)",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": true,
+        "is_false_positive": false,
+        "public_rate": 100.0,
+        "hidden_rate": 100.0
+      }
+    },
+    {
+      "sv_id": "SV010",
+      "task_id": 6,
+      "func": "factorial",
+      "topic": "math",
+      "mo_ta_loi": "Hard-code n<=3, sai với n>=4",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 66.67,
+        "hidden_rate": 20.0
+      }
+    },
+    {
+      "sv_id": "SV011",
+      "task_id": 7,
+      "func": "is_palindrome",
+      "topic": "string",
+      "mo_ta_loi": "Luôn trả True — FP với public test",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 66.67,
+        "hidden_rate": 70.0
+      }
+    },
+    {
+      "sv_id": "SV012",
+      "task_id": 8,
+      "func": "remove_duplicates",
+      "topic": "list",
+      "mo_ta_loi": "set mất thứ tự — FP với public test đơn giản",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": true,
+        "is_false_positive": false,
+        "public_rate": 100.0,
+        "hidden_rate": 100.0
+      }
+    },
+    {
+      "sv_id": "SV013",
+      "task_id": 9,
+      "func": "average",
+      "topic": "math",
+      "mo_ta_loi": "Không xử lý danh sách rỗng — ZeroDivisionError",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": false,
+        "is_false_positive": true,
+        "public_rate": 100.0,
+        "hidden_rate": 90.0
+      }
+    },
+    {
+      "sv_id": "SV014",
+      "task_id": 9,
+      "func": "average",
+      "topic": "math",
+      "mo_ta_loi": "Trả int thay vì float",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": true,
+        "is_false_positive": false,
+        "public_rate": 100.0,
+        "hidden_rate": 100.0
+      }
+    },
+    {
+      "sv_id": "SV015",
+      "task_id": 11,
+      "func": "is_prime",
+      "topic": "math",
+      "mo_ta_loi": "Không xử lý n=0,n=1 — FP với public",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": false,
+        "is_false_positive": true,
+        "public_rate": 100.0,
+        "hidden_rate": 70.0
+      }
+    },
+    {
+      "sv_id": "SV016",
+      "task_id": 11,
+      "func": "is_prime",
+      "topic": "math",
+      "mo_ta_loi": "Thiếu kiểm tra n<2 nhưng có range đúng",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": false,
+        "is_false_positive": true,
+        "public_rate": 100.0,
+        "hidden_rate": 70.0
+      }
+    },
+    {
+      "sv_id": "SV017",
+      "task_id": 12,
+      "func": "sum_even",
+      "topic": "list",
+      "mo_ta_loi": "Tính tổng số lẻ thay vì chẵn",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 0.0,
+        "hidden_rate": 30.0
+      }
+    },
+    {
+      "sv_id": "SV018",
+      "task_id": 13,
+      "func": "fibonacci",
+      "topic": "math",
+      "mo_ta_loi": "Đệ quy thiếu base case n=0 — RE",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 33.33,
+        "hidden_rate": 0.0
+      }
+    },
+    {
+      "sv_id": "SV019",
+      "task_id": 14,
+      "func": "count_words",
+      "topic": "string",
+      "mo_ta_loi": "Không xử lý chuỗi toàn khoảng trắng",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": true,
+        "is_false_positive": false,
+        "public_rate": 100.0,
+        "hidden_rate": 100.0
+      }
+    },
+    {
+      "sv_id": "SV020",
+      "task_id": 15,
+      "func": "sort_list",
+      "topic": "list",
+      "mo_ta_loi": "Sắp xếp giảm dần thay vì tăng dần",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": true,
+        "is_false_positive": false,
+        "public_rate": 100.0,
+        "hidden_rate": 100.0
+      }
+    },
+    {
+      "sv_id": "SV021",
+      "task_id": 16,
+      "func": "find_min",
+      "topic": "list",
+      "mo_ta_loi": "Trả max thay vì min",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 0.0,
+        "hidden_rate": 50.0
+      }
+    },
+    {
+      "sv_id": "SV022",
+      "task_id": 17,
+      "func": "has_negative",
+      "topic": "list",
+      "mo_ta_loi": "Kiểm tra <=0 thay vì <0, sai với 0",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": false,
+        "is_false_positive": true,
+        "public_rate": 100.0,
+        "hidden_rate": 50.0
+      }
+    },
+    {
+      "sv_id": "SV023",
+      "task_id": 18,
+      "func": "product_list",
+      "topic": "math",
+      "mo_ta_loi": "Tính tổng thay vì tích",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 66.67,
+        "hidden_rate": 20.0
+      }
+    },
+    {
+      "sv_id": "SV024",
+      "task_id": 20,
+      "func": "is_anagram",
+      "topic": "string",
+      "mo_ta_loi": "So sánh len thay vì ký tự",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 66.67,
+        "hidden_rate": 80.0
+      }
+    },
+    {
+      "sv_id": "SV025",
+      "task_id": 21,
+      "func": "count_positive",
+      "topic": "list",
+      "mo_ta_loi": "Đếm >=0 thay vì >0, sai với 0",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": false,
+        "is_false_positive": true,
+        "public_rate": 100.0,
+        "hidden_rate": 60.0
+      }
+    },
+    {
+      "sv_id": "SV026",
+      "task_id": 22,
+      "func": "get_evens",
+      "topic": "list",
+      "mo_ta_loi": "Lấy số lẻ thay vì số chẵn",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 0.0,
+        "hidden_rate": 10.0
+      }
+    },
+    {
+      "sv_id": "SV027",
+      "task_id": 23,
+      "func": "power",
+      "topic": "math",
+      "mo_ta_loi": "Nhân n thay vì lũy thừa",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 0.0,
+        "hidden_rate": 20.0
+      }
+    },
+    {
+      "sv_id": "SV028",
+      "task_id": 24,
+      "func": "is_sorted",
+      "topic": "list",
+      "mo_ta_loi": "Không xử lý list rỗng đúng cách",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": true,
+        "is_false_positive": false,
+        "public_rate": 100.0,
+        "hidden_rate": 100.0
+      }
+    },
+    {
+      "sv_id": "SV029",
+      "task_id": 26,
+      "func": "count_negative",
+      "topic": "list",
+      "mo_ta_loi": "Đếm <=0 thay vì <0",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": false,
+        "is_false_positive": true,
+        "public_rate": 100.0,
+        "hidden_rate": 60.0
+      }
+    },
+    {
+      "sv_id": "SV030",
+      "task_id": 27,
+      "func": "last_element",
+      "topic": "list",
+      "mo_ta_loi": "Không xử lý list rỗng — RE",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": false,
+        "is_false_positive": true,
+        "public_rate": 100.0,
+        "hidden_rate": 90.0
+      }
+    },
+    {
+      "sv_id": "SV031",
+      "task_id": 29,
+      "func": "abs_list",
+      "topic": "list",
+      "mo_ta_loi": "Quên abs() — trả nguyên giá trị",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 33.33,
+        "hidden_rate": 40.0
+      }
+    },
+    {
+      "sv_id": "SV032",
+      "task_id": 30,
+      "func": "count_non_space",
+      "topic": "string",
+      "mo_ta_loi": "Trả len(s) thay vì đếm không phải khoảng trắng",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 33.33,
+        "hidden_rate": 40.0
+      }
+    },
+    {
+      "sv_id": "SV033",
+      "task_id": 31,
+      "func": "gcd",
+      "topic": "math",
+      "mo_ta_loi": "Trả a thay vì GCD",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 0.0,
+        "hidden_rate": 40.0
+      }
+    },
+    {
+      "sv_id": "SV034",
+      "task_id": 33,
+      "func": "digit_sum",
+      "topic": "math",
+      "mo_ta_loi": "Trả n thay vì tổng chữ số",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 0.0,
+        "hidden_rate": 40.0
+      }
+    },
+    {
+      "sv_id": "SV035",
+      "task_id": 34,
+      "func": "has_digit",
+      "topic": "string",
+      "mo_ta_loi": "Luôn trả False",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 33.33,
+        "hidden_rate": 50.0
+      }
+    },
+    {
+      "sv_id": "SV036",
+      "task_id": 35,
+      "func": "sum_squares",
+      "topic": "math",
+      "mo_ta_loi": "Tính tổng thay vì tổng bình phương",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 33.33,
+        "hidden_rate": 40.0
+      }
+    },
+    {
+      "sv_id": "SV037",
+      "task_id": 36,
+      "func": "rotate_right",
+      "topic": "list",
+      "mo_ta_loi": "Xoay trái thay vì phải",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": true,
+        "is_false_positive": false,
+        "public_rate": 100.0,
+        "hidden_rate": 100.0
+      }
+    },
+    {
+      "sv_id": "SV038",
+      "task_id": 37,
+      "func": "most_frequent",
+      "topic": "list",
+      "mo_ta_loi": "Trả phần tử ít nhất thay vì nhiều nhất",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 33.33,
+        "hidden_rate": 40.0
+      }
+    },
+    {
+      "sv_id": "SV039",
+      "task_id": 38,
+      "func": "is_all_digits",
+      "topic": "string",
+      "mo_ta_loi": "Không kiểm tra chuỗi rỗng — sai với ''",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": false,
+        "is_false_positive": true,
+        "public_rate": 100.0,
+        "hidden_rate": 90.0
+      }
+    },
+    {
+      "sv_id": "SV040",
+      "task_id": 40,
+      "func": "first_n",
+      "topic": "list",
+      "mo_ta_loi": "Lấy n phần tử cuối thay vì đầu",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 66.67,
+        "hidden_rate": 70.0
+      }
+    },
+    {
+      "sv_id": "SV041",
+      "task_id": 41,
+      "func": "is_perfect",
+      "topic": "math",
+      "mo_ta_loi": "Không xử lý n<=1 — sai với 0,1",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": false,
+        "is_false_positive": true,
+        "public_rate": 100.0,
+        "hidden_rate": 90.0
+      }
+    },
+    {
+      "sv_id": "SV042",
+      "task_id": 43,
+      "func": "list_to_string",
+      "topic": "string",
+      "mo_ta_loi": "Dùng khoảng trắng thay vì dấu phẩy",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 33.33,
+        "hidden_rate": 50.0
+      }
+    },
+    {
+      "sv_id": "SV043",
+      "task_id": 44,
+      "func": "count_vowels",
+      "topic": "string",
+      "mo_ta_loi": "Không lowercase — bỏ sót nguyên âm hoa",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 66.67,
+        "hidden_rate": 70.0
+      }
+    },
+    {
+      "sv_id": "SV044",
+      "task_id": 46,
+      "func": "reverse_list",
+      "topic": "list",
+      "mo_ta_loi": "Không đảo ngược — trả nguyên list",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": true,
+        "is_false_positive": false,
+        "public_rate": 100.0,
+        "hidden_rate": 100.0
+      }
+    },
+    {
+      "sv_id": "SV045",
+      "task_id": 47,
+      "func": "all_positive",
+      "topic": "list",
+      "mo_ta_loi": "Không xử lý list rỗng — sai với []",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": false,
+        "is_false_positive": true,
+        "public_rate": 100.0,
+        "hidden_rate": 90.0
+      }
+    },
+    {
+      "sv_id": "SV046",
+      "task_id": 49,
+      "func": "starts_with_upper",
+      "topic": "string",
+      "mo_ta_loi": "Không xử lý chuỗi rỗng — RE",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": false,
+        "is_false_positive": true,
+        "public_rate": 100.0,
+        "hidden_rate": 90.0
+      }
+    },
+    {
+      "sv_id": "SV047",
+      "task_id": 50,
+      "func": "last_n",
+      "topic": "list",
+      "mo_ta_loi": "Lấy n phần tử đầu thay vì cuối",
+      "fpr": {
+        "public_pass_all": false,
+        "hidden_pass_all": false,
+        "is_false_positive": false,
+        "public_rate": 33.33,
+        "hidden_rate": 80.0
+      }
+    },
+    {
+      "sv_id": "SV048",
+      "task_id": 10,
+      "func": "to_uppercase",
+      "topic": "string",
+      "mo_ta_loi": "(Solution đúng — dùng làm điểm so sánh)",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": true,
+        "is_false_positive": false,
+        "public_rate": 100.0,
+        "hidden_rate": 100.0
+      }
+    },
+    {
+      "sv_id": "SV049",
+      "task_id": 15,
+      "func": "sort_list",
+      "topic": "list",
+      "mo_ta_loi": "(Solution đúng)",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": true,
+        "is_false_positive": false,
+        "public_rate": 100.0,
+        "hidden_rate": 100.0
+      }
+    },
+    {
+      "sv_id": "SV050",
+      "task_id": 5,
+      "func": "count_char",
+      "topic": "string",
+      "mo_ta_loi": "(Solution đúng)",
+      "fpr": {
+        "public_pass_all": true,
+        "hidden_pass_all": true,
+        "is_false_positive": false,
+        "public_rate": 100.0,
+        "hidden_rate": 100.0
+      }
+    }
+  ]
+}
