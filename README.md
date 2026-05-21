@@ -154,12 +154,12 @@ python notebooks/comparison_3sets.py
 
 ### Chạy trên Google Colab
 
-**Bước 1:** Upload thư mục `ProjectT2/` lên Google Drive  
+**Bước 1:** Upload thư mục `Project/` lên Google Drive  
 **Bước 2:** Mở Colab, chạy cell sau (chỉ cần đổi 3 dòng đầu mỗi tuần):
 
 ```python
 # ── Đổi 3 dòng này khi chuyển tuần ─────────────────────
-DRIVE_ROOT = "/content/drive/MyDrive/ProjectT2"  # tên thư mục Drive
+DRIVE_ROOT = "/content/drive/MyDrive/Project"     # tên thư mục Drive
 TUAN       = "tuan3"                              # tuần hiện tại
 DATA_FILE  = "mbpp_50.json"                       # file data
 # ────────────────────────────────────────────────────────
