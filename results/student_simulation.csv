@@ -1,0 +1,13 @@
+sv_id,task_id,func,mo_ta_loi,pub_pass,pub_total,pub_tpr,pub_errors,hid_pass,hid_total,hid_tpr,hid_errors,is_false_positive
+SV001,1,sum_list,Dùng vòng lặp đúng nhưng cộng index thay vì giá trị,0,3,0.0,"{'SE': 0, 'WA': 3, 'RE': 0, 'TLE': 0}",2,6,33.33,"{'SE': 0, 'WA': 4, 'RE': 0, 'TLE': 0}",False
+SV002,1,sum_list,Quên return — trả về None,0,3,0.0,"{'SE': 0, 'WA': 3, 'RE': 0, 'TLE': 0}",0,6,0.0,"{'SE': 0, 'WA': 6, 'RE': 0, 'TLE': 0}",False
+SV003,2,is_even,Syntax Error — thiếu dấu :,0,3,0.0,"{'SE': 3, 'WA': 0, 'RE': 0, 'TLE': 0}",0,6,0.0,"{'SE': 6, 'WA': 0, 'RE': 0, 'TLE': 0}",False
+SV004,4,find_max,sorted() lấy phần tử đầu thay vì cuối — fail 3/3 public,0,3,0.0,"{'SE': 0, 'WA': 3, 'RE': 0, 'TLE': 0}",3,6,50.0,"{'SE': 0, 'WA': 3, 'RE': 0, 'TLE': 0}",False
+SV005,6,factorial,"pass public (5,3,1) và hidden test",3,3,100.0,"{'SE': 0, 'WA': 0, 'RE': 0, 'TLE': 0}",6,6,100.0,"{'SE': 0, 'WA': 0, 'RE': 0, 'TLE': 0}",False
+SV006,7,is_palindrome,So sánh sai — luôn trả True,2,3,66.67,"{'SE': 0, 'WA': 1, 'RE': 0, 'TLE': 0}",5,6,83.33,"{'SE': 0, 'WA': 1, 'RE': 0, 'TLE': 0}",False
+SV007,8,remove_duplicates,Dùng set mất thứ tự — WA với hidden test thứ tự quan trọng,3,3,100.0,"{'SE': 0, 'WA': 0, 'RE': 0, 'TLE': 0}",4,6,66.67,"{'SE': 0, 'WA': 2, 'RE': 0, 'TLE': 0}",True
+SV008,9,average,Không xử lý danh sách rỗng — ZeroDivisionError với hidden test [],3,3,100.0,"{'SE': 0, 'WA': 0, 'RE': 0, 'TLE': 0}",5,6,83.33,"{'SE': 0, 'WA': 0, 'RE': 1, 'TLE': 0}",True
+SV009,11,is_prime,"Không xử lý n=0, n=1 — pass public (7,4,2) fail hidden (0,1)",3,3,100.0,"{'SE': 0, 'WA': 0, 'RE': 0, 'TLE': 0}",4,6,66.67,"{'SE': 0, 'WA': 2, 'RE': 0, 'TLE': 0}",True
+SV010,12,sum_even,Tính tổng số lẻ thay vì số chẵn,0,3,0.0,"{'SE': 0, 'WA': 3, 'RE': 0, 'TLE': 0}",2,6,33.33,"{'SE': 0, 'WA': 4, 'RE': 0, 'TLE': 0}",False
+SV011,13,fibonacci,Đệ quy thiếu base case n=0 — RuntimeError với hidden test,1,3,33.33,"{'SE': 0, 'WA': 0, 'RE': 2, 'TLE': 0}",0,6,0.0,"{'SE': 0, 'WA': 0, 'RE': 6, 'TLE': 0}",False
+SV012,14,count_words,pass public và hidden test,3,3,100.0,"{'SE': 0, 'WA': 0, 'RE': 0, 'TLE': 0}",6,6,100.0,"{'SE': 0, 'WA': 0, 'RE': 0, 'TLE': 0}",False
