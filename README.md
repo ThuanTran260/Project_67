@@ -68,7 +68,7 @@ Project_67/
 │
 ├── tuan2/                         # Baseline runner
 │   ├── bao_cao_tuan2.docx
-│   ├── data/raw/mbpp_subset.json     # 15 bài, 3 public + 6 hidden test
+│   ├── data/raw/mbpp_subset.json  # 15 bài, 3 public + 6 hidden test
 │   ├── notebooks/
 │   │   ├── 01_load_data.ipynb
 │   │   ├── 02_baseline.ipynb
