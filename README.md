@@ -35,10 +35,12 @@ Project_67/                              ← Tên GitHub repo (đổi tùy ý)
 │   │   │   └── mbpp_15.json                   ← 15 bài, 3 public + 6 hidden test
 │   │   └── processed/
 │   │       └── mbpp_clean.json                ← Sau khi làm sạch
-│   ├── notebooks/
-│   │   ├── 01_load_data.ipynb                 ← Đọc + làm sạch + EDA + 4 biểu đồ
-│   │   ├── 02_baseline.ipynb                  ← Chạy runner trên 15 bài
-│   │   └── 03_simulate.ipynb                  ← Mô phỏng 12 bài nộp có lỗi
+│   ├── notebooks/               ← Chạy theo thứ tự 00 → 01 → 02 → 03 → 04
+│   ├── 00_setup.ipynb           ← Kết nối Drive, tạo thư mục, chép file
+│   ├── 01_load_data.ipynb       ← Đọc MBPP, làm sạch, thống kê, bảng mô tả
+│   ├── 02_baseline.ipynb        ← Chạy runner, tính TPR/FPR/Latency
+│   ├── 03_simulate.ipynb        ← Mô phỏng 12 bài nộp có lỗi → đo FPR
+│   └── 04_visualize.ipynb       ← Vẽ 2 biểu đồ + lưu lên Drive
 │   └── results/
 │       ├── baseline_summary.csv
 │       ├── student_simulation.csv
