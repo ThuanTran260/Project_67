@@ -69,8 +69,8 @@ def check_banned_imports(code: str) -> Tuple[bool, List[Dict]]:
 
 # ── Script giới hạn bộ nhớ ───────────────────────────────────────────────────
 MEMORY_LIMITER = f"""
-import resource
 try:
+    import resource
     mem_bytes = {MEMORY_LIMIT_MB} * 1024 * 1024
     resource.setrlimit(resource.RLIMIT_AS, (mem_bytes, mem_bytes))
 except Exception:

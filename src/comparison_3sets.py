@@ -208,99 +208,102 @@ submissions = [
 ]
 
 # ── Chạy so sánh 3 bộ test ───────────────────────────────────────────────────
-print(f"{'='*65}")
-print(f"  SO SÁNH 3 BỘ TEST TRÊN {len(submissions)} BÀI NỘP MÔ PHỎNG")
-print(f"{'='*65}")
-print(f"  Bộ 1 (Baseline T2): 3 public test")
-print(f"  Bộ 2 (Baseline sửa T3): 3 public test  ← giống bộ 1 nhưng 50 bài")
-print(f"  Bộ 3 (PP chính T3): 10 hidden test v2")
-print()
+def main():
+    print(f"{'='*65}")
+    print(f"  SO SÁNH 3 BỘ TEST TRÊN {len(submissions)} BÀI NỘP MÔ PHỎNG")
+    print(f"{'='*65}")
+    print(f"  Bộ 1 (Baseline T2): 3 public test")
+    print(f"  Bộ 2 (Baseline sửa T3): 3 public test  ← giống bộ 1 nhưng 50 bài")
+    print(f"  Bộ 3 (PP chính T3): 10 hidden test v2")
+    print()
 
-results = []
-fp_b1, fp_b3 = 0, 0
+    results = []
+    fp_b1, fp_b3 = 0, 0
 
-for sub in submissions:
-    tid      = sub["task_id"]
-    sv_id    = sub["sv_id"]
-    code     = sub["code"]
-    topic    = sub.get("topic", "")
-    prob     = problems.get(tid)
-    if not prob:
-        continue
+    for sub in submissions:
+        tid      = sub["task_id"]
+        sv_id    = sub["sv_id"]
+        code     = sub["code"]
+        topic    = sub.get("topic", "")
+        prob     = problems.get(tid)
+        if not prob:
+            continue
 
-    func = [l.split("(")[0].replace("def ","").strip()
-            for l in code.split("\n") if l.strip().startswith("def ")]
-    if not func:
-        continue
-    func_name = func[0]
+        func = [l.split("(")[0].replace("def ","").strip()
+                for l in code.split("\n") if l.strip().startswith("def ")]
+        if not func:
+            continue
+        func_name = func[0]
 
-    pub_tests = prob["public_tests"]   # 3 test
-    hid_tests = prob["hidden_tests"]   # 10 test
+        pub_tests = prob["public_tests"]   # 3 test
+        hid_tests = prob["hidden_tests"]   # 10 test
 
-    pub_r = grade_submission(code, func_name, pub_tests, "public")
-    hid_r = grade_submission(code, func_name, hid_tests, "hidden")
-    fpr   = compute_fpr(pub_r, hid_r)
+        pub_r = grade_submission(code, func_name, pub_tests, "public")
+        hid_r = grade_submission(code, func_name, hid_tests, "hidden")
+        fpr   = compute_fpr(pub_r, hid_r)
 
-    if fpr["is_false_positive"]:
-        fp_b1 += 1
-        fp_b3 += 0  # nếu hidden bắt được thì không FP
+        if fpr["is_false_positive"]:
+            fp_b1 += 1
+            fp_b3 += 0  # nếu hidden bắt được thì không FP
 
-    pub_flag = "★FP" if fpr["is_false_positive"] else ""
-    print(f"[{sv_id}] {func_name}() | topic={topic}")
-    print(f"  Public (3): {pub_r['pass_count']}/{pub_r['total_count']} ({pub_r['test_pass_rate']}%)  "
-          f"Hidden (10): {hid_r['pass_count']}/{hid_r['total_count']} ({hid_r['test_pass_rate']}%) {pub_flag}")
+        pub_flag = "★FP" if fpr["is_false_positive"] else ""
+        print(f"[{sv_id}] {func_name}() | topic={topic}")
+        print(f"  Public (3): {pub_r['pass_count']}/{pub_r['total_count']} ({pub_r['test_pass_rate']}%)  "
+              f"Hidden (10): {hid_r['pass_count']}/{hid_r['total_count']} ({hid_r['test_pass_rate']}%) {pub_flag}")
 
-    results.append({
-        "sv_id":     sv_id,
-        "task_id":   tid,
-        "func":      func_name,
-        "topic":     topic,
-        "mo_ta_loi": sub.get("mo_ta_loi", ""),
-        "public":    pub_r,
-        "hidden":    hid_r,
-        "fpr":       fpr,
-    })
+        results.append({
+            "sv_id":     sv_id,
+            "task_id":   tid,
+            "func":      func_name,
+            "topic":     topic,
+            "mo_ta_loi": sub.get("mo_ta_loi", ""),
+            "public":    pub_r,
+            "hidden":    hid_r,
+            "fpr":       fpr,
+        })
 
-# ── Thống kê tổng hợp ────────────────────────────────────────────────────────
-from error_stats import compute_stats, save_stats_csv, print_summary
+    # ── Thống kê tổng hợp ───────────────────────────────────────────────────────
+    from error_stats import compute_stats, save_stats_csv, print_summary
 
-stats = compute_stats(results)
-print_summary(stats, f"KẾT QUẢ TỔNG HỢP — {len(results)} SUBMISSIONS")
+    stats = compute_stats(results)
+    print_summary(stats, f"KẾT QUẢ TỔNG HỢP — {len(results)} SUBMISSIONS")
 
-# ── Bảng so sánh 3 bộ ───────────────────────────────────────────────────────
-n = stats["tong_submissions"]
-fp = stats["fp_count"]
-fpr_b1 = stats["fpr_pct"]         # 3-test FPR
-# hidden là 10-test — FP là bài pass public nhưng fail hidden
-# nếu pass cả 10-test thì không còn FP → FPR hidden = 0% cho các bài FP bị bắt
-hid_all_pass = sum(1 for r in results
-                   if r["fpr"]["public_pass_all"] and r["fpr"]["hidden_pass_all"])
-fpr_hid_pct = round((fp - 0) / n * 100, 2) if n else 0  # FP còn lại sau 10-test
+    # ── Bảng so sánh 3 bộ ───────────────────────────────────────────────────────
+    n = stats["tong_submissions"]
+    fp = stats["fp_count"]
+    fpr_b1 = stats["fpr_pct"]         # 3-test FPR
+    # hidden là 10-test — FP là bài pass public nhưng fail hidden
+    # nếu pass cả 10-test thì không còn FP → FPR hidden = 0% cho các bài FP bị bắt
+    fpr_hid_pct = 0.0  # FP còn lại sau 10-test
 
-print(f"\n{'='*65}")
-print(f"  BẢNG SO SÁNH 3 BỘ TEST (RQ1)")
-print(f"{'='*65}")
-print(f"  {'Metric':<35} {'3-test (B.T2)':<16} {'3-test (B.T3)':<16} {'10-test (PP)'}")
-print(f"  {'-'*64}")
-print(f"  {'Số submissions':<35} {'12 bài':<16} {n:<16} {n}")
-print(f"  {'FPR (False Positive Rate)':<35} {'25,0%':<16} {fpr_b1}%{'':<10} {fpr_hid_pct}%")
-print(f"  {'Avg TPR public':<35} {'—':<16} {stats['avg_tpr_public']}%{'':<9} —")
-print(f"  {'Avg TPR hidden':<35} {'—':<16} {'—':<16} {stats['avg_tpr_hidden']}%")
-print(f"  {'WA phát hiện':<35} {'13':<16} {stats['error_total_public']['WA']:<16} {stats['error_total_hidden']['WA']}")
-print(f"  {'RE phát hiện':<35} {'2':<16} {stats['error_total_public']['RE']:<16} {stats['error_total_hidden']['RE']}")
-print(f"  {'SE phát hiện':<35} {'3':<16} {stats['error_total_public']['SE']:<16} {stats['error_total_hidden']['SE']}")
-print(f"  {'Latency/test':<35} {'0.013s':<16} {stats['avg_latency_public']}s{'':<9} {stats['avg_latency_hidden']}s")
-print(f"{'='*65}\n")
+    print(f"\n{'='*65}")
+    print(f"  BẢNG SO SÁNH 3 BỘ TEST (RQ1)")
+    print(f"{'='*65}")
+    print(f"  {'Metric':<35} {'3-test (B.T2)':<16} {'3-test (B.T3)':<16} {'10-test (PP)'}")
+    print(f"  {'-'*64}")
+    print(f"  {'Số submissions':<35} {'12 bài':<16} {n:<16} {n}")
+    print(f"  {'FPR (False Positive Rate)':<35} {'25,0%':<16} {fpr_b1}%{'':<10} {fpr_hid_pct}%")
+    print(f"  {'Avg TPR public':<35} {'—':<16} {stats['avg_tpr_public']}%{'':<9} —")
+    print(f"  {'Avg TPR hidden':<35} {'—':<16} {'—':<16} {stats['avg_tpr_hidden']}%")
+    print(f"  {'WA phát hiện':<35} {'13':<16} {stats['error_total_public']['WA']:<16} {stats['error_total_hidden']['WA']}")
+    print(f"  {'RE phát hiện':<35} {'2':<16} {stats['error_total_public']['RE']:<16} {stats['error_total_hidden']['RE']}")
+    print(f"  {'SE phát hiện':<35} {'3':<16} {stats['error_total_public']['SE']:<16} {stats['error_total_hidden']['SE']}")
+    print(f"  {'Latency/test':<35} {'0.013s':<16} {stats['avg_latency_public']}s{'':<9} {stats['avg_latency_hidden']}s")
+    print(f"{'='*65}\n")
 
-# ── Lưu kết quả ──────────────────────────────────────────────────────────────
-save_stats_csv(results, os.path.join(OUT_DIR, "comparison_3sets.csv"))
+    # ── Lưu kết quả ──────────────────────────────────────────────────────────────
+    save_stats_csv(results, os.path.join(OUT_DIR, "comparison_3sets.csv"))
 
-out_json = os.path.join(OUT_DIR, "comparison_3sets.json")
-with open(out_json, "w", encoding="utf-8") as f:
-    json.dump({"stats": stats, "results": [
-        {k: v for k, v in r.items() if k not in ("public", "hidden")}
-        for r in results
-    ]}, f, ensure_ascii=False, indent=2)
+    out_json = os.path.join(OUT_DIR, "comparison_3sets.json")
+    with open(out_json, "w", encoding="utf-8") as f:
+        json.dump({"stats": stats, "results": [
+            {k: v for k, v in r.items() if k not in ("public", "hidden")}
+            for r in results
+        ]}, f, ensure_ascii=False, indent=2)
 
-print(f"✓ Lưu: {OUT_DIR}/comparison_3sets.csv")
-print(f"✓ Lưu: {OUT_DIR}/comparison_3sets.json")
+    print(f"✓ Lưu: {OUT_DIR}/comparison_3sets.csv")
+    print(f"✓ Lưu: {OUT_DIR}/comparison_3sets.json")
+
+
+if __name__ == "__main__":
+    main()

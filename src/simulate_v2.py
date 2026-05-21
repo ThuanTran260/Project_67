@@ -26,7 +26,7 @@ if os.path.basename(cwd) in ["data", "src", "notebooks", "results"]:
 else:
     BASE = Path(cwd)
 
-MBPP_FILE = BASE / "data" / "processed" / "mbpp_50.json"
+MBPP_FILE = BASE / "data" / "processed" / "hidden_v2.json"
 OUT_FILE = BASE / "data" / "processed" / "submissions_50.json"
 
 
