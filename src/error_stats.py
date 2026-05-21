@@ -1,189 +1,173 @@
 """
 error_stats.py — Module thống kê lỗi tự động theo task
-Nhóm 67 | Tuần 3 | Ngôn ngữ lập trình Python
+Nhóm 67 | Tuần 3
+
+Chức năng:
+  - Đếm SE/WA/RE/TLE theo từng task và toàn bộ
+  - Tính FPR theo đơn vị bài nộp
+  - Xuất báo cáo CSV và JSON tự động
 """
 
-import json
-import os
-import csv
-from collections import Counter, defaultdict
-from pathlib import Path
-from typing import List, Dict, Union
+import json, csv, os
+from collections import defaultdict
+from typing import List, Dict
 
-# Auto-resolve BASE path
-cwd = os.getcwd()
-if os.path.basename(cwd) in ["data", "src", "notebooks", "results"]:
-    BASE = Path(cwd).parent
-else:
-    BASE = Path(cwd)
-
-
-def analyze_errors(submissions_results: List[Dict]) -> Dict:
+def compute_stats(results: List[Dict]) -> Dict:
     """
-    Phân tích danh sách kết quả chấm bài của sinh viên và trả về thống kê chi tiết.
-    
-    Args:
-        submissions_results: Danh sách kết quả chấm bài. Mỗi kết quả chứa:
-            - task_id, func, topic, is_false_positive
-            - error_type (loại lỗi thực tế của bài nộp)
-            - status (kết quả test thực tế: PASS, WA, RE, TLE, MLE, SE)
+    Tính toàn bộ thống kê từ danh sách kết quả.
+
+    Mỗi result có dạng:
+    {
+      "sv_id": ..., "task_id": ..., "func": ...,
+      "public": {grade_submission output},
+      "hidden": {grade_submission output},
+      "fpr": {compute_fpr output}
+    }
     """
-    total_submissions = len(submissions_results)
-    
-    # 1. Thống kê theo loại lỗi thực tế (error_type) vs Kết quả chấm (status)
-    error_type_stats = defaultdict(lambda: defaultdict(int))
-    # 2. Thống kê theo chủ đề (topic)
-    topic_stats = defaultdict(lambda: defaultdict(int))
-    # 3. Thống kê theo Task ID
-    task_stats = defaultdict(lambda: defaultdict(int))
-    
-    false_positives = 0
-    
-    for sub in submissions_results:
-        # Nhận diện thông tin
-        task_id = sub.get("task_id")
-        topic = sub.get("topic", "unknown")
-        err_type = sub.get("mo_ta_loi", "").split(" - ")[0].replace("Lỗi ", "").strip()
-        if not err_type:
-            err_type = sub.get("error_type", "unknown")
-            
-        status = sub.get("status", "")
-        # Nếu từ file student_simulation.json, kiểm tra kết quả trên bộ test
-        is_fp = sub.get("is_false_positive", False)
-        if is_fp:
-            false_positives += 1
-            
-        # Xác định status đại diện cho bài nộp (ví dụ nếu có bất kỳ lỗi nào)
-        # Hoặc đếm số lượng lỗi cụ thể
-        if "hid_errors" in sub:
-            # Nếu là kết quả tổng hợp của bài
-            # Trích xuất lỗi từ dict hid_errors
-            try:
-                err_counts = eval(sub["hid_errors"]) if isinstance(sub["hid_errors"], str) else sub["hid_errors"]
-                if err_counts.get("SE", 0) > 0:
-                    rep_status = "SE"
-                elif err_counts.get("TLE", 0) > 0:
-                    rep_status = "TLE"
-                elif err_counts.get("MLE", 0) > 0:
-                    rep_status = "MLE"
-                elif err_counts.get("RE", 0) > 0:
-                    rep_status = "RE"
-                elif err_counts.get("WA", 0) > 0:
-                    rep_status = "WA"
-                else:
-                    rep_status = "PASS"
-            except Exception:
-                rep_status = "unknown"
-        else:
-            rep_status = status if status else "unknown"
-            
-        # Cập nhật thống kê
-        error_type_stats[err_type][rep_status] += 1
-        topic_stats[topic][rep_status] += 1
-        task_stats[task_id][rep_status] += 1
-        if is_fp:
-            task_stats[task_id]["false_positive"] += 1
-            topic_stats[topic]["false_positive"] += 1
-            error_type_stats[err_type]["false_positive"] += 1
-            
-    return {
-        "total": total_submissions,
-        "false_positives": false_positives,
-        "fpr_rate": round(false_positives / total_submissions * 100, 2) if total_submissions > 0 else 0.0,
-        "by_error_type": error_type_stats,
-        "by_topic": topic_stats,
-        "by_task": task_stats
+    stats = {
+        "tong_submissions": len(results),
+        "fp_count": 0,
+        "fpr_pct": 0.0,
+        "avg_tpr_public": 0.0,
+        "avg_tpr_hidden": 0.0,
+        "error_total_public": {"SE": 0, "WA": 0, "RE": 0, "TLE": 0},
+        "error_total_hidden": {"SE": 0, "WA": 0, "RE": 0, "TLE": 0},
+        "avg_latency_public": 0.0,
+        "avg_latency_hidden": 0.0,
+        "per_topic":  defaultdict(lambda: {
+            "count": 0, "fp": 0,
+            "pub_err": {"SE":0,"WA":0,"RE":0,"TLE":0},
+            "hid_err": {"SE":0,"WA":0,"RE":0,"TLE":0},
+        }),
+        "false_positives": [],
     }
 
+    for r in results:
+        pub = r.get("public", {})
+        hid = r.get("hidden", {})
+        fpr = r.get("fpr", {})
+        topic = r.get("topic", "unknown")
 
-def print_ascii_report(stats: Dict):
-    """In bao cao thong ke dinh dang ASCII ra console."""
-    print("=" * 70)
-    print("           BAO CAO THONG KE LOI TU DONG THEO TASK")
-    print("=" * 70)
-    print(f" Tong so bai nop duoc phan tich: {stats['total']}")
-    print(f" So luong False Positive: {stats['false_positives']}")
-    print(f" Ty le False Positive Rate (FPR): {stats['fpr_rate']}%")
-    print("-" * 70)
-    
-    # 1. Thống kê theo Chủ đề (Topic)
-    print("\n[1] THONG KE LOI THEO CHU DE (TOPIC):")
-    print(f" {'Topic':<12} | {'PASS':<6} | {'WA':<6} | {'RE':<6} | {'TLE':<6} | {'MLE':<6} | {'SE':<6} | {'FPs':<6}")
-    print("-" * 70)
-    for topic, s in sorted(stats["by_topic"].items()):
-        print(f" {topic:<12} | {s['PASS']:<6} | {s['WA']:<6} | {s['RE']:<6} | {s['TLE']:<6} | {s['MLE']:<6} | {s['SE']:<6} | {s['false_positive']:<6}")
-    print("-" * 70)
-    
-    # 2. Thống kê theo Loại lỗi sinh viên thiết kế (Error Type)
-    print("\n[2] THONG KE THEO LOAI LOI THUC TE:")
-    print(f" {'Loai loi goc':<15} | {'PASS':<6} | {'WA':<6} | {'RE':<6} | {'TLE':<6} | {'MLE':<6} | {'SE':<6} | {'FPs':<6}")
-    print("-" * 70)
-    for err_type, s in sorted(stats["by_error_type"].items()):
-        print(f" {err_type:<15} | {s['PASS']:<6} | {s['WA']:<6} | {s['RE']:<6} | {s['TLE']:<6} | {s['MLE']:<6} | {s['SE']:<6} | {s['false_positive']:<6}")
-    print("-" * 70)
+        if fpr.get("is_false_positive"):
+            stats["fp_count"] += 1
+            stats["false_positives"].append({
+                "sv_id":    r.get("sv_id"),
+                "task_id":  r.get("task_id"),
+                "func":     r.get("func"),
+                "pub_rate": fpr.get("public_rate"),
+                "hid_rate": fpr.get("hidden_rate"),
+                "mo_ta_loi": r.get("mo_ta_loi", "")
+            })
+
+        stats["avg_tpr_public"] += pub.get("test_pass_rate", 0)
+        stats["avg_tpr_hidden"] += hid.get("test_pass_rate", 0)
+        stats["avg_latency_public"] += pub.get("avg_latency", 0)
+        stats["avg_latency_hidden"] += hid.get("avg_latency", 0)
+
+        for err_type in ["SE", "WA", "RE", "TLE"]:
+            stats["error_total_public"][err_type] += pub.get("error_counts", {}).get(err_type, 0)
+            stats["error_total_hidden"][err_type] += hid.get("error_counts", {}).get(err_type, 0)
+
+        # Theo topic
+        stats["per_topic"][topic]["count"] += 1
+        if fpr.get("is_false_positive"):
+            stats["per_topic"][topic]["fp"] += 1
+        for err_type in ["SE", "WA", "RE", "TLE"]:
+            stats["per_topic"][topic]["pub_err"][err_type] += pub.get("error_counts", {}).get(err_type, 0)
+            stats["per_topic"][topic]["hid_err"][err_type] += hid.get("error_counts", {}).get(err_type, 0)
+
+    n = len(results)
+    if n > 0:
+        stats["fpr_pct"]           = round(stats["fp_count"] / n * 100, 2)
+        stats["avg_tpr_public"]    = round(stats["avg_tpr_public"] / n, 2)
+        stats["avg_tpr_hidden"]    = round(stats["avg_tpr_hidden"] / n, 2)
+        stats["avg_latency_public"]= round(stats["avg_latency_public"] / n, 4)
+        stats["avg_latency_hidden"]= round(stats["avg_latency_hidden"] / n, 4)
+
+    stats["per_topic"] = dict(stats["per_topic"])
+    return stats
 
 
-def export_stats_to_csv(stats: Dict, output_path: Union[str, Path]):
-    """Xuất báo cáo thống kê chi tiết theo từng task ra file CSV."""
-    # Gom tất cả task_id
-    all_tasks = sorted(list(stats["by_task"].keys()))
-    
+def save_stats_csv(results: List[Dict], filepath: str):
+    """Lưu kết quả chi tiết ra CSV."""
+    if not results:
+        return
+
+    fieldnames = [
+        "sv_id", "task_id", "func", "topic", "mo_ta_loi",
+        "pub_pass", "pub_total", "pub_tpr",
+        "pub_SE", "pub_WA", "pub_RE", "pub_TLE",
+        "hid_pass", "hid_total", "hid_tpr",
+        "hid_SE", "hid_WA", "hid_RE", "hid_TLE",
+        "is_false_positive",
+        "avg_latency_pub", "avg_latency_hid",
+    ]
+
     rows = []
-    for tid in all_tasks:
-        s = stats["by_task"][tid]
+    for r in results:
+        pub = r.get("public", {})
+        hid = r.get("hidden", {})
+        fpr = r.get("fpr", {})
+        pub_err = pub.get("error_counts", {})
+        hid_err = hid.get("error_counts", {})
+
         rows.append({
-            "task_id": tid,
-            "total_submissions": sum(v for k, v in s.items() if k != "false_positive"),
-            "PASS": s["PASS"],
-            "WA": s["WA"],
-            "RE": s["RE"],
-            "TLE": s["TLE"],
-            "MLE": s["MLE"],
-            "SE": s["SE"],
-            "false_positives": s["false_positive"],
-            "fpr_pct": round(s["false_positive"] / sum(v for k, v in s.items() if k != "false_positive") * 100, 2) if sum(v for k, v in s.items() if k != "false_positive") > 0 else 0.0
+            "sv_id":       r.get("sv_id", ""),
+            "task_id":     r.get("task_id", ""),
+            "func":        r.get("func", ""),
+            "topic":       r.get("topic", ""),
+            "mo_ta_loi":   r.get("mo_ta_loi", ""),
+            "pub_pass":    pub.get("pass_count", 0),
+            "pub_total":   pub.get("total_count", 0),
+            "pub_tpr":     pub.get("test_pass_rate", 0),
+            "pub_SE":      pub_err.get("SE", 0),
+            "pub_WA":      pub_err.get("WA", 0),
+            "pub_RE":      pub_err.get("RE", 0),
+            "pub_TLE":     pub_err.get("TLE", 0),
+            "hid_pass":    hid.get("pass_count", 0),
+            "hid_total":   hid.get("total_count", 0),
+            "hid_tpr":     hid.get("test_pass_rate", 0),
+            "hid_SE":      hid_err.get("SE", 0),
+            "hid_WA":      hid_err.get("WA", 0),
+            "hid_RE":      hid_err.get("RE", 0),
+            "hid_TLE":     hid_err.get("TLE", 0),
+            "is_false_positive": fpr.get("is_false_positive", False),
+            "avg_latency_pub": pub.get("avg_latency", 0),
+            "avg_latency_hid": hid.get("avg_latency", 0),
         })
-        
-    os.makedirs(os.path.dirname(output_path), exist_ok=True)
-    with open(output_path, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=[
-            "task_id", "total_submissions", "PASS", "WA", "RE", "TLE", "MLE", "SE", "false_positives", "fpr_pct"
-        ])
+
+    os.makedirs(os.path.dirname(filepath) if os.path.dirname(filepath) else ".", exist_ok=True)
+    with open(filepath, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
-    print(f"OK: Da xuat thong ke loi theo task ra file: {output_path}")
 
 
-def analyze_file(json_file_path: Union[str, Path], csv_output_path: Union[str, Path] = None):
-    """Đọc dữ liệu từ file kết quả mô phỏng và xuất báo cáo."""
-    if not os.path.exists(json_file_path):
-        print(f"ERROR: File {json_file_path} khong ton tai.")
-        return
-        
-    with open(json_file_path, encoding="utf-8") as f:
-        data = json.load(f)
-        
-    # Hỗ trợ cả định dạng bọc ngoài {"submissions": [...]} và list gốc
-    if isinstance(data, dict) and "submissions" in data:
-        subs = data["submissions"]
-    elif isinstance(data, list):
-        subs = data
-    else:
-        print("ERROR: Dinh dang file khong hop le (can la list hoac dict submissions)")
-        return
-        
-    stats = analyze_errors(subs)
-    print_ascii_report(stats)
-    
-    if csv_output_path:
-        export_stats_to_csv(stats, csv_output_path)
+def print_summary(stats: Dict, label: str = ""):
+    """In bảng tổng hợp ra màn hình."""
+    print(f"\n{'='*60}")
+    if label:
+        print(f"  {label}")
+    print(f"{'='*60}")
+    print(f"  Tổng submissions        : {stats['tong_submissions']}")
+    print(f"  False Positive Rate     : {stats['fpr_pct']}% ({stats['fp_count']} bài)")
+    print(f"  Avg TPR public (3 test) : {stats['avg_tpr_public']}%")
+    print(f"  Avg TPR hidden (10 test): {stats['avg_tpr_hidden']}%")
+    print(f"  Latency public          : {stats['avg_latency_public']}s/test")
+    print(f"  Latency hidden          : {stats['avg_latency_hidden']}s/test")
+    print(f"\n  Lỗi PUBLIC  → SE:{stats['error_total_public']['SE']}  WA:{stats['error_total_public']['WA']}  RE:{stats['error_total_public']['RE']}  TLE:{stats['error_total_public']['TLE']}")
+    print(f"  Lỗi HIDDEN  → SE:{stats['error_total_hidden']['SE']}  WA:{stats['error_total_hidden']['WA']}  RE:{stats['error_total_hidden']['RE']}  TLE:{stats['error_total_hidden']['TLE']}")
 
+    if stats.get("per_topic"):
+        print(f"\n  Theo topic:")
+        for topic, t in stats["per_topic"].items():
+            fp_rate = round(t['fp'] / t['count'] * 100, 1) if t['count'] else 0
+            print(f"    {topic:<10}: {t['count']} bài, FPR={fp_rate}%")
 
-if __name__ == "__main__":
-    # Chạy thử với dữ liệu hiện tại nếu có
-    sim_path = BASE / "results" / "student_simulation.json"
-    out_csv = BASE / "results" / "error_analysis_v2.csv"
-    if sim_path.exists():
-        analyze_file(sim_path, out_csv)
-    else:
-        print(f"Chua co file {sim_path}. Hay chay file simulation truoc.")
+    if stats.get("false_positives"):
+        print(f"\n  Bài False Positive chi tiết:")
+        for fp in stats["false_positives"]:
+            print(f"    [{fp['sv_id']}] task {fp['task_id']} {fp['func']}() — pub:{fp['pub_rate']}% hid:{fp['hid_rate']}%")
+            if fp.get("mo_ta_loi"):
+                print(f"      Lỗi: {fp['mo_ta_loi']}")
+    print(f"{'='*60}\n")
