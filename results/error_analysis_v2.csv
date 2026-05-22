@@ -1,51 +1,51 @@
-sv_id,task_id,func,topic,mo_ta_loi,pub_pass,pub_total,pub_tpr,pub_SE,pub_WA,pub_RE,pub_TLE,hid_pass,hid_total,hid_tpr,hid_SE,hid_WA,hid_RE,hid_TLE,is_false_positive,avg_latency_pub,avg_latency_hid
-,1,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,1,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,1,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,2,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,2,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,3,,string,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,4,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,4,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,6,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,6,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,7,,string,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,8,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,9,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,9,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,11,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,11,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,12,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,13,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,14,,string,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,15,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,16,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,17,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,18,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,20,,string,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,21,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,22,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,23,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,24,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,26,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,27,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,29,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,30,,string,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,31,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,33,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,34,,string,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,35,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,36,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,37,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,38,,string,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,40,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,41,,math,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,43,,string,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,44,,string,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,46,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,47,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,49,,string,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,50,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,10,,string,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,15,,list,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
-,5,,string,,0,0,0,0,0,0,0,0,0,0,0,0,0,0,False,0,0
+sv_id,task_id,func,topic,mo_ta_loi,pub_pass,pub_total,pub_tpr,pub_SE,pub_WA,pub_RE,pub_TLE,pub_MLE,hid_pass,hid_total,hid_tpr,hid_SE,hid_WA,hid_RE,hid_TLE,hid_MLE,is_false_positive,avg_latency_pub,avg_latency_hid
+SV001,1,sum_list,list,False Positive: Hardcode public test. Bị bắt ở 6 hidden,3,3,100.0,0,0,0,0,0,3,6,50.0,0,3,0,0,0,True,0.0291,0.0298
+SV002,2,is_even,math,False Positive: Hardcode public test. Bị bắt ở 6 hidden,3,3,100.0,0,0,0,0,0,3,6,50.0,0,3,0,0,0,True,0.0294,0.0315
+SV003,3,reverse_string,string,False Positive: Hardcode public test. Bị bắt ở 6 hidden,3,3,100.0,0,0,0,0,0,1,6,16.67,0,5,0,0,0,True,0.029,0.0272
+SV004,4,find_max,list,False Positive: Hardcode public test. Bị bắt ở 6 hidden,3,3,100.0,0,0,0,0,0,1,6,16.67,0,5,0,0,0,True,0.0259,0.0282
+SV005,5,count_char,string,Lỗi cú pháp (Syntax Error) - Thiếu dấu hai chấm hoặc thụt lề sai,0,3,0.0,3,0,0,0,0,0,6,0.0,6,0,0,0,0,False,0.0,0.0
+SV006,6,factorial,math,False Positive: Hardcode public và 6 hidden. Bị bắt ở 10 hidden (SV011),3,3,100.0,0,0,0,0,0,6,7,85.71,0,1,0,0,0,True,0.0261,0.0277
+SV007,7,is_palindrome,string,False Positive: Hardcode public và 6 hidden. Bị bắt ở 10 hidden (SV012),3,3,100.0,0,0,0,0,0,6,7,85.71,0,1,0,0,0,True,0.0304,0.0316
+SV008,8,remove_duplicates,list,False Positive: Hardcode public + 10 hidden. Vẫn pass 10 hidden (SV014),3,3,100.0,0,0,0,0,0,7,7,100.0,0,0,0,0,0,False,0.029,0.0293
+SV009,9,average,math,False Positive: Hardcode public test. Bị bắt ở 6 hidden,3,3,100.0,0,0,0,0,0,3,7,42.86,0,4,0,0,0,True,0.0293,0.0293
+SV010,10,to_uppercase,string,Lỗi thời gian chạy (Runtime Error) - Phát sinh ngoại lệ khi thực thi,0,3,0.0,0,0,3,0,0,0,7,0.0,0,0,7,0,0,False,0.0585,0.0547
+SV011,11,is_prime,math,False Positive: Hardcode public test. Bị bắt ở 6 hidden,3,3,100.0,0,0,0,0,0,4,7,57.14,0,3,0,0,0,True,0.0319,0.029
+SV012,12,sum_even,list,False Positive: Hardcode public test. Bị bắt ở 6 hidden,3,3,100.0,0,0,0,0,0,2,7,28.57,0,5,0,0,0,True,0.0293,0.0298
+SV013,13,fibonacci,math,False Positive: Hardcode public test. Bị bắt ở 6 hidden,3,3,100.0,0,0,0,0,0,1,7,14.29,0,6,0,0,0,True,0.0314,0.0357
+SV014,14,count_words,string,False Positive: Hardcode public test. Bị bắt ở 6 hidden,3,3,100.0,0,0,0,0,0,2,7,28.57,0,5,0,0,0,True,0.033,0.0333
+SV015,15,sort_list,list,Lỗi quá giới hạn thời gian (Time Limit Exceeded) - Vòng lặp vô hạn,0,3,0.0,0,0,0,3,0,0,7,0.0,0,0,0,7,0,False,1.0111,1.0102
+SV016,16,find_min,list,Lỗi cú pháp (Syntax Error) - Thiếu dấu hai chấm hoặc thụt lề sai,0,3,0.0,3,0,0,0,0,0,8,0.0,8,0,0,0,0,False,0.0,0.0
+SV017,17,is_leap_year,math,Lỗi thời gian chạy (Runtime Error) - Phát sinh ngoại lệ khi thực thi,0,3,0.0,0,0,3,0,0,0,8,0.0,0,0,8,0,0,False,0.0449,0.0507
+SV018,18,count_vowels,string,Lỗi quá giới hạn thời gian (Time Limit Exceeded) - Vòng lặp vô hạn,0,3,0.0,0,0,0,3,0,0,8,0.0,0,0,0,8,0,False,1.0057,1.0062
+SV019,19,sum_odd,list,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,0.0267,0.0311
+SV020,20,all_positive,list,Lỗi thời gian chạy (Runtime Error) - Phát sinh ngoại lệ khi thực thi,0,3,0.0,0,0,3,0,0,0,8,0.0,0,0,8,0,0,False,0.0562,0.0535
+SV021,21,celsius_to_fahrenheit,math,Lỗi quá giới hạn thời gian (Time Limit Exceeded) - Vòng lặp vô hạn,0,3,0.0,0,0,0,3,0,0,8,0.0,0,0,0,8,0,False,1.0064,1.0073
+SV022,22,replace_spaces,string,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,0.0265,0.0297
+SV023,23,absolute_value,math,Lỗi thời gian chạy (Runtime Error) - Phát sinh ngoại lệ khi thực thi,0,3,0.0,0,0,3,0,0,0,8,0.0,0,0,8,0,0,False,0.0535,0.0527
+SV024,24,is_anagram,string,Lỗi quá giới hạn thời gian (Time Limit Exceeded) - Vòng lặp vô hạn,0,3,0.0,0,0,0,3,0,0,8,0.0,0,0,0,8,0,False,1.0086,1.0064
+SV025,25,sum_of_digits,math,Lỗi cú pháp (Syntax Error) - Thiếu dấu hai chấm hoặc thụt lề sai,0,3,0.0,3,0,0,0,0,0,8,0.0,8,0,0,0,0,False,0.0,0.0
+SV026,26,multiply_list,list,Lỗi thời gian chạy (Runtime Error) - Phát sinh ngoại lệ khi thực thi,0,3,0.0,0,0,3,0,0,0,8,0.0,0,0,8,0,0,False,0.0492,0.0496
+SV027,27,is_sorted_ascending,list,Lỗi quá giới hạn thời gian (Time Limit Exceeded) - Vòng lặp vô hạn,0,3,0.0,0,0,0,3,0,0,8,0.0,0,0,0,8,0,False,1.0057,1.0077
+SV028,28,repeat_string,string,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,0.0318,0.0298
+SV029,29,find_common_elements,list,Lỗi thời gian chạy (Runtime Error) - Phát sinh ngoại lệ khi thực thi,0,3,0.0,0,0,3,0,0,0,8,0.0,0,0,8,0,0,False,0.0519,0.0574
+SV030,30,get_list_length,list,Lỗi quá giới hạn bộ nhớ (Memory Limit Exceeded) - Cấp phát mảng cực đại,0,3,0.0,0,0,0,0,3,0,8,0.0,0,0,0,0,8,False,0.0737,0.0739
+SV031,31,remove_vowels,string,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,0.0305,0.0295
+SV032,32,get_first_element,list,Lỗi thời gian chạy (Runtime Error) - Phát sinh ngoại lệ khi thực thi,0,3,0.0,0,0,3,0,0,0,8,0.0,0,0,8,0,0,False,0.0498,0.0514
+SV033,33,find_perimeter_rectangle,math,Lỗi quá giới hạn bộ nhớ (Memory Limit Exceeded) - Cấp phát mảng cực đại,0,3,0.0,0,0,0,0,3,0,8,0.0,0,0,0,0,8,False,0.0665,0.0724
+SV034,34,cube_number,math,Lỗi quá giới hạn bộ nhớ (Memory Limit Exceeded) - Cấp phát mảng cực đại,0,3,0.0,0,0,0,0,3,0,8,0.0,0,0,0,0,8,False,0.0717,0.07
+SV035,35,count_consonants,string,Lỗi thời gian chạy (Runtime Error) - Phát sinh ngoại lệ khi thực thi,0,3,0.0,0,0,3,0,0,0,8,0.0,0,0,8,0,0,False,0.0496,0.0497
+SV036,36,starts_with_uppercase,string,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,9,9,100.0,0,0,0,0,0,False,0.0303,0.0265
+SV037,37,circle_area,math,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,9,9,100.0,0,0,0,0,0,False,0.0263,0.0289
+SV038,38,reverse_list,list,Lỗi thời gian chạy (Runtime Error) - Phát sinh ngoại lệ khi thực thi,0,3,0.0,0,0,3,0,0,0,9,0.0,0,0,9,0,0,False,0.0538,0.054
+SV039,39,gcd,math,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,9,9,100.0,0,0,0,0,0,False,0.0319,0.03
+SV040,40,trim_string,string,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,9,9,100.0,0,0,0,0,0,False,0.0346,0.0264
+SV041,41,filter_positive,list,Lỗi thời gian chạy (Runtime Error) - Phát sinh ngoại lệ khi thực thi,0,3,0.0,0,0,3,0,0,0,9,0.0,0,0,9,0,0,False,0.0536,0.0511
+SV042,42,string_to_list,string,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,9,9,100.0,0,0,0,0,0,False,0.027,0.0264
+SV043,43,square_list,list,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,9,9,100.0,0,0,0,0,0,False,0.0288,0.0278
+SV044,44,count_negative,list,Lỗi quá giới hạn bộ nhớ (Memory Limit Exceeded) - Cấp phát mảng cực đại,0,3,0.0,0,0,0,0,3,0,9,0.0,0,0,0,0,9,False,0.0706,0.0701
+SV045,45,merge_lists,list,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,9,9,100.0,0,0,0,0,0,False,0.0266,0.0261
+SV046,46,is_numeric_string,string,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,10,10,100.0,0,0,0,0,0,False,0.0303,0.0266
+SV047,47,lcm,math,Lỗi quá giới hạn bộ nhớ (Memory Limit Exceeded) - Cấp phát mảng cực đại,0,3,0.0,0,0,0,0,3,0,10,0.0,0,0,0,0,10,False,0.0765,0.0735
+SV048,48,list_to_string,string,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,10,10,100.0,0,0,0,0,0,False,0.0269,0.0288
+SV049,49,get_first_n,list,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,10,10,100.0,0,0,0,0,0,False,0.0267,0.0284
+SV050,50,has_zero,list,Bài làm chính xác hoàn toàn,3,3,100.0,0,0,0,0,0,10,10,100.0,0,0,0,0,0,False,0.0275,0.0274

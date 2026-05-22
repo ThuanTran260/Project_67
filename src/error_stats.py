@@ -30,14 +30,14 @@ def compute_stats(results: List[Dict]) -> Dict:
         "fpr_pct": 0.0,
         "avg_tpr_public": 0.0,
         "avg_tpr_hidden": 0.0,
-        "error_total_public": {"SE": 0, "WA": 0, "RE": 0, "TLE": 0},
-        "error_total_hidden": {"SE": 0, "WA": 0, "RE": 0, "TLE": 0},
+        "error_total_public": {"SE": 0, "WA": 0, "RE": 0, "TLE": 0, "MLE": 0},
+        "error_total_hidden": {"SE": 0, "WA": 0, "RE": 0, "TLE": 0, "MLE": 0},
         "avg_latency_public": 0.0,
         "avg_latency_hidden": 0.0,
         "per_topic":  defaultdict(lambda: {
             "count": 0, "fp": 0,
-            "pub_err": {"SE":0,"WA":0,"RE":0,"TLE":0},
-            "hid_err": {"SE":0,"WA":0,"RE":0,"TLE":0},
+            "pub_err": {"SE":0,"WA":0,"RE":0,"TLE":0,"MLE":0},
+            "hid_err": {"SE":0,"WA":0,"RE":0,"TLE":0,"MLE":0},
         }),
         "false_positives": [],
     }
@@ -64,7 +64,7 @@ def compute_stats(results: List[Dict]) -> Dict:
         stats["avg_latency_public"] += pub.get("avg_latency", 0)
         stats["avg_latency_hidden"] += hid.get("avg_latency", 0)
 
-        for err_type in ["SE", "WA", "RE", "TLE"]:
+        for err_type in ["SE", "WA", "RE", "TLE", "MLE"]:
             stats["error_total_public"][err_type] += pub.get("error_counts", {}).get(err_type, 0)
             stats["error_total_hidden"][err_type] += hid.get("error_counts", {}).get(err_type, 0)
 
@@ -72,7 +72,7 @@ def compute_stats(results: List[Dict]) -> Dict:
         stats["per_topic"][topic]["count"] += 1
         if fpr.get("is_false_positive"):
             stats["per_topic"][topic]["fp"] += 1
-        for err_type in ["SE", "WA", "RE", "TLE"]:
+        for err_type in ["SE", "WA", "RE", "TLE", "MLE"]:
             stats["per_topic"][topic]["pub_err"][err_type] += pub.get("error_counts", {}).get(err_type, 0)
             stats["per_topic"][topic]["hid_err"][err_type] += hid.get("error_counts", {}).get(err_type, 0)
 
@@ -96,9 +96,9 @@ def save_stats_csv(results: List[Dict], filepath: str):
     fieldnames = [
         "sv_id", "task_id", "func", "topic", "mo_ta_loi",
         "pub_pass", "pub_total", "pub_tpr",
-        "pub_SE", "pub_WA", "pub_RE", "pub_TLE",
+        "pub_SE", "pub_WA", "pub_RE", "pub_TLE", "pub_MLE",
         "hid_pass", "hid_total", "hid_tpr",
-        "hid_SE", "hid_WA", "hid_RE", "hid_TLE",
+        "hid_SE", "hid_WA", "hid_RE", "hid_TLE", "hid_MLE",
         "is_false_positive",
         "avg_latency_pub", "avg_latency_hid",
     ]
@@ -124,6 +124,7 @@ def save_stats_csv(results: List[Dict], filepath: str):
             "pub_WA":      pub_err.get("WA", 0),
             "pub_RE":      pub_err.get("RE", 0),
             "pub_TLE":     pub_err.get("TLE", 0),
+            "pub_MLE":     pub_err.get("MLE", 0),
             "hid_pass":    hid.get("pass_count", 0),
             "hid_total":   hid.get("total_count", 0),
             "hid_tpr":     hid.get("test_pass_rate", 0),
@@ -131,6 +132,7 @@ def save_stats_csv(results: List[Dict], filepath: str):
             "hid_WA":      hid_err.get("WA", 0),
             "hid_RE":      hid_err.get("RE", 0),
             "hid_TLE":     hid_err.get("TLE", 0),
+            "hid_MLE":     hid_err.get("MLE", 0),
             "is_false_positive": fpr.get("is_false_positive", False),
             "avg_latency_pub": pub.get("avg_latency", 0),
             "avg_latency_hid": hid.get("avg_latency", 0),
@@ -155,8 +157,8 @@ def print_summary(stats: Dict, label: str = ""):
     print(f"  Avg TPR hidden (10 test): {stats['avg_tpr_hidden']}%")
     print(f"  Latency public          : {stats['avg_latency_public']}s/test")
     print(f"  Latency hidden          : {stats['avg_latency_hidden']}s/test")
-    print(f"\n  Lỗi PUBLIC  → SE:{stats['error_total_public']['SE']}  WA:{stats['error_total_public']['WA']}  RE:{stats['error_total_public']['RE']}  TLE:{stats['error_total_public']['TLE']}")
-    print(f"  Lỗi HIDDEN  → SE:{stats['error_total_hidden']['SE']}  WA:{stats['error_total_hidden']['WA']}  RE:{stats['error_total_hidden']['RE']}  TLE:{stats['error_total_hidden']['TLE']}")
+    print(f"\n  Lỗi PUBLIC  → SE:{stats['error_total_public']['SE']}  WA:{stats['error_total_public']['WA']}  RE:{stats['error_total_public']['RE']}  TLE:{stats['error_total_public']['TLE']}  MLE:{stats['error_total_public']['MLE']}")
+    print(f"  Lỗi HIDDEN  → SE:{stats['error_total_hidden']['SE']}  WA:{stats['error_total_hidden']['WA']}  RE:{stats['error_total_hidden']['RE']}  TLE:{stats['error_total_hidden']['TLE']}  MLE:{stats['error_total_hidden']['MLE']}")
 
     if stats.get("per_topic"):
         print(f"\n  Theo topic:")

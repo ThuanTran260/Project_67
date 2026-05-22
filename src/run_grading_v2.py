@@ -9,7 +9,7 @@ import os
 import sys
 from pathlib import Path
 
-# ── Auto-resolve BASE path ────────────────────────────────────────────────────
+# Auto-resolve BASE path
 cwd = os.getcwd()
 if os.path.basename(cwd) in ["data", "src", "notebookes", "results"]:
     BASE = Path(cwd).parent
@@ -20,13 +20,18 @@ sys.path.insert(0, str(BASE / "src"))
 from runner_v2 import grade_submission, compute_fpr
 from error_stats import compute_stats, save_stats_csv, print_summary
 
-# ── Đường dẫn file ───────────────────────────────────────────────────────────
 SUBMISSIONS_FILE = BASE / "data" / "processed" / "submissions_50.json"
 DATASET_FILE     = BASE / "data" / "processed" / "hidden_v2.json"
 OUTPUT_CSV       = BASE / "results" / "error_analysis_v2.csv"
 OUTPUT_JSON      = BASE / "results" / "error_analysis_v2.json"
 TARGET_SUBMISSIONS = 50
 
+# Đồng bộ hệ thống file để hiển thị được tiếng Việt có dấu trên Windows console
+# try:
+#     sys.stdout.reconfigure(encoding='utf-8')
+#     sys.stderr.reconfigure(encoding='utf-8')
+# except AttributeError:
+#     pass
 
 def main():
     print("=" * 65)
@@ -34,15 +39,12 @@ def main():
     print("  Bộ test: 3 public + 10 hidden = 13 test/bài")
     print("=" * 65)
 
-    # ── 1. Load dữ liệu ───────────────────────────────────────────────────────
     if not SUBMISSIONS_FILE.exists():
         print(f"\n[LỖI] Không tìm thấy file bài nộp: {SUBMISSIONS_FILE}")
-        print("  → Chạy 03_simulate_v2.ipynb trước để tạo file này.")
         return
 
     if not DATASET_FILE.exists():
         print(f"\n[LỖI] Không tìm thấy file dataset: {DATASET_FILE}")
-        print("  → Kiểm tra lại thư mục data/processed/")
         return
 
     with open(SUBMISSIONS_FILE, encoding="utf-8") as f:
@@ -57,11 +59,11 @@ def main():
     print(f"\n  ✓ Đã load {len(submissions)} bài nộp mô phỏng")
     print(f"  ✓ Đã load {len(problems)} bài toán MBPP")
     print(f"  ✓ Số bài sẽ chấm: {len(submissions)}/{TARGET_SUBMISSIONS}")
-    print(f"\n  Bắt đầu chấm (có thể mất 3–5 phút do subprocess)...")
+    print(f"\n  Bắt đầu chấm (sử dụng psutil giới hạn tài nguyên và thu thập lỗi)...")
     print()
 
-    # ── 2. Chấm từng bài nộp ─────────────────────────────────────────────────
     results = []
+    wrapped = []
 
     for i, sub in enumerate(submissions):
         try:
@@ -70,6 +72,7 @@ def main():
             func_name = sub["func_name"]
             code      = sub["submitted_code"]
             err_type  = sub.get("error_type", "")
+            topic     = sub.get("topic", "")
 
             prob = problems.get(tid)
             if not prob:
@@ -83,14 +86,16 @@ def main():
             hid_r = grade_submission(code, func_name, hid_tests, "hidden")
             fpr   = compute_fpr(pub_r, hid_r)
 
-            # ── Xác định trạng thái tổng hợp ─────────────────────────
+            # Xác định trạng thái tổng hợp cho học sinh
             if not pub_r["syntax_ok"]:
                 status = "SE"
             else:
                 ec_hid = hid_r["error_counts"]
                 ec_pub = pub_r["error_counts"]
 
-                if ec_hid["TLE"] > 0 or ec_pub["TLE"] > 0:
+                if ec_hid.get("MLE", 0) > 0 or ec_pub.get("MLE", 0) > 0:
+                    status = "MLE"
+                elif ec_hid["TLE"] > 0 or ec_pub["TLE"] > 0:
                     status = "TLE"
                 elif ec_hid["RE"] > 0 or ec_pub["RE"] > 0:
                     status = "RE"
@@ -99,11 +104,36 @@ def main():
                 else:
                     status = "PASS"
 
-            results.append({
+            # Thu thập chi tiết lỗi đầy đủ làm feedback
+            error_details = []
+            for idx, r in enumerate(pub_r["test_results"]):
+                if r["status"] != "PASS" and r.get("error_msg"):
+                    error_details.append({
+                        "set": "public",
+                        "test_case_index": idx + 1,
+                        "input": r["input"],
+                        "expected": r["expected"],
+                        "actual": r["actual"],
+                        "status": r["status"],
+                        "error_msg": r["error_msg"]
+                    })
+            for idx, r in enumerate(hid_r["test_results"]):
+                if r["status"] != "PASS" and r.get("error_msg"):
+                    error_details.append({
+                        "set": "hidden",
+                        "test_case_index": idx + 1,
+                        "input": r["input"],
+                        "expected": r["expected"],
+                        "actual": r["actual"],
+                        "status": r["status"],
+                        "error_msg": r["error_msg"]
+                    })
+
+            res_item = {
                 "submission_id":   sub_id,
                 "task_id":         tid,
                 "func_name":       func_name,
-                "topic":           sub.get("topic", ""),
+                "topic":           topic,
                 "error_type":      err_type,
                 "status":          status,
 
@@ -114,6 +144,7 @@ def main():
                 "pub_WA":          pub_r["error_counts"]["WA"],
                 "pub_RE":          pub_r["error_counts"]["RE"],
                 "pub_TLE":         pub_r["error_counts"]["TLE"],
+                "pub_MLE":         pub_r["error_counts"].get("MLE", 0),
 
                 "hid_pass":        hid_r["pass_count"],
                 "hid_total":       hid_r["total_count"],
@@ -122,74 +153,78 @@ def main():
                 "hid_WA":          hid_r["error_counts"]["WA"],
                 "hid_RE":          hid_r["error_counts"]["RE"],
                 "hid_TLE":         hid_r["error_counts"]["TLE"],
+                "hid_MLE":         hid_r["error_counts"].get("MLE", 0),
 
                 "is_false_positive": fpr["is_false_positive"],
                 "avg_latency_s":   hid_r["avg_latency"],
+                "error_details":   error_details
+            }
+            results.append(res_item)
+
+            # Chuyển format tương thích cho compute_stats và save_stats_csv
+            wrapped.append({
+                "sv_id":    sub_id,
+                "task_id":  tid,
+                "func":     func_name,
+                "topic":    topic,
+                "mo_ta_loi": sub.get("note", ""),
+                "public": {
+                    "pass_count":    pub_r["pass_count"],
+                    "total_count":   pub_r["total_count"],
+                    "test_pass_rate": pub_r["test_pass_rate"],
+                    "error_counts":  {
+                        "SE": pub_r["error_counts"]["SE"],
+                        "WA": pub_r["error_counts"]["WA"],
+                        "RE": pub_r["error_counts"]["RE"],
+                        "TLE": pub_r["error_counts"]["TLE"],
+                        "MLE": pub_r["error_counts"].get("MLE", 0),
+                    },
+                    "avg_latency": pub_r["avg_latency"],
+                },
+                "hidden": {
+                    "pass_count":    hid_r["pass_count"],
+                    "total_count":   hid_r["total_count"],
+                    "test_pass_rate": hid_r["test_pass_rate"],
+                    "error_counts":  {
+                        "SE": hid_r["error_counts"]["SE"],
+                        "WA": hid_r["error_counts"]["WA"],
+                        "RE": hid_r["error_counts"]["RE"],
+                        "TLE": hid_r["error_counts"]["TLE"],
+                        "MLE": hid_r["error_counts"].get("MLE", 0),
+                    },
+                    "avg_latency": hid_r["avg_latency"],
+                },
+                "fpr": {
+                    "is_false_positive": fpr["is_false_positive"],
+                    "public_rate":  fpr["public_rate"],
+                    "hidden_rate":  fpr["hidden_rate"],
+                    "public_pass_all": fpr["public_pass_all"],
+                    "hidden_pass_all": fpr["hidden_pass_all"],
+                },
             })
 
         except Exception as e:
             print(f"  [LỖI] Submission {i+1} bị crash: {e}")
             continue
-            
 
-        # In tiến độ mỗi 10 bài
         if (i + 1) % 10 == 0:
             print(f"  Chấm xong {i + 1}/{len(submissions)} bài...")
 
-    # ── 3. Lưu kết quả ───────────────────────────────────────────────────────
+    # Lưu kết quả
     os.makedirs(OUTPUT_CSV.parent, exist_ok=True)
 
-    # CSV chi tiết
-    save_stats_csv(results, str(OUTPUT_CSV))
+    # Ghi CSV theo chuẩn format đã chỉnh sửa
+    save_stats_csv(wrapped, str(OUTPUT_CSV))
     print(f"  ✓ Lưu CSV: {OUTPUT_CSV}")
 
-    # JSON đầy đủ
+    # Ghi JSON đầy đủ bao gồm thông tin traceback chi tiết
     with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
-    print(f"  ✓ Lưu JSON: {OUTPUT_JSON}")
+    print(f"  ✓ Lưu JSON (Đầy đủ traceback): {OUTPUT_JSON}")
 
-    # ── 4. In thống kê tổng hợp ──────────────────────────────────────────────
-    # Chuyển format cho compute_stats
-    wrapped = []
-    for r in results:
-        wrapped.append({
-            "sv_id":    r["submission_id"],
-            "task_id":  r["task_id"],
-            "func":     r["func_name"],
-            "topic":    r["topic"],
-            "mo_ta_loi": r["error_type"],
-            "public": {
-                "pass_count":    r["pub_pass"],
-                "total_count":   r["pub_total"],
-                "test_pass_rate": r["pub_tpr"],
-                "error_counts":  {
-                    "SE": r["pub_SE"], "WA": r["pub_WA"],
-                    "RE": r["pub_RE"], "TLE": r["pub_TLE"],
-                },
-                "avg_latency": r["avg_latency_s"],
-            },
-            "hidden": {
-                "pass_count":    r["hid_pass"],
-                "total_count":   r["hid_total"],
-                "test_pass_rate": r["hid_tpr"],
-                "error_counts":  {
-                    "SE": r["hid_SE"], "WA": r["hid_WA"],
-                    "RE": r["hid_RE"], "TLE": r["hid_TLE"],
-                },
-                "avg_latency": r["avg_latency_s"],
-            },
-            "fpr": {
-                "is_false_positive": r["is_false_positive"],
-                "public_rate":  r["pub_tpr"],
-                "hidden_rate":  r["hid_tpr"],
-                "public_pass_all": r["pub_pass"] == r["pub_total"],
-                "hidden_pass_all": r["hid_pass"] == r["hid_total"],
-            },
-        })
-
+    # Thống kê tổng hợp
     stats = compute_stats(wrapped)
-    print_summary(stats, "KẾT QUẢ CHẤM BÀI V2")
-
+    print_summary(stats, "KẾT QUẢ CHẤM BÀI V2 (13 TESTS/BÀI)")
 
 if __name__ == "__main__":
     main()

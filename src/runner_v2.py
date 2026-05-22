@@ -1,20 +1,21 @@
 """
 runner_v2.py — Test-case runner tuần 3
 Cập nhật so với tuần 2:
-  + Giới hạn bộ nhớ (memory limit) bằng resource module
+  + Giới hạn bộ nhớ (memory limit) bằng psutil (hoạt động tốt trên Windows/Linux)
   + Giới hạn file system (chạy trong thư mục tạm riêng)
-  + Danh sách import cấm rõ ràng hơn, có giải thích
+  + Danh sách import và ký tự cấm rõ ràng (AST safety check)
   + Module thống kê lỗi tự động theo task
-  + Ghi log chi tiết hơn
+  + Ghi log chi tiết và đầy đủ traceback
 """
 
-import subprocess, sys, os, json, time, ast, textwrap, tempfile, shutil
+import subprocess, sys, os, json, time, ast, textwrap, tempfile, shutil, math
+import psutil
 from typing import Dict, List, Tuple
 
 # ── Cấu hình ─────────────────────────────────────────────────────────────────
-TIMEOUT_SECONDS   = 5
+TIMEOUT_SECONDS   = 1.0    # 1.0 giây mỗi test case
 MAX_OUTPUT_BYTES  = 4096
-MEMORY_LIMIT_MB   = 128    # Mới tuần 3: giới hạn 128MB RAM
+MEMORY_LIMIT_MB   = 128    # Giới hạn 128MB RAM mỗi test case
 
 # Import cấm và lý do
 BANNED_IMPORTS = {
@@ -38,88 +39,210 @@ def check_syntax(code: str) -> Tuple[bool, str]:
     except SyntaxError as e:
         return False, f"SyntaxError dòng {e.lineno}: {e.msg}"
 
-# ── Kiểm tra import cấm ───────────────────────────────────────────────────────
-def check_banned_imports(code: str) -> Tuple[bool, List[Dict]]:
+# ── Kiểm tra bảo mật (AST Safety Check) ───────────────────────────────────────
+def check_safety(code: str) -> Tuple[bool, List[str]]:
     try:
         tree = ast.parse(code)
     except SyntaxError:
-        return True, []
+        return True, [] # Syntax check sẽ bắt lỗi này
 
     violations = []
+    banned_names = {"eval", "exec", "open", "__import__", "getattr", "setattr", "compile", "globals", "locals"}
+    
     for node in ast.walk(tree):
+        # 1. Kiểm tra Import
         if isinstance(node, ast.Import):
             for alias in node.names:
                 name = alias.name.split('.')[0]
                 if name in BANNED_IMPORTS:
-                    violations.append({
-                        "module": name,
-                        "reason": BANNED_IMPORTS[name],
-                        "line": node.lineno
-                    })
+                    violations.append(f"Import cấm '{name}' (Dòng {node.lineno}): {BANNED_IMPORTS[name]}")
         elif isinstance(node, ast.ImportFrom):
             if node.module:
                 name = node.module.split('.')[0]
                 if name in BANNED_IMPORTS:
-                    violations.append({
-                        "module": name,
-                        "reason": BANNED_IMPORTS[name],
-                        "line": node.lineno
-                    })
+                    violations.append(f"Import cấm '{name}' (Dòng {node.lineno}): {BANNED_IMPORTS[name]}")
+        
+        # 2. Kiểm tra các hàm và biến cấm hoặc chứa double-underscore
+        elif isinstance(node, ast.Name):
+            if node.id in banned_names:
+                violations.append(f"Hàm/Từ khóa bị cấm '{node.id}' (Dòng {node.lineno})")
+            elif "__" in node.id:
+                violations.append(f"Không được sử dụng từ khóa có gạch dưới kép '__' trong tên biến/hàm '{node.id}' (Dòng {node.lineno})")
+                
+        # 3. Thuộc tính cấm (e.g. obj.__class__)
+        elif isinstance(node, ast.Attribute):
+            if "__" in node.attr:
+                violations.append(f"Không được truy cập thuộc tính gạch dưới kép '{node.attr}' (Dòng {node.lineno})")
+                
     return len(violations) == 0, violations
 
-# ── Script giới hạn bộ nhớ ───────────────────────────────────────────────────
-MEMORY_LIMITER = f"""
-try:
-    import resource
-    mem_bytes = {MEMORY_LIMIT_MB} * 1024 * 1024
-    resource.setrlimit(resource.RLIMIT_AS, (mem_bytes, mem_bytes))
-except Exception:
-    pass  # resource module không khả dụng trên một số OS
-"""
+# ── Hỗ trợ so sánh cấu trúc chứa Floats ───────────────────────────────────────
+def compare_structures(val1, val2) -> bool:
+    if isinstance(val1, (int, float)) and isinstance(val2, (int, float)):
+        return math.isclose(float(val1), float(val2), rel_tol=1e-9, abs_tol=1e-9)
+    if type(val1) != type(val2):
+        return False
+    if isinstance(val1, (list, tuple)):
+        if len(val1) != len(val2):
+            return False
+        # So sánh trực tiếp từng phần tử
+        if all(compare_structures(x, y) for x, y in zip(val1, val2)):
+            return True
+        # So sánh không quan tâm thứ tự nếu có thể sort được
+        try:
+            s1 = sorted(val1, key=lambda x: (str(type(x)), x))
+            s2 = sorted(val2, key=lambda x: (str(type(x)), x))
+            return all(compare_structures(x, y) for x, y in zip(s1, s2))
+        except Exception:
+            pass
+        return False
+    if isinstance(val1, dict):
+        if len(val1) != len(val2):
+            return False
+        for k in val1:
+            if k not in val2:
+                return False
+            if not compare_structures(val1[k], val2[k]):
+                return False
+        return True
+    return val1 == val2
+
+def _compare(actual: str, expected: str) -> bool:
+    a, e = actual.strip(), expected.strip()
+    if a == e:
+        return True
+    # Thử so sánh số thực đơn giản
+    try:
+        return math.isclose(float(a), float(e), rel_tol=1e-9, abs_tol=1e-9)
+    except (ValueError, TypeError):
+        pass
+    # Thử eval cấu trúc phức tạp (list, dict, tuple)
+    try:
+        av, ev = eval(a), eval(e)
+        return compare_structures(av, ev)
+    except Exception:
+        pass
+    return False
 
 # ── Chạy một test case ────────────────────────────────────────────────────────
 def run_single_test(code: str, func_name: str,
                     test_input: str, expected: str,
                     use_tempdir: bool = True) -> Dict:
+    # Đoạn script chạy test case cụ thể
     script = textwrap.dedent(f"""
-{MEMORY_LIMITER}
+import sys
 {code}
 
-import sys
 try:
     result = {func_name}({test_input})
     print(result)
+except MemoryError:
+    print("MEMORY_LIMIT_EXCEEDED", file=sys.stderr)
+    sys.exit(2)
 except Exception as e:
-    print(f"RUNTIME_ERROR: {{type(e).__name__}}: {{e}}", file=sys.stderr)
+    import traceback
+    traceback.print_exc(file=sys.stderr)
     sys.exit(1)
 """)
 
     tmpdir = None
     start = time.perf_counter()
+    tle_triggered = False
+    mle_triggered = False
+    stdout = ""
+    stderr = ""
+    latency = 0.0
+
     try:
         if use_tempdir:
             tmpdir = tempfile.mkdtemp(prefix="runner_")
+        
+        # Ghi script ra file thay vì dùng -c để có traceback đẹp và chính xác hơn
+        script_path = os.path.join(tmpdir if tmpdir else ".", "solution.py")
+        with open(script_path, "w", encoding="utf-8") as f:
+            f.write(script)
 
-        proc = subprocess.run(
-            [sys.executable, "-c", script],
-            capture_output=True,
+        # Chạy python với cờ -X utf8 để đồng bộ encoding
+        proc = subprocess.Popen(
+            [sys.executable, "-X", "utf8", "solution.py"],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
             text=True,
-            timeout=TIMEOUT_SECONDS,
             cwd=tmpdir if tmpdir else "."
         )
+
+        try:
+            p = psutil.Process(proc.pid)
+        except psutil.NoSuchProcess:
+            p = None
+
+        while True:
+            # Kiểm tra trạng thái tiến trình
+            ret = proc.poll()
+            if ret is not None:
+                break
+
+            # Kiểm tra Timeout (1.0s)
+            elapsed = time.perf_counter() - start
+            if elapsed > TIMEOUT_SECONDS:
+                tle_triggered = True
+                proc.kill()
+                break
+
+            # Kiểm tra Memory (128MB)
+            if p is not None:
+                try:
+                    total_rss = p.memory_info().rss
+                    for child in p.children(recursive=True):
+                        try:
+                            total_rss += child.memory_info().rss
+                        except (psutil.NoSuchProcess, psutil.AccessDenied):
+                            pass
+                    rss_mb = total_rss / (1024 * 1024)
+                    if rss_mb > MEMORY_LIMIT_MB:
+                        mle_triggered = True
+                        for child in p.children(recursive=True):
+                            try:
+                                child.kill()
+                            except Exception:
+                                pass
+                        proc.kill()
+                        break
+                except (psutil.NoSuchProcess, psutil.AccessDenied):
+                    pass
+            time.sleep(0.005)
+
+        stdout, stderr = proc.communicate()
         latency = round(time.perf_counter() - start, 4)
 
+        if tle_triggered:
+            return {
+                "status": "TLE",
+                "actual": None,
+                "expected": expected,
+                "latency": latency,
+                "error_msg": f"Time Limit Exceeded (>{TIMEOUT_SECONDS}s)"
+            }
+
+        if mle_triggered or proc.returncode == 2 or "MEMORY_LIMIT_EXCEEDED" in stderr:
+            return {
+                "status": "MLE",
+                "actual": None,
+                "expected": expected,
+                "latency": latency,
+                "error_msg": f"Memory Limit Exceeded (>{MEMORY_LIMIT_MB}MB)"
+            }
+
         if proc.returncode != 0:
-            stderr = proc.stderr.strip()
             return {
                 "status": "RE",
                 "actual": None,
                 "expected": expected,
                 "latency": latency,
-                "error_msg": stderr[:200]
+                "error_msg": stderr.strip()  # Giữ nguyên full traceback/stderr
             }
 
-        actual = proc.stdout.strip()
+        actual = stdout.strip()
         if len(actual) > MAX_OUTPUT_BYTES:
             actual = actual[:MAX_OUTPUT_BYTES]
 
@@ -132,29 +255,18 @@ except Exception as e:
             "error_msg": "" if passed else f"Expected '{expected}', got '{actual}'"
         }
 
-    except subprocess.TimeoutExpired:
+    except Exception as e:
         latency = round(time.perf_counter() - start, 4)
-        return {"status": "TLE", "actual": None, "expected": expected,
-                "latency": latency, "error_msg": f"Timeout >{TIMEOUT_SECONDS}s"}
+        return {
+            "status": "RE",
+            "actual": None,
+            "expected": expected,
+            "latency": latency,
+            "error_msg": f"Runner Internal Error: {str(e)}"
+        }
     finally:
         if tmpdir and os.path.exists(tmpdir):
             shutil.rmtree(tmpdir, ignore_errors=True)
-
-def _compare(actual: str, expected: str) -> bool:
-    a, e = actual.strip(), expected.strip()
-    if a == e: return True
-    try:
-        return float(a) == float(e)
-    except (ValueError, TypeError):
-        pass
-    try:
-        av, ev = eval(a), eval(e)
-        if isinstance(av, list) and isinstance(ev, list):
-            return sorted(av) == sorted(ev) if len(av) == len(ev) else av == ev
-        return av == ev
-    except Exception:
-        pass
-    return False
 
 # ── Chấm toàn bộ bài ─────────────────────────────────────────────────────────
 def grade_submission(code: str, func_name: str,
@@ -169,11 +281,12 @@ def grade_submission(code: str, func_name: str,
         "pass_count": 0,
         "total_count": len(tests),
         "test_pass_rate": 0.0,
-        "error_counts": {"SE": 0, "WA": 0, "RE": 0, "TLE": 0},
+        "error_counts": {"SE": 0, "WA": 0, "RE": 0, "TLE": 0, "MLE": 0},
         "total_latency": 0.0,
         "avg_latency": 0.0,
     }
 
+    # 1. Kiểm tra lỗi cú pháp
     ok, msg = check_syntax(code)
     if not ok:
         result["syntax_ok"] = False
@@ -185,10 +298,20 @@ def grade_submission(code: str, func_name: str,
         ]
         return result
 
-    clean, violations = check_banned_imports(code)
-    if not clean:
-        result["banned_imports"] = violations
+    # 2. Kiểm tra bảo mật
+    safe, violations = check_safety(code)
+    if not safe:
+        result["syntax_ok"] = False
+        result["error_counts"]["SE"] = len(tests) # Vi phạm bảo mật coi như lỗi SE
+        result["test_results"] = [
+            {"status": "SE", "actual": None, "expected": t["expected"],
+             "latency": 0.0, "error_msg": f"Security Violation: {'; '.join(violations)}", "input": t["input"]}
+            for t in tests
+        ]
+        result["banned_imports"] = [{"module": v, "reason": "AST Security Violation", "line": 0} for v in violations]
+        return result
 
+    # 3. Chạy từng test case
     for test in tests:
         r = run_single_test(code, func_name.strip(), test["input"], test["expected"])
         r["input"] = test["input"]
@@ -215,24 +338,3 @@ def compute_fpr(public_result: Dict, hidden_result: Dict) -> Dict:
         "public_rate": public_result["test_pass_rate"],
         "hidden_rate": hidden_result["test_pass_rate"],
     }
-
-# ── Test nhanh ────────────────────────────────────────────────────────────────
-if __name__ == "__main__":
-    code = "def sum_list(lst):\n    return sum(lst)"
-    tests_pub = [
-        {"input": "[1,2,3]", "expected": "6"},
-        {"input": "[]",      "expected": "0"},
-    ]
-    tests_hid = [
-        {"input": "[-1,-2,-3]", "expected": "-6"},
-        {"input": "[0]",        "expected": "0"},
-    ]
-    r_pub = grade_submission(code, "sum_list", tests_pub, "public")
-    r_hid = grade_submission(code, "sum_list", tests_hid, "hidden")
-    fpr   = compute_fpr(r_pub, r_hid)
-
-    print(f"Public  : {r_pub['pass_count']}/{r_pub['total_count']} ({r_pub['test_pass_rate']}%)")
-    print(f"Hidden  : {r_hid['pass_count']}/{r_hid['total_count']} ({r_hid['test_pass_rate']}%)")
-    print(f"FPR     : {fpr['is_false_positive']}")
-    print(f"Latency : {r_pub['avg_latency']}s/test")
-    print(f"Config  : timeout={TIMEOUT_SECONDS}s, memory={MEMORY_LIMIT_MB}MB")
