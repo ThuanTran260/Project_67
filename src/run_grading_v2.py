@@ -36,7 +36,7 @@ TARGET_SUBMISSIONS = 50
 def main():
     print("=" * 65)
     print("  CHẠY CHẤM BÀI TỰ ĐỘNG V2")
-    print("  Bộ test: 3 public + 10 hidden = 13 test/bài")
+    print("  Bộ test: 3 public + 6-10 hidden (Phân bố Chuông)")
     print("=" * 65)
 
     if not SUBMISSIONS_FILE.exists():
@@ -224,7 +224,7 @@ def main():
 
     # Thống kê tổng hợp
     stats = compute_stats(wrapped)
-    print_summary(stats, "KẾT QUẢ CHẤM BÀI V2 (13 TESTS/BÀI)")
+    print_summary(stats, "KẾT QUẢ CHẤM BÀI V2 (Set 3: Bell Curve)")
 
 if __name__ == "__main__":
     main()

@@ -23,7 +23,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": true,
-    "avg_latency_s": 0.0298,
+    "avg_latency_s": 0.0242,
     "error_details": [
       {
         "set": "hidden",
@@ -78,7 +78,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": true,
-    "avg_latency_s": 0.0315,
+    "avg_latency_s": 0.0262,
     "error_details": [
       {
         "set": "hidden",
@@ -133,7 +133,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": true,
-    "avg_latency_s": 0.0272,
+    "avg_latency_s": 0.0248,
     "error_details": [
       {
         "set": "hidden",
@@ -206,7 +206,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": true,
-    "avg_latency_s": 0.0282,
+    "avg_latency_s": 0.0264,
     "error_details": [
       {
         "set": "hidden",
@@ -388,7 +388,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": true,
-    "avg_latency_s": 0.0277,
+    "avg_latency_s": 0.0261,
     "error_details": [
       {
         "set": "hidden",
@@ -425,7 +425,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": true,
-    "avg_latency_s": 0.0316,
+    "avg_latency_s": 0.0242,
     "error_details": [
       {
         "set": "hidden",
@@ -462,7 +462,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0293,
+    "avg_latency_s": 0.0259,
     "error_details": []
   },
   {
@@ -489,7 +489,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": true,
-    "avg_latency_s": 0.0293,
+    "avg_latency_s": 0.0275,
     "error_details": [
       {
         "set": "hidden",
@@ -553,7 +553,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0547,
+    "avg_latency_s": 0.0494,
     "error_details": [
       {
         "set": "public",
@@ -562,7 +562,7 @@
         "expected": "HELLO",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_goljqgks\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"hello\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_goljqgks\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_92jeffaf\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"hello\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_92jeffaf\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -571,7 +571,7 @@
         "expected": "PYTHON",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_d236teud\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"python\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_d236teud\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_cyqefd7h\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"python\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_cyqefd7h\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -580,7 +580,7 @@
         "expected": "ABC",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_obx36s3q\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"abc\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_obx36s3q\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_vr1193qd\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"abc\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_vr1193qd\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -589,7 +589,7 @@
         "expected": "",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_p9e_luuk\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_p9e_luuk\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_mwwvswtt\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_mwwvswtt\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -598,7 +598,7 @@
         "expected": "HELLO",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_wfhhbsmf\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"HELLO\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_wfhhbsmf\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qsixrf7t\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"HELLO\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qsixrf7t\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -607,7 +607,7 @@
         "expected": "HELLO WORLD",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_2gqynqr_\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"Hello World\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_2gqynqr_\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6fbzizv7\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"Hello World\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6fbzizv7\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -616,7 +616,7 @@
         "expected": "123ABC",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8q3apgjv\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"123abc\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8q3apgjv\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_lnbu_s76\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"123abc\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_lnbu_s76\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -625,7 +625,7 @@
         "expected": "A1B2C3",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hcube7dr\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"a1b2c3\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hcube7dr\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ofzvhblu\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"a1b2c3\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ofzvhblu\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -634,7 +634,7 @@
         "expected": " ",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_y9e1zxeb\\solution.py\", line 8, in <module>\n    result = to_uppercase(\" \")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_y9e1zxeb\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_w19lwc_z\\solution.py\", line 8, in <module>\n    result = to_uppercase(\" \")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_w19lwc_z\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -643,7 +643,7 @@
         "expected": "MIXEDCASE",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_7uefn8xr\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"mixedCase\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_7uefn8xr\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hd70aq1f\\solution.py\", line 8, in <module>\n    result = to_uppercase(\"mixedCase\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hd70aq1f\\solution.py\", line 4, in to_uppercase\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       }
     ]
   },
@@ -671,7 +671,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": true,
-    "avg_latency_s": 0.029,
+    "avg_latency_s": 0.0243,
     "error_details": [
       {
         "set": "hidden",
@@ -726,7 +726,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": true,
-    "avg_latency_s": 0.0298,
+    "avg_latency_s": 0.0244,
     "error_details": [
       {
         "set": "hidden",
@@ -799,7 +799,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": true,
-    "avg_latency_s": 0.0357,
+    "avg_latency_s": 0.0259,
     "error_details": [
       {
         "set": "hidden",
@@ -881,7 +881,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": true,
-    "avg_latency_s": 0.0333,
+    "avg_latency_s": 0.0259,
     "error_details": [
       {
         "set": "hidden",
@@ -954,7 +954,7 @@
     "hid_TLE": 7,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 1.0102,
+    "avg_latency_s": 1.0057,
     "error_details": [
       {
         "set": "public",
@@ -1199,7 +1199,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0507,
+    "avg_latency_s": 0.0455,
     "error_details": [
       {
         "set": "public",
@@ -1208,7 +1208,7 @@
         "expected": "True",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_nunpztz6\\solution.py\", line 8, in <module>\n    result = is_leap_year(2024)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_nunpztz6\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__2df0xm8\\solution.py\", line 8, in <module>\n    result = is_leap_year(2024)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__2df0xm8\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -1217,7 +1217,7 @@
         "expected": "False",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ceunjisz\\solution.py\", line 8, in <module>\n    result = is_leap_year(2023)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ceunjisz\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__oivonv3\\solution.py\", line 8, in <module>\n    result = is_leap_year(2023)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__oivonv3\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -1226,7 +1226,7 @@
         "expected": "True",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_utzoepn_\\solution.py\", line 8, in <module>\n    result = is_leap_year(2000)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_utzoepn_\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_vir6e4yh\\solution.py\", line 8, in <module>\n    result = is_leap_year(2000)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_vir6e4yh\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1235,7 +1235,7 @@
         "expected": "False",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_j_2u0cf1\\solution.py\", line 8, in <module>\n    result = is_leap_year(1900)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_j_2u0cf1\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ca71rjdu\\solution.py\", line 8, in <module>\n    result = is_leap_year(1900)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ca71rjdu\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1244,7 +1244,7 @@
         "expected": "False",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_o_iy9dmi\\solution.py\", line 8, in <module>\n    result = is_leap_year(2100)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_o_iy9dmi\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_p_55r1ti\\solution.py\", line 8, in <module>\n    result = is_leap_year(2100)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_p_55r1ti\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1253,7 +1253,7 @@
         "expected": "True",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_m15zp2p4\\solution.py\", line 8, in <module>\n    result = is_leap_year(2400)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_m15zp2p4\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_10nfft68\\solution.py\", line 8, in <module>\n    result = is_leap_year(2400)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_10nfft68\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1262,7 +1262,7 @@
         "expected": "True",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_o0t6l8de\\solution.py\", line 8, in <module>\n    result = is_leap_year(1600)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_o0t6l8de\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_lms0njjb\\solution.py\", line 8, in <module>\n    result = is_leap_year(1600)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_lms0njjb\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1271,7 +1271,7 @@
         "expected": "False",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_a7apkzfm\\solution.py\", line 8, in <module>\n    result = is_leap_year(1700)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_a7apkzfm\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__e8xq_m2\\solution.py\", line 8, in <module>\n    result = is_leap_year(1700)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__e8xq_m2\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1280,7 +1280,7 @@
         "expected": "False",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_op2ebn2h\\solution.py\", line 8, in <module>\n    result = is_leap_year(1800)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_op2ebn2h\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_60ezrpq8\\solution.py\", line 8, in <module>\n    result = is_leap_year(1800)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_60ezrpq8\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1289,7 +1289,7 @@
         "expected": "True",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8gv188p5\\solution.py\", line 8, in <module>\n    result = is_leap_year(2004)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8gv188p5\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hqt5ky1w\\solution.py\", line 8, in <module>\n    result = is_leap_year(2004)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hqt5ky1w\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1298,7 +1298,7 @@
         "expected": "False",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_irin44f7\\solution.py\", line 8, in <module>\n    result = is_leap_year(2025)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_irin44f7\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_lsvoaxh0\\solution.py\", line 8, in <module>\n    result = is_leap_year(2025)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_lsvoaxh0\\solution.py\", line 4, in is_leap_year\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       }
     ]
   },
@@ -1326,7 +1326,7 @@
     "hid_TLE": 8,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 1.0062,
+    "avg_latency_s": 1.0078,
     "error_details": [
       {
         "set": "public",
@@ -1453,7 +1453,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0311,
+    "avg_latency_s": 0.0272,
     "error_details": []
   },
   {
@@ -1480,7 +1480,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0535,
+    "avg_latency_s": 0.0473,
     "error_details": [
       {
         "set": "public",
@@ -1489,7 +1489,7 @@
         "expected": "True",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_55hygqhg\\solution.py\", line 8, in <module>\n    result = all_positive([1, 2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_55hygqhg\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_frjwru5o\\solution.py\", line 8, in <module>\n    result = all_positive([1, 2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_frjwru5o\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -1498,7 +1498,7 @@
         "expected": "False",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_afue64_y\\solution.py\", line 8, in <module>\n    result = all_positive([-1, 1, 2])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_afue64_y\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_uii4g_80\\solution.py\", line 8, in <module>\n    result = all_positive([-1, 1, 2])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_uii4g_80\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -1507,7 +1507,7 @@
         "expected": "True",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_25fy78fn\\solution.py\", line 8, in <module>\n    result = all_positive([10, 20])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_25fy78fn\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_m_eq3d_s\\solution.py\", line 8, in <module>\n    result = all_positive([10, 20])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_m_eq3d_s\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1516,7 +1516,7 @@
         "expected": "True",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_y353uhjv\\solution.py\", line 8, in <module>\n    result = all_positive([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_y353uhjv\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_e46r21x9\\solution.py\", line 8, in <module>\n    result = all_positive([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_e46r21x9\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1525,7 +1525,7 @@
         "expected": "False",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_j8xd1iuw\\solution.py\", line 8, in <module>\n    result = all_positive([0, 1, 2])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_j8xd1iuw\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_m2w31__y\\solution.py\", line 8, in <module>\n    result = all_positive([0, 1, 2])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_m2w31__y\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1534,7 +1534,7 @@
         "expected": "False",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_q55c0oy4\\solution.py\", line 8, in <module>\n    result = all_positive([-5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_q55c0oy4\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1xgmjeb4\\solution.py\", line 8, in <module>\n    result = all_positive([-5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1xgmjeb4\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1543,7 +1543,7 @@
         "expected": "True",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_zvmahcbx\\solution.py\", line 8, in <module>\n    result = all_positive([1, 2, 3, 4, 5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_zvmahcbx\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_7z2x6g3z\\solution.py\", line 8, in <module>\n    result = all_positive([1, 2, 3, 4, 5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_7z2x6g3z\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1552,7 +1552,7 @@
         "expected": "False",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_s12yz793\\solution.py\", line 8, in <module>\n    result = all_positive([1, 2, -3, 4])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_s12yz793\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__c5rafxt\\solution.py\", line 8, in <module>\n    result = all_positive([1, 2, -3, 4])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__c5rafxt\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1561,7 +1561,7 @@
         "expected": "False",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_3sxb_65q\\solution.py\", line 8, in <module>\n    result = all_positive([-1, -2, -3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_3sxb_65q\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rg8xny0q\\solution.py\", line 8, in <module>\n    result = all_positive([-1, -2, -3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rg8xny0q\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1570,7 +1570,7 @@
         "expected": "True",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5qsvljjg\\solution.py\", line 8, in <module>\n    result = all_positive([0.1, 0.2])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5qsvljjg\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_k47hwtaj\\solution.py\", line 8, in <module>\n    result = all_positive([0.1, 0.2])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_k47hwtaj\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1579,7 +1579,7 @@
         "expected": "False",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8uh95orp\\solution.py\", line 8, in <module>\n    result = all_positive([0, 0])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8uh95orp\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_i8kx618q\\solution.py\", line 8, in <module>\n    result = all_positive([0, 0])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_i8kx618q\\solution.py\", line 4, in all_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       }
     ]
   },
@@ -1607,7 +1607,7 @@
     "hid_TLE": 8,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 1.0073,
+    "avg_latency_s": 1.0067,
     "error_details": [
       {
         "set": "public",
@@ -1734,7 +1734,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0297,
+    "avg_latency_s": 0.0305,
     "error_details": []
   },
   {
@@ -1761,7 +1761,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0527,
+    "avg_latency_s": 0.0557,
     "error_details": [
       {
         "set": "public",
@@ -1770,7 +1770,7 @@
         "expected": "5",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_9g8b9vdr\\solution.py\", line 8, in <module>\n    result = absolute_value(-5)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_9g8b9vdr\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_kxfkw3uy\\solution.py\", line 8, in <module>\n    result = absolute_value(-5)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_kxfkw3uy\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -1779,7 +1779,7 @@
         "expected": "10",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_uwbninhr\\solution.py\", line 8, in <module>\n    result = absolute_value(10)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_uwbninhr\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_cz9n76g6\\solution.py\", line 8, in <module>\n    result = absolute_value(10)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_cz9n76g6\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -1788,7 +1788,7 @@
         "expected": "0",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_gvnrzn71\\solution.py\", line 8, in <module>\n    result = absolute_value(0)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_gvnrzn71\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_0rz0x4th\\solution.py\", line 8, in <module>\n    result = absolute_value(0)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_0rz0x4th\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1797,7 +1797,7 @@
         "expected": "1",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_xlt3e39h\\solution.py\", line 8, in <module>\n    result = absolute_value(-1)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_xlt3e39h\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_h840aieb\\solution.py\", line 8, in <module>\n    result = absolute_value(-1)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_h840aieb\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1806,7 +1806,7 @@
         "expected": "1000000",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_gncm2rfb\\solution.py\", line 8, in <module>\n    result = absolute_value(-1000000)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_gncm2rfb\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_sc0kvqnw\\solution.py\", line 8, in <module>\n    result = absolute_value(-1000000)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_sc0kvqnw\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1815,7 +1815,7 @@
         "expected": "1",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_o0xff912\\solution.py\", line 8, in <module>\n    result = absolute_value(1)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_o0xff912\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_dxc3q4o4\\solution.py\", line 8, in <module>\n    result = absolute_value(1)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_dxc3q4o4\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1824,7 +1824,7 @@
         "expected": "99",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_3vxdkuvb\\solution.py\", line 8, in <module>\n    result = absolute_value(-99)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_3vxdkuvb\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_l75j5vlf\\solution.py\", line 8, in <module>\n    result = absolute_value(-99)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_l75j5vlf\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1833,7 +1833,7 @@
         "expected": "99",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ibxx6_du\\solution.py\", line 8, in <module>\n    result = absolute_value(99)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ibxx6_du\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5ax1kygt\\solution.py\", line 8, in <module>\n    result = absolute_value(99)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5ax1kygt\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1842,7 +1842,7 @@
         "expected": "0.5",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_wb0efuuk\\solution.py\", line 8, in <module>\n    result = absolute_value(-0.5)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_wb0efuuk\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_atpc6vs7\\solution.py\", line 8, in <module>\n    result = absolute_value(-0.5)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_atpc6vs7\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1851,7 +1851,7 @@
         "expected": "0.0001",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_aftz6xxj\\solution.py\", line 8, in <module>\n    result = absolute_value(0.0001)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_aftz6xxj\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_l775oqr9\\solution.py\", line 8, in <module>\n    result = absolute_value(0.0001)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_l775oqr9\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -1860,7 +1860,7 @@
         "expected": "123456",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_o_18zdxv\\solution.py\", line 8, in <module>\n    result = absolute_value(-123456)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_o_18zdxv\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ht57ql6d\\solution.py\", line 8, in <module>\n    result = absolute_value(-123456)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ht57ql6d\\solution.py\", line 4, in absolute_value\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       }
     ]
   },
@@ -2142,7 +2142,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0496,
+    "avg_latency_s": 0.0473,
     "error_details": [
       {
         "set": "public",
@@ -2151,7 +2151,7 @@
         "expected": "6",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_gr6gy4vd\\solution.py\", line 8, in <module>\n    result = multiply_list([1, 2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_gr6gy4vd\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_do2kd3wt\\solution.py\", line 8, in <module>\n    result = multiply_list([1, 2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_do2kd3wt\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -2160,7 +2160,7 @@
         "expected": "10",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_jvij6zof\\solution.py\", line 8, in <module>\n    result = multiply_list([2, 5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_jvij6zof\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hqv6ezjv\\solution.py\", line 8, in <module>\n    result = multiply_list([2, 5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hqv6ezjv\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -2169,7 +2169,7 @@
         "expected": "-6",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_7lzm_l5y\\solution.py\", line 8, in <module>\n    result = multiply_list([-1, 2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_7lzm_l5y\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8ellct0o\\solution.py\", line 8, in <module>\n    result = multiply_list([-1, 2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8ellct0o\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2178,7 +2178,7 @@
         "expected": "1",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_3zg8htty\\solution.py\", line 8, in <module>\n    result = multiply_list([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_3zg8htty\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_pxj39ur6\\solution.py\", line 8, in <module>\n    result = multiply_list([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_pxj39ur6\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2187,7 +2187,7 @@
         "expected": "0",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_v9c2tz04\\solution.py\", line 8, in <module>\n    result = multiply_list([0, 1, 2])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_v9c2tz04\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rvnn9zzd\\solution.py\", line 8, in <module>\n    result = multiply_list([0, 1, 2])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rvnn9zzd\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2196,7 +2196,7 @@
         "expected": "-6",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_doozrgvd\\solution.py\", line 8, in <module>\n    result = multiply_list([-1, -2, -3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_doozrgvd\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_uvjk0ryl\\solution.py\", line 8, in <module>\n    result = multiply_list([-1, -2, -3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_uvjk0ryl\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2205,7 +2205,7 @@
         "expected": "24",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5b4r_r_8\\solution.py\", line 8, in <module>\n    result = multiply_list([1, 2, 3, 4])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5b4r_r_8\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_jahkqb0u\\solution.py\", line 8, in <module>\n    result = multiply_list([1, 2, 3, 4])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_jahkqb0u\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2214,7 +2214,7 @@
         "expected": "-1",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_x3mfbhr5\\solution.py\", line 8, in <module>\n    result = multiply_list([-1, -1, -1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_x3mfbhr5\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qztozxf2\\solution.py\", line 8, in <module>\n    result = multiply_list([-1, -1, -1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qztozxf2\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2223,7 +2223,7 @@
         "expected": "125",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_dn1911vz\\solution.py\", line 8, in <module>\n    result = multiply_list([5, 5, 5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_dn1911vz\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_f13ln118\\solution.py\", line 8, in <module>\n    result = multiply_list([5, 5, 5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_f13ln118\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2232,7 +2232,7 @@
         "expected": "0",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qoy6z01e\\solution.py\", line 8, in <module>\n    result = multiply_list([10, 0, 10])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qoy6z01e\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_d48sc67_\\solution.py\", line 8, in <module>\n    result = multiply_list([10, 0, 10])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_d48sc67_\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2241,7 +2241,7 @@
         "expected": "32",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_gtrgm79w\\solution.py\", line 8, in <module>\n    result = multiply_list([2, 2, 2, 2, 2])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_gtrgm79w\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_34o_6xd9\\solution.py\", line 8, in <module>\n    result = multiply_list([2, 2, 2, 2, 2])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_34o_6xd9\\solution.py\", line 4, in multiply_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       }
     ]
   },
@@ -2269,7 +2269,7 @@
     "hid_TLE": 8,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 1.0077,
+    "avg_latency_s": 1.0055,
     "error_details": [
       {
         "set": "public",
@@ -2396,7 +2396,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0298,
+    "avg_latency_s": 0.0267,
     "error_details": []
   },
   {
@@ -2423,7 +2423,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0574,
+    "avg_latency_s": 0.0459,
     "error_details": [
       {
         "set": "public",
@@ -2432,7 +2432,7 @@
         "expected": "[2, 3]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_9utgfdhl\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 2, 3], [2, 3, 4])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_9utgfdhl\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5c1i10j0\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 2, 3], [2, 3, 4])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5c1i10j0\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -2441,7 +2441,7 @@
         "expected": "[]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_m17go148\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 5], [2, 6])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_m17go148\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ou93sfaz\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 5], [2, 6])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ou93sfaz\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -2450,7 +2450,7 @@
         "expected": "[1]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_h95gt431\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 1, 2], [1, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_h95gt431\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1upzwhkh\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 1, 2], [1, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1upzwhkh\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2459,7 +2459,7 @@
         "expected": "[]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rresr4_8\\solution.py\", line 8, in <module>\n    result = find_common_elements([], [])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rresr4_8\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_r_q6j0jc\\solution.py\", line 8, in <module>\n    result = find_common_elements([], [])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_r_q6j0jc\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2468,7 +2468,7 @@
         "expected": "[]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_s5wr1bei\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 2], [])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_s5wr1bei\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_o57b1_m2\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 2], [])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_o57b1_m2\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2477,7 +2477,7 @@
         "expected": "[0]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_0s20c55u\\solution.py\", line 8, in <module>\n    result = find_common_elements([0, 0], [0])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_0s20c55u\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hivv7yqv\\solution.py\", line 8, in <module>\n    result = find_common_elements([0, 0], [0])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hivv7yqv\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2486,7 +2486,7 @@
         "expected": "[2]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_tj8iq8bb\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 2], [2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_tj8iq8bb\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_htipqv3r\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 2], [2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_htipqv3r\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2495,7 +2495,7 @@
         "expected": "[1, 2, 3]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_nijqkx78\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 2, 3], [1, 2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_nijqkx78\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6wujip7k\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 2, 3], [1, 2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6wujip7k\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2504,7 +2504,7 @@
         "expected": "[]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_319klrrx\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 2, 3], [4, 5, 6])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_319klrrx\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_b9ct0c57\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 2, 3], [4, 5, 6])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_b9ct0c57\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2513,7 +2513,7 @@
         "expected": "[1]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_9pekl7nf\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 1, 1], [1, 1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_9pekl7nf\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qr_3tnpl\\solution.py\", line 8, in <module>\n    result = find_common_elements([1, 1, 1], [1, 1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qr_3tnpl\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2522,7 +2522,7 @@
         "expected": "[0]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_jy11u4e_\\solution.py\", line 8, in <module>\n    result = find_common_elements([0], [0, 1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_jy11u4e_\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_xamj3hg3\\solution.py\", line 8, in <module>\n    result = find_common_elements([0], [0, 1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_xamj3hg3\\solution.py\", line 4, in find_common_elements\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       }
     ]
   },
@@ -2550,7 +2550,7 @@
     "hid_TLE": 0,
     "hid_MLE": 8,
     "is_false_positive": false,
-    "avg_latency_s": 0.0739,
+    "avg_latency_s": 0.0659,
     "error_details": [
       {
         "set": "public",
@@ -2677,7 +2677,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0295,
+    "avg_latency_s": 0.0372,
     "error_details": []
   },
   {
@@ -2704,7 +2704,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0514,
+    "avg_latency_s": 0.0643,
     "error_details": [
       {
         "set": "public",
@@ -2713,7 +2713,7 @@
         "expected": "1",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_4yvfuaio\\solution.py\", line 8, in <module>\n    result = get_first_element([1, 2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_4yvfuaio\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_9t5k5f_v\\solution.py\", line 8, in <module>\n    result = get_first_element([1, 2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_9t5k5f_v\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -2722,7 +2722,7 @@
         "expected": "None",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_3zl05ps_\\solution.py\", line 8, in <module>\n    result = get_first_element([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_3zl05ps_\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_svw4dmo_\\solution.py\", line 8, in <module>\n    result = get_first_element([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_svw4dmo_\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -2731,7 +2731,7 @@
         "expected": "10",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hyhzk__t\\solution.py\", line 8, in <module>\n    result = get_first_element([10])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hyhzk__t\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5qmiv5qr\\solution.py\", line 8, in <module>\n    result = get_first_element([10])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5qmiv5qr\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2740,7 +2740,7 @@
         "expected": "0",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_k3n00fuo\\solution.py\", line 8, in <module>\n    result = get_first_element([0, 1, 2])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_k3n00fuo\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_wl6u6e_a\\solution.py\", line 8, in <module>\n    result = get_first_element([0, 1, 2])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_wl6u6e_a\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2749,7 +2749,7 @@
         "expected": "-5",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_dy0w53p9\\solution.py\", line 8, in <module>\n    result = get_first_element([-5, -1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_dy0w53p9\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_3i262czt\\solution.py\", line 8, in <module>\n    result = get_first_element([-5, -1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_3i262czt\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2758,7 +2758,7 @@
         "expected": "999",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_fhmq34l2\\solution.py\", line 8, in <module>\n    result = get_first_element([999, 888])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_fhmq34l2\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_43br0qxv\\solution.py\", line 8, in <module>\n    result = get_first_element([999, 888])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_43br0qxv\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2767,7 +2767,7 @@
         "expected": "5",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__0zuda_3\\solution.py\", line 8, in <module>\n    result = get_first_element([5, 6, 7])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__0zuda_3\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rsykrkgm\\solution.py\", line 8, in <module>\n    result = get_first_element([5, 6, 7])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rsykrkgm\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2776,7 +2776,7 @@
         "expected": "None",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_z32vnfx8\\solution.py\", line 8, in <module>\n    result = get_first_element([None])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_z32vnfx8\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_2rupvw2l\\solution.py\", line 8, in <module>\n    result = get_first_element([None])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_2rupvw2l\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2785,7 +2785,7 @@
         "expected": "1",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_vwnagjem\\solution.py\", line 8, in <module>\n    result = get_first_element([1, 2, 3, 4, 5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_vwnagjem\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__7qsw7fn\\solution.py\", line 8, in <module>\n    result = get_first_element([1, 2, 3, 4, 5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__7qsw7fn\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2794,7 +2794,7 @@
         "expected": "100",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8a407b1n\\solution.py\", line 8, in <module>\n    result = get_first_element([100, 200])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8a407b1n\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_b1a0fqaa\\solution.py\", line 8, in <module>\n    result = get_first_element([100, 200])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_b1a0fqaa\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -2803,7 +2803,7 @@
         "expected": "hello",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_lc7sh0mo\\solution.py\", line 8, in <module>\n    result = get_first_element([\"hello\"])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_lc7sh0mo\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_r_2_ujyw\\solution.py\", line 8, in <module>\n    result = get_first_element([\"hello\"])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_r_2_ujyw\\solution.py\", line 4, in get_first_element\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       }
     ]
   },
@@ -2831,7 +2831,7 @@
     "hid_TLE": 0,
     "hid_MLE": 8,
     "is_false_positive": false,
-    "avg_latency_s": 0.0724,
+    "avg_latency_s": 0.0732,
     "error_details": [
       {
         "set": "public",
@@ -2958,7 +2958,7 @@
     "hid_TLE": 0,
     "hid_MLE": 8,
     "is_false_positive": false,
-    "avg_latency_s": 0.07,
+    "avg_latency_s": 0.0697,
     "error_details": [
       {
         "set": "public",
@@ -3085,7 +3085,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0497,
+    "avg_latency_s": 0.0488,
     "error_details": [
       {
         "set": "public",
@@ -3094,7 +3094,7 @@
         "expected": "3",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_q2ehao8h\\solution.py\", line 8, in <module>\n    result = count_consonants(\"hello\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_q2ehao8h\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_levo7szf\\solution.py\", line 8, in <module>\n    result = count_consonants(\"hello\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_levo7szf\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -3103,7 +3103,7 @@
         "expected": "3",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8_kdfei0\\solution.py\", line 8, in <module>\n    result = count_consonants(\"apple\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8_kdfei0\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_y8njkgqn\\solution.py\", line 8, in <module>\n    result = count_consonants(\"apple\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_y8njkgqn\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -3112,7 +3112,7 @@
         "expected": "3",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_u6vt5ecw\\solution.py\", line 8, in <module>\n    result = count_consonants(\"bcd\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_u6vt5ecw\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_fmtj6m1_\\solution.py\", line 8, in <module>\n    result = count_consonants(\"bcd\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_fmtj6m1_\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3121,7 +3121,7 @@
         "expected": "0",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_twjcx3jw\\solution.py\", line 8, in <module>\n    result = count_consonants(\"\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_twjcx3jw\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_s5kn9xyb\\solution.py\", line 8, in <module>\n    result = count_consonants(\"\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_s5kn9xyb\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3130,7 +3130,7 @@
         "expected": "0",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hriwm9kt\\solution.py\", line 8, in <module>\n    result = count_consonants(\"AEIOU\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hriwm9kt\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_xz5wa0cb\\solution.py\", line 8, in <module>\n    result = count_consonants(\"AEIOU\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_xz5wa0cb\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3139,7 +3139,7 @@
         "expected": "3",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_xi2uxu0i\\solution.py\", line 8, in <module>\n    result = count_consonants(\"xyz\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_xi2uxu0i\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_iewmclyn\\solution.py\", line 8, in <module>\n    result = count_consonants(\"xyz\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_iewmclyn\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3148,7 +3148,7 @@
         "expected": "3",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_adu41j2u\\solution.py\", line 8, in <module>\n    result = count_consonants(\"xyz\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_adu41j2u\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_taa9cvem\\solution.py\", line 8, in <module>\n    result = count_consonants(\"xyz\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_taa9cvem\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3157,7 +3157,7 @@
         "expected": "0",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_zi_bqbic\\solution.py\", line 8, in <module>\n    result = count_consonants(\"aiueo\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_zi_bqbic\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_9tyzxbdr\\solution.py\", line 8, in <module>\n    result = count_consonants(\"aiueo\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_9tyzxbdr\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3166,7 +3166,7 @@
         "expected": "13",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6c3h0qn1\\solution.py\", line 8, in <module>\n    result = count_consonants(\"Python programming\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6c3h0qn1\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_gmv_hp03\\solution.py\", line 8, in <module>\n    result = count_consonants(\"Python programming\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_gmv_hp03\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3175,7 +3175,7 @@
         "expected": "6",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_37zk51zz\\solution.py\", line 8, in <module>\n    result = count_consonants(\"Beautiful Day\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_37zk51zz\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1kqiqzui\\solution.py\", line 8, in <module>\n    result = count_consonants(\"Beautiful Day\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1kqiqzui\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3184,7 +3184,7 @@
         "expected": "0",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_pwc7m82u\\solution.py\", line 8, in <module>\n    result = count_consonants(\"12345\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_pwc7m82u\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_4bt3c_a1\\solution.py\", line 8, in <module>\n    result = count_consonants(\"12345\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_4bt3c_a1\\solution.py\", line 4, in count_consonants\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       }
     ]
   },
@@ -3212,7 +3212,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0265,
+    "avg_latency_s": 0.0309,
     "error_details": []
   },
   {
@@ -3239,7 +3239,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0289,
+    "avg_latency_s": 0.0282,
     "error_details": []
   },
   {
@@ -3266,7 +3266,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.054,
+    "avg_latency_s": 0.0572,
     "error_details": [
       {
         "set": "public",
@@ -3275,7 +3275,7 @@
         "expected": "[3, 2, 1]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_gfdmq5du\\solution.py\", line 8, in <module>\n    result = reverse_list([1, 2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_gfdmq5du\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_9n11dggo\\solution.py\", line 8, in <module>\n    result = reverse_list([1, 2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_9n11dggo\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -3284,7 +3284,7 @@
         "expected": "[1, 2, 3, 4, 5]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6telfa3b\\solution.py\", line 8, in <module>\n    result = reverse_list([5, 4, 3, 2, 1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6telfa3b\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_facnrb_3\\solution.py\", line 8, in <module>\n    result = reverse_list([5, 4, 3, 2, 1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_facnrb_3\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -3293,7 +3293,7 @@
         "expected": "[10]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6jt8kp9t\\solution.py\", line 8, in <module>\n    result = reverse_list([10])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6jt8kp9t\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_woyhd_t2\\solution.py\", line 8, in <module>\n    result = reverse_list([10])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_woyhd_t2\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3302,7 +3302,7 @@
         "expected": "[]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_yug0slz0\\solution.py\", line 8, in <module>\n    result = reverse_list([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_yug0slz0\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_mjp7rsu8\\solution.py\", line 8, in <module>\n    result = reverse_list([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_mjp7rsu8\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3311,7 +3311,7 @@
         "expected": "[0, 0]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_i19jjq00\\solution.py\", line 8, in <module>\n    result = reverse_list([0, 0])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_i19jjq00\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_fknhwzd6\\solution.py\", line 8, in <module>\n    result = reverse_list([0, 0])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_fknhwzd6\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3320,7 +3320,7 @@
         "expected": "[-3, -2, -1]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_7jsu3lam\\solution.py\", line 8, in <module>\n    result = reverse_list([-1, -2, -3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_7jsu3lam\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_nmnykfhc\\solution.py\", line 8, in <module>\n    result = reverse_list([-1, -2, -3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_nmnykfhc\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3329,7 +3329,7 @@
         "expected": "[5, 4, 3, 2, 1]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qj2hbq0k\\solution.py\", line 8, in <module>\n    result = reverse_list([1, 2, 3, 4, 5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qj2hbq0k\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_2cv2j8r3\\solution.py\", line 8, in <module>\n    result = reverse_list([1, 2, 3, 4, 5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_2cv2j8r3\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3338,7 +3338,7 @@
         "expected": "[1]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6319_dtx\\solution.py\", line 8, in <module>\n    result = reverse_list([1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6319_dtx\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_34f1a96t\\solution.py\", line 8, in <module>\n    result = reverse_list([1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_34f1a96t\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3347,7 +3347,7 @@
         "expected": "[30, 20, 10]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_dpe69rd0\\solution.py\", line 8, in <module>\n    result = reverse_list([10, 20, 30])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_dpe69rd0\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_j27q4_np\\solution.py\", line 8, in <module>\n    result = reverse_list([10, 20, 30])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_j27q4_np\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3356,7 +3356,7 @@
         "expected": "[1, 0]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_vd7art6d\\solution.py\", line 8, in <module>\n    result = reverse_list([0, 1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_vd7art6d\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ykku_upk\\solution.py\", line 8, in <module>\n    result = reverse_list([0, 1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ykku_upk\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3365,7 +3365,7 @@
         "expected": "[1, 2, 2, 1]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ey55wp5x\\solution.py\", line 8, in <module>\n    result = reverse_list([1, 2, 2, 1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ey55wp5x\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_2xviil6u\\solution.py\", line 8, in <module>\n    result = reverse_list([1, 2, 2, 1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_2xviil6u\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3374,7 +3374,7 @@
         "expected": "[5, -5]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_16by1nkt\\solution.py\", line 8, in <module>\n    result = reverse_list([-5, 5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_16by1nkt\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5u_y_sww\\solution.py\", line 8, in <module>\n    result = reverse_list([-5, 5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5u_y_sww\\solution.py\", line 4, in reverse_list\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       }
     ]
   },
@@ -3402,7 +3402,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.03,
+    "avg_latency_s": 0.0331,
     "error_details": []
   },
   {
@@ -3429,7 +3429,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0264,
+    "avg_latency_s": 0.0322,
     "error_details": []
   },
   {
@@ -3456,7 +3456,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0511,
+    "avg_latency_s": 0.0531,
     "error_details": [
       {
         "set": "public",
@@ -3465,7 +3465,7 @@
         "expected": "[1, 3]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_n1mhs_tu\\solution.py\", line 8, in <module>\n    result = filter_positive([1, -2, 3, -4])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_n1mhs_tu\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_pjmti6y0\\solution.py\", line 8, in <module>\n    result = filter_positive([1, -2, 3, -4])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_pjmti6y0\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -3474,7 +3474,7 @@
         "expected": "[]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_omyyfva_\\solution.py\", line 8, in <module>\n    result = filter_positive([-1, -2, -3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_omyyfva_\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_fyhp2hxl\\solution.py\", line 8, in <module>\n    result = filter_positive([-1, -2, -3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_fyhp2hxl\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "public",
@@ -3483,7 +3483,7 @@
         "expected": "[10, 20, 30]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_fyuyr5uz\\solution.py\", line 8, in <module>\n    result = filter_positive([10, 20, 30])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_fyuyr5uz\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__tag0_f5\\solution.py\", line 8, in <module>\n    result = filter_positive([10, 20, 30])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__tag0_f5\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3492,7 +3492,7 @@
         "expected": "[]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_tormxmk7\\solution.py\", line 8, in <module>\n    result = filter_positive([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_tormxmk7\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_x0qgmk5o\\solution.py\", line 8, in <module>\n    result = filter_positive([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_x0qgmk5o\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3501,7 +3501,7 @@
         "expected": "[1]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_sfa0cf0o\\solution.py\", line 8, in <module>\n    result = filter_positive([0, 1, -1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_sfa0cf0o\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1l68rol8\\solution.py\", line 8, in <module>\n    result = filter_positive([0, 1, -1])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1l68rol8\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3510,7 +3510,7 @@
         "expected": "[]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ijdsx75n\\solution.py\", line 8, in <module>\n    result = filter_positive([0, 0, 0])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ijdsx75n\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_7t2ya7ec\\solution.py\", line 8, in <module>\n    result = filter_positive([0, 0, 0])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_7t2ya7ec\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3519,7 +3519,7 @@
         "expected": "[1, 2, 3]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ipx6dopz\\solution.py\", line 8, in <module>\n    result = filter_positive([1, 2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ipx6dopz\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_c9wugfxv\\solution.py\", line 8, in <module>\n    result = filter_positive([1, 2, 3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_c9wugfxv\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3528,7 +3528,7 @@
         "expected": "[]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_m5ooit0f\\solution.py\", line 8, in <module>\n    result = filter_positive([-1, -2, -3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_m5ooit0f\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_3n2nx_o1\\solution.py\", line 8, in <module>\n    result = filter_positive([-1, -2, -3])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_3n2nx_o1\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3537,7 +3537,7 @@
         "expected": "[1, 2]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__tzxtskl\\solution.py\", line 8, in <module>\n    result = filter_positive([0, 1, 2])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__tzxtskl\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_t9l_4wii\\solution.py\", line 8, in <module>\n    result = filter_positive([0, 1, 2])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_t9l_4wii\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3546,7 +3546,7 @@
         "expected": "[5]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ycu847zf\\solution.py\", line 8, in <module>\n    result = filter_positive([-5, 5, 0])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ycu847zf\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_vspxhyqa\\solution.py\", line 8, in <module>\n    result = filter_positive([-5, 5, 0])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_vspxhyqa\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3555,7 +3555,7 @@
         "expected": "[100]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_02wmfqxc\\solution.py\", line 8, in <module>\n    result = filter_positive([100, -100])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_02wmfqxc\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_smixpraj\\solution.py\", line 8, in <module>\n    result = filter_positive([100, -100])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_smixpraj\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       },
       {
         "set": "hidden",
@@ -3564,7 +3564,7 @@
         "expected": "[0.5]",
         "actual": null,
         "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_zjjvef51\\solution.py\", line 8, in <module>\n    result = filter_positive([0.5, -0.5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_zjjvef51\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
+        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_cnmchw9b\\solution.py\", line 8, in <module>\n    result = filter_positive([0.5, -0.5])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_cnmchw9b\\solution.py\", line 4, in filter_positive\n    raise RuntimeError('Intentional execution crash')\nRuntimeError: Intentional execution crash"
       }
     ]
   },
@@ -3592,7 +3592,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0264,
+    "avg_latency_s": 0.0285,
     "error_details": []
   },
   {
@@ -3619,7 +3619,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0278,
+    "avg_latency_s": 0.0337,
     "error_details": []
   },
   {
@@ -3646,7 +3646,7 @@
     "hid_TLE": 0,
     "hid_MLE": 9,
     "is_false_positive": false,
-    "avg_latency_s": 0.0701,
+    "avg_latency_s": 0.0774,
     "error_details": [
       {
         "set": "public",
@@ -3782,7 +3782,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0261,
+    "avg_latency_s": 0.0313,
     "error_details": []
   },
   {
@@ -3809,7 +3809,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0266,
+    "avg_latency_s": 0.0313,
     "error_details": []
   },
   {
@@ -3836,7 +3836,7 @@
     "hid_TLE": 0,
     "hid_MLE": 10,
     "is_false_positive": false,
-    "avg_latency_s": 0.0735,
+    "avg_latency_s": 0.0669,
     "error_details": [
       {
         "set": "public",
@@ -3981,7 +3981,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0288,
+    "avg_latency_s": 0.0279,
     "error_details": []
   },
   {
@@ -4008,7 +4008,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0284,
+    "avg_latency_s": 0.026,
     "error_details": []
   },
   {
@@ -4035,7 +4035,7 @@
     "hid_TLE": 0,
     "hid_MLE": 0,
     "is_false_positive": false,
-    "avg_latency_s": 0.0274,
+    "avg_latency_s": 0.0255,
     "error_details": []
   }
 ]

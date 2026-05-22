@@ -292,7 +292,7 @@ def main():
     
     # 1. Update hidden_v2.json
     # Load original hidden tasks from git HEAD to get original description texts and 10 hidden tests
-    git_data = subprocess.check_output(['git', 'show', 'HEAD:data/processed/hidden_v2.json']).decode('utf-8')
+    git_data = subprocess.check_output(['git', 'show', '5cb1be8:data/processed/hidden_v2.json']).decode('utf-8')
     hidden_tasks = json.loads(git_data)
     
     # Vary the number of hidden tests for Set 3 using a bell curve distribution (6 to 10 hidden tests)
@@ -311,18 +311,14 @@ def main():
     
     # 2. Update mbpp_clean.json
     # Load original mbpp tasks from git HEAD
-    git_data_mbpp = subprocess.check_output(['git', 'show', 'HEAD:data/processed/mbpp_clean.json']).decode('utf-8')
+    git_data_mbpp = subprocess.check_output(['git', 'show', '5cb1be8:data/processed/mbpp_clean.json']).decode('utf-8')
     mbpp_tasks = json.loads(git_data_mbpp)
     # The text should match hidden_v2.json exactly.
     desc_map = {t['task_id']: t['text'] for t in hidden_tasks}
     for t in mbpp_tasks:
         t['text'] = desc_map[t['task_id']]
-        # Vary the number of hidden tests for Set 2 using a bell curve distribution (3 to 6 hidden tests)
-        tid = t['task_id']
-        if tid <= 5: num_h = 3
-        elif tid <= 15: num_h = 4
-        elif tid <= 35: num_h = 5
-        else: num_h = 6
+        # Set 2 always has 6 hidden tests as per requirements
+        num_h = 6
         t['hidden_tests'] = t['hidden_tests'][:num_h]
         
     with open(MBPP_FILE, 'w', encoding='utf-8') as f:

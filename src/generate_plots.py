@@ -54,12 +54,16 @@ def apply_styling(ax):
 def plot_fpr_vs_ntest(df, stats, out_dir):
     """
     Biểu đồ 1: FPR theo số lượng test case (RQ1).
-    So sánh 3 bộ test: Set 1 (3 tests), Set 2 (9 tests), Set 3 (13 tests)
+    So sánh 3 bộ test: Set 1, Set 2, Set 3
     """
     if not stats:
         return
         
-    x_tests = [3, 9, 13]
+    avg_t1 = df["set1_total"].mean() if df is not None and "set1_total" in df.columns else 3.0
+    avg_t2 = df["set2_total"].mean() if df is not None and "set2_total" in df.columns else 9.0
+    avg_t3 = df["set3_total"].mean() if df is not None and "set3_total" in df.columns else 13.0
+    
+    x_tests = [avg_t1, avg_t2, avg_t3]
     y_fpr = [
         stats["set1"]["fpr_pct"],
         stats["set2"]["fpr_pct"],
@@ -88,12 +92,18 @@ def plot_fpr_vs_ntest(df, stats, out_dir):
         )
         
     ax.set_title("Biểu đồ 1: False Positive Rate (FPR) Giảm Dần Theo Số Lượng Test Case", fontsize=12, fontweight="bold", pad=12)
-    ax.set_xlabel("Số lượng test case mỗi bài toán", fontsize=10, labelpad=8)
+    ax.set_xlabel("Số lượng test case trung bình mỗi bài toán", fontsize=10, labelpad=8)
     ax.set_ylabel("FPR (%)", fontsize=10, labelpad=8)
-    ax.set_xlim(1.5, 14.5)
+    ax.set_xlim(min(x_tests) - 1.5, max(x_tests) + 1.5)
     ax.set_ylim(-2, max(y_fpr) + 8)
     ax.set_xticks(x_tests)
-    ax.set_xticklabels(["3 tests\n(Set 1: Public)", "9 tests\n(Set 2: 3P+6H)", "13 tests\n(Set 3: 3P+10H)"], fontsize=9)
+    
+    labels = [
+        f"{avg_t1:.1f} tests\n(Set 1: Public)" if avg_t1 % 1 != 0 else f"{int(avg_t1)} tests\n(Set 1: Public)",
+        f"{avg_t2:.1f} tests\n(Set 2: 3P+6H)" if avg_t2 % 1 != 0 else f"{int(avg_t2)} tests\n(Set 2: 3P+6H)",
+        f"{avg_t3:.1f} tests\n(Set 3: 3P+6-10H)" if avg_t3 % 1 != 0 else f"{int(avg_t3)} tests\n(Set 3: 3P+6-10H)"
+    ]
+    ax.set_xticklabels(labels, fontsize=9)
     apply_styling(ax)
     
     path = out_dir / "FPR_vs_ntest.png"
@@ -102,12 +112,16 @@ def plot_fpr_vs_ntest(df, stats, out_dir):
     plt.close()
     print(f"  ✓ Đã vẽ và lưu: {path}")
 
-def plot_error_types_comparison(stats, out_dir):
+def plot_error_types_comparison(df, stats, out_dir):
     """
     Biểu đồ 2: So sánh số lỗi SE/WA/RE/TLE/MLE phát hiện được qua 3 bộ test.
     """
     if not stats:
         return
+        
+    avg_t1 = df["set1_total"].mean() if df is not None and "set1_total" in df.columns else 3.0
+    avg_t2 = df["set2_total"].mean() if df is not None and "set2_total" in df.columns else 9.0
+    avg_t3 = df["set3_total"].mean() if df is not None and "set3_total" in df.columns else 13.0
         
     err_types = ["SE", "WA", "RE", "TLE", "MLE"]
     set1_vals = [stats["set1"]["errors"].get(e, 0) for e in err_types]
@@ -119,9 +133,13 @@ def plot_error_types_comparison(stats, out_dir):
     
     fig, ax = plt.subplots(figsize=(10, 6), dpi=150)
     
-    rects1 = ax.bar(x - width, set1_vals, width, label="Set 1 (3 Public)", color="#5C9BD1")
-    rects2 = ax.bar(x, set2_vals, width, label="Set 2 (3P+6H)", color="#F29C38")
-    rects3 = ax.bar(x + width, set3_vals, width, label="Set 3 (3P+10H)", color="#3CB371")
+    label1 = f"Set 1 ({int(avg_t1)} Public)" if avg_t1 % 1 == 0 else f"Set 1 (Avg {avg_t1:.1f} Public)"
+    label2 = f"Set 2 ({int(avg_t2)} tests: 3P+6H)" if avg_t2 % 1 == 0 else f"Set 2 (Avg {avg_t2:.1f} tests: 3P+6H)"
+    label3 = f"Set 3 (Avg {avg_t3:.1f} tests: 3P+6-10H)"
+    
+    rects1 = ax.bar(x - width, set1_vals, width, label=label1, color="#5C9BD1")
+    rects2 = ax.bar(x, set2_vals, width, label=label2, color="#F29C38")
+    rects3 = ax.bar(x + width, set3_vals, width, label=label3, color="#3CB371")
     
     # Add values on top of bars
     def autolabel(rects):
@@ -286,7 +304,7 @@ def main():
     os.makedirs(OUT_DIR, exist_ok=True)
     
     plot_fpr_vs_ntest(df, stats, OUT_DIR)
-    plot_error_types_comparison(stats, OUT_DIR)
+    plot_error_types_comparison(df, stats, OUT_DIR)
     plot_fpr_by_topic(df, OUT_DIR)
     plot_description_lengths(OUT_DIR)
     

@@ -149,7 +149,7 @@ def main():
         if is_fp_set2: fp_flag += "[FP Set2]"
         if is_fp_set3: fp_flag += "[FP Set3]"
         
-        print(f"  [{sv_id}] {func_name}() (Topic: {topic:<8}) | Actual: {err_type_actual:<4} | Set1 Pass: {r_set1['pass_count']}/3 | Set2 Pass: {r_set2['pass_count']}/9 | Set3 Pass: {r_set3['pass_count']}/13 {fp_flag}")
+        print(f"  [{sv_id}] {func_name}() (Topic: {topic:<8}) | Actual: {err_type_actual:<4} | Set1 Pass: {r_set1['pass_count']}/{r_set1['total_count']} | Set2 Pass: {r_set2['pass_count']}/{r_set2['total_count']} | Set3 Pass: {r_set3['pass_count']}/{r_set3['total_count']} {fp_flag}")
         
         results.append({
             "sv_id": sv_id,
@@ -207,7 +207,12 @@ def main():
     print("\n" + "=" * 80)
     print("  KẾT QUẢ SO SÁNH 3 TẬP TEST CASES (RQ1)")
     print("=" * 80)
-    print(f"  {'Metric':<32} | {'Set 1 (3 Public)':<15} | {'Set 2 (3P+6H)':<15} | {'Set 3 (3P+10H)'}")
+    
+    avg_t1 = sum(r["set1_total"] for r in results) / len(results)
+    avg_t2 = sum(r["set2_total"] for r in results) / len(results)
+    avg_t3 = sum(r["set3_total"] for r in results) / len(results)
+    
+    print(f"  {'Metric':<32} | {f'Set 1 (Avg {avg_t1:.1f}t)':<15} | {f'Set 2 (Avg {avg_t2:.1f}t)':<15} | {f'Set 3 (Avg {avg_t3:.1f}t)'}")
     print("  " + "-" * 78)
     print(f"  {'Số bài nộp mô phỏng':<32} | {n:<15} | {n:<15} | {n}")
     print(f"  {'Số lượng False Positives':<32} | {stats['set1']['fp_count']:<15} | {stats['set2']['fp_count']:<15} | {stats['set3']['fp_count']}")
@@ -234,7 +239,7 @@ def main():
     for fp in fp_details_set2:
         print(f"    - [{fp['sv_id']}] Task {fp['task_id']} {fp['func']}() ({fp['topic']}) | Lỗi: {fp['note']}")
         
-    print(f"\n  * Tập 3 (3 Public + 10 Hidden) có {len(fp_details_set3)} bài FP:")
+    print(f"\n  * Tập 3 (3 Public + 6-10 Hidden) có {len(fp_details_set3)} bài FP:")
     for fp in fp_details_set3:
         print(f"    - [{fp['sv_id']}] Task {fp['task_id']} {fp['func']}() ({fp['topic']}) | Lỗi: {fp['note']}")
     print("-" * 80 + "\n")

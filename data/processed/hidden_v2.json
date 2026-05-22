@@ -42,22 +42,6 @@
       {
         "input": "[0]",
         "expected": "0"
-      },
-      {
-        "input": "[100, 200, 300, 400]",
-        "expected": "1000"
-      },
-      {
-        "input": "[-10, 20, -30, 40]",
-        "expected": "20"
-      },
-      {
-        "input": "[9999, 1]",
-        "expected": "10000"
-      },
-      {
-        "input": "[5, 5, 5, 5, 5]",
-        "expected": "25"
       }
     ]
   },
@@ -104,22 +88,6 @@
       {
         "input": "2",
         "expected": "True"
-      },
-      {
-        "input": "999",
-        "expected": "False"
-      },
-      {
-        "input": "-999",
-        "expected": "False"
-      },
-      {
-        "input": "2000002",
-        "expected": "True"
-      },
-      {
-        "input": "-2000002",
-        "expected": "True"
       }
     ]
   },
@@ -162,22 +130,6 @@
       {
         "input": "\" hi \"",
         "expected": " ih "
-      },
-      {
-        "input": "\"racecar\"",
-        "expected": "racecar"
-      },
-      {
-        "input": "\"abcde\"",
-        "expected": "edcba"
-      },
-      {
-        "input": "\"123 456\"",
-        "expected": "654 321"
-      },
-      {
-        "input": "\"A\"",
-        "expected": "A"
       },
       {
         "input": "\"racecar\"",
@@ -228,22 +180,6 @@
       {
         "input": "[1000000, 999999]",
         "expected": "1000000"
-      },
-      {
-        "input": "[10, 9, 8, 7, 6]",
-        "expected": "10"
-      },
-      {
-        "input": "[-10, -5, -20, -1]",
-        "expected": "-1"
-      },
-      {
-        "input": "[0, 100, 50]",
-        "expected": "100"
-      },
-      {
-        "input": "[999, 999, 999]",
-        "expected": "999"
       }
     ]
   },
@@ -290,22 +226,6 @@
       {
         "input": "\"x\", \"x\"",
         "expected": "1"
-      },
-      {
-        "input": "\"abcabcabc\", \"a\"",
-        "expected": "3"
-      },
-      {
-        "input": "\"hello\", \"x\"",
-        "expected": "0"
-      },
-      {
-        "input": "\"  \", \" \"",
-        "expected": "2"
-      },
-      {
-        "input": "\"A\", \"a\"",
-        "expected": "0"
       }
     ]
   },
@@ -356,18 +276,6 @@
       {
         "input": "11",
         "expected": "39916800"
-      },
-      {
-        "input": "12",
-        "expected": "479001600"
-      },
-      {
-        "input": "0",
-        "expected": "1"
-      },
-      {
-        "input": "8",
-        "expected": "40320"
       }
     ]
   },
@@ -418,18 +326,6 @@
       {
         "input": "\"kayak\"",
         "expected": "True"
-      },
-      {
-        "input": "\"civic\"",
-        "expected": "True"
-      },
-      {
-        "input": "\"noon\"",
-        "expected": "True"
-      },
-      {
-        "input": "\"hello\"",
-        "expected": "False"
       }
     ]
   },
@@ -480,18 +376,6 @@
       {
         "input": "[1, 1, 2, 2, 3, 3]",
         "expected": "[1, 2, 3]"
-      },
-      {
-        "input": "[\"a\", \"b\", \"c\", \"a\"]",
-        "expected": "['a', 'b', 'c']"
-      },
-      {
-        "input": "[]",
-        "expected": "[]"
-      },
-      {
-        "input": "[5, 4, 3, 2, 1]",
-        "expected": "[5, 4, 3, 2, 1]"
       }
     ]
   },
@@ -542,18 +426,6 @@
       {
         "input": "[2, 4, 6, 8]",
         "expected": "5.0"
-      },
-      {
-        "input": "[-10, 10]",
-        "expected": "0.0"
-      },
-      {
-        "input": "[100, 300]",
-        "expected": "200.0"
-      },
-      {
-        "input": "[1]",
-        "expected": "1.0"
       }
     ]
   },
@@ -604,18 +476,6 @@
       {
         "input": "\"mixedCase\"",
         "expected": "MIXEDCASE"
-      },
-      {
-        "input": "\"already UPPER\"",
-        "expected": "ALREADY UPPER"
-      },
-      {
-        "input": "\"123!!! \"",
-        "expected": "123!!! "
-      },
-      {
-        "input": "\"hello world\"",
-        "expected": "HELLO WORLD"
       }
     ]
   },
@@ -666,18 +526,6 @@
       {
         "input": "97",
         "expected": "True"
-      },
-      {
-        "input": "100",
-        "expected": "False"
-      },
-      {
-        "input": "2",
-        "expected": "True"
-      },
-      {
-        "input": "1",
-        "expected": "False"
       }
     ]
   },
@@ -728,18 +576,6 @@
       {
         "input": "[-2, -4, -6]",
         "expected": "-12"
-      },
-      {
-        "input": "[1, 2, 3, 4, 5]",
-        "expected": "6"
-      },
-      {
-        "input": "[0, 0, 0]",
-        "expected": "0"
-      },
-      {
-        "input": "[100, 201]",
-        "expected": "100"
       }
     ]
   },
@@ -790,18 +626,6 @@
       {
         "input": "15",
         "expected": "610"
-      },
-      {
-        "input": "20",
-        "expected": "6765"
-      },
-      {
-        "input": "0",
-        "expected": "0"
-      },
-      {
-        "input": "8",
-        "expected": "21"
       }
     ]
   },
@@ -852,18 +676,6 @@
       {
         "input": "\"abc def ghi jkl\"",
         "expected": "4"
-      },
-      {
-        "input": "\"\\t tab \\n\"",
-        "expected": "1"
-      },
-      {
-        "input": "\"\"",
-        "expected": "0"
-      },
-      {
-        "input": "\"one two\"",
-        "expected": "2"
       }
     ]
   },
@@ -914,18 +726,6 @@
       {
         "input": "[9, 1, 5, 3, 7]",
         "expected": "[1, 3, 5, 7, 9]"
-      },
-      {
-        "input": "[-1, -5, 0]",
-        "expected": "[-5, -1, 0]"
-      },
-      {
-        "input": "[]",
-        "expected": "[]"
-      },
-      {
-        "input": "[1, 2, 3]",
-        "expected": "[1, 2, 3]"
       }
     ]
   },
@@ -980,14 +780,6 @@
       {
         "input": "[0, 1]",
         "expected": "0"
-      },
-      {
-        "input": "[-1, 0, 1]",
-        "expected": "-1"
-      },
-      {
-        "input": "[200000, 100000]",
-        "expected": "100000"
       }
     ]
   },
@@ -1042,14 +834,6 @@
       {
         "input": "2025",
         "expected": "False"
-      },
-      {
-        "input": "2026",
-        "expected": "False"
-      },
-      {
-        "input": "2028",
-        "expected": "True"
       }
     ]
   },
@@ -1104,14 +888,6 @@
       {
         "input": "\"12345\"",
         "expected": "0"
-      },
-      {
-        "input": "\"bcdfg\"",
-        "expected": "0"
-      },
-      {
-        "input": "\"Antigravity\"",
-        "expected": "4"
       }
     ]
   },
@@ -1166,14 +942,6 @@
       {
         "input": "[-101]",
         "expected": "-101"
-      },
-      {
-        "input": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
-        "expected": "25"
-      },
-      {
-        "input": "[0, 0, 0]",
-        "expected": "0"
       }
     ]
   },
@@ -1227,14 +995,6 @@
       },
       {
         "input": "[0, 0]",
-        "expected": "False"
-      },
-      {
-        "input": "[1000]",
-        "expected": "True"
-      },
-      {
-        "input": "[-1000]",
         "expected": "False"
       }
     ]
@@ -1290,14 +1050,6 @@
       {
         "input": "-459.67",
         "expected": "-795.406"
-      },
-      {
-        "input": "15",
-        "expected": "59.0"
-      },
-      {
-        "input": "5",
-        "expected": "41.0"
       }
     ]
   },
@@ -1352,14 +1104,6 @@
       {
         "input": "\"multiple   spaces   here\"",
         "expected": "multiple___spaces___here"
-      },
-      {
-        "input": "\"1 2 3\"",
-        "expected": "1_2_3"
-      },
-      {
-        "input": "\"   \"",
-        "expected": "___"
       }
     ]
   },
@@ -1414,14 +1158,6 @@
       {
         "input": "-123456",
         "expected": "123456"
-      },
-      {
-        "input": "123456",
-        "expected": "123456"
-      },
-      {
-        "input": "-10",
-        "expected": "10"
       }
     ]
   },
@@ -1476,14 +1212,6 @@
       {
         "input": "\"hello\", \"olleh\"",
         "expected": "True"
-      },
-      {
-        "input": "\"test\", \"sett\"",
-        "expected": "True"
-      },
-      {
-        "input": "\"aaaa\", \"aaa\"",
-        "expected": "False"
       }
     ]
   },
@@ -1538,14 +1266,6 @@
       {
         "input": "-12345",
         "expected": "15"
-      },
-      {
-        "input": "88",
-        "expected": "16"
-      },
-      {
-        "input": "77",
-        "expected": "14"
       }
     ]
   },
@@ -1600,14 +1320,6 @@
       {
         "input": "[2, 2, 2, 2, 2]",
         "expected": "32"
-      },
-      {
-        "input": "[-2, 4]",
-        "expected": "-8"
-      },
-      {
-        "input": "[100]",
-        "expected": "100"
       }
     ]
   },
@@ -1662,14 +1374,6 @@
       {
         "input": "[1, 2, 2, 3]",
         "expected": "True"
-      },
-      {
-        "input": "[-5, 0, 5]",
-        "expected": "True"
-      },
-      {
-        "input": "[2, 1]",
-        "expected": "False"
       }
     ]
   },
@@ -1724,14 +1428,6 @@
       {
         "input": "\"  \", 3",
         "expected": "      "
-      },
-      {
-        "input": "\"123\", 2",
-        "expected": "123123"
-      },
-      {
-        "input": "\"\", 100",
-        "expected": ""
       }
     ]
   },
@@ -1786,14 +1482,6 @@
       {
         "input": "[0], [0, 1]",
         "expected": "[0]"
-      },
-      {
-        "input": "[-1, -2], [-2, -3]",
-        "expected": "[-2]"
-      },
-      {
-        "input": "[9, 8, 7], [7, 8, 9]",
-        "expected": "[7, 8, 9]"
       }
     ]
   },
@@ -1848,14 +1536,6 @@
       {
         "input": "[True, False]",
         "expected": "2"
-      },
-      {
-        "input": "[[1, 2], [3, 4]]",
-        "expected": "2"
-      },
-      {
-        "input": "list(range(50))",
-        "expected": "50"
       }
     ]
   },
@@ -1910,14 +1590,6 @@
       {
         "input": "\"12345\"",
         "expected": "12345"
-      },
-      {
-        "input": "\"bcdfg\"",
-        "expected": "bcdfg"
-      },
-      {
-        "input": "\"Antigravity\"",
-        "expected": "ntgrvty"
       }
     ]
   },
@@ -1972,14 +1644,6 @@
       {
         "input": "[\"hello\"]",
         "expected": "hello"
-      },
-      {
-        "input": "[False, True]",
-        "expected": "False"
-      },
-      {
-        "input": "[-1, -2, -3]",
-        "expected": "-1"
       }
     ]
   },
@@ -2034,14 +1698,6 @@
       {
         "input": "1, 2",
         "expected": "6"
-      },
-      {
-        "input": "5, 5",
-        "expected": "20"
-      },
-      {
-        "input": "20, 30",
-        "expected": "100"
       }
     ]
   },
@@ -2096,14 +1752,6 @@
       {
         "input": "-10",
         "expected": "-1000"
-      },
-      {
-        "input": "6",
-        "expected": "216"
-      },
-      {
-        "input": "-5",
-        "expected": "-125"
       }
     ]
   },
@@ -2158,14 +1806,6 @@
       {
         "input": "\"12345\"",
         "expected": "0"
-      },
-      {
-        "input": "\"bcdfg\"",
-        "expected": "5"
-      },
-      {
-        "input": "\"Antigravity\"",
-        "expected": "7"
       }
     ]
   },
@@ -2224,10 +1864,6 @@
       {
         "input": "\"  Hello\"",
         "expected": "False"
-      },
-      {
-        "input": "\"Z\"",
-        "expected": "True"
       }
     ]
   },
@@ -2286,10 +1922,6 @@
       {
         "input": "7",
         "expected": "153.93791"
-      },
-      {
-        "input": "0",
-        "expected": "0.0"
       }
     ]
   },
@@ -2348,10 +1980,6 @@
       {
         "input": "[-5, 5]",
         "expected": "[5, -5]"
-      },
-      {
-        "input": "list(range(10))",
-        "expected": "[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]"
       }
     ]
   },
@@ -2410,10 +2038,6 @@
       {
         "input": "18, 24",
         "expected": "6"
-      },
-      {
-        "input": "100, 10",
-        "expected": "10"
       }
     ]
   },
@@ -2472,10 +2096,6 @@
       {
         "input": "\"a\"",
         "expected": "a"
-      },
-      {
-        "input": "\"  a b  \"",
-        "expected": "a b"
       }
     ]
   },
@@ -2534,10 +2154,6 @@
       {
         "input": "[0.5, -0.5]",
         "expected": "[0.5]"
-      },
-      {
-        "input": "[1, -1, 2, -2]",
-        "expected": "[1, 2]"
       }
     ]
   },
@@ -2596,10 +2212,6 @@
       {
         "input": "\"x y z\"",
         "expected": "['x', ' ', 'y', ' ', 'z']"
-      },
-      {
-        "input": "\"A\"",
-        "expected": "['A']"
       }
     ]
   },
@@ -2658,10 +2270,6 @@
       {
         "input": "[12]",
         "expected": "[144]"
-      },
-      {
-        "input": "[0, 0]",
-        "expected": "[0, 0]"
       }
     ]
   },
@@ -2719,10 +2327,6 @@
       },
       {
         "input": "[]",
-        "expected": "0"
-      },
-      {
-        "input": "[0, 0]",
         "expected": "0"
       }
     ]
@@ -2782,10 +2386,6 @@
       {
         "input": "[10], [20, 30]",
         "expected": "[10, 20, 30]"
-      },
-      {
-        "input": "[-1], [-2]",
-        "expected": "[-1, -2]"
       }
     ]
   },
