@@ -85,17 +85,7 @@ def compare_structures(val1, val2) -> bool:
     if isinstance(val1, (list, tuple)):
         if len(val1) != len(val2):
             return False
-        # So sánh trực tiếp từng phần tử
-        if all(compare_structures(x, y) for x, y in zip(val1, val2)):
-            return True
-        # So sánh không quan tâm thứ tự nếu có thể sort được
-        try:
-            s1 = sorted(val1, key=lambda x: (str(type(x)), x))
-            s2 = sorted(val2, key=lambda x: (str(type(x)), x))
-            return all(compare_structures(x, y) for x, y in zip(s1, s2))
-        except Exception:
-            pass
-        return False
+        return all(compare_structures(x, y) for x, y in zip(val1, val2))
     if isinstance(val1, dict):
         if len(val1) != len(val2):
             return False
@@ -327,14 +317,24 @@ def grade_submission(code: str, func_name: str,
     result["avg_latency"] = round(result["total_latency"] / n, 4) if n > 0 else 0.0
     return result
 
-# ── Tính FPR ──────────────────────────────────────────────────────────────────
-def compute_fpr(public_result: Dict, hidden_result: Dict) -> Dict:
+# ── Tính Public Test Leakage ──────────────────────────────────────────────────
+def compute_leakage(public_result: Dict, hidden_result: Dict) -> Dict:
     pub_all_pass = public_result["pass_count"] == public_result["total_count"]
     hid_all_pass = hidden_result["pass_count"] == hidden_result["total_count"]
     return {
         "public_pass_all": pub_all_pass,
         "hidden_pass_all": hid_all_pass,
-        "is_false_positive": pub_all_pass and not hid_all_pass,
+        "is_public_test_leakage": pub_all_pass and not hid_all_pass,
         "public_rate": public_result["test_pass_rate"],
         "hidden_rate": hidden_result["test_pass_rate"],
+    }
+
+def compute_fpr(public_result: Dict, hidden_result: Dict) -> Dict:
+    leakage = compute_leakage(public_result, hidden_result)
+    return {
+        "public_pass_all": leakage["public_pass_all"],
+        "hidden_pass_all": leakage["hidden_pass_all"],
+        "is_false_positive": leakage["is_public_test_leakage"],
+        "public_rate": leakage["public_rate"],
+        "hidden_rate": leakage["hidden_rate"],
     }

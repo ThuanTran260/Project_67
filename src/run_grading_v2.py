@@ -17,7 +17,7 @@ else:
     BASE = Path(cwd)
 
 sys.path.insert(0, str(BASE / "src"))
-from runner_v2 import grade_submission, compute_fpr
+from runner_v2 import grade_submission, compute_leakage
 from error_stats import compute_stats, save_stats_csv, print_summary
 
 SUBMISSIONS_FILE = BASE / "data" / "processed" / "submissions_50.json"
@@ -84,7 +84,7 @@ def main():
 
             pub_r = grade_submission(code, func_name, pub_tests, "public")
             hid_r = grade_submission(code, func_name, hid_tests, "hidden")
-            fpr   = compute_fpr(pub_r, hid_r)
+            leakage = compute_leakage(pub_r, hid_r)
 
             # Xác định trạng thái tổng hợp cho học sinh
             if not pub_r["syntax_ok"]:
@@ -155,7 +155,8 @@ def main():
                 "hid_TLE":         hid_r["error_counts"]["TLE"],
                 "hid_MLE":         hid_r["error_counts"].get("MLE", 0),
 
-                "is_false_positive": fpr["is_false_positive"],
+                "is_false_positive": leakage["is_public_test_leakage"],
+                "is_public_test_leakage": leakage["is_public_test_leakage"],
                 "avg_latency_s":   hid_r["avg_latency"],
                 "error_details":   error_details
             }
@@ -194,12 +195,13 @@ def main():
                     },
                     "avg_latency": hid_r["avg_latency"],
                 },
-                "fpr": {
-                    "is_false_positive": fpr["is_false_positive"],
-                    "public_rate":  fpr["public_rate"],
-                    "hidden_rate":  fpr["hidden_rate"],
-                    "public_pass_all": fpr["public_pass_all"],
-                    "hidden_pass_all": fpr["hidden_pass_all"],
+                "leakage": {
+                    "is_public_test_leakage": leakage["is_public_test_leakage"],
+                    "is_false_positive": leakage["is_public_test_leakage"],
+                    "public_rate":  leakage["public_rate"],
+                    "hidden_rate":  leakage["hidden_rate"],
+                    "public_pass_all": leakage["public_pass_all"],
+                    "hidden_pass_all": leakage["hidden_pass_all"],
                 },
             })
 

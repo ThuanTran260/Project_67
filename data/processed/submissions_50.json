@@ -76,7 +76,7 @@
     "task_id": 6,
     "func_name": "factorial",
     "topic": "math",
-    "error_type": "WA",
+    "error_type": "AC",
     "submitted_code": "def factorial(n):\n    result=1\n    for i in range(1,n+1):\n        result*=i\n    return result\n",
     "note": "Không xử lý n=0 — fail hidden test(0)"
   },
@@ -283,7 +283,7 @@
     "task_id": 30,
     "func_name": "count_non_space",
     "topic": "string",
-    "error_type": "WA",
+    "error_type": "AC",
     "submitted_code": "def count_non_space(s):\n    return len(s)\n",
     "note": "Trả len(s) thay vì đếm không phải khoảng trắng"
   },

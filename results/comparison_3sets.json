@@ -2,39 +2,39 @@
   "stats": {
     "tong_submissions": 50,
     "set1": {
-      "fp_count": 11,
-      "fpr_pct": 22.0,
-      "avg_tpr": 33.33,
-      "avg_latency": 0.0465,
+      "fp_count": 8,
+      "fpr_pct": 16.0,
+      "avg_tpr": 32.0,
+      "avg_latency": 0.0366,
       "errors": {
         "SE": 3,
-        "WA": 35,
+        "WA": 37,
         "RE": 62,
         "TLE": 0,
         "MLE": 0
       }
     },
     "set2": {
-      "fp_count": 7,
-      "fpr_pct": 14.0,
-      "avg_tpr": 33.33,
-      "avg_latency": 0.0458,
+      "fp_count": 3,
+      "fpr_pct": 6.0,
+      "avg_tpr": 31.56,
+      "avg_latency": 0.0365,
       "errors": {
         "SE": 9,
-        "WA": 106,
+        "WA": 114,
         "RE": 185,
         "TLE": 0,
         "MLE": 0
       }
     },
     "set3": {
-      "fp_count": 7,
-      "fpr_pct": 14.0,
-      "avg_tpr": 33.58,
-      "avg_latency": 0.0449,
+      "fp_count": 2,
+      "fpr_pct": 4.0,
+      "avg_tpr": 31.58,
+      "avg_latency": 0.0358,
       "errors": {
         "SE": 9,
-        "WA": 121,
+        "WA": 131,
         "RE": 237,
         "TLE": 0,
         "MLE": 0
@@ -208,19 +208,19 @@
       "func": "factorial",
       "topic": "math",
       "mo_ta_loi": "Không xử lý n=0 — fail hidden test(0)",
-      "actual_error_type": "WA",
+      "actual_error_type": "AC",
       "set1_pass": 3,
       "set1_total": 3,
       "set1_tpr": 100.0,
-      "is_fp_set1": true,
+      "is_fp_set1": false,
       "set2_pass": 9,
       "set2_total": 9,
       "set2_tpr": 100.0,
-      "is_fp_set2": true,
+      "is_fp_set2": false,
       "set3_pass": 10,
       "set3_total": 10,
       "set3_tpr": 100.0,
-      "is_fp_set3": true
+      "is_fp_set3": false
     },
     {
       "sv_id": "SV010",
@@ -273,14 +273,14 @@
       "set1_total": 3,
       "set1_tpr": 100.0,
       "is_fp_set1": true,
-      "set2_pass": 9,
+      "set2_pass": 7,
       "set2_total": 9,
-      "set2_tpr": 100.0,
-      "is_fp_set2": true,
-      "set3_pass": 10,
+      "set2_tpr": 77.78,
+      "is_fp_set2": false,
+      "set3_pass": 8,
       "set3_total": 10,
-      "set3_tpr": 100.0,
-      "is_fp_set3": true
+      "set3_tpr": 80.0,
+      "is_fp_set3": false
     },
     {
       "sv_id": "SV013",
@@ -317,10 +317,10 @@
       "set2_total": 9,
       "set2_tpr": 100.0,
       "is_fp_set2": true,
-      "set3_pass": 10,
+      "set3_pass": 9,
       "set3_total": 10,
-      "set3_tpr": 100.0,
-      "is_fp_set3": true
+      "set3_tpr": 90.0,
+      "is_fp_set3": false
     },
     {
       "sv_id": "SV015",
@@ -429,18 +429,18 @@
       "topic": "list",
       "mo_ta_loi": "Sắp xếp giảm dần thay vì tăng dần",
       "actual_error_type": "WA",
-      "set1_pass": 3,
+      "set1_pass": 1,
       "set1_total": 3,
-      "set1_tpr": 100.0,
-      "is_fp_set1": true,
-      "set2_pass": 9,
+      "set1_tpr": 33.33,
+      "is_fp_set1": false,
+      "set2_pass": 3,
       "set2_total": 9,
-      "set2_tpr": 100.0,
-      "is_fp_set2": true,
-      "set3_pass": 10,
+      "set2_tpr": 33.33,
+      "is_fp_set2": false,
+      "set3_pass": 3,
       "set3_total": 10,
-      "set3_tpr": 100.0,
-      "is_fp_set3": true
+      "set3_tpr": 30.0,
+      "is_fp_set3": false
     },
     {
       "sv_id": "SV021",
@@ -668,19 +668,19 @@
       "func": "count_non_space",
       "topic": "string",
       "mo_ta_loi": "Trả len(s) thay vì đếm không phải khoảng trắng",
-      "actual_error_type": "WA",
+      "actual_error_type": "AC",
       "set1_pass": 3,
       "set1_total": 3,
       "set1_tpr": 100.0,
-      "is_fp_set1": true,
+      "is_fp_set1": false,
       "set2_pass": 9,
       "set2_total": 9,
       "set2_tpr": 100.0,
-      "is_fp_set2": true,
+      "is_fp_set2": false,
       "set3_pass": 11,
       "set3_total": 11,
       "set3_tpr": 100.0,
-      "is_fp_set3": true
+      "is_fp_set3": false
     },
     {
       "sv_id": "SV033",

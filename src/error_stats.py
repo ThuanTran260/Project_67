@@ -21,13 +21,15 @@ def compute_stats(results: List[Dict]) -> Dict:
       "sv_id": ..., "task_id": ..., "func": ...,
       "public": {grade_submission output},
       "hidden": {grade_submission output},
-      "fpr": {compute_fpr output}
+      "fpr": {compute_fpr output} hoặc "leakage": {compute_leakage output}
     }
     """
     stats = {
         "tong_submissions": len(results),
         "fp_count": 0,
         "fpr_pct": 0.0,
+        "leakage_count": 0,
+        "leakage_rate_pct": 0.0,
         "avg_tpr_public": 0.0,
         "avg_tpr_hidden": 0.0,
         "error_total_public": {"SE": 0, "WA": 0, "RE": 0, "TLE": 0, "MLE": 0},
@@ -35,29 +37,36 @@ def compute_stats(results: List[Dict]) -> Dict:
         "avg_latency_public": 0.0,
         "avg_latency_hidden": 0.0,
         "per_topic":  defaultdict(lambda: {
-            "count": 0, "fp": 0,
+            "count": 0, "fp": 0, "leakage": 0,
             "pub_err": {"SE":0,"WA":0,"RE":0,"TLE":0,"MLE":0},
             "hid_err": {"SE":0,"WA":0,"RE":0,"TLE":0,"MLE":0},
         }),
         "false_positives": [],
+        "leakages": [],
     }
 
     for r in results:
         pub = r.get("public", {})
         hid = r.get("hidden", {})
-        fpr = r.get("fpr", {})
+        # Hỗ trợ cả key "leakage" mới và key "fpr" cũ
+        leakage = r.get("leakage") or r.get("fpr") or {}
         topic = r.get("topic", "unknown")
 
-        if fpr.get("is_false_positive"):
+        is_leak = leakage.get("is_public_test_leakage") or leakage.get("is_false_positive")
+
+        if is_leak:
             stats["fp_count"] += 1
-            stats["false_positives"].append({
+            stats["leakage_count"] += 1
+            leak_info = {
                 "sv_id":    r.get("sv_id"),
                 "task_id":  r.get("task_id"),
                 "func":     r.get("func"),
-                "pub_rate": fpr.get("public_rate"),
-                "hid_rate": fpr.get("hidden_rate"),
+                "pub_rate": leakage.get("public_rate"),
+                "hid_rate": leakage.get("hidden_rate"),
                 "mo_ta_loi": r.get("mo_ta_loi", "")
-            })
+            }
+            stats["false_positives"].append(leak_info)
+            stats["leakages"].append(leak_info)
 
         stats["avg_tpr_public"] += pub.get("test_pass_rate", 0)
         stats["avg_tpr_hidden"] += hid.get("test_pass_rate", 0)
@@ -70,8 +79,9 @@ def compute_stats(results: List[Dict]) -> Dict:
 
         # Theo topic
         stats["per_topic"][topic]["count"] += 1
-        if fpr.get("is_false_positive"):
+        if is_leak:
             stats["per_topic"][topic]["fp"] += 1
+            stats["per_topic"][topic]["leakage"] += 1
         for err_type in ["SE", "WA", "RE", "TLE", "MLE"]:
             stats["per_topic"][topic]["pub_err"][err_type] += pub.get("error_counts", {}).get(err_type, 0)
             stats["per_topic"][topic]["hid_err"][err_type] += hid.get("error_counts", {}).get(err_type, 0)
@@ -79,6 +89,7 @@ def compute_stats(results: List[Dict]) -> Dict:
     n = len(results)
     if n > 0:
         stats["fpr_pct"]           = round(stats["fp_count"] / n * 100, 2)
+        stats["leakage_rate_pct"]   = round(stats["leakage_count"] / n * 100, 2)
         stats["avg_tpr_public"]    = round(stats["avg_tpr_public"] / n, 2)
         stats["avg_tpr_hidden"]    = round(stats["avg_tpr_hidden"] / n, 2)
         stats["avg_latency_public"]= round(stats["avg_latency_public"] / n, 4)
@@ -100,6 +111,7 @@ def save_stats_csv(results: List[Dict], filepath: str):
         "hid_pass", "hid_total", "hid_tpr",
         "hid_SE", "hid_WA", "hid_RE", "hid_TLE", "hid_MLE",
         "is_false_positive",
+        "is_public_test_leakage",
         "avg_latency_pub", "avg_latency_hid",
     ]
 
@@ -107,9 +119,11 @@ def save_stats_csv(results: List[Dict], filepath: str):
     for r in results:
         pub = r.get("public", {})
         hid = r.get("hidden", {})
-        fpr = r.get("fpr", {})
+        leakage = r.get("leakage") or r.get("fpr") or {}
         pub_err = pub.get("error_counts", {})
         hid_err = hid.get("error_counts", {})
+
+        is_leak = leakage.get("is_public_test_leakage") or leakage.get("is_false_positive") or False
 
         rows.append({
             "sv_id":       r.get("sv_id", ""),
@@ -133,7 +147,8 @@ def save_stats_csv(results: List[Dict], filepath: str):
             "hid_RE":      hid_err.get("RE", 0),
             "hid_TLE":     hid_err.get("TLE", 0),
             "hid_MLE":     hid_err.get("MLE", 0),
-            "is_false_positive": fpr.get("is_false_positive", False),
+            "is_false_positive": is_leak,
+            "is_public_test_leakage": is_leak,
             "avg_latency_pub": pub.get("avg_latency", 0),
             "avg_latency_hid": hid.get("avg_latency", 0),
         })
@@ -152,7 +167,7 @@ def print_summary(stats: Dict, label: str = ""):
         print(f"  {label}")
     print(f"{'='*60}")
     print(f"  Tổng submissions        : {stats['tong_submissions']}")
-    print(f"  False Positive Rate     : {stats['fpr_pct']}% ({stats['fp_count']} bài)")
+    print(f"  Public Test Leakage Rate: {stats['leakage_rate_pct']}% ({stats['leakage_count']} bài)")
     print(f"  Avg TPR public (3 test) : {stats['avg_tpr_public']}%")
     print(f"  Avg TPR hidden (10 test): {stats['avg_tpr_hidden']}%")
     print(f"  Latency public          : {stats['avg_latency_public']}s/test")
@@ -163,13 +178,13 @@ def print_summary(stats: Dict, label: str = ""):
     if stats.get("per_topic"):
         print(f"\n  Theo topic:")
         for topic, t in stats["per_topic"].items():
-            fp_rate = round(t['fp'] / t['count'] * 100, 1) if t['count'] else 0
-            print(f"    {topic:<10}: {t['count']} bài, FPR={fp_rate}%")
+            leakage_rate = round(t['leakage'] / t['count'] * 100, 1) if t['count'] else 0
+            print(f"    {topic:<10}: {t['count']} bài, Leakage Rate={leakage_rate}%")
 
-    if stats.get("false_positives"):
-        print(f"\n  Bài False Positive chi tiết:")
-        for fp in stats["false_positives"]:
-            print(f"    [{fp['sv_id']}] task {fp['task_id']} {fp['func']}() — pub:{fp['pub_rate']}% hid:{fp['hid_rate']}%")
-            if fp.get("mo_ta_loi"):
-                print(f"      Lỗi: {fp['mo_ta_loi']}")
+    if stats.get("leakages"):
+        print(f"\n  Bài Public Test Leakage chi tiết:")
+        for l in stats["leakages"]:
+            print(f"    [{l['sv_id']}] task {l['task_id']} {l['func']}() — pub:{l['pub_rate']}% hid:{l['hid_rate']}%")
+            if l.get("mo_ta_loi"):
+                print(f"      Lỗi: {l['mo_ta_loi']}")
     print(f"{'='*60}\n")
