@@ -192,7 +192,7 @@
     "submission_id": "SV022",
     "task_id": 17,
     "func_name": "has_negative",
-    "topic": "list",
+    "topic": "math",
     "error_type": "WA",
     "submitted_code": "def has_negative(lst):\n    return any(x<=0 for x in lst)\n",
     "note": "Kiểm tra <=0 thay vì <0, sai với 0"
@@ -201,7 +201,7 @@
     "submission_id": "SV023",
     "task_id": 18,
     "func_name": "product_list",
-    "topic": "math",
+    "topic": "string",
     "error_type": "WA",
     "submitted_code": "def product_list(lst):\n    return sum(lst)\n",
     "note": "Tính tổng thay vì tích"
@@ -210,7 +210,7 @@
     "submission_id": "SV024",
     "task_id": 20,
     "func_name": "is_anagram",
-    "topic": "string",
+    "topic": "list",
     "error_type": "WA",
     "submitted_code": "def is_anagram(s1,s2):\n    return len(s1)==len(s2)\n",
     "note": "So sánh len thay vì ký tự"
@@ -219,7 +219,7 @@
     "submission_id": "SV025",
     "task_id": 21,
     "func_name": "count_positive",
-    "topic": "list",
+    "topic": "math",
     "error_type": "WA",
     "submitted_code": "def count_positive(lst):\n    return sum(1 for x in lst if x>=0)\n",
     "note": "Đếm >=0 thay vì >0, sai với 0"
@@ -228,7 +228,7 @@
     "submission_id": "SV026",
     "task_id": 22,
     "func_name": "get_evens",
-    "topic": "list",
+    "topic": "string",
     "error_type": "WA",
     "submitted_code": "def get_evens(lst):\n    return [x for x in lst if x%2!=0]\n",
     "note": "Lấy số lẻ thay vì số chẵn"
@@ -246,7 +246,7 @@
     "submission_id": "SV028",
     "task_id": 24,
     "func_name": "is_sorted",
-    "topic": "list",
+    "topic": "string",
     "error_type": "WA",
     "submitted_code": "def is_sorted(lst):\n    for i in range(len(lst)-1):\n        if lst[i]>lst[i+1]: return False\n    return True\n",
     "note": "Không xử lý list rỗng đúng cách"
@@ -282,7 +282,7 @@
     "submission_id": "SV032",
     "task_id": 30,
     "func_name": "count_non_space",
-    "topic": "string",
+    "topic": "list",
     "error_type": "AC",
     "submitted_code": "def count_non_space(s):\n    return len(s)\n",
     "note": "Trả len(s) thay vì đếm không phải khoảng trắng"
@@ -291,7 +291,7 @@
     "submission_id": "SV033",
     "task_id": 31,
     "func_name": "gcd",
-    "topic": "math",
+    "topic": "string",
     "error_type": "WA",
     "submitted_code": "def gcd(a,b):\n    return a\n",
     "note": "Trả a thay vì GCD"
@@ -309,7 +309,7 @@
     "submission_id": "SV035",
     "task_id": 34,
     "func_name": "has_digit",
-    "topic": "string",
+    "topic": "math",
     "error_type": "WA",
     "submitted_code": "def has_digit(s):\n    return False\n",
     "note": "Luôn trả False"
@@ -318,7 +318,7 @@
     "submission_id": "SV036",
     "task_id": 35,
     "func_name": "sum_squares",
-    "topic": "math",
+    "topic": "string",
     "error_type": "WA",
     "submitted_code": "def sum_squares(lst):\n    return sum(lst)\n",
     "note": "Tính tổng thay vì tổng bình phương"
@@ -327,7 +327,7 @@
     "submission_id": "SV037",
     "task_id": 36,
     "func_name": "rotate_right",
-    "topic": "list",
+    "topic": "string",
     "error_type": "WA",
     "submitted_code": "def rotate_right(lst,k):\n    if not lst: return lst\n    k=k%len(lst)\n    return lst[k:]+lst[:k] if k else lst[:]\n",
     "note": "Xoay trái thay vì phải"
@@ -336,7 +336,7 @@
     "submission_id": "SV038",
     "task_id": 37,
     "func_name": "most_frequent",
-    "topic": "list",
+    "topic": "math",
     "error_type": "WA",
     "submitted_code": "def most_frequent(lst):\n    return min(set(lst),key=lst.count)\n",
     "note": "Trả phần tử ít nhất thay vì nhiều nhất"
@@ -345,7 +345,7 @@
     "submission_id": "SV039",
     "task_id": 38,
     "func_name": "is_all_digits",
-    "topic": "string",
+    "topic": "list",
     "error_type": "WA",
     "submitted_code": "def is_all_digits(s):\n    for c in s:\n        if not c.isdigit(): return False\n    return True\n",
     "note": "Không kiểm tra chuỗi rỗng — sai với ''"
@@ -354,7 +354,7 @@
     "submission_id": "SV040",
     "task_id": 40,
     "func_name": "first_n",
-    "topic": "list",
+    "topic": "string",
     "error_type": "WA",
     "submitted_code": "def first_n(lst,n):\n    return lst[-n:] if n else []\n",
     "note": "Lấy n phần tử cuối thay vì đầu"
@@ -363,7 +363,7 @@
     "submission_id": "SV041",
     "task_id": 41,
     "func_name": "is_perfect",
-    "topic": "math",
+    "topic": "list",
     "error_type": "WA",
     "submitted_code": "def is_perfect(n):\n    return sum(i for i in range(1,n) if n%i==0)==n\n",
     "note": "Không xử lý n<=1 — sai với 0,1"
@@ -372,7 +372,7 @@
     "submission_id": "SV042",
     "task_id": 43,
     "func_name": "list_to_string",
-    "topic": "string",
+    "topic": "list",
     "error_type": "WA",
     "submitted_code": "def list_to_string(lst):\n    return ' '.join(str(x) for x in lst)\n",
     "note": "Dùng khoảng trắng thay vì dấu phẩy"
@@ -381,7 +381,7 @@
     "submission_id": "SV043",
     "task_id": 44,
     "func_name": "count_vowels",
-    "topic": "string",
+    "topic": "list",
     "error_type": "WA",
     "submitted_code": "def count_vowels(s):\n    return sum(1 for c in s if c in 'aeiou')\n",
     "note": "Không lowercase — bỏ sót nguyên âm hoa"
@@ -390,7 +390,7 @@
     "submission_id": "SV044",
     "task_id": 46,
     "func_name": "reverse_list",
-    "topic": "list",
+    "topic": "string",
     "error_type": "WA",
     "submitted_code": "def reverse_list(lst):\n    return lst\n",
     "note": "Không đảo ngược — trả nguyên list"
@@ -399,7 +399,7 @@
     "submission_id": "SV045",
     "task_id": 47,
     "func_name": "all_positive",
-    "topic": "list",
+    "topic": "math",
     "error_type": "WA",
     "submitted_code": "def all_positive(lst):\n    return all(x>0 for x in lst)\n",
     "note": "Không xử lý list rỗng — sai với []"
@@ -408,7 +408,7 @@
     "submission_id": "SV046",
     "task_id": 49,
     "func_name": "starts_with_upper",
-    "topic": "string",
+    "topic": "list",
     "error_type": "RE",
     "submitted_code": "def starts_with_upper(s):\n    return s[0].isupper()\n",
     "note": "Không xử lý chuỗi rỗng — RE"

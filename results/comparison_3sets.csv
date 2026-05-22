@@ -20,31 +20,31 @@ SV018,13,fibonacci,math,Đệ quy thiếu base case n=0 — RE,RE,1,3,33.33,Fals
 SV019,14,count_words,string,Không xử lý chuỗi toàn khoảng trắng,WA,3,3,100.0,True,9,9,100.0,True,10,10,100.0,True
 SV020,15,sort_list,list,Sắp xếp giảm dần thay vì tăng dần,WA,1,3,33.33,False,3,9,33.33,False,3,10,30.0,False
 SV021,16,find_min,list,Trả max thay vì min,WA,0,3,0.0,False,2,9,22.22,False,3,11,27.27,False
-SV022,17,has_negative,list,"Kiểm tra <=0 thay vì <0, sai với 0",WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
-SV023,18,product_list,math,Tính tổng thay vì tích,WA,0,3,0.0,False,1,9,11.11,False,1,11,9.09,False
-SV024,20,is_anagram,string,So sánh len thay vì ký tự,WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
-SV025,21,count_positive,list,"Đếm >=0 thay vì >0, sai với 0",WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
-SV026,22,get_evens,list,Lấy số lẻ thay vì số chẵn,WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
+SV022,17,has_negative,math,"Kiểm tra <=0 thay vì <0, sai với 0",WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
+SV023,18,product_list,string,Tính tổng thay vì tích,WA,0,3,0.0,False,1,9,11.11,False,1,11,9.09,False
+SV024,20,is_anagram,list,So sánh len thay vì ký tự,WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
+SV025,21,count_positive,math,"Đếm >=0 thay vì >0, sai với 0",WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
+SV026,22,get_evens,string,Lấy số lẻ thay vì số chẵn,WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
 SV027,23,power,math,Nhân n thay vì lũy thừa,WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
-SV028,24,is_sorted,list,Không xử lý list rỗng đúng cách,WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
+SV028,24,is_sorted,string,Không xử lý list rỗng đúng cách,WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
 SV029,26,count_negative,list,Đếm <=0 thay vì <0,WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
 SV030,27,last_element,list,Không xử lý list rỗng — RE,RE,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
 SV031,29,abs_list,list,Quên abs() — trả nguyên giá trị,WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
-SV032,30,count_non_space,string,Trả len(s) thay vì đếm không phải khoảng trắng,AC,3,3,100.0,False,9,9,100.0,False,11,11,100.0,False
-SV033,31,gcd,math,Trả a thay vì GCD,WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
+SV032,30,count_non_space,list,Trả len(s) thay vì đếm không phải khoảng trắng,AC,3,3,100.0,False,9,9,100.0,False,11,11,100.0,False
+SV033,31,gcd,string,Trả a thay vì GCD,WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
 SV034,33,digit_sum,math,Trả n thay vì tổng chữ số,WA,0,3,0.0,False,0,9,0.0,False,0,11,0.0,False
-SV035,34,has_digit,string,Luôn trả False,WA,1,3,33.33,False,1,9,11.11,False,1,11,9.09,False
-SV036,35,sum_squares,math,Tính tổng thay vì tổng bình phương,WA,0,3,0.0,False,1,9,11.11,False,1,11,9.09,False
-SV037,36,rotate_right,list,Xoay trái thay vì phải,WA,0,3,0.0,False,0,9,0.0,False,0,12,0.0,False
-SV038,37,most_frequent,list,Trả phần tử ít nhất thay vì nhiều nhất,WA,0,3,0.0,False,0,9,0.0,False,0,12,0.0,False
-SV039,38,is_all_digits,string,Không kiểm tra chuỗi rỗng — sai với '',WA,0,3,0.0,False,0,9,0.0,False,0,12,0.0,False
-SV040,40,first_n,list,Lấy n phần tử cuối thay vì đầu,WA,0,3,0.0,False,0,9,0.0,False,0,12,0.0,False
-SV041,41,is_perfect,math,"Không xử lý n<=1 — sai với 0,1",WA,0,3,0.0,False,0,9,0.0,False,0,12,0.0,False
-SV042,43,list_to_string,string,Dùng khoảng trắng thay vì dấu phẩy,WA,0,3,0.0,False,0,9,0.0,False,0,12,0.0,False
-SV043,44,count_vowels,string,Không lowercase — bỏ sót nguyên âm hoa,WA,0,3,0.0,False,1,9,11.11,False,2,12,16.67,False
-SV044,46,reverse_list,list,Không đảo ngược — trả nguyên list,WA,0,3,0.0,False,0,9,0.0,False,1,13,7.69,False
-SV045,47,all_positive,list,Không xử lý list rỗng — sai với [],WA,0,3,0.0,False,0,9,0.0,False,0,13,0.0,False
-SV046,49,starts_with_upper,string,Không xử lý chuỗi rỗng — RE,RE,0,3,0.0,False,0,9,0.0,False,0,13,0.0,False
+SV035,34,has_digit,math,Luôn trả False,WA,1,3,33.33,False,1,9,11.11,False,1,11,9.09,False
+SV036,35,sum_squares,string,Tính tổng thay vì tổng bình phương,WA,0,3,0.0,False,1,9,11.11,False,1,11,9.09,False
+SV037,36,rotate_right,string,Xoay trái thay vì phải,WA,0,3,0.0,False,0,9,0.0,False,0,12,0.0,False
+SV038,37,most_frequent,math,Trả phần tử ít nhất thay vì nhiều nhất,WA,0,3,0.0,False,0,9,0.0,False,0,12,0.0,False
+SV039,38,is_all_digits,list,Không kiểm tra chuỗi rỗng — sai với '',WA,0,3,0.0,False,0,9,0.0,False,0,12,0.0,False
+SV040,40,first_n,string,Lấy n phần tử cuối thay vì đầu,WA,0,3,0.0,False,0,9,0.0,False,0,12,0.0,False
+SV041,41,is_perfect,list,"Không xử lý n<=1 — sai với 0,1",WA,0,3,0.0,False,0,9,0.0,False,0,12,0.0,False
+SV042,43,list_to_string,list,Dùng khoảng trắng thay vì dấu phẩy,WA,0,3,0.0,False,0,9,0.0,False,0,12,0.0,False
+SV043,44,count_vowels,list,Không lowercase — bỏ sót nguyên âm hoa,WA,0,3,0.0,False,1,9,11.11,False,2,12,16.67,False
+SV044,46,reverse_list,string,Không đảo ngược — trả nguyên list,WA,0,3,0.0,False,0,9,0.0,False,1,13,7.69,False
+SV045,47,all_positive,math,Không xử lý list rỗng — sai với [],WA,0,3,0.0,False,0,9,0.0,False,0,13,0.0,False
+SV046,49,starts_with_upper,list,Không xử lý chuỗi rỗng — RE,RE,0,3,0.0,False,0,9,0.0,False,0,13,0.0,False
 SV047,50,last_n,list,Lấy n phần tử đầu thay vì cuối,WA,0,3,0.0,False,0,9,0.0,False,0,13,0.0,False
 SV048,10,to_uppercase,string,(Solution đúng — dùng làm điểm so sánh),AC,3,3,100.0,False,9,9,100.0,False,10,10,100.0,False
 SV049,15,sort_list,list,(Solution đúng),AC,3,3,100.0,False,9,9,100.0,False,10,10,100.0,False
