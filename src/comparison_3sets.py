@@ -56,7 +56,7 @@ def main():
         problems_clean = {p['task_id']: p for p in json.load(f)}
         
     print(f"  ✓ Đã load {len(submissions)} bài nộp của sinh viên.")
-    print(f"  ✓ Đã load bộ dữ liệu 10 hidden: {len(problems_v2)} bài.")
+    print(f"  ✓ Đã load bộ dữ liệu hidden v2: {len(problems_v2)} bài.")
     print(f"  ✓ Đã load bộ dữ liệu 6 hidden: {len(problems_clean)} bài.")
     print("\n  Bắt đầu chấm bài trên 3 tập cấu hình test cases...")
     print()

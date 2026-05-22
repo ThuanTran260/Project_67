@@ -21,7 +21,7 @@ if sys.stdout.encoding != 'utf-8':
 
 # Auto-resolve BASE path
 cwd = os.getcwd()
-if os.path.basename(cwd) in ["data", "src", "notebooks", "results"]:
+if os.path.basename(cwd) in ["data", "src", "notebookes", "results"]:
     BASE = Path(cwd).parent
 else:
     BASE = Path(cwd)
