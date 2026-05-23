@@ -12,11 +12,8 @@ import numpy as np
 from pathlib import Path
 
 # Auto-resolve BASE path
-cwd = os.getcwd()
-if os.path.basename(cwd) in ["data", "src", "notebookes", "results"]:
-    BASE = Path(cwd).parent
-else:
-    BASE = Path(cwd)
+BASE = Path('/content/drive/MyDrive/Project')
+
 
 try:
     import matplotlib.pyplot as plt

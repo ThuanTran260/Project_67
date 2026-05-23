@@ -2,7 +2,7 @@ import json
 import os
 import sys
 
-BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE = r"/content/drive/MyDrive/Project"
 HIDDEN_FILE = os.path.join(BASE, 'data', 'processed', 'hidden_v2.json')
 MBPP_FILE = os.path.join(BASE, 'data', 'processed', 'mbpp_clean.json')
 SUBMISSIONS_FILE = os.path.join(BASE, 'data', 'processed', 'submissions_50.json')

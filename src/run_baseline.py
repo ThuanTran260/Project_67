@@ -18,11 +18,7 @@ from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # ── Auto-resolve BASE path ───────────────────────────────────────────────────
-cwd = os.getcwd()
-if os.path.basename(cwd) in ["data", "src", "notebookes", "results"]:
-    BASE = Path(cwd).parent
-else:
-    BASE = Path(cwd)
+BASE = Path("/content/drive/MyDrive/Project")
 
 sys.path.insert(0, str(BASE / "src"))
 from runner_v2 import grade_submission

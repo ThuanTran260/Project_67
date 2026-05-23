@@ -10,11 +10,7 @@ import sys
 from pathlib import Path
 
 # Auto-resolve BASE path
-cwd = os.getcwd()
-if os.path.basename(cwd) in ["data", "src", "notebookes", "results"]:
-    BASE = Path(cwd).parent
-else:
-    BASE = Path(cwd)
+BASE = Path("/content/drive/MyDrive/Project")
 
 sys.path.insert(0, str(BASE / "src"))
 from runner_v2 import grade_submission, compute_leakage

@@ -22,7 +22,7 @@ from typing import Dict, List
 # except AttributeError:
 #     pass
 
-BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE = "/content/drive/MyDrive/Project"
 SUBMISSIONS_FILE = os.path.join(BASE, 'data', 'processed', 'submissions_50.json')
 HIDDEN_V2_FILE = os.path.join(BASE, 'data', 'processed', 'hidden_v2.json')
 MBPP_CLEAN_FILE = os.path.join(BASE, 'data', 'processed', 'mbpp_clean.json')
