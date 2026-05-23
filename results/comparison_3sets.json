@@ -2,10 +2,10 @@
   "stats": {
     "tong_submissions": 50,
     "set1": {
-      "fp_count": 8,
-      "fpr_pct": 16.0,
+      "fp_count": 9,
+      "fpr_pct": 18.0,
       "avg_tpr": 32.0,
-      "avg_latency": 0.0358,
+      "avg_latency": 0.0464,
       "errors": {
         "SE": 3,
         "WA": 37,
@@ -15,10 +15,10 @@
       }
     },
     "set2": {
-      "fp_count": 3,
-      "fpr_pct": 6.0,
+      "fp_count": 4,
+      "fpr_pct": 8.0,
       "avg_tpr": 31.56,
-      "avg_latency": 0.0362,
+      "avg_latency": 0.0457,
       "errors": {
         "SE": 9,
         "WA": 114,
@@ -28,10 +28,10 @@
       }
     },
     "set3": {
-      "fp_count": 2,
-      "fpr_pct": 4.0,
+      "fp_count": 3,
+      "fpr_pct": 6.0,
       "avg_tpr": 31.58,
-      "avg_latency": 0.0354,
+      "avg_latency": 0.0457,
       "errors": {
         "SE": 9,
         "WA": 131,
@@ -668,19 +668,19 @@
       "func": "count_non_space",
       "topic": "string",
       "mo_ta_loi": "Trả len(s) thay vì đếm không phải khoảng trắng",
-      "actual_error_type": "AC",
+      "actual_error_type": "WA",
       "set1_pass": 3,
       "set1_total": 3,
       "set1_tpr": 100.0,
-      "is_fp_set1": false,
+      "is_fp_set1": true,
       "set2_pass": 9,
       "set2_total": 9,
       "set2_tpr": 100.0,
-      "is_fp_set2": false,
+      "is_fp_set2": true,
       "set3_pass": 11,
       "set3_total": 11,
       "set3_tpr": 100.0,
-      "is_fp_set3": false
+      "is_fp_set3": true
     },
     {
       "sv_id": "SV033",

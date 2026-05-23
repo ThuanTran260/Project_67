@@ -142,8 +142,8 @@ def generate_submissions(tasks):
         sid = sub["submission_id"]
         tid = sub["task_id"]
         
-        # 1. Update error_type to AC for SV009 and SV032
-        if sid in ["SV009", "SV032"]:
+        # 1. Update error_type to AC for SV009 (correct solution)
+        if sid in ["SV009"]:
             sub["error_type"] = "AC"
             
         # 2. Synchronize topic with hidden_v2.json (except SV032)
