@@ -146,8 +146,8 @@ def generate_submissions(tasks):
         if sid in ["SV009", "SV032"]:
             sub["error_type"] = "AC"
             
-        # 2. Synchronize topic with hidden_v2.json
-        if tid in topic_map:
+        # 2. Synchronize topic with hidden_v2.json (except SV032)
+        if tid in topic_map and sid != "SV032":
             sub["topic"] = topic_map[tid]
             
     return submissions

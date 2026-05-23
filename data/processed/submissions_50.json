@@ -282,7 +282,7 @@
     "submission_id": "SV032",
     "task_id": 30,
     "func_name": "count_non_space",
-    "topic": "list",
+    "topic": "string",
     "error_type": "AC",
     "submitted_code": "def count_non_space(s):\n    return len(s)\n",
     "note": "Trả len(s) thay vì đếm không phải khoảng trắng"

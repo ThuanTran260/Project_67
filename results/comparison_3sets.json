@@ -5,7 +5,7 @@
       "fp_count": 8,
       "fpr_pct": 16.0,
       "avg_tpr": 32.0,
-      "avg_latency": 0.0373,
+      "avg_latency": 0.0358,
       "errors": {
         "SE": 3,
         "WA": 37,
@@ -18,7 +18,7 @@
       "fp_count": 3,
       "fpr_pct": 6.0,
       "avg_tpr": 31.56,
-      "avg_latency": 0.0368,
+      "avg_latency": 0.0362,
       "errors": {
         "SE": 9,
         "WA": 114,
@@ -31,7 +31,7 @@
       "fp_count": 2,
       "fpr_pct": 4.0,
       "avg_tpr": 31.58,
-      "avg_latency": 0.0359,
+      "avg_latency": 0.0354,
       "errors": {
         "SE": 9,
         "WA": 131,
@@ -666,7 +666,7 @@
       "sv_id": "SV032",
       "task_id": 30,
       "func": "count_non_space",
-      "topic": "list",
+      "topic": "string",
       "mo_ta_loi": "Trả len(s) thay vì đếm không phải khoảng trắng",
       "actual_error_type": "AC",
       "set1_pass": 3,
