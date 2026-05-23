@@ -6,7 +6,7 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Tuần](https://img.shields.io/badge/Tuần%20hiện%20tại-3%2F5-orange)
 ![FPR](https://img.shields.io/badge/FPR%20(3--test)-24%25-red)
-<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/971a6c71-b526-4c00-b121-3a569522958d" />
+
 
 ---
 
