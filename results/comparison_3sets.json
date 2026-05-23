@@ -5,7 +5,7 @@
       "fp_count": 9,
       "fpr_pct": 18.0,
       "avg_tpr": 32.0,
-      "avg_latency": 0.0464,
+      "avg_latency": 0.0589,
       "errors": {
         "SE": 3,
         "WA": 37,
@@ -18,7 +18,7 @@
       "fp_count": 4,
       "fpr_pct": 8.0,
       "avg_tpr": 31.56,
-      "avg_latency": 0.0457,
+      "avg_latency": 0.0567,
       "errors": {
         "SE": 9,
         "WA": 114,
@@ -31,7 +31,7 @@
       "fp_count": 3,
       "fpr_pct": 6.0,
       "avg_tpr": 31.58,
-      "avg_latency": 0.0457,
+      "avg_latency": 0.0563,
       "errors": {
         "SE": 9,
         "WA": 131,
