@@ -1,28 +1,21 @@
 import json
 import os
 import sys
+from collections import Counter
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RAW_TASKS_FILE = os.path.join(BASE, 'data', 'raw', 'mbpp_50.json')
 HIDDEN_FILE = os.path.join(BASE, 'data', 'processed', 'hidden_v2.json')
 MBPP_FILE = os.path.join(BASE, 'data', 'processed', 'mbpp_clean.json')
 SUBMISSIONS_FILE = os.path.join(BASE, 'data', 'processed', 'submissions_50.json')
+RAW_SUBMISSIONS_FILE = os.path.join(BASE, 'data', 'raw', 'submissions_50.json')
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Part 1: Redistribute Task Description Lengths Semantically & Uniformly
 # ──────────────────────────────────────────────────────────────────────────────
 
 def adjust_descriptions(tasks):
-    # Sort tasks by their task_id to keep processing ordered
     sorted_tasks = sorted(tasks, key=lambda x: x['task_id'])
-    
-    # We want to distribute target lengths uniformly from 10 to 19.
-    # Since we have 50 tasks, we want exactly 5 tasks for each length:
-    # Lengths: 10 (5 tasks), 11 (5 tasks), ..., 19 (5 tasks).
-    # To assign target lengths uniformly but keep it reproducible:
-    # Task 1..5 -> length 10
-    # Task 6..10 -> length 11
-    # ...
-    # Task 46..50 -> length 19
     
     prefixes = {
         0: "",
@@ -45,14 +38,13 @@ def adjust_descriptions(tasks):
         2: " một cách tối ưu.",
         3: " bằng cách viết mã nguồn Python."
     }
-
+    
     adjusted = []
     for task in sorted_tasks:
         tid = task['task_id']
         original_text = task['text'].strip()
-        target_len = 10 + ((tid - 1) // 5)  # 10 to 19 words
+        target_len = 10 + ((tid - 1) // 10)  # 10 to 19 words (10 tasks per length for 100 tasks)
         
-        # Strip common starting verbs
         clean_text = original_text
         for start in ["Viết hàm ", "Viết chương trình ", "Hãy viết hàm ", "Hãy viết chương trình ", "Định nghĩa một hàm ", "Định nghĩa hàm "]:
             if clean_text.startswith(start):
@@ -64,7 +56,6 @@ def adjust_descriptions(tasks):
         words_A = clean_text.split()
         W_A = len(words_A)
         
-        # Try to find prefix and suffix to match target_len
         found = False
         for p_len in sorted(prefixes.keys()):
             for s_len in sorted(suffixes.keys()):
@@ -88,25 +79,20 @@ def adjust_descriptions(tasks):
                 break
                 
         if not found:
-            # Fallback: take the original text, split it, and truncate/pad directly
             orig_words = original_text.split()
             if len(orig_words) > target_len:
-                # Truncate and add dot if cut off
                 task['text'] = " ".join(orig_words[:target_len])
                 if not task['text'].endswith("."):
                     task['text'] += "."
             else:
-                # Pad with standard words
                 padding = ["trong", "ngôn", "ngữ", "lập", "trình", "Python", "đúng", "đắn", "và", "hiệu", "quả"]
                 needed = target_len - len(orig_words)
                 if original_text.endswith("."):
                     original_text = original_text[:-1]
                 task['text'] = original_text + " " + " ".join(padding[:needed]) + "."
                 
-        # Final sanity check: ensure exact word count match
         final_words = task['text'].split()
         if len(final_words) != target_len:
-            # Direct word level adjustment
             if len(final_words) > target_len:
                 task['text'] = " ".join(final_words[:target_len])
                 if not task['text'].endswith("."):
@@ -117,7 +103,6 @@ def adjust_descriptions(tasks):
                     task['text'] = task['text'][:-1]
                 task['text'] = task['text'] + " " + " ".join(["đối", "tượng", "phù", "hợp", "nhất"][:needed]) + "."
                 
-        # Confirm word count
         assert len(task['text'].split()) == target_len, f"Task {tid} text length is {len(task['text'].split())}, expected {target_len}"
         adjusted.append(task)
         
@@ -127,31 +112,55 @@ def adjust_descriptions(tasks):
 # Part 2: Generate 50 Student Submissions with Realistic Error Distribution
 # ──────────────────────────────────────────────────────────────────────────────
 
-def generate_submissions(tasks):
-    raw_file = os.path.join(BASE, 'data', 'raw', 'submissions_50.json')
-    if not os.path.exists(raw_file):
-        raise FileNotFoundError(f"Khong tim thay file nguon {raw_file}")
+def generate_submissions(tasks, topic_map):
+    if not os.path.exists(RAW_SUBMISSIONS_FILE):
+        raise FileNotFoundError(f"Khong tim thay file nguon {RAW_SUBMISSIONS_FILE}")
         
-    with open(raw_file, "r", encoding="utf-8") as f:
+    with open(RAW_SUBMISSIONS_FILE, "r", encoding="utf-8") as f:
         submissions = json.load(f)
         
-    # Map task_id to its correct topic
-    topic_map = {t["task_id"]: t["topic"] for t in tasks}
-    
     for sub in submissions:
         sid = sub["submission_id"]
         tid = sub["task_id"]
         
-        # 1. Update error_type to AC for SV009 (correct solution)
-        if sid in ["SV009"]:
+        sub["topic"] = topic_map[tid]
+        
+        # 1. Update SV009 (factorial) to AC
+        if sid == "SV009":
             sub["error_type"] = "AC"
+            sub["submitted_code"] = "def factorial(n):\n    if n == 0:\n        return 1\n    result = 1\n    for i in range(1, n + 1):\n        result *= i\n    return result\n"
+            sub["note"] = "factorial - Solution đúng hoàn toàn"
             
-        # 2. Synchronize topic with hidden_v2.json (except SV032)
-        if tid in topic_map and sid != "SV032":
-            sub["topic"] = topic_map[tid]
+        # 2. Update SV019 (count_words)
+        if sid == "SV019":
+            sub["error_type"] = "WA"
+            sub["submitted_code"] = "def count_words(s):\n    return len(s.split(' '))\n"
+            sub["note"] = "Không xử lý chuỗi có khoảng trắng liên tiếp hoặc đầu/cuối - WA"
             
-    return submissions
+        # 3. Update SV028 (is_sorted) so that it is genuinely buggy on length <= 1 lists
+        if sid == "SV028":
+            sub["error_type"] = "WA"
+            sub["submitted_code"] = "def is_sorted(lst):\n    if len(lst) <= 1:\n        return False\n    for i in range(len(lst)-1):\n        if lst[i]>lst[i+1]:\n            return False\n    return True\n"
+            sub["note"] = "Trả về False cho danh sách rỗng hoặc có 1 phần tử - WA"
+            
+        # 4. Update SV046 (MLE)
+        if sid == "SV046":
+            sub["error_type"] = "MLE"
+            sub["submitted_code"] = "def starts_with_upper(s):\n    # Cố tình tạo chuỗi 200MB để kích hoạt MLE\n    x = ' ' * (200 * 1024 * 1024)\n    return s[0].isupper()\n"
+            sub["note"] = "Tràn bộ nhớ (MLE) — Khai báo chuỗi 200MB"
+            
+        # 5. Update SV047 (TLE)
+        if sid == "SV047":
+            sub["error_type"] = "TLE"
+            sub["submitted_code"] = "def last_n(lst, n):\n    # Vòng lặp vô hạn kích hoạt TLE\n    while True:\n        pass\n    return lst[-n:] if n else []\n"
+            sub["note"] = "Quá thời gian (TLE) — Vòng lặp vô hạn"
 
+        # 6. Update SV063 (is_samepatterns) to AC because it is functionally correct
+        if sid == "SV063":
+            sub["error_type"] = "AC"
+            sub["note"] = "is_samepatterns - Solution đúng mặc dù có thay đổi dấu cộng thành dấu trừ (do tính chất đối xứng và chỉ mục âm)"
+
+    return submissions
 
 # ──────────────────────────────────────────────────────────────────────────────
 # Main Execution
@@ -159,64 +168,131 @@ def generate_submissions(tasks):
 
 def main():
     print("Regenerating all datasets and submissions...")
-    import subprocess
     
-    # 1. Update hidden_v2.json
-    # Load original hidden tasks from git HEAD to get original description texts and 10 hidden tests
-    git_data = subprocess.check_output(['git', 'show', 'HEAD:data/processed/hidden_v2.json']).decode('utf-8')
-    hidden_tasks = json.loads(git_data)
+    if not os.path.exists(RAW_TASKS_FILE):
+        print(f"[LỖI] Không tìm thấy file raw tasks: {RAW_TASKS_FILE}")
+        sys.exit(1)
+        
+    with open(RAW_TASKS_FILE, 'r', encoding='utf-8') as f:
+        hidden_tasks = json.load(f)
+        
+    if not os.path.exists(RAW_SUBMISSIONS_FILE):
+        print(f"[LỖI] Không tìm thấy file raw submissions: {RAW_SUBMISSIONS_FILE}")
+        sys.exit(1)
+        
+    with open(RAW_SUBMISSIONS_FILE, 'r', encoding='utf-8') as f:
+        raw_subs = json.load(f)
+    topic_map = {s['task_id']: s['topic'] for s in raw_subs}
     
-    # Vary the number of hidden tests for Set 3 using a bell curve distribution (6 to 10 hidden tests)
+    missing_topics = {
+        19: 'math',
+        25: 'list',
+        28: 'math',
+        32: 'math',
+        39: 'list',
+        42: 'list',
+        45: 'math',
+        48: 'list'
+    }
+    for tid, topic in missing_topics.items():
+        topic_map[tid] = topic
+        
+    print("Sourcing topic distribution from raw submissions + fallback:")
+    for k, v in sorted(Counter(topic_map.values()).items()):
+        print(f"  {k}: {v} tasks")
+        
     for t in hidden_tasks:
         tid = t['task_id']
-        if tid <= 5: num_h = 6
-        elif tid <= 15: num_h = 7
-        elif tid <= 35: num_h = 8
-        elif tid <= 45: num_h = 9
+        t['topic'] = topic_map[tid]
+        
+    hidden_tasks = adjust_descriptions(hidden_tasks)
+    
+    # 1. Inject empty list [] test case for Task 4 (find_max)
+    for t in hidden_tasks:
+        if t['task_id'] == 4:
+            t['code'] = "def find_max(lst):\n    if not lst:\n        return None\n    return max(lst)"
+            t['hidden_tests'].insert(0, {
+                "input": "[]",
+                "expected": "None"
+            })
+            print("OK Task 4 find_max: Injected [] expecting None edge case.")
+            
+    # 2. Inject fractional average test case for Task 9 (average) to catch SV014
+    for t in hidden_tasks:
+        if t['task_id'] == 9:
+            t['hidden_tests'].insert(0, {
+                "input": "[1, 2]",
+                "expected": "1.5"
+            })
+            print("OK Task 9 average: Injected [1, 2] expecting 1.5 edge case.")
+            
+    # 3. Inject "+123" and "-123" test cases for Task 86 (check_integer) to catch SV086
+    for t in hidden_tasks:
+        if t['task_id'] == 86:
+            t['hidden_tests'].insert(0, {
+                "input": "'+123'",
+                "expected": "True"
+            })
+            t['hidden_tests'].insert(1, {
+                "input": "'-123'",
+                "expected": "True"
+            })
+            print("OK Task 86 check_integer: Injected '+123' and '-123' expecting True edge cases.")
+            
+    # Vary the number of hidden tests for Set 3 using a bell curve distribution
+    for t in hidden_tasks:
+        tid = t['task_id']
+        if tid <= 10: num_h = 6
+        elif tid <= 30: num_h = 7
+        elif tid <= 70: num_h = 8
+        elif tid <= 90: num_h = 9
         else: num_h = 10
         t['hidden_tests'] = t['hidden_tests'][:num_h]
         
+    # Save hidden_v2.json
+    os.makedirs(os.path.dirname(HIDDEN_FILE), exist_ok=True)
     with open(HIDDEN_FILE, 'w', encoding='utf-8') as f:
         json.dump(hidden_tasks, f, ensure_ascii=False, indent=2)
-    print(f"✓ Updated: {HIDDEN_FILE}")
+    print(f"OK Saved: {HIDDEN_FILE}")
     
     # 2. Update mbpp_clean.json
-    # Load original mbpp tasks from git HEAD
-    git_data_mbpp = subprocess.check_output(['git', 'show', 'HEAD:data/processed/mbpp_clean.json']).decode('utf-8')
-    mbpp_tasks = json.loads(git_data_mbpp)
-    # The text should match hidden_v2.json exactly.
+    mbpp_tasks = []
+    with open(RAW_TASKS_FILE, 'r', encoding='utf-8') as f:
+        mbpp_tasks = json.load(f)
+        
     desc_map = {t['task_id']: t['text'] for t in hidden_tasks}
+    code_map = {t['task_id']: t['code'] for t in hidden_tasks}
+    hidden_tests_map = {t['task_id']: t['hidden_tests'] for t in hidden_tasks}
+    
     for t in mbpp_tasks:
-        t['text'] = desc_map[t['task_id']]
-        # Set 2 always has 6 hidden tests as per requirements
-        num_h = 6
-        t['hidden_tests'] = t['hidden_tests'][:num_h]
+        tid = t['task_id']
+        t['text'] = desc_map[tid]
+        t['topic'] = topic_map[tid]
+        t['code'] = code_map[tid]
+        t['hidden_tests'] = hidden_tests_map[tid][:6]
         
     with open(MBPP_FILE, 'w', encoding='utf-8') as f:
         json.dump(mbpp_tasks, f, ensure_ascii=False, indent=2)
-    print(f"✓ Updated: {MBPP_FILE}")
+    print(f"OK Saved: {MBPP_FILE}")
     
     # 3. Generate submissions_50.json
-    submissions = generate_submissions(hidden_tasks)
+    submissions = generate_submissions(hidden_tasks, topic_map)
     with open(SUBMISSIONS_FILE, 'w', encoding='utf-8') as f:
         json.dump(submissions, f, ensure_ascii=False, indent=2)
-    print(f"✓ Generated: {SUBMISSIONS_FILE}")
+    print(f"OK Generated: {SUBMISSIONS_FILE}")
     
     # Check distributions
     print("\nSummary of submissions distribution:")
-    from collections import Counter
     err_counts = Counter(s['error_type'] for s in submissions)
     topic_counts = Counter(s['topic'] for s in submissions)
-    for k, v in err_counts.items():
+    for k, v in sorted(err_counts.items()):
         print(f"  Error Type {k}: {v}")
-    for k, v in topic_counts.items():
+    for k, v in sorted(topic_counts.items()):
         print(f"  Topic {k}: {v}")
         
     print("\nDescription length distribution:")
-    len_counts = Counter(len(t['text']) for t in hidden_tasks)
-    print(f"  Min char length: {min(len_counts.keys())}")
-    print(f"  Max char length: {max(len_counts.keys())}")
-    print(f"  Avg char length: {sum(len(t['text']) for t in hidden_tasks)/len(hidden_tasks):.2f}")
+    len_counts = Counter(len(t['text'].split()) for t in hidden_tasks)
+    print(f"  Word count frequency: {dict(sorted(len_counts.items()))}")
         
     print("\nRegeneration completed successfully!")
 

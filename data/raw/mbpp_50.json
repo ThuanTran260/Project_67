@@ -43,7 +43,8 @@
         "input": "[0]",
         "expected": "0"
       }
-    ]
+    ],
+    "func_name": "sum_list"
   },
   {
     "task_id": 2,
@@ -89,7 +90,8 @@
         "input": "2",
         "expected": "True"
       }
-    ]
+    ],
+    "func_name": "is_even"
   },
   {
     "task_id": 3,
@@ -135,7 +137,8 @@
         "input": "\"racecar\"",
         "expected": "racecar"
       }
-    ]
+    ],
+    "func_name": "reverse_string"
   },
   {
     "task_id": 4,
@@ -181,7 +184,8 @@
         "input": "[1000000, 999999]",
         "expected": "1000000"
       }
-    ]
+    ],
+    "func_name": "find_max"
   },
   {
     "task_id": 5,
@@ -227,7 +231,8 @@
         "input": "\"x\", \"x\"",
         "expected": "1"
       }
-    ]
+    ],
+    "func_name": "count_char"
   },
   {
     "task_id": 6,
@@ -273,7 +278,8 @@
         "input": "7",
         "expected": "5040"
       }
-    ]
+    ],
+    "func_name": "factorial"
   },
   {
     "task_id": 7,
@@ -319,7 +325,8 @@
         "input": "\"abcba\"",
         "expected": "True"
       }
-    ]
+    ],
+    "func_name": "is_palindrome"
   },
   {
     "task_id": 8,
@@ -365,7 +372,8 @@
         "input": "[1, 2, 1, 2, 3]",
         "expected": "[1, 2, 3]"
       }
-    ]
+    ],
+    "func_name": "remove_duplicates"
   },
   {
     "task_id": 9,
@@ -411,7 +419,8 @@
         "input": "[7]",
         "expected": "7.0"
       }
-    ]
+    ],
+    "func_name": "average"
   },
   {
     "task_id": 10,
@@ -457,7 +466,8 @@
         "input": "\" \"",
         "expected": " "
       }
-    ]
+    ],
+    "func_name": "to_uppercase"
   },
   {
     "task_id": 11,
@@ -503,7 +513,8 @@
         "input": "25",
         "expected": "False"
       }
-    ]
+    ],
+    "func_name": "is_prime"
   },
   {
     "task_id": 12,
@@ -549,7 +560,8 @@
         "input": "[100, 200, 301]",
         "expected": "300"
       }
-    ]
+    ],
+    "func_name": "sum_even"
   },
   {
     "task_id": 13,
@@ -595,7 +607,8 @@
         "input": "7",
         "expected": "13"
       }
-    ]
+    ],
+    "func_name": "fibonacci"
   },
   {
     "task_id": 14,
@@ -641,7 +654,8 @@
         "input": "\"one two three four five\"",
         "expected": "5"
       }
-    ]
+    ],
+    "func_name": "count_words"
   },
   {
     "task_id": 15,
@@ -687,7 +701,8 @@
         "input": "[100, 50, 75, 25]",
         "expected": "[25, 50, 75, 100]"
       }
-    ]
+    ],
+    "func_name": "sort_list"
   },
   {
     "task_id": 16,
@@ -733,7 +748,8 @@
         "input": "[-1]",
         "expected": "-1"
       }
-    ]
+    ],
+    "func_name": "find_min"
   },
   {
     "task_id": 17,
@@ -779,7 +795,8 @@
         "input": "[100]",
         "expected": "False"
       }
-    ]
+    ],
+    "func_name": "has_negative"
   },
   {
     "task_id": 18,
@@ -825,7 +842,8 @@
         "input": "[10, 10]",
         "expected": "100"
       }
-    ]
+    ],
+    "func_name": "product_list"
   },
   {
     "task_id": 19,
@@ -871,7 +889,8 @@
         "input": "\"AA\"",
         "expected": "['A', 'A']"
       }
-    ]
+    ],
+    "func_name": "string_to_list"
   },
   {
     "task_id": 20,
@@ -917,7 +936,8 @@
         "input": "\"aab\", \"aba\"",
         "expected": "True"
       }
-    ]
+    ],
+    "func_name": "is_anagram"
   },
   {
     "task_id": 21,
@@ -963,7 +983,8 @@
         "input": "[-5, -3, -1]",
         "expected": "0"
       }
-    ]
+    ],
+    "func_name": "count_positive"
   },
   {
     "task_id": 22,
@@ -1009,7 +1030,8 @@
         "input": "[0, 1, 2]",
         "expected": "[0, 2]"
       }
-    ]
+    ],
+    "func_name": "get_evens"
   },
   {
     "task_id": 23,
@@ -1055,7 +1077,8 @@
         "input": "10, 1",
         "expected": "10"
       }
-    ]
+    ],
+    "func_name": "power"
   },
   {
     "task_id": 24,
@@ -1101,7 +1124,8 @@
         "input": "[0, -1]",
         "expected": "False"
       }
-    ]
+    ],
+    "func_name": "is_sorted"
   },
   {
     "task_id": 25,
@@ -1147,7 +1171,8 @@
         "input": "[1, 2, 3], []",
         "expected": "[1, 2, 3]"
       }
-    ]
+    ],
+    "func_name": "interleave"
   },
   {
     "task_id": 26,
@@ -1193,7 +1218,8 @@
         "input": "[1]",
         "expected": "0"
       }
-    ]
+    ],
+    "func_name": "count_negative"
   },
   {
     "task_id": 27,
@@ -1239,7 +1265,8 @@
         "input": "[1, 1, 1]",
         "expected": "1"
       }
-    ]
+    ],
+    "func_name": "last_element"
   },
   {
     "task_id": 28,
@@ -1285,7 +1312,8 @@
         "input": "\" \"",
         "expected": " "
       }
-    ]
+    ],
+    "func_name": "swap_case"
   },
   {
     "task_id": 29,
@@ -1331,7 +1359,8 @@
         "input": "[-2, 2]",
         "expected": "[2, 2]"
       }
-    ]
+    ],
+    "func_name": "abs_list"
   },
   {
     "task_id": 30,
@@ -1377,7 +1406,8 @@
         "input": "\"ab\"",
         "expected": "2"
       }
-    ]
+    ],
+    "func_name": "count_non_space"
   },
   {
     "task_id": 31,
@@ -1423,7 +1453,8 @@
         "input": "48, 18",
         "expected": "6"
       }
-    ]
+    ],
+    "func_name": "gcd"
   },
   {
     "task_id": 32,
@@ -1469,7 +1500,8 @@
         "input": "8",
         "expected": "[1, 3, 5, 7]"
       }
-    ]
+    ],
+    "func_name": "odd_numbers"
   },
   {
     "task_id": 33,
@@ -1515,7 +1547,8 @@
         "input": "99",
         "expected": "18"
       }
-    ]
+    ],
+    "func_name": "digit_sum"
   },
   {
     "task_id": 34,
@@ -1561,7 +1594,8 @@
         "input": "\"12\"",
         "expected": "True"
       }
-    ]
+    ],
+    "func_name": "has_digit"
   },
   {
     "task_id": 35,
@@ -1607,7 +1641,8 @@
         "input": "[3, 4]",
         "expected": "25"
       }
-    ]
+    ],
+    "func_name": "sum_squares"
   },
   {
     "task_id": 36,
@@ -1653,7 +1688,8 @@
         "input": "[1, 2, 3, 4], 1",
         "expected": "[4, 1, 2, 3]"
       }
-    ]
+    ],
+    "func_name": "rotate_right"
   },
   {
     "task_id": 37,
@@ -1699,7 +1735,8 @@
         "input": "[1, 1, 2, 2, 3]",
         "expected": "1"
       }
-    ]
+    ],
+    "func_name": "most_frequent"
   },
   {
     "task_id": 38,
@@ -1745,7 +1782,8 @@
         "input": "\"12.3\"",
         "expected": "False"
       }
-    ]
+    ],
+    "func_name": "is_all_digits"
   },
   {
     "task_id": 39,
@@ -1791,7 +1829,8 @@
         "input": "[[], [1]]",
         "expected": "[1]"
       }
-    ]
+    ],
+    "func_name": "flatten"
   },
   {
     "task_id": 40,
@@ -1837,7 +1876,8 @@
         "input": "[1, 2, 3], 3",
         "expected": "[1, 2, 3]"
       }
-    ]
+    ],
+    "func_name": "first_n"
   },
   {
     "task_id": 41,
@@ -1883,7 +1923,8 @@
         "input": "7",
         "expected": "False"
       }
-    ]
+    ],
+    "func_name": "is_perfect"
   },
   {
     "task_id": 42,
@@ -1929,7 +1970,8 @@
         "input": "[1, 2, 3, 1]",
         "expected": "[2, 3]"
       }
-    ]
+    ],
+    "func_name": "unique_elements"
   },
   {
     "task_id": 43,
@@ -1975,7 +2017,8 @@
         "input": "[100]",
         "expected": "100"
       }
-    ]
+    ],
+    "func_name": "list_to_string"
   },
   {
     "task_id": 44,
@@ -2021,7 +2064,8 @@
         "input": "\"aA\"",
         "expected": "2"
       }
-    ]
+    ],
+    "func_name": "count_vowels"
   },
   {
     "task_id": 45,
@@ -2067,7 +2111,8 @@
         "input": "2, 3",
         "expected": "6"
       }
-    ]
+    ],
+    "func_name": "lcm"
   },
   {
     "task_id": 46,
@@ -2113,7 +2158,8 @@
         "input": "[1, 1]",
         "expected": "[1, 1]"
       }
-    ]
+    ],
+    "func_name": "reverse_list"
   },
   {
     "task_id": 47,
@@ -2159,7 +2205,8 @@
         "input": "[1, 2, -3]",
         "expected": "False"
       }
-    ]
+    ],
+    "func_name": "all_positive"
   },
   {
     "task_id": 48,
@@ -2205,7 +2252,8 @@
         "input": "[0, 1], [1, 2]",
         "expected": "[1]"
       }
-    ]
+    ],
+    "func_name": "intersection"
   },
   {
     "task_id": 49,
@@ -2251,7 +2299,8 @@
         "input": "\"Ab\"",
         "expected": "True"
       }
-    ]
+    ],
+    "func_name": "starts_with_upper"
   },
   {
     "task_id": 50,
@@ -2297,6 +2346,3157 @@
         "input": "[1, 2, 3], 3",
         "expected": "[1, 2, 3]"
       }
-    ]
+    ],
+    "func_name": "last_n"
+  },
+  {
+    "code": "def similar_elements(test_tup1, test_tup2):\n  res = tuple(set(test_tup1) & set(test_tup2))\n  return (res) ",
+    "func_name": "similar_elements",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "(3, 4, 5, 6), (5, 7, 4, 10)",
+        "expected": "(4, 5)"
+      },
+      {
+        "input": "(1, 2, 3, 4), (5, 4, 3, 7)",
+        "expected": "(3, 4)"
+      },
+      {
+        "input": "(11, 12, 14, 13), (17, 15, 14, 13)",
+        "expected": "(13, 14)"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "(3, 4, 5, 6), (5, 7, 4, 10)",
+        "expected": "(4, 5)"
+      },
+      {
+        "input": "(1, 2, 3, 4), (5, 4, 3, 7)",
+        "expected": "(3, 4)"
+      },
+      {
+        "input": "(11, 12, 14, 13), (17, 15, 14, 13)",
+        "expected": "(13, 14)"
+      },
+      {
+        "input": "(37, 3, 34), (32,)",
+        "expected": "()"
+      },
+      {
+        "input": "(2, 36, 37), (8, 40, 13)",
+        "expected": "()"
+      },
+      {
+        "input": "(29, 44), (25, 12)",
+        "expected": "()"
+      },
+      {
+        "input": "(48, 50, 8), (18, 29)",
+        "expected": "()"
+      },
+      {
+        "input": "(33, 32, 50), (3, 35, 11, 21)",
+        "expected": "()"
+      },
+      {
+        "input": "(14, 4), (18, 32, 9, 40)",
+        "expected": "()"
+      },
+      {
+        "input": "(22, 16, 28, 29), (6, 50)",
+        "expected": "()"
+      }
+    ],
+    "task_id": 51,
+    "text": "Tìm các phần tử chung giữa hai danh sách."
+  },
+  {
+    "code": "import heapq as hq\ndef heap_queue_largest(nums,n):\n  largest_nums = hq.nlargest(n, nums)\n  return largest_nums",
+    "func_name": "heap_queue_largest",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "[25, 35, 22, 85, 14, 65, 75, 22, 58], 3",
+        "expected": "[85, 75, 65]"
+      },
+      {
+        "input": "[25, 35, 22, 85, 14, 65, 75, 22, 58], 2",
+        "expected": "[85, 75]"
+      },
+      {
+        "input": "[25, 35, 22, 85, 14, 65, 75, 22, 58], 5",
+        "expected": "[85, 75, 65, 58, 35]"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "[25, 35, 22, 85, 14, 65, 75, 22, 58], 3",
+        "expected": "[85, 75, 65]"
+      },
+      {
+        "input": "[25, 35, 22, 85, 14, 65, 75, 22, 58], 2",
+        "expected": "[85, 75]"
+      },
+      {
+        "input": "[25, 35, 22, 85, 14, 65, 75, 22, 58], 5",
+        "expected": "[85, 75, 65, 58, 35]"
+      },
+      {
+        "input": "[7, 9], 10",
+        "expected": "[9, 7]"
+      },
+      {
+        "input": "[16, 48, 39, 8, 43, 25, 9, 40], 14",
+        "expected": "[48, 43, 40, 39, 25, 16, 9, 8]"
+      },
+      {
+        "input": "[24, 3, 15, 5], 8",
+        "expected": "[24, 15, 5, 3]"
+      },
+      {
+        "input": "[46, 11, 25, 13, 23, 34, 43], 19",
+        "expected": "[46, 43, 34, 25, 23, 13, 11]"
+      },
+      {
+        "input": "[35, 14, 34, 38, 41], 16",
+        "expected": "[41, 38, 35, 34, 14]"
+      },
+      {
+        "input": "[43, 19, 32, 29, 37, 37, 41, 8], 12",
+        "expected": "[43, 41, 37, 37, 32, 29, 19, 8]"
+      },
+      {
+        "input": "[50, 35, 10, 33, 18, 17, 27, 47], 14",
+        "expected": "[50, 47, 35, 33, 27, 18, 17, 10]"
+      }
+    ],
+    "task_id": 52,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm heap_queue_largest."
+  },
+  {
+    "code": "def square_nums(nums):\n square_nums = list(map(lambda x: x ** 2, nums))\n return square_nums",
+    "func_name": "square_nums",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+        "expected": "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]"
+      },
+      {
+        "input": "[10, 20, 30]",
+        "expected": "[100, 400, 900]"
+      },
+      {
+        "input": "[12, 15]",
+        "expected": "[144, 225]"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
+        "expected": "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]"
+      },
+      {
+        "input": "[10, 20, 30]",
+        "expected": "[100, 400, 900]"
+      },
+      {
+        "input": "[12, 15]",
+        "expected": "[144, 225]"
+      },
+      {
+        "input": "[1]",
+        "expected": "[1]"
+      },
+      {
+        "input": "[22, 43, 3]",
+        "expected": "[484, 1849, 9]"
+      },
+      {
+        "input": "[44, 45]",
+        "expected": "[1936, 2025]"
+      },
+      {
+        "input": "[3, 20, 24, 25, 38, 19, 47, 15]",
+        "expected": "[9, 400, 576, 625, 1444, 361, 2209, 225]"
+      },
+      {
+        "input": "[49, 17, 26, 1, 49, 24, 41, 1]",
+        "expected": "[2401, 289, 676, 1, 2401, 576, 1681, 1]"
+      },
+      {
+        "input": "[34, 15, 32, 14, 15]",
+        "expected": "[1156, 225, 1024, 196, 225]"
+      },
+      {
+        "input": "[40, 31, 38, 44, 43, 3]",
+        "expected": "[1600, 961, 1444, 1936, 1849, 9]"
+      }
+    ],
+    "task_id": 53,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm square_nums."
+  },
+  {
+    "code": "def sort_matrix(M):\n    result = sorted(M, key=sum)\n    return result",
+    "func_name": "sort_matrix",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
+        "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]"
+      },
+      {
+        "input": "[[1, 2, 3], [-2, 4, -5], [1, -1, 1]]",
+        "expected": "[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]"
+      },
+      {
+        "input": "[[5, 8, 9], [6, 4, 3], [2, 1, 4]]",
+        "expected": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
+        "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]"
+      },
+      {
+        "input": "[[1, 2, 3], [-2, 4, -5], [1, -1, 1]]",
+        "expected": "[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]"
+      },
+      {
+        "input": "[[5, 8, 9], [6, 4, 3], [2, 1, 4]]",
+        "expected": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]"
+      },
+      {
+        "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
+        "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]"
+      },
+      {
+        "input": "[[1, 2, 3], [-2, 4, -5], [1, -1, 1]]",
+        "expected": "[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]"
+      },
+      {
+        "input": "[[5, 8, 9], [6, 4, 3], [2, 1, 4]]",
+        "expected": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]"
+      },
+      {
+        "input": "[[1, 2, 3], [-2, 4, -5], [1, -1, 1]]",
+        "expected": "[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]"
+      },
+      {
+        "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
+        "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]"
+      },
+      {
+        "input": "[[1, 2, 3], [-2, 4, -5], [1, -1, 1]]",
+        "expected": "[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]"
+      },
+      {
+        "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
+        "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]"
+      }
+    ],
+    "task_id": 54,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm sort_matrix."
+  },
+  {
+    "code": "def test_duplicate(arraynums):\n    nums_set = set(arraynums)    \n    return len(arraynums) != len(nums_set)     ",
+    "func_name": "test_duplicate",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "[1, 2, 3, 4, 5]",
+        "expected": "False"
+      },
+      {
+        "input": "[1, 2, 3, 4, 4]",
+        "expected": "True"
+      },
+      {
+        "input": "[1, 1, 2, 2, 3, 3, 4, 4, 5]",
+        "expected": "True"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "[1, 2, 3, 4, 5]",
+        "expected": "False"
+      },
+      {
+        "input": "[1, 2, 3, 4, 4]",
+        "expected": "True"
+      },
+      {
+        "input": "[1, 1, 2, 2, 3, 3, 4, 4, 5]",
+        "expected": "True"
+      },
+      {
+        "input": "[20, 24, 28, 18, 41, 41]",
+        "expected": "True"
+      },
+      {
+        "input": "[31]",
+        "expected": "False"
+      },
+      {
+        "input": "[4, 21, 13, 21, 23, 1, 46, 7]",
+        "expected": "True"
+      },
+      {
+        "input": "[1, 7, 26]",
+        "expected": "False"
+      },
+      {
+        "input": "[6, 50, 32, 5]",
+        "expected": "False"
+      },
+      {
+        "input": "[42, 8, 3, 47, 35, 49]",
+        "expected": "False"
+      },
+      {
+        "input": "[40, 42, 42, 9, 5, 22, 37]",
+        "expected": "True"
+      }
+    ],
+    "task_id": 55,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm test_duplicate."
+  },
+  {
+    "code": "def find_Max_Num(arr) : \n    n = len(arr)\n    arr.sort(reverse = True) \n    num = arr[0] \n    for i in range(1,n) : \n        num = num * 10 + arr[i] \n    return num ",
+    "func_name": "find_Max_Num",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "[1, 2, 3]",
+        "expected": "321"
+      },
+      {
+        "input": "[4, 5, 6, 1]",
+        "expected": "6541"
+      },
+      {
+        "input": "[1, 2, 3, 9]",
+        "expected": "9321"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "[1, 2, 3]",
+        "expected": "321"
+      },
+      {
+        "input": "[4, 5, 6, 1]",
+        "expected": "6541"
+      },
+      {
+        "input": "[1, 2, 3, 9]",
+        "expected": "9321"
+      },
+      {
+        "input": "[16, 36]",
+        "expected": "376"
+      },
+      {
+        "input": "[13, 37, 42, 35, 21, 34]",
+        "expected": "4608623"
+      },
+      {
+        "input": "[23, 2, 1, 28, 14, 42, 32]",
+        "expected": "45504421"
+      },
+      {
+        "input": "[30, 42, 19, 31, 34, 2, 16, 29]",
+        "expected": "457431062"
+      },
+      {
+        "input": "[50, 4, 48, 49, 8]",
+        "expected": "553884"
+      },
+      {
+        "input": "[30, 28, 29, 17, 5, 22]",
+        "expected": "3320375"
+      },
+      {
+        "input": "[16, 11, 17, 42, 11]",
+        "expected": "438721"
+      }
+    ],
+    "task_id": 56,
+    "text": "Tìm số lớn nhất có thể được tạo ra từ danh sách các chữ số cho trước."
+  },
+  {
+    "code": "from collections import defaultdict\ndef count_Substrings(s):\n    n = len(s)\n    count,sum = 0,0\n    mp = defaultdict(lambda : 0)\n    mp[0] += 1\n    for i in range(n):\n        sum += ord(s[i]) - ord('0')\n        count += mp[sum - (i + 1)]\n        mp[sum - (i + 1)] += 1\n    return count",
+    "func_name": "count_Substrings",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "'112112'",
+        "expected": "6"
+      },
+      {
+        "input": "'111'",
+        "expected": "6"
+      },
+      {
+        "input": "'1101112'",
+        "expected": "12"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'112112'",
+        "expected": "6"
+      },
+      {
+        "input": "'111'",
+        "expected": "6"
+      },
+      {
+        "input": "'1101112'",
+        "expected": "12"
+      },
+      {
+        "input": "'ZHmPtD'",
+        "expected": "0"
+      },
+      {
+        "input": "'tXI'",
+        "expected": "0"
+      },
+      {
+        "input": "'dBuk'",
+        "expected": "0"
+      },
+      {
+        "input": "'Qylu'",
+        "expected": "0"
+      },
+      {
+        "input": "'GlXcqNsc'",
+        "expected": "0"
+      },
+      {
+        "input": "'OXmL'",
+        "expected": "0"
+      },
+      {
+        "input": "'Twk'",
+        "expected": "0"
+      }
+    ],
+    "task_id": 57,
+    "text": "Đếm số lượng chuỗi con có tổng các chữ số bằng độ dài của chính chuỗi con đó."
+  },
+  {
+    "code": "def smallest_num(xs):\n  return min(xs)\n",
+    "func_name": "smallest_num",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "[10, 20, 1, 45, 99]",
+        "expected": "1"
+      },
+      {
+        "input": "[1, 2, 3]",
+        "expected": "1"
+      },
+      {
+        "input": "[45, 46, 50, 60]",
+        "expected": "45"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "[10, 20, 1, 45, 99]",
+        "expected": "1"
+      },
+      {
+        "input": "[1, 2, 3]",
+        "expected": "1"
+      },
+      {
+        "input": "[45, 46, 50, 60]",
+        "expected": "45"
+      },
+      {
+        "input": "[12, 34, 48, 37, 29, 8, 35, 4]",
+        "expected": "4"
+      },
+      {
+        "input": "[35, 19, 49, 21, 31, 23]",
+        "expected": "19"
+      },
+      {
+        "input": "[45]",
+        "expected": "45"
+      },
+      {
+        "input": "[15, 48]",
+        "expected": "15"
+      },
+      {
+        "input": "[50, 1, 18, 35, 5, 46]",
+        "expected": "1"
+      },
+      {
+        "input": "[4]",
+        "expected": "4"
+      },
+      {
+        "input": "[26, 48, 31, 31, 48]",
+        "expected": "26"
+      }
+    ],
+    "task_id": 58,
+    "text": "Tìm số nhỏ nhất trong một danh sách số cho trước."
+  },
+  {
+    "code": "def max_difference(test_list):\n  temp = [abs(b - a) for a, b in test_list]\n  res = max(temp)\n  return (res) ",
+    "func_name": "max_difference",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "[(3, 5), (1, 7), (10, 3), (1, 2)]",
+        "expected": "7"
+      },
+      {
+        "input": "[(4, 6), (2, 17), (9, 13), (11, 12)]",
+        "expected": "15"
+      },
+      {
+        "input": "[(12, 35), (21, 27), (13, 23), (41, 22)]",
+        "expected": "23"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "[(3, 5), (1, 7), (10, 3), (1, 2)]",
+        "expected": "7"
+      },
+      {
+        "input": "[(4, 6), (2, 17), (9, 13), (11, 12)]",
+        "expected": "15"
+      },
+      {
+        "input": "[(12, 35), (21, 27), (13, 23), (41, 22)]",
+        "expected": "23"
+      },
+      {
+        "input": "[(3, 5), (1, 7), (10, 3), (1, 2)]",
+        "expected": "7"
+      },
+      {
+        "input": "[(4, 6), (2, 17), (9, 13), (11, 12)]",
+        "expected": "15"
+      },
+      {
+        "input": "[(4, 6), (2, 17), (9, 13), (11, 12)]",
+        "expected": "15"
+      },
+      {
+        "input": "[(3, 5), (1, 7), (10, 3), (1, 2)]",
+        "expected": "7"
+      },
+      {
+        "input": "[(4, 6), (2, 17), (9, 13), (11, 12)]",
+        "expected": "15"
+      },
+      {
+        "input": "[(4, 6), (2, 17), (9, 13), (11, 12)]",
+        "expected": "15"
+      },
+      {
+        "input": "[(4, 6), (2, 17), (9, 13), (11, 12)]",
+        "expected": "15"
+      }
+    ],
+    "task_id": 59,
+    "text": "Tìm khoảng cách lớn nhất giữa các cặp số trong một danh sách tuple cho trước."
+  },
+  {
+    "code": "def subject_marks(subjectmarks):\n#subject_marks = [('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)])\n subjectmarks.sort(key = lambda x: x[1])\n return subjectmarks",
+    "func_name": "subject_marks",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "[('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]",
+        "expected": "[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]"
+      },
+      {
+        "input": "[('Telugu', 49), ('Hindhi', 54), ('Social', 33)]",
+        "expected": "[('Social', 33), ('Telugu', 49), ('Hindhi', 54)]"
+      },
+      {
+        "input": "[('Physics', 96), ('Chemistry', 97), ('Biology', 45)]",
+        "expected": "[('Biology', 45), ('Physics', 96), ('Chemistry', 97)]"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "[('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]",
+        "expected": "[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]"
+      },
+      {
+        "input": "[('Telugu', 49), ('Hindhi', 54), ('Social', 33)]",
+        "expected": "[('Social', 33), ('Telugu', 49), ('Hindhi', 54)]"
+      },
+      {
+        "input": "[('Physics', 96), ('Chemistry', 97), ('Biology', 45)]",
+        "expected": "[('Biology', 45), ('Physics', 96), ('Chemistry', 97)]"
+      },
+      {
+        "input": "[('Telugu', 49), ('Hindhi', 54), ('Social', 33)]",
+        "expected": "[('Social', 33), ('Telugu', 49), ('Hindhi', 54)]"
+      },
+      {
+        "input": "[('Physics', 96), ('Chemistry', 97), ('Biology', 45)]",
+        "expected": "[('Biology', 45), ('Physics', 96), ('Chemistry', 97)]"
+      },
+      {
+        "input": "[('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]",
+        "expected": "[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]"
+      },
+      {
+        "input": "[('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]",
+        "expected": "[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]"
+      },
+      {
+        "input": "[('Telugu', 49), ('Hindhi', 54), ('Social', 33)]",
+        "expected": "[('Social', 33), ('Telugu', 49), ('Hindhi', 54)]"
+      },
+      {
+        "input": "[('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]",
+        "expected": "[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]"
+      },
+      {
+        "input": "[('Telugu', 49), ('Hindhi', 54), ('Social', 33)]",
+        "expected": "[('Social', 33), ('Telugu', 49), ('Hindhi', 54)]"
+      }
+    ],
+    "task_id": 60,
+    "text": "Sắp xếp danh sách các tuple điểm số môn học theo thứ tự điểm tăng dần."
+  },
+  {
+    "code": "def pos_count(list):\n  pos_count= 0\n  for num in list: \n    if num >= 0: \n      pos_count += 1\n  return pos_count ",
+    "func_name": "pos_count",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "[1, -2, 3, -4]",
+        "expected": "2"
+      },
+      {
+        "input": "[3, 4, 5, -1]",
+        "expected": "3"
+      },
+      {
+        "input": "[1, 2, 3, 4]",
+        "expected": "4"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "[1, -2, 3, -4]",
+        "expected": "2"
+      },
+      {
+        "input": "[3, 4, 5, -1]",
+        "expected": "3"
+      },
+      {
+        "input": "[1, 2, 3, 4]",
+        "expected": "4"
+      },
+      {
+        "input": "[36, 37, 40]",
+        "expected": "3"
+      },
+      {
+        "input": "[22]",
+        "expected": "1"
+      },
+      {
+        "input": "[44, 42, 15, 35, 14, 38]",
+        "expected": "6"
+      },
+      {
+        "input": "[1, 4, 22]",
+        "expected": "3"
+      },
+      {
+        "input": "[19, 11, 19]",
+        "expected": "3"
+      },
+      {
+        "input": "[46, 45, 14, 26, 14, 33, 11]",
+        "expected": "7"
+      },
+      {
+        "input": "[1, 31]",
+        "expected": "2"
+      }
+    ],
+    "task_id": 61,
+    "text": "Đếm số lượng số dương trong một danh sách số nguyên cho trước."
+  },
+  {
+    "code": "def is_Monotonic(A): \n    return (all(A[i] <= A[i + 1] for i in range(len(A) - 1)) or\n            all(A[i] >= A[i + 1] for i in range(len(A) - 1))) ",
+    "func_name": "is_Monotonic",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "[6, 5, 4, 4]",
+        "expected": "True"
+      },
+      {
+        "input": "[1, 2, 2, 3]",
+        "expected": "True"
+      },
+      {
+        "input": "[1, 3, 2]",
+        "expected": "False"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "[6, 5, 4, 4]",
+        "expected": "True"
+      },
+      {
+        "input": "[1, 2, 2, 3]",
+        "expected": "True"
+      },
+      {
+        "input": "[1, 3, 2]",
+        "expected": "False"
+      },
+      {
+        "input": "[15, 4, 14, 49, 21, 36, 7, 46]",
+        "expected": "False"
+      },
+      {
+        "input": "[43, 8, 40, 35, 32]",
+        "expected": "False"
+      },
+      {
+        "input": "[19, 34, 25, 22]",
+        "expected": "False"
+      },
+      {
+        "input": "[4, 30, 38, 10, 35, 7, 36]",
+        "expected": "False"
+      },
+      {
+        "input": "[30, 40, 9, 15]",
+        "expected": "False"
+      },
+      {
+        "input": "[44, 5, 10, 38, 14, 10, 25]",
+        "expected": "False"
+      },
+      {
+        "input": "[17, 23, 23, 43]",
+        "expected": "True"
+      }
+    ],
+    "task_id": 62,
+    "text": "Kiểm tra xem một danh sách số nguyên cho trước có đơn điệu hay không."
+  },
+  {
+    "code": "def is_samepatterns(colors, patterns):    \n    if len(colors) != len(patterns):\n        return False    \n    sdict = {}\n    pset = set()\n    sset = set()    \n    for i in range(len(patterns)):\n        pset.add(patterns[i])\n        sset.add(colors[i])\n        if patterns[i] not in sdict.keys():\n            sdict[patterns[i]] = []\n\n        keys = sdict[patterns[i]]\n        keys.append(colors[i])\n        sdict[patterns[i]] = keys\n\n    if len(pset) != len(sset):\n        return False   \n\n    for values in sdict.values():\n\n        for i in range(len(values) - 1):\n            if values[i] != values[i+1]:\n                return False\n\n    return True",
+    "func_name": "is_samepatterns",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "['red', 'green', 'green'], ['a', 'b', 'b']",
+        "expected": "True"
+      },
+      {
+        "input": "['red', 'green', 'greenn'], ['a', 'b', 'b']",
+        "expected": "False"
+      },
+      {
+        "input": "['red', 'green', 'greenn'], ['a', 'b']",
+        "expected": "False"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "['red', 'green', 'green'], ['a', 'b', 'b']",
+        "expected": "True"
+      },
+      {
+        "input": "['red', 'green', 'greenn'], ['a', 'b', 'b']",
+        "expected": "False"
+      },
+      {
+        "input": "['red', 'green', 'greenn'], ['a', 'b']",
+        "expected": "False"
+      },
+      {
+        "input": "['asn', 'jha', 'xpj', 'dsm'], ['fxd', 'wex', 'wrp']",
+        "expected": "False"
+      },
+      {
+        "input": "['wmj', 'ybb', 'ani', 'vbe'], ['pko', 'hfe', 'muh', 'csq', 'wvm', 'rob', 'hpx']",
+        "expected": "False"
+      },
+      {
+        "input": "['iuo', 'qsr', 'pjd', 'jhi'], ['bjj', 'hpt', 'ort']",
+        "expected": "False"
+      },
+      {
+        "input": "['etz', 'bjy'], ['mka', 'lce', 'dfa']",
+        "expected": "False"
+      },
+      {
+        "input": "['gsn', 'iyj', 'olz', 'iuq', 'mvd', 'hwq', 'xcq'], ['old', 'nis', 'qdu', 'mnm', 'aga', 'fnp', 'scm']",
+        "expected": "True"
+      },
+      {
+        "input": "['npz', 'jse', 'pis', 'ami'], ['mtw', 'zwj', 'txs', 'jgl', 'wmu', 'ncq', 'ltr', 'upt']",
+        "expected": "False"
+      },
+      {
+        "input": "['trv', 'hke', 'eer'], ['kmo', 'vob', 'bsw', 'wzv', 'hul', 'qmz', 'jpt', 'wkf']",
+        "expected": "False"
+      }
+    ],
+    "task_id": 63,
+    "text": "Kiểm tra xem danh sách màu sắc có tuân theo mẫu hình pattern cho trước không."
+  },
+  {
+    "code": "def find_tuples(test_list, K):\n  res = [sub for sub in test_list if all(ele % K == 0 for ele in sub)]\n  return res",
+    "func_name": "find_tuples",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "[(6, 24, 12), (7, 9, 6), (12, 18, 21)], 6",
+        "expected": "[(6, 24, 12)]"
+      },
+      {
+        "input": "[(5, 25, 30), (4, 2, 3), (7, 8, 9)], 5",
+        "expected": "[(5, 25, 30)]"
+      },
+      {
+        "input": "[(7, 9, 16), (8, 16, 4), (19, 17, 18)], 4",
+        "expected": "[(8, 16, 4)]"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "[(6, 24, 12), (7, 9, 6), (12, 18, 21)], 6",
+        "expected": "[(6, 24, 12)]"
+      },
+      {
+        "input": "[(5, 25, 30), (4, 2, 3), (7, 8, 9)], 5",
+        "expected": "[(5, 25, 30)]"
+      },
+      {
+        "input": "[(7, 9, 16), (8, 16, 4), (19, 17, 18)], 4",
+        "expected": "[(8, 16, 4)]"
+      },
+      {
+        "input": "[(5, 25, 30), (4, 2, 3), (7, 8, 9)], 13",
+        "expected": "[]"
+      },
+      {
+        "input": "[(6, 24, 12), (7, 9, 6), (12, 18, 21)], 18",
+        "expected": "[]"
+      },
+      {
+        "input": "[(7, 9, 16), (8, 16, 4), (19, 17, 18)], 8",
+        "expected": "[]"
+      },
+      {
+        "input": "[(5, 25, 30), (4, 2, 3), (7, 8, 9)], 5",
+        "expected": "[(5, 25, 30)]"
+      },
+      {
+        "input": "[(7, 9, 16), (8, 16, 4), (19, 17, 18)], 11",
+        "expected": "[]"
+      },
+      {
+        "input": "[(5, 25, 30), (4, 2, 3), (7, 8, 9)], 18",
+        "expected": "[]"
+      },
+      {
+        "input": "[(6, 24, 12), (7, 9, 6), (12, 18, 21)], 5",
+        "expected": "[]"
+      }
+    ],
+    "task_id": 64,
+    "text": "Tìm các tuple trong danh sách có tất cả phần tử chia hết cho số k."
+  },
+  {
+    "code": "def word_len(s): \n    s = s.split(' ')   \n    for word in s:    \n        if len(word)%2!=0: \n            return True  \n        else:\n          return False",
+    "func_name": "word_len",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "'Hadoop'",
+        "expected": "False"
+      },
+      {
+        "input": "'great'",
+        "expected": "True"
+      },
+      {
+        "input": "'structure'",
+        "expected": "True"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'Hadoop'",
+        "expected": "False"
+      },
+      {
+        "input": "'great'",
+        "expected": "True"
+      },
+      {
+        "input": "'structure'",
+        "expected": "True"
+      },
+      {
+        "input": "'HTk'",
+        "expected": "True"
+      },
+      {
+        "input": "'xqcj'",
+        "expected": "False"
+      },
+      {
+        "input": "'myfGkE'",
+        "expected": "False"
+      },
+      {
+        "input": "'bTvPc'",
+        "expected": "True"
+      },
+      {
+        "input": "'clXf'",
+        "expected": "False"
+      },
+      {
+        "input": "'wgpjqUb'",
+        "expected": "True"
+      },
+      {
+        "input": "'FfZHmhB'",
+        "expected": "True"
+      }
+    ],
+    "task_id": 65,
+    "text": "Kiểm tra xem trong chuỗi có từ nào có độ dài lẻ hay không."
+  },
+  {
+    "code": "import collections as ct\ndef merge_dictionaries_three(dict1,dict2, dict3):\n    merged_dict = dict(ct.ChainMap({},dict1,dict2,dict3))\n    return merged_dict",
+    "func_name": "merge_dictionaries_three",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'G': 'Green', 'W': 'White'}, {'O': 'Orange', 'W': 'White', 'B': 'Black'}",
+        "expected": "{'O': 'Orange', 'W': 'White', 'B': 'Black', 'G': 'Green', 'R': 'Red', 'P': 'Pink'}"
+      },
+      {
+        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'G': 'Green', 'W': 'White'}, {'L': 'lavender', 'B': 'Blue'}",
+        "expected": "{'L': 'lavender', 'B': 'Black', 'G': 'Green', 'W': 'White', 'R': 'Red', 'P': 'Pink'}"
+      },
+      {
+        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'L': 'lavender', 'B': 'Blue'}, {'G': 'Green', 'W': 'White'}",
+        "expected": "{'G': 'Green', 'W': 'White', 'L': 'lavender', 'B': 'Black', 'R': 'Red', 'P': 'Pink'}"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'G': 'Green', 'W': 'White'}, {'O': 'Orange', 'W': 'White', 'B': 'Black'}",
+        "expected": "{'O': 'Orange', 'W': 'White', 'B': 'Black', 'G': 'Green', 'R': 'Red', 'P': 'Pink'}"
+      },
+      {
+        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'G': 'Green', 'W': 'White'}, {'L': 'lavender', 'B': 'Blue'}",
+        "expected": "{'L': 'lavender', 'B': 'Black', 'G': 'Green', 'W': 'White', 'R': 'Red', 'P': 'Pink'}"
+      },
+      {
+        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'L': 'lavender', 'B': 'Blue'}, {'G': 'Green', 'W': 'White'}",
+        "expected": "{'G': 'Green', 'W': 'White', 'L': 'lavender', 'B': 'Black', 'R': 'Red', 'P': 'Pink'}"
+      },
+      {
+        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'G': 'Green', 'W': 'White'}, {'L': 'lavender', 'B': 'Blue'}",
+        "expected": "{'L': 'lavender', 'B': 'Black', 'G': 'Green', 'W': 'White', 'R': 'Red', 'P': 'Pink'}"
+      },
+      {
+        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'G': 'Green', 'W': 'White'}, {'L': 'lavender', 'B': 'Blue'}",
+        "expected": "{'L': 'lavender', 'B': 'Black', 'G': 'Green', 'W': 'White', 'R': 'Red', 'P': 'Pink'}"
+      },
+      {
+        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'L': 'lavender', 'B': 'Blue'}, {'G': 'Green', 'W': 'White'}",
+        "expected": "{'G': 'Green', 'W': 'White', 'L': 'lavender', 'B': 'Black', 'R': 'Red', 'P': 'Pink'}"
+      },
+      {
+        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'G': 'Green', 'W': 'White'}, {'O': 'Orange', 'W': 'White', 'B': 'Black'}",
+        "expected": "{'O': 'Orange', 'W': 'White', 'B': 'Black', 'G': 'Green', 'R': 'Red', 'P': 'Pink'}"
+      },
+      {
+        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'L': 'lavender', 'B': 'Blue'}, {'G': 'Green', 'W': 'White'}",
+        "expected": "{'G': 'Green', 'W': 'White', 'L': 'lavender', 'B': 'Black', 'R': 'Red', 'P': 'Pink'}"
+      },
+      {
+        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'G': 'Green', 'W': 'White'}, {'O': 'Orange', 'W': 'White', 'B': 'Black'}",
+        "expected": "{'O': 'Orange', 'W': 'White', 'B': 'Black', 'G': 'Green', 'R': 'Red', 'P': 'Pink'}"
+      },
+      {
+        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'G': 'Green', 'W': 'White'}, {'L': 'lavender', 'B': 'Blue'}",
+        "expected": "{'L': 'lavender', 'B': 'Black', 'G': 'Green', 'W': 'White', 'R': 'Red', 'P': 'Pink'}"
+      }
+    ],
+    "task_id": 66,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm merge_dictionaries_three."
+  },
+  {
+    "code": "import collections\ndef freq_count(list1):\n  freq_count= collections.Counter(list1)\n  return freq_count",
+    "func_name": "freq_count",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "[10, 10, 10, 10, 20, 20, 20, 20, 40, 40, 50, 50, 30]",
+        "expected": "Counter({10: 4, 20: 4, 40: 2, 50: 2, 30: 1})"
+      },
+      {
+        "input": "[1, 2, 3, 4, 3, 2, 4, 1, 3, 1, 4]",
+        "expected": "Counter({1: 3, 3: 3, 4: 3, 2: 2})"
+      },
+      {
+        "input": "[5, 6, 7, 4, 9, 10, 4, 5, 6, 7, 9, 5]",
+        "expected": "Counter({5: 3, 6: 2, 7: 2, 4: 2, 9: 2, 10: 1})"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "[10, 10, 10, 10, 20, 20, 20, 20, 40, 40, 50, 50, 30]",
+        "expected": "Counter({10: 4, 20: 4, 40: 2, 50: 2, 30: 1})"
+      },
+      {
+        "input": "[1, 2, 3, 4, 3, 2, 4, 1, 3, 1, 4]",
+        "expected": "Counter({1: 3, 3: 3, 4: 3, 2: 2})"
+      },
+      {
+        "input": "[5, 6, 7, 4, 9, 10, 4, 5, 6, 7, 9, 5]",
+        "expected": "Counter({5: 3, 6: 2, 7: 2, 4: 2, 9: 2, 10: 1})"
+      },
+      {
+        "input": "[10, 16, 39, 12, 49]",
+        "expected": "Counter({10: 1, 16: 1, 39: 1, 12: 1, 49: 1})"
+      },
+      {
+        "input": "[7, 29, 39, 16, 48, 28, 9]",
+        "expected": "Counter({7: 1, 29: 1, 39: 1, 16: 1, 48: 1, 28: 1, 9: 1})"
+      },
+      {
+        "input": "[37, 16, 17, 15, 25, 10, 6, 1]",
+        "expected": "Counter({37: 1, 16: 1, 17: 1, 15: 1, 25: 1, 10: 1, 6: 1, 1: 1})"
+      },
+      {
+        "input": "[32, 35, 43, 17, 45, 8]",
+        "expected": "Counter({32: 1, 35: 1, 43: 1, 17: 1, 45: 1, 8: 1})"
+      },
+      {
+        "input": "[25, 2, 19, 41, 38]",
+        "expected": "Counter({25: 1, 2: 1, 19: 1, 41: 1, 38: 1})"
+      },
+      {
+        "input": "[46, 1]",
+        "expected": "Counter({46: 1, 1: 1})"
+      },
+      {
+        "input": "[32, 10, 41, 28, 36, 46, 36, 42]",
+        "expected": "Counter({36: 2, 32: 1, 10: 1, 41: 1, 28: 1, 46: 1, 42: 1})"
+      }
+    ],
+    "task_id": 67,
+    "text": "Đếm tần suất xuất hiện của các phần tử trong danh sách và trả về từ điển."
+  },
+  {
+    "code": "def len_log(list1):\n    max=len(list1[0])\n    for i in list1:\n        if len(i)>max:\n            max=len(i)\n    return max",
+    "func_name": "len_log",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "['python', 'PHP', 'bigdata']",
+        "expected": "7"
+      },
+      {
+        "input": "['a', 'ab', 'abc']",
+        "expected": "3"
+      },
+      {
+        "input": "['small', 'big', 'tall']",
+        "expected": "5"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "['python', 'PHP', 'bigdata']",
+        "expected": "7"
+      },
+      {
+        "input": "['a', 'ab', 'abc']",
+        "expected": "3"
+      },
+      {
+        "input": "['small', 'big', 'tall']",
+        "expected": "5"
+      },
+      {
+        "input": "['fth']",
+        "expected": "3"
+      },
+      {
+        "input": "['clx', 'pxv', 'ity', 'auy', 'dbm', 'kai']",
+        "expected": "3"
+      },
+      {
+        "input": "['wtd', 'umy']",
+        "expected": "3"
+      },
+      {
+        "input": "['eyl', 'ges', 'msr']",
+        "expected": "3"
+      },
+      {
+        "input": "['fkn', 'dtb']",
+        "expected": "3"
+      },
+      {
+        "input": "['exe', 'vvb', 'hoe', 'wmh', 'llx', 'ogz']",
+        "expected": "3"
+      },
+      {
+        "input": "['msv', 'yyz', 'qzi', 'zrn', 'vsu', 'qke']",
+        "expected": "3"
+      }
+    ],
+    "task_id": 68,
+    "text": "Tìm độ dài của từ dài nhất trong một danh sách từ cho trước."
+  },
+  {
+    "code": "def find_substring(str1, sub_str):\n   if any(sub_str in s for s in str1):\n       return True\n   return False",
+    "func_name": "find_substring",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "['red', 'black', 'white', 'green', 'orange'], 'ack'",
+        "expected": "True"
+      },
+      {
+        "input": "['red', 'black', 'white', 'green', 'orange'], 'abc'",
+        "expected": "False"
+      },
+      {
+        "input": "['red', 'black', 'white', 'green', 'orange'], 'ange'",
+        "expected": "True"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "['red', 'black', 'white', 'green', 'orange'], 'ack'",
+        "expected": "True"
+      },
+      {
+        "input": "['red', 'black', 'white', 'green', 'orange'], 'abc'",
+        "expected": "False"
+      },
+      {
+        "input": "['red', 'black', 'white', 'green', 'orange'], 'ange'",
+        "expected": "True"
+      },
+      {
+        "input": "['nok', 'uxy', 'ofu', 'lnx', 'krm', 'ont', 'ynn'], 'GkDymIOT'",
+        "expected": "False"
+      },
+      {
+        "input": "['fpc', 'mil', 'dyf'], 'qpq'",
+        "expected": "False"
+      },
+      {
+        "input": "['qqb', 'evz', 'qjp', 'wmm', 'gbx', 'cju', 'euu'], 'LymBzJ'",
+        "expected": "False"
+      },
+      {
+        "input": "['mdk', 'dds', 'eog', 'tuv', 'hcb', 'afo'], 'MFNFdwGJ'",
+        "expected": "False"
+      },
+      {
+        "input": "['pmz', 'xgz', 'ayy', 'xvv', 'wtb'], 'OKYtB'",
+        "expected": "False"
+      },
+      {
+        "input": "['teh', 'ake', 'vae', 'bih', 'wkr', 'keg', 'hoo', 'zsg'], 'rlJmxUW'",
+        "expected": "False"
+      },
+      {
+        "input": "['upv', 'zgp', 'koy'], 'hUh'",
+        "expected": "False"
+      }
+    ],
+    "task_id": 69,
+    "text": "Kiểm tra xem chuỗi con có xuất hiện trong bất kỳ từ nào của danh sách không."
+  },
+  {
+    "code": "from operator import itemgetter \ndef index_minimum(test_list):\n  res = min(test_list, key = itemgetter(1))[0]\n  return (res) ",
+    "func_name": "index_minimum",
+    "topic": "list",
+    "public_tests": [
+      {
+        "input": "[('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]",
+        "expected": "'Varsha'"
+      },
+      {
+        "input": "[('Yash', 185), ('Dawood', 125), ('Sanya', 175)]",
+        "expected": "'Dawood'"
+      },
+      {
+        "input": "[('Sai', 345), ('Salman', 145), ('Ayesha', 96)]",
+        "expected": "'Ayesha'"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "[('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]",
+        "expected": "'Varsha'"
+      },
+      {
+        "input": "[('Yash', 185), ('Dawood', 125), ('Sanya', 175)]",
+        "expected": "'Dawood'"
+      },
+      {
+        "input": "[('Sai', 345), ('Salman', 145), ('Ayesha', 96)]",
+        "expected": "'Ayesha'"
+      },
+      {
+        "input": "[('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]",
+        "expected": "'Varsha'"
+      },
+      {
+        "input": "[('Yash', 185), ('Dawood', 125), ('Sanya', 175)]",
+        "expected": "'Dawood'"
+      },
+      {
+        "input": "[('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]",
+        "expected": "'Varsha'"
+      },
+      {
+        "input": "[('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]",
+        "expected": "'Varsha'"
+      },
+      {
+        "input": "[('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]",
+        "expected": "'Varsha'"
+      },
+      {
+        "input": "[('Yash', 185), ('Dawood', 125), ('Sanya', 175)]",
+        "expected": "'Dawood'"
+      },
+      {
+        "input": "[('Yash', 185), ('Dawood', 125), ('Sanya', 175)]",
+        "expected": "'Dawood'"
+      }
+    ],
+    "task_id": 70,
+    "text": "Tìm phần tử đầu tiên của tuple có giá trị phần tử thứ hai nhỏ nhất."
+  },
+  {
+    "code": "import math\ndef is_not_prime(n):\n    result = False\n    for i in range(2,int(math.sqrt(n)) + 1):\n        if n % i == 0:\n            result = True\n    return result",
+    "func_name": "is_not_prime",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "2",
+        "expected": "False"
+      },
+      {
+        "input": "10",
+        "expected": "True"
+      },
+      {
+        "input": "35",
+        "expected": "True"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "2",
+        "expected": "False"
+      },
+      {
+        "input": "10",
+        "expected": "True"
+      },
+      {
+        "input": "35",
+        "expected": "True"
+      },
+      {
+        "input": "37",
+        "expected": "False"
+      },
+      {
+        "input": "11",
+        "expected": "False"
+      },
+      {
+        "input": "6",
+        "expected": "True"
+      },
+      {
+        "input": "10",
+        "expected": "True"
+      },
+      {
+        "input": "3",
+        "expected": "False"
+      },
+      {
+        "input": "19",
+        "expected": "False"
+      },
+      {
+        "input": "10",
+        "expected": "True"
+      }
+    ],
+    "task_id": 71,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm is_not_prime."
+  },
+  {
+    "code": "def find_Rotations(str): \n    tmp = str + str\n    n = len(str) \n    for i in range(1,n + 1): \n        substring = tmp[i: i+n] \n        if (str == substring): \n            return i \n    return n ",
+    "func_name": "find_Rotations",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "'aaaa'",
+        "expected": "1"
+      },
+      {
+        "input": "'ab'",
+        "expected": "2"
+      },
+      {
+        "input": "'abc'",
+        "expected": "3"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'aaaa'",
+        "expected": "1"
+      },
+      {
+        "input": "'ab'",
+        "expected": "2"
+      },
+      {
+        "input": "'abc'",
+        "expected": "3"
+      },
+      {
+        "input": "'HILRhNe'",
+        "expected": "7"
+      },
+      {
+        "input": "'xyQREHNu'",
+        "expected": "8"
+      },
+      {
+        "input": "'CTe'",
+        "expected": "3"
+      },
+      {
+        "input": "'kGC'",
+        "expected": "3"
+      },
+      {
+        "input": "'yCvNpaO'",
+        "expected": "7"
+      },
+      {
+        "input": "'XYmXFR'",
+        "expected": "6"
+      },
+      {
+        "input": "'NZYdC'",
+        "expected": "5"
+      }
+    ],
+    "task_id": 72,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm find_Rotations."
+  },
+  {
+    "code": "def find_Volume(l,b,h) : \n    return ((l * b * h) / 2) ",
+    "func_name": "find_Volume",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "10, 8, 6",
+        "expected": "240.0"
+      },
+      {
+        "input": "3, 2, 2",
+        "expected": "6.0"
+      },
+      {
+        "input": "1, 2, 1",
+        "expected": "1.0"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "10, 8, 6",
+        "expected": "240.0"
+      },
+      {
+        "input": "3, 2, 2",
+        "expected": "6.0"
+      },
+      {
+        "input": "1, 2, 1",
+        "expected": "1.0"
+      },
+      {
+        "input": "10, 5, 20",
+        "expected": "500.0"
+      },
+      {
+        "input": "1, 13, 16",
+        "expected": "104.0"
+      },
+      {
+        "input": "2, 9, 12",
+        "expected": "108.0"
+      },
+      {
+        "input": "20, 5, 16",
+        "expected": "800.0"
+      },
+      {
+        "input": "4, 7, 2",
+        "expected": "28.0"
+      },
+      {
+        "input": "9, 15, 19",
+        "expected": "1282.5"
+      },
+      {
+        "input": "12, 20, 17",
+        "expected": "2040.0"
+      }
+    ],
+    "task_id": 73,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm find_Volume."
+  },
+  {
+    "code": "def square_perimeter(a):\n  perimeter=4*a\n  return perimeter",
+    "func_name": "square_perimeter",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "10",
+        "expected": "40"
+      },
+      {
+        "input": "5",
+        "expected": "20"
+      },
+      {
+        "input": "4",
+        "expected": "16"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "10",
+        "expected": "40"
+      },
+      {
+        "input": "5",
+        "expected": "20"
+      },
+      {
+        "input": "4",
+        "expected": "16"
+      },
+      {
+        "input": "13",
+        "expected": "52"
+      },
+      {
+        "input": "10",
+        "expected": "40"
+      },
+      {
+        "input": "7",
+        "expected": "28"
+      },
+      {
+        "input": "20",
+        "expected": "80"
+      },
+      {
+        "input": "11",
+        "expected": "44"
+      },
+      {
+        "input": "2",
+        "expected": "8"
+      },
+      {
+        "input": "18",
+        "expected": "72"
+      }
+    ],
+    "task_id": 74,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm square_perimeter."
+  },
+  {
+    "code": "def opposite_Signs(x,y): \n    return ((x ^ y) < 0); ",
+    "func_name": "opposite_Signs",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "1, -2",
+        "expected": "True"
+      },
+      {
+        "input": "3, 2",
+        "expected": "False"
+      },
+      {
+        "input": "-10, -10",
+        "expected": "False"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "1, -2",
+        "expected": "True"
+      },
+      {
+        "input": "3, 2",
+        "expected": "False"
+      },
+      {
+        "input": "-10, -10",
+        "expected": "False"
+      },
+      {
+        "input": "-2, 2",
+        "expected": "True"
+      },
+      {
+        "input": "18, 7",
+        "expected": "False"
+      },
+      {
+        "input": "1, 17",
+        "expected": "False"
+      },
+      {
+        "input": "5, 2",
+        "expected": "False"
+      },
+      {
+        "input": "13, 6",
+        "expected": "False"
+      },
+      {
+        "input": "11, 5",
+        "expected": "False"
+      },
+      {
+        "input": "4, 2",
+        "expected": "False"
+      }
+    ],
+    "task_id": 75,
+    "text": "Kiểm tra xem hai số nguyên cho trước có khác dấu nhau hay không."
+  },
+  {
+    "code": "def is_octagonal(n): \n\treturn 3 * n * n - 2 * n ",
+    "func_name": "is_octagonal",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "5",
+        "expected": "65"
+      },
+      {
+        "input": "10",
+        "expected": "280"
+      },
+      {
+        "input": "15",
+        "expected": "645"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "5",
+        "expected": "65"
+      },
+      {
+        "input": "10",
+        "expected": "280"
+      },
+      {
+        "input": "15",
+        "expected": "645"
+      },
+      {
+        "input": "5",
+        "expected": "65"
+      },
+      {
+        "input": "18",
+        "expected": "936"
+      },
+      {
+        "input": "5",
+        "expected": "65"
+      },
+      {
+        "input": "10",
+        "expected": "280"
+      },
+      {
+        "input": "9",
+        "expected": "225"
+      },
+      {
+        "input": "6",
+        "expected": "96"
+      },
+      {
+        "input": "11",
+        "expected": "341"
+      }
+    ],
+    "task_id": 76,
+    "text": "Tính số bát giác thứ n trong dãy số bát giác."
+  },
+  {
+    "code": "def bell_number(n):   \n    bell = [[0 for i in range(n+1)] for j in range(n+1)] \n    bell[0][0] = 1\n    for i in range(1, n+1): \n        bell[i][0] = bell[i-1][i-1]  \n        for j in range(1, i+1): \n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]   \n    return bell[n][0] ",
+    "func_name": "bell_number",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "2",
+        "expected": "2"
+      },
+      {
+        "input": "10",
+        "expected": "115975"
+      },
+      {
+        "input": "56",
+        "expected": "6775685320645824322581483068371419745979053216268760300"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "2",
+        "expected": "2"
+      },
+      {
+        "input": "10",
+        "expected": "115975"
+      },
+      {
+        "input": "56",
+        "expected": "6775685320645824322581483068371419745979053216268760300"
+      },
+      {
+        "input": "9",
+        "expected": "21147"
+      },
+      {
+        "input": "9",
+        "expected": "21147"
+      },
+      {
+        "input": "10",
+        "expected": "115975"
+      },
+      {
+        "input": "16",
+        "expected": "10480142147"
+      },
+      {
+        "input": "3",
+        "expected": "5"
+      },
+      {
+        "input": "9",
+        "expected": "21147"
+      },
+      {
+        "input": "5",
+        "expected": "52"
+      }
+    ],
+    "task_id": 77,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm bell_number."
+  },
+  {
+    "code": "def dif_Square(n): \n    if (n % 4 != 2): \n        return True\n    return False",
+    "func_name": "dif_Square",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "5",
+        "expected": "True"
+      },
+      {
+        "input": "10",
+        "expected": "False"
+      },
+      {
+        "input": "15",
+        "expected": "True"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "5",
+        "expected": "True"
+      },
+      {
+        "input": "10",
+        "expected": "False"
+      },
+      {
+        "input": "15",
+        "expected": "True"
+      },
+      {
+        "input": "7",
+        "expected": "True"
+      },
+      {
+        "input": "11",
+        "expected": "True"
+      },
+      {
+        "input": "8",
+        "expected": "True"
+      },
+      {
+        "input": "12",
+        "expected": "True"
+      },
+      {
+        "input": "11",
+        "expected": "True"
+      },
+      {
+        "input": "4",
+        "expected": "True"
+      },
+      {
+        "input": "20",
+        "expected": "True"
+      }
+    ],
+    "task_id": 78,
+    "text": "Kiểm tra một số có thể biểu diễn dưới dạng hiệu của hai số chính phương không."
+  },
+  {
+    "code": "def is_Diff(n): \n    return (n % 11 == 0) ",
+    "func_name": "is_Diff",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "12345",
+        "expected": "False"
+      },
+      {
+        "input": "1212112",
+        "expected": "True"
+      },
+      {
+        "input": "1212",
+        "expected": "False"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "12345",
+        "expected": "False"
+      },
+      {
+        "input": "1212112",
+        "expected": "True"
+      },
+      {
+        "input": "1212",
+        "expected": "False"
+      },
+      {
+        "input": "4",
+        "expected": "False"
+      },
+      {
+        "input": "5",
+        "expected": "False"
+      },
+      {
+        "input": "9",
+        "expected": "False"
+      },
+      {
+        "input": "2",
+        "expected": "False"
+      },
+      {
+        "input": "15",
+        "expected": "False"
+      },
+      {
+        "input": "9",
+        "expected": "False"
+      },
+      {
+        "input": "16",
+        "expected": "False"
+      }
+    ],
+    "task_id": 79,
+    "text": "Kiểm tra xem một số nguyên cho trước có chia hết cho 11 hay không."
+  },
+  {
+    "code": "def tetrahedral_number(n): \n\treturn (n * (n + 1) * (n + 2)) / 6",
+    "func_name": "tetrahedral_number",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "5",
+        "expected": "35.0"
+      },
+      {
+        "input": "6",
+        "expected": "56.0"
+      },
+      {
+        "input": "7",
+        "expected": "84.0"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "5",
+        "expected": "35.0"
+      },
+      {
+        "input": "6",
+        "expected": "56.0"
+      },
+      {
+        "input": "7",
+        "expected": "84.0"
+      },
+      {
+        "input": "8",
+        "expected": "120.0"
+      },
+      {
+        "input": "18",
+        "expected": "1140.0"
+      },
+      {
+        "input": "1",
+        "expected": "1.0"
+      },
+      {
+        "input": "13",
+        "expected": "455.0"
+      },
+      {
+        "input": "8",
+        "expected": "120.0"
+      },
+      {
+        "input": "17",
+        "expected": "969.0"
+      },
+      {
+        "input": "19",
+        "expected": "1330.0"
+      }
+    ],
+    "task_id": 80,
+    "text": "Tính số tứ diện thứ n trong dãy số tứ diện."
+  },
+  {
+    "code": "def centered_hexagonal_number(n):\n  return 3 * n * (n - 1) + 1",
+    "func_name": "centered_hexagonal_number",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "10",
+        "expected": "271"
+      },
+      {
+        "input": "2",
+        "expected": "7"
+      },
+      {
+        "input": "9",
+        "expected": "217"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "10",
+        "expected": "271"
+      },
+      {
+        "input": "2",
+        "expected": "7"
+      },
+      {
+        "input": "9",
+        "expected": "217"
+      },
+      {
+        "input": "7",
+        "expected": "127"
+      },
+      {
+        "input": "3",
+        "expected": "19"
+      },
+      {
+        "input": "1",
+        "expected": "1"
+      },
+      {
+        "input": "11",
+        "expected": "331"
+      },
+      {
+        "input": "5",
+        "expected": "61"
+      },
+      {
+        "input": "7",
+        "expected": "127"
+      },
+      {
+        "input": "17",
+        "expected": "817"
+      }
+    ],
+    "task_id": 81,
+    "text": "Tính số lục giác tâm thứ n trong dãy số lục giác tâm."
+  },
+  {
+    "code": "def closest_num(N):\n  return (N - 1)",
+    "func_name": "closest_num",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "11",
+        "expected": "10"
+      },
+      {
+        "input": "7",
+        "expected": "6"
+      },
+      {
+        "input": "12",
+        "expected": "11"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "11",
+        "expected": "10"
+      },
+      {
+        "input": "7",
+        "expected": "6"
+      },
+      {
+        "input": "12",
+        "expected": "11"
+      },
+      {
+        "input": "14",
+        "expected": "13"
+      },
+      {
+        "input": "20",
+        "expected": "19"
+      },
+      {
+        "input": "14",
+        "expected": "13"
+      },
+      {
+        "input": "17",
+        "expected": "16"
+      },
+      {
+        "input": "1",
+        "expected": "0"
+      },
+      {
+        "input": "12",
+        "expected": "11"
+      },
+      {
+        "input": "5",
+        "expected": "4"
+      }
+    ],
+    "task_id": 82,
+    "text": "Tìm số nguyên nhỏ hơn và gần số n nhất."
+  },
+  {
+    "code": "def is_undulating(n): \n\tn = str(n)\n\tif (len(n) <= 2): \n\t\treturn False\n\tfor i in range(2, len(n)): \n\t\tif (n[i - 2] != n[i]): \n\t\t\treturn False\n\treturn True",
+    "func_name": "is_undulating",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "1212121",
+        "expected": "True"
+      },
+      {
+        "input": "1991",
+        "expected": "False"
+      },
+      {
+        "input": "121",
+        "expected": "True"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "1212121",
+        "expected": "True"
+      },
+      {
+        "input": "1991",
+        "expected": "False"
+      },
+      {
+        "input": "121",
+        "expected": "True"
+      },
+      {
+        "input": "20",
+        "expected": "False"
+      },
+      {
+        "input": "6",
+        "expected": "False"
+      },
+      {
+        "input": "11",
+        "expected": "False"
+      },
+      {
+        "input": "16",
+        "expected": "False"
+      },
+      {
+        "input": "3",
+        "expected": "False"
+      },
+      {
+        "input": "8",
+        "expected": "False"
+      },
+      {
+        "input": "19",
+        "expected": "False"
+      }
+    ],
+    "task_id": 83,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm is_undulating."
+  },
+  {
+    "code": "def divisor(n):\n  for i in range(n):\n    x = len([i for i in range(1,n+1) if not n % i])\n  return x",
+    "func_name": "divisor",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "15",
+        "expected": "4"
+      },
+      {
+        "input": "12",
+        "expected": "6"
+      },
+      {
+        "input": "9",
+        "expected": "3"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "15",
+        "expected": "4"
+      },
+      {
+        "input": "12",
+        "expected": "6"
+      },
+      {
+        "input": "9",
+        "expected": "3"
+      },
+      {
+        "input": "3",
+        "expected": "2"
+      },
+      {
+        "input": "4",
+        "expected": "3"
+      },
+      {
+        "input": "13",
+        "expected": "2"
+      },
+      {
+        "input": "16",
+        "expected": "5"
+      },
+      {
+        "input": "9",
+        "expected": "3"
+      },
+      {
+        "input": "12",
+        "expected": "6"
+      },
+      {
+        "input": "19",
+        "expected": "2"
+      }
+    ],
+    "task_id": 84,
+    "text": "Tìm số lượng các ước số của một số nguyên dương n cho trước."
+  },
+  {
+    "code": "def decimal_to_binary(n): \n    return bin(n).replace(\"0b\",\"\") ",
+    "func_name": "decimal_to_binary",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "8",
+        "expected": "'1000'"
+      },
+      {
+        "input": "18",
+        "expected": "'10010'"
+      },
+      {
+        "input": "7",
+        "expected": "'111'"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "8",
+        "expected": "'1000'"
+      },
+      {
+        "input": "18",
+        "expected": "'10010'"
+      },
+      {
+        "input": "7",
+        "expected": "'111'"
+      },
+      {
+        "input": "18",
+        "expected": "'10010'"
+      },
+      {
+        "input": "13",
+        "expected": "'1101'"
+      },
+      {
+        "input": "3",
+        "expected": "'11'"
+      },
+      {
+        "input": "1",
+        "expected": "'1'"
+      },
+      {
+        "input": "2",
+        "expected": "'10'"
+      },
+      {
+        "input": "4",
+        "expected": "'100'"
+      },
+      {
+        "input": "4",
+        "expected": "'100'"
+      }
+    ],
+    "task_id": 85,
+    "text": "Chuyển đổi số thập phân cho trước thành chuỗi nhị phân tương ứng."
+  },
+  {
+    "code": "def check_integer(text):\n text = text.strip()\n if len(text) < 1:\n    return None\n else:\n     if all(text[i] in \"0123456789\" for i in range(len(text))):\n          return True\n     elif (text[0] in \"+-\") and \\\n         all(text[i] in \"0123456789\" for i in range(1,len(text))):\n         return True\n     else:\n        return False",
+    "func_name": "check_integer",
+    "topic": "math",
+    "public_tests": [
+      {
+        "input": "'python'",
+        "expected": "False"
+      },
+      {
+        "input": "'1'",
+        "expected": "True"
+      },
+      {
+        "input": "'12345'",
+        "expected": "True"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'python'",
+        "expected": "False"
+      },
+      {
+        "input": "'1'",
+        "expected": "True"
+      },
+      {
+        "input": "'12345'",
+        "expected": "True"
+      },
+      {
+        "input": "'REaIOW'",
+        "expected": "False"
+      },
+      {
+        "input": "'JHc'",
+        "expected": "False"
+      },
+      {
+        "input": "'IshQbB'",
+        "expected": "False"
+      },
+      {
+        "input": "'IRDFKW'",
+        "expected": "False"
+      },
+      {
+        "input": "'eVlk'",
+        "expected": "False"
+      },
+      {
+        "input": "'PqknuF'",
+        "expected": "False"
+      },
+      {
+        "input": "'JRMHcwht'",
+        "expected": "False"
+      }
+    ],
+    "task_id": 86,
+    "text": "Kiểm tra xem một chuỗi cho trước có biểu diễn một số nguyên hợp lệ không."
+  },
+  {
+    "code": "import re\ndef find_char_long(text):\n  return (re.findall(r\"\\b\\w{4,}\\b\", text))",
+    "func_name": "find_char_long",
+    "topic": "string",
+    "public_tests": [
+      {
+        "input": "'Please move back to stream'",
+        "expected": "['Please', 'move', 'back', 'stream']"
+      },
+      {
+        "input": "'Jing Eco and Tech'",
+        "expected": "['Jing', 'Tech']"
+      },
+      {
+        "input": "'Jhingai wulu road Zone 3'",
+        "expected": "['Jhingai', 'wulu', 'road', 'Zone']"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'Please move back to stream'",
+        "expected": "['Please', 'move', 'back', 'stream']"
+      },
+      {
+        "input": "'Jing Eco and Tech'",
+        "expected": "['Jing', 'Tech']"
+      },
+      {
+        "input": "'Jhingai wulu road Zone 3'",
+        "expected": "['Jhingai', 'wulu', 'road', 'Zone']"
+      },
+      {
+        "input": "'WKynVZbk'",
+        "expected": "['WKynVZbk']"
+      },
+      {
+        "input": "'aDTE'",
+        "expected": "['aDTE']"
+      },
+      {
+        "input": "'bnFMpE'",
+        "expected": "['bnFMpE']"
+      },
+      {
+        "input": "'LfMuRKCk'",
+        "expected": "['LfMuRKCk']"
+      },
+      {
+        "input": "'bzD'",
+        "expected": "[]"
+      },
+      {
+        "input": "'VPZBUZM'",
+        "expected": "['VPZBUZM']"
+      },
+      {
+        "input": "'LOBau'",
+        "expected": "['LOBau']"
+      }
+    ],
+    "task_id": 87,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm find_char_long."
+  },
+  {
+    "code": "def remove_Occ(s,ch): \n    for i in range(len(s)): \n        if (s[i] == ch): \n            s = s[0 : i] + s[i + 1:] \n            break\n    for i in range(len(s) - 1,-1,-1):  \n        if (s[i] == ch): \n            s = s[0 : i] + s[i + 1:] \n            break\n    return s ",
+    "func_name": "remove_Occ",
+    "topic": "string",
+    "public_tests": [
+      {
+        "input": "'hello', 'l'",
+        "expected": "'heo'"
+      },
+      {
+        "input": "'abcda', 'a'",
+        "expected": "'bcd'"
+      },
+      {
+        "input": "'PHP', 'P'",
+        "expected": "'H'"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'hello', 'l'",
+        "expected": "'heo'"
+      },
+      {
+        "input": "'abcda', 'a'",
+        "expected": "'bcd'"
+      },
+      {
+        "input": "'PHP', 'P'",
+        "expected": "'H'"
+      },
+      {
+        "input": "'jjUFxmx', 'znJH'",
+        "expected": "'jjUFxmx'"
+      },
+      {
+        "input": "'Fhk', 'VFckc'",
+        "expected": "'Fhk'"
+      },
+      {
+        "input": "'JAfY', 'pOzHLtr'",
+        "expected": "'JAfY'"
+      },
+      {
+        "input": "'RGw', 'HWShO'",
+        "expected": "'RGw'"
+      },
+      {
+        "input": "'wBh', 'cwP'",
+        "expected": "'wBh'"
+      },
+      {
+        "input": "'MeqKxMk', 'HJKwoZCy'",
+        "expected": "'MeqKxMk'"
+      },
+      {
+        "input": "'TUXn', 'zFt'",
+        "expected": "'TUXn'"
+      }
+    ],
+    "task_id": 88,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm remove_Occ."
+  },
+  {
+    "code": "import re\ndef text_lowercase_underscore(text):\n        patterns = '^[a-z]+_[a-z]+$'\n        if re.search(patterns,  text):\n                return True\n        else:\n                return False",
+    "func_name": "text_lowercase_underscore",
+    "topic": "string",
+    "public_tests": [
+      {
+        "input": "'aab_cbbbc'",
+        "expected": "True"
+      },
+      {
+        "input": "'aab_Abbbc'",
+        "expected": "False"
+      },
+      {
+        "input": "'Aaab_abbbc'",
+        "expected": "False"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'aab_cbbbc'",
+        "expected": "True"
+      },
+      {
+        "input": "'aab_Abbbc'",
+        "expected": "False"
+      },
+      {
+        "input": "'Aaab_abbbc'",
+        "expected": "False"
+      },
+      {
+        "input": "'oZCSTaIy'",
+        "expected": "False"
+      },
+      {
+        "input": "'Ute'",
+        "expected": "False"
+      },
+      {
+        "input": "'ADsLgRqa'",
+        "expected": "False"
+      },
+      {
+        "input": "'OFpfwwMW'",
+        "expected": "False"
+      },
+      {
+        "input": "'uizdj'",
+        "expected": "False"
+      },
+      {
+        "input": "'QKMsxmXG'",
+        "expected": "False"
+      },
+      {
+        "input": "'PlAB'",
+        "expected": "False"
+      }
+    ],
+    "task_id": 89,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm text_lowercase_underscore."
+  },
+  {
+    "code": "def get_Char(strr):  \n    summ = 0\n    for i in range(len(strr)): \n        summ += (ord(strr[i]) - ord('a') + 1)  \n    if (summ % 26 == 0): \n        return ord('z') \n    else: \n        summ = summ % 26\n        return chr(ord('a') + summ - 1)",
+    "func_name": "get_Char",
+    "topic": "string",
+    "public_tests": [
+      {
+        "input": "'abc'",
+        "expected": "'f'"
+      },
+      {
+        "input": "'gfg'",
+        "expected": "'t'"
+      },
+      {
+        "input": "'ab'",
+        "expected": "'c'"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'abc'",
+        "expected": "'f'"
+      },
+      {
+        "input": "'gfg'",
+        "expected": "'t'"
+      },
+      {
+        "input": "'ab'",
+        "expected": "'c'"
+      },
+      {
+        "input": "'KVN'",
+        "expected": "'c'"
+      },
+      {
+        "input": "'nlIYtN'",
+        "expected": "'x'"
+      },
+      {
+        "input": "'KBvfq'",
+        "expected": "'t'"
+      },
+      {
+        "input": "'Llx'",
+        "expected": "'p'"
+      },
+      {
+        "input": "'jida'",
+        "expected": "'x'"
+      },
+      {
+        "input": "'UQzkb'",
+        "expected": "'m'"
+      },
+      {
+        "input": "'wdq'",
+        "expected": "'r'"
+      }
+    ],
+    "task_id": 90,
+    "text": "Tìm ký tự bằng cách cộng mã ASCII của chuỗi rồi chia lấy dư cho 26."
+  },
+  {
+    "code": "def snake_to_camel(word):\n        import re\n        return ''.join(x.capitalize() or '_' for x in word.split('_'))",
+    "func_name": "snake_to_camel",
+    "topic": "string",
+    "public_tests": [
+      {
+        "input": "'python_program'",
+        "expected": "'PythonProgram'"
+      },
+      {
+        "input": "'python_language'",
+        "expected": "'PythonLanguage'"
+      },
+      {
+        "input": "'programming_language'",
+        "expected": "'ProgrammingLanguage'"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'python_program'",
+        "expected": "'PythonProgram'"
+      },
+      {
+        "input": "'python_language'",
+        "expected": "'PythonLanguage'"
+      },
+      {
+        "input": "'programming_language'",
+        "expected": "'ProgrammingLanguage'"
+      },
+      {
+        "input": "'hAn'",
+        "expected": "'Han'"
+      },
+      {
+        "input": "'xPk'",
+        "expected": "'Xpk'"
+      },
+      {
+        "input": "'wgqH'",
+        "expected": "'Wgqh'"
+      },
+      {
+        "input": "'KccLTzCn'",
+        "expected": "'Kccltzcn'"
+      },
+      {
+        "input": "'earOk'",
+        "expected": "'Earok'"
+      },
+      {
+        "input": "'wMaHWO'",
+        "expected": "'Wmahwo'"
+      },
+      {
+        "input": "'jRoWkHTc'",
+        "expected": "'Jrowkhtc'"
+      }
+    ],
+    "task_id": 91,
+    "text": "Chuyển đổi chuỗi định dạng snake_case sang định dạng CamelCase."
+  },
+  {
+    "code": "def odd_Equivalent(s,n): \n    count=0\n    for i in range(0,n): \n        if (s[i] == '1'): \n            count = count + 1\n    return count ",
+    "func_name": "odd_Equivalent",
+    "topic": "string",
+    "public_tests": [
+      {
+        "input": "'011001', 6",
+        "expected": "3"
+      },
+      {
+        "input": "'11011', 5",
+        "expected": "4"
+      },
+      {
+        "input": "'1010', 4",
+        "expected": "2"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'011001', 6",
+        "expected": "3"
+      },
+      {
+        "input": "'11011', 5",
+        "expected": "4"
+      },
+      {
+        "input": "'1010', 4",
+        "expected": "2"
+      },
+      {
+        "input": "'NAwCQB', 4",
+        "expected": "0"
+      },
+      {
+        "input": "'JKtzkBJk', 7",
+        "expected": "0"
+      },
+      {
+        "input": "'011001', 6",
+        "expected": "3"
+      },
+      {
+        "input": "'011001', 6",
+        "expected": "3"
+      },
+      {
+        "input": "'011001', 6",
+        "expected": "3"
+      },
+      {
+        "input": "'011001', 6",
+        "expected": "3"
+      },
+      {
+        "input": "'011001', 6",
+        "expected": "3"
+      }
+    ],
+    "task_id": 92,
+    "text": "Đếm số lượng chuỗi con có giá trị lẻ khi xoay chuỗi nhị phân."
+  },
+  {
+    "code": "def find_length(string): \n\tn = len(string)\n\tcurrent_sum = 0\n\tmax_sum = 0\n\tfor i in range(n): \n\t\tcurrent_sum += (1 if string[i] == '0' else -1) \n\t\tif current_sum < 0: \n\t\t\tcurrent_sum = 0\n\t\tmax_sum = max(current_sum, max_sum) \n\treturn max_sum if max_sum else 0",
+    "func_name": "find_length",
+    "topic": "string",
+    "public_tests": [
+      {
+        "input": "'11000010001'",
+        "expected": "6"
+      },
+      {
+        "input": "'10111'",
+        "expected": "1"
+      },
+      {
+        "input": "'11011101100101'",
+        "expected": "2"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'11000010001'",
+        "expected": "6"
+      },
+      {
+        "input": "'10111'",
+        "expected": "1"
+      },
+      {
+        "input": "'11011101100101'",
+        "expected": "2"
+      },
+      {
+        "input": "'HkqjAWsT'",
+        "expected": "0"
+      },
+      {
+        "input": "'mTwVc'",
+        "expected": "0"
+      },
+      {
+        "input": "'RCwgY'",
+        "expected": "0"
+      },
+      {
+        "input": "'QXcZcMMX'",
+        "expected": "0"
+      },
+      {
+        "input": "'GfQpl'",
+        "expected": "0"
+      },
+      {
+        "input": "'bNpQsGj'",
+        "expected": "0"
+      },
+      {
+        "input": "'igZn'",
+        "expected": "0"
+      }
+    ],
+    "task_id": 93,
+    "text": "Tìm hiệu số lớn nhất giữa số chữ số 0 và số chữ số 1 trong chuỗi con."
+  },
+  {
+    "code": "def long_words(n, str):\n    word_len = []\n    txt = str.split(\" \")\n    for x in txt:\n        if len(x) > n:\n            word_len.append(x)\n    return word_len\t",
+    "func_name": "long_words",
+    "topic": "string",
+    "public_tests": [
+      {
+        "input": "3, 'python is a programming language'",
+        "expected": "['python', 'programming', 'language']"
+      },
+      {
+        "input": "2, 'writing a program'",
+        "expected": "['writing', 'program']"
+      },
+      {
+        "input": "5, 'sorting list'",
+        "expected": "['sorting']"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "3, 'python is a programming language'",
+        "expected": "['python', 'programming', 'language']"
+      },
+      {
+        "input": "2, 'writing a program'",
+        "expected": "['writing', 'program']"
+      },
+      {
+        "input": "5, 'sorting list'",
+        "expected": "['sorting']"
+      },
+      {
+        "input": "7, 'HaypHI'",
+        "expected": "[]"
+      },
+      {
+        "input": "4, 'bzabKRlC'",
+        "expected": "['bzabKRlC']"
+      },
+      {
+        "input": "5, 'saxleBM'",
+        "expected": "['saxleBM']"
+      },
+      {
+        "input": "15, 'CPusjNlD'",
+        "expected": "[]"
+      },
+      {
+        "input": "16, 'ckSwsjAK'",
+        "expected": "[]"
+      },
+      {
+        "input": "4, 'BKpQOIz'",
+        "expected": "['BKpQOIz']"
+      },
+      {
+        "input": "2, 'cjYHHpy'",
+        "expected": "['cjYHHpy']"
+      }
+    ],
+    "task_id": 94,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm long_words."
+  },
+  {
+    "code": "def reverse_vowels(str1):\n\tvowels = \"\"\n\tfor char in str1:\n\t\tif char in \"aeiouAEIOU\":\n\t\t\tvowels += char\n\tresult_string = \"\"\n\tfor char in str1:\n\t\tif char in \"aeiouAEIOU\":\n\t\t\tresult_string += vowels[-1]\n\t\t\tvowels = vowels[:-1]\n\t\telse:\n\t\t\tresult_string += char\n\treturn result_string",
+    "func_name": "reverse_vowels",
+    "topic": "string",
+    "public_tests": [
+      {
+        "input": "'Python'",
+        "expected": "'Python'"
+      },
+      {
+        "input": "'USA'",
+        "expected": "'ASU'"
+      },
+      {
+        "input": "'ab'",
+        "expected": "'ab'"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'Python'",
+        "expected": "'Python'"
+      },
+      {
+        "input": "'USA'",
+        "expected": "'ASU'"
+      },
+      {
+        "input": "'ab'",
+        "expected": "'ab'"
+      },
+      {
+        "input": "'dvtphj'",
+        "expected": "'dvtphj'"
+      },
+      {
+        "input": "'aBbQY'",
+        "expected": "'aBbQY'"
+      },
+      {
+        "input": "'sZZx'",
+        "expected": "'sZZx'"
+      },
+      {
+        "input": "'uyQxL'",
+        "expected": "'uyQxL'"
+      },
+      {
+        "input": "'fjY'",
+        "expected": "'fjY'"
+      },
+      {
+        "input": "'LdC'",
+        "expected": "'LdC'"
+      },
+      {
+        "input": "'PfZXhusM'",
+        "expected": "'PfZXhusM'"
+      }
+    ],
+    "task_id": 95,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm reverse_vowels."
+  },
+  {
+    "code": "def count_char_position(str1): \n    count_chars = 0\n    for i in range(len(str1)):\n        if ((i == ord(str1[i]) - ord('A')) or \n            (i == ord(str1[i]) - ord('a'))): \n            count_chars += 1\n    return count_chars ",
+    "func_name": "count_char_position",
+    "topic": "string",
+    "public_tests": [
+      {
+        "input": "'xbcefg'",
+        "expected": "2"
+      },
+      {
+        "input": "'ABcED'",
+        "expected": "3"
+      },
+      {
+        "input": "'AbgdeF'",
+        "expected": "5"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'xbcefg'",
+        "expected": "2"
+      },
+      {
+        "input": "'ABcED'",
+        "expected": "3"
+      },
+      {
+        "input": "'AbgdeF'",
+        "expected": "5"
+      },
+      {
+        "input": "'JWims'",
+        "expected": "0"
+      },
+      {
+        "input": "'ZUT'",
+        "expected": "0"
+      },
+      {
+        "input": "'nZtmjfw'",
+        "expected": "1"
+      },
+      {
+        "input": "'AAthZKa'",
+        "expected": "1"
+      },
+      {
+        "input": "'eCAS'",
+        "expected": "0"
+      },
+      {
+        "input": "'yLMUiwd'",
+        "expected": "0"
+      },
+      {
+        "input": "'rTu'",
+        "expected": "0"
+      }
+    ],
+    "task_id": 96,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm count_char_position."
+  },
+  {
+    "code": "def odd_values_string(str):\n  result = \"\" \n  for i in range(len(str)):\n    if i % 2 == 0:\n      result = result + str[i]\n  return result",
+    "func_name": "odd_values_string",
+    "topic": "string",
+    "public_tests": [
+      {
+        "input": "'abcdef'",
+        "expected": "'ace'"
+      },
+      {
+        "input": "'python'",
+        "expected": "'pto'"
+      },
+      {
+        "input": "'data'",
+        "expected": "'dt'"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'abcdef'",
+        "expected": "'ace'"
+      },
+      {
+        "input": "'python'",
+        "expected": "'pto'"
+      },
+      {
+        "input": "'data'",
+        "expected": "'dt'"
+      },
+      {
+        "input": "'lambs'",
+        "expected": "'lms'"
+      },
+      {
+        "input": "'iGWEiLVL'",
+        "expected": "'iWiV'"
+      },
+      {
+        "input": "'rbPKUAZ'",
+        "expected": "'rPUZ'"
+      },
+      {
+        "input": "'OIY'",
+        "expected": "'OY'"
+      },
+      {
+        "input": "'WCAmqBn'",
+        "expected": "'WAqn'"
+      },
+      {
+        "input": "'OgMOxz'",
+        "expected": "'OMx'"
+      },
+      {
+        "input": "'bpeQ'",
+        "expected": "'be'"
+      }
+    ],
+    "task_id": 97,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm odd_values_string."
+  },
+  {
+    "code": "def replace_blank(str1,char):\n str2 = str1.replace(' ', char)\n return str2",
+    "func_name": "replace_blank",
+    "topic": "string",
+    "public_tests": [
+      {
+        "input": "'hello people', '@'",
+        "expected": "'hello@people'"
+      },
+      {
+        "input": "'python program language', '$'",
+        "expected": "'python$program$language'"
+      },
+      {
+        "input": "'blank space', '-'",
+        "expected": "'blank-space'"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'hello people', '@'",
+        "expected": "'hello@people'"
+      },
+      {
+        "input": "'python program language', '$'",
+        "expected": "'python$program$language'"
+      },
+      {
+        "input": "'blank space', '-'",
+        "expected": "'blank-space'"
+      },
+      {
+        "input": "'ecw', 'iWBxOmEf'",
+        "expected": "'ecw'"
+      },
+      {
+        "input": "'WhbzzF', 'Cays'",
+        "expected": "'WhbzzF'"
+      },
+      {
+        "input": "'btNM', 'ibhy'",
+        "expected": "'btNM'"
+      },
+      {
+        "input": "'ZiLR', 'NnwBoR'",
+        "expected": "'ZiLR'"
+      },
+      {
+        "input": "'WvJjSh', 'EFZAdC'",
+        "expected": "'WvJjSh'"
+      },
+      {
+        "input": "'vkoBkV', 'gqooUL'",
+        "expected": "'vkoBkV'"
+      },
+      {
+        "input": "'PCRo', 'VUD'",
+        "expected": "'PCRo'"
+      }
+    ],
+    "task_id": 98,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm replace_blank."
+  },
+  {
+    "code": "def count_charac(str1):\n total = 0\n for i in str1:\n    total = total + 1\n return total",
+    "func_name": "count_charac",
+    "topic": "string",
+    "public_tests": [
+      {
+        "input": "'python programming'",
+        "expected": "18"
+      },
+      {
+        "input": "'language'",
+        "expected": "8"
+      },
+      {
+        "input": "'words'",
+        "expected": "5"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'python programming'",
+        "expected": "18"
+      },
+      {
+        "input": "'language'",
+        "expected": "8"
+      },
+      {
+        "input": "'words'",
+        "expected": "5"
+      },
+      {
+        "input": "'RFXdX'",
+        "expected": "5"
+      },
+      {
+        "input": "'vkrD'",
+        "expected": "4"
+      },
+      {
+        "input": "'vvMuCWh'",
+        "expected": "7"
+      },
+      {
+        "input": "'xlzi'",
+        "expected": "4"
+      },
+      {
+        "input": "'KGgFedP'",
+        "expected": "7"
+      },
+      {
+        "input": "'QdYx'",
+        "expected": "4"
+      },
+      {
+        "input": "'rUPu'",
+        "expected": "4"
+      }
+    ],
+    "task_id": 99,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm count_charac."
+  },
+  {
+    "code": "def ascii_value(k):\n  ch=k\n  return ord(ch)",
+    "func_name": "ascii_value",
+    "topic": "string",
+    "public_tests": [
+      {
+        "input": "'A'",
+        "expected": "65"
+      },
+      {
+        "input": "'R'",
+        "expected": "82"
+      },
+      {
+        "input": "'S'",
+        "expected": "83"
+      }
+    ],
+    "hidden_tests": [
+      {
+        "input": "'A'",
+        "expected": "65"
+      },
+      {
+        "input": "'R'",
+        "expected": "82"
+      },
+      {
+        "input": "'S'",
+        "expected": "83"
+      },
+      {
+        "input": "'A'",
+        "expected": "65"
+      },
+      {
+        "input": "'A'",
+        "expected": "65"
+      },
+      {
+        "input": "'A'",
+        "expected": "65"
+      },
+      {
+        "input": "'A'",
+        "expected": "65"
+      },
+      {
+        "input": "'A'",
+        "expected": "65"
+      },
+      {
+        "input": "'A'",
+        "expected": "65"
+      },
+      {
+        "input": "'A'",
+        "expected": "65"
+      }
+    ],
+    "task_id": 100,
+    "text": "Hãy viết chương trình Python thực hiện chức năng của hàm ascii_value."
   }
 ]

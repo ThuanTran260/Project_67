@@ -1,26 +1,20 @@
 """
-comparison_3sets.py — So sánh 3 bộ test trên 50 bài nộp mô phỏng
-Nhóm 67 | Tuần 3
-
-Đồng bộ dữ liệu đầu vào từ submissions_50.json.
-So sánh 3 bộ test:
-  - Set 1 (3 public tests)
-  - Set 2 (3 public + 6 hidden = 9 tests, từ mbpp_clean.json)
-  - Set 3 (3 public + 10 hidden = 13 tests, từ hidden_v2.json)
+comparison_3sets.py — So sánh 3 bộ test và Cấu hình tối ưu tuần 4 trên 50 bài nộp
+Nhóm 67 | Tuần 4
 """
 
 import json
 import sys
 import os
 import csv
+import time
 from typing import Dict, List
 
-# Đồng bộ hệ thống file để hiển thị được tiếng Việt có dấu trên Windows console
-# try:
-#     sys.stdout.reconfigure(encoding='utf-8')
-#     sys.stderr.reconfigure(encoding='utf-8')
-# except AttributeError:
-#     pass
+# Thiết lập encoding UTF-8 để hiển thị an toàn trên Windows console
+if sys.stdout.encoding != 'utf-8':
+    import io
+    if hasattr(sys.stdout, 'buffer'):
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SUBMISSIONS_FILE = os.path.join(BASE, 'data', 'processed', 'submissions_50.json')
@@ -30,20 +24,32 @@ OUT_DIR = os.path.join(BASE, 'results')
 os.makedirs(OUT_DIR, exist_ok=True)
 
 sys.path.insert(0, os.path.join(BASE, 'src'))
-from runner_v2 import grade_submission
+from runner_v3 import grade_submission
+
+def calculate_percentile(data: List[float], percentile: float) -> float:
+    if not data:
+        return 0.0
+    sorted_data = sorted(data)
+    k = (len(sorted_data) - 1) * (percentile / 100.0)
+    f = int(k)
+    c = f + 1
+    if c < len(sorted_data):
+        return sorted_data[f] + (k - f) * (sorted_data[c] - sorted_data[f])
+    else:
+        return sorted_data[f]
 
 def main():
-    print("=" * 75)
-    print("  HỆ THỐNG SO SÁNH 3 BỘ TEST TRÊN BÀI NỘP THỰC TẾ CỦA SINH VIÊN (RQ1)")
-    print("=" * 75)
+    print("=" * 80)
+    print("  HE THONG graded VA SO SANH CAC BO TEST CASES (WEEK 4 EVALUATION)")
+    print("=" * 80)
     
     # ── 1. Đọc dữ liệu đầu vào ────────────────────────────────────────────────
     if not os.path.exists(SUBMISSIONS_FILE):
-        print(f"[LỖI] Không tìm thấy file bài nộp: {SUBMISSIONS_FILE}")
+        print(f"[LOI] Khong tim thay file submissions: {SUBMISSIONS_FILE}")
         sys.exit(1)
         
     if not os.path.exists(HIDDEN_V2_FILE) or not os.path.exists(MBPP_CLEAN_FILE):
-        print(f"[LỖI] Không tìm thấy file dữ liệu test cases!")
+        print(f"[LOI] Khong tim thay file du lieu test cases!")
         sys.exit(1)
         
     with open(SUBMISSIONS_FILE, 'r', encoding='utf-8') as f:
@@ -55,32 +61,33 @@ def main():
     with open(MBPP_CLEAN_FILE, 'r', encoding='utf-8') as f:
         problems_clean = {p['task_id']: p for p in json.load(f)}
         
-    print(f"  ✓ Đã load {len(submissions)} bài nộp của sinh viên.")
-    print(f"  ✓ Đã load bộ dữ liệu hidden v2: {len(problems_v2)} bài.")
-    print(f"  ✓ Đã load bộ dữ liệu 6 hidden: {len(problems_clean)} bài.")
-    print("\n  Bắt đầu chấm bài trên 3 tập cấu hình test cases...")
+    print(f"  [OK] Da load {len(submissions)} bai nop mo phong.")
+    print(f"  [OK] Da load bo test hidden v2 (Set 3/4): {len(problems_v2)} bai.")
+    print(f"  [OK] Da load bo test 6 hidden (Set 2): {len(problems_clean)} bai.")
+    print("\n  Bat dau cham bai tren 4 cau hinh test cases...")
     print()
 
-    # ── 2. Chạy chấm bài và so sánh ───────────────────────────────────────────
+    # ── 2. Chấm bài và so sánh ───────────────────────────────────────────
     results = []
     
-    # Khởi tạo bộ đếm lỗi cho các set
-    set1_counts = {"SE": 0, "WA": 0, "RE": 0, "TLE": 0, "MLE": 0, "FP": 0}
-    set2_counts = {"SE": 0, "WA": 0, "RE": 0, "TLE": 0, "MLE": 0, "FP": 0}
-    set3_counts = {"SE": 0, "WA": 0, "RE": 0, "TLE": 0, "MLE": 0, "FP": 0}
-    
-    set1_latencies = []
-    set2_latencies = []
-    set3_latencies = []
-    
-    set1_tprs = []
-    set2_tprs = []
-    set3_tprs = []
-    
-    # Danh sách chi tiết các bài FP
-    fp_details_set1 = []
-    fp_details_set2 = []
-    fp_details_set3 = []
+    # Khởi tạo thống kê lỗi cho 4 set
+    set_keys = ["set1", "set2", "set3", "set4"]
+    stats_dict = {
+        k: {
+            "SE": 0, "WA": 0, "RE": 0, "TLE": 0, "MLE": 0, "FP": 0,
+            "IndexError": 0, "ZeroDivisionError": 0, "TypeError": 0, 
+            "ValueError": 0, "NameError": 0, "AttributeError": 0, "KeyError": 0, "RecursionError": 0, "SKIPPED": 0,
+            "tprs": [], "latencies_per_test": [], "latencies_per_sub": [], "total_time": 0.0,
+            "fp_details": []
+        } for k in set_keys
+    }
+
+    # Đếm số lượng buggy submissions thật sự
+    total_submissions = len(submissions)
+    buggy_submissions_count = sum(1 for s in submissions if s.get("error_type", "") != "AC")
+    print(f"  So submissions AC: {total_submissions - buggy_submissions_count}")
+    print(f"  So submissions Buggy (Faulty): {buggy_submissions_count}")
+    print("-" * 80)
 
     for i, sub in enumerate(submissions):
         sv_id = sub["submission_id"]
@@ -97,60 +104,72 @@ def main():
         if not prob_v2 or not prob_clean:
             continue
             
-        # Trích xuất các test case
         pub_tests = prob_v2["public_tests"]
         hid_6_tests = prob_clean["hidden_tests"]
         hid_10_tests = prob_v2["hidden_tests"]
         
-        # Chấm trên Set 1: 3 public tests
-        r_set1 = grade_submission(code, func_name, pub_tests, "set1_public")
-        # Chấm trên Set 2: 3 public + 6 hidden = 9 tests
-        r_set2 = grade_submission(code, func_name, pub_tests + hid_6_tests, "set2_clean")
-        # Chấm trên Set 3: 3 public + 10 hidden = 13 tests
-        r_set3 = grade_submission(code, func_name, pub_tests + hid_10_tests, "set3_v2")
-        
-        # Kiểm tra trạng thái False Positive (bài làm bị lỗi nhưng lại PASS hết test)
         is_buggy = (err_type_actual != "AC")
         
-        is_fp_set1 = is_buggy and (r_set1["pass_count"] == r_set1["total_count"])
-        is_fp_set2 = is_buggy and (r_set2["pass_count"] == r_set2["total_count"])
-        is_fp_set3 = is_buggy and (r_set3["pass_count"] == r_set3["total_count"])
+        # ── Set 1: 3 public tests
+        t1_start = time.perf_counter()
+        r_set1 = grade_submission(code, func_name, pub_tests, "set1_public", fail_fast=False)
+        t1_end = time.perf_counter()
         
-        # Cập nhật thống kê Set 1
-        set1_tprs.append(r_set1["test_pass_rate"])
-        set1_latencies.append(r_set1["avg_latency"])
-        for k in r_set1["error_counts"]:
-            set1_counts[k] += r_set1["error_counts"][k]
-        if is_fp_set1:
-            set1_counts["FP"] += 1
-            fp_details_set1.append({"sv_id": sv_id, "task_id": tid, "func": func_name, "topic": topic, "note": note})
+        # ── Set 2: 3 public + 6 hidden = 9 tests
+        t2_start = time.perf_counter()
+        r_set2 = grade_submission(code, func_name, pub_tests + hid_6_tests, "set2_clean", fail_fast=False)
+        t2_end = time.perf_counter()
+        
+        # ── Set 3: 3 public + 6-10 hidden = 13 tests (fail_fast=False)
+        t3_start = time.perf_counter()
+        r_set3 = grade_submission(code, func_name, pub_tests + hid_10_tests, "set3_v2", fail_fast=False)
+        t3_end = time.perf_counter()
+        
+        # ── Set 4: Set 3 + fail_fast=True (Optimized Runner Week 4)
+        t4_start = time.perf_counter()
+        r_set4 = grade_submission(code, func_name, pub_tests + hid_10_tests, "set4_opt", fail_fast=True)
+        t4_end = time.perf_counter()
+        
+        # Lưu thời gian chạy thực tế của toàn bộ submission
+        sub_latencies = {
+            "set1": t1_end - t1_start,
+            "set2": t2_end - t2_start,
+            "set3": t3_end - t3_start,
+            "set4": t4_end - t4_start
+        }
+        
+        runs = [("set1", r_set1), ("set2", r_set2), ("set3", r_set3), ("set4", r_set4)]
+        
+        for skey, r_set in runs:
+            is_fp = is_buggy and (r_set["pass_count"] == r_set["total_count"])
+            stats_dict[skey]["tprs"].append(r_set["test_pass_rate"])
+            stats_dict[skey]["latencies_per_test"].append(r_set["avg_latency"])
+            stats_dict[skey]["latencies_per_sub"].append(sub_latencies[skey])
+            stats_dict[skey]["total_time"] += sub_latencies[skey]
             
-        # Cập nhật thống kê Set 2
-        set2_tprs.append(r_set2["test_pass_rate"])
-        set2_latencies.append(r_set2["avg_latency"])
-        for k in r_set2["error_counts"]:
-            set2_counts[k] += r_set2["error_counts"][k]
-        if is_fp_set2:
-            set2_counts["FP"] += 1
-            fp_details_set2.append({"sv_id": sv_id, "task_id": tid, "func": func_name, "topic": topic, "note": note})
-            
-        # Cập nhật thống kê Set 3
-        set3_tprs.append(r_set3["test_pass_rate"])
-        set3_latencies.append(r_set3["avg_latency"])
-        for k in r_set3["error_counts"]:
-            set3_counts[k] += r_set3["error_counts"][k]
-        if is_fp_set3:
-            set3_counts["FP"] += 1
-            fp_details_set3.append({"sv_id": sv_id, "task_id": tid, "func": func_name, "topic": topic, "note": note})
-            
-        # In tiến trình chạy
+            for err in r_set["error_counts"]:
+                if r_set["error_counts"][err] > 0:
+                    stats_dict[skey][err] += r_set["error_counts"][err]
+                    
+            if is_fp:
+                stats_dict[skey]["FP"] += 1
+                stats_dict[skey]["fp_details"].append({
+                    "sv_id": sv_id,
+                    "task_id": tid,
+                    "func": func_name,
+                    "topic": topic,
+                    "note": note
+                })
+
+        # In tiến trình chạy ra console
         fp_flag = ""
-        if is_fp_set1: fp_flag += "[FP Set1]"
-        if is_fp_set2: fp_flag += "[FP Set2]"
-        if is_fp_set3: fp_flag += "[FP Set3]"
+        if is_buggy and r_set1["pass_count"] == r_set1["total_count"]: fp_flag += "[FP S1]"
+        if is_buggy and r_set2["pass_count"] == r_set2["total_count"]: fp_flag += "[FP S2]"
+        if is_buggy and r_set3["pass_count"] == r_set3["total_count"]: fp_flag += "[FP S3]"
+        if is_buggy and r_set4["pass_count"] == r_set4["total_count"]: fp_flag += "[FP S4]"
         
-        print(f"  [{sv_id}] {func_name}() (Topic: {topic:<8}) | Actual: {err_type_actual:<4} | Set1 Pass: {r_set1['pass_count']}/{r_set1['total_count']} | Set2 Pass: {r_set2['pass_count']}/{r_set2['total_count']} | Set3 Pass: {r_set3['pass_count']}/{r_set3['total_count']} {fp_flag}")
-        
+        print(f"  [{sv_id}] {func_name:<20} | Act: {err_type_actual:<4} | S1: {r_set1['pass_count']}/{r_set1['total_count']} | S3: {r_set3['pass_count']}/{r_set3['total_count']} | S4 (FF): {r_set4['pass_count']}/{r_set4['total_count']} {fp_flag}")
+
         results.append({
             "sv_id": sv_id,
             "task_id": tid,
@@ -162,106 +181,132 @@ def main():
             "set1_pass": r_set1["pass_count"],
             "set1_total": r_set1["total_count"],
             "set1_tpr": r_set1["test_pass_rate"],
-            "is_fp_set1": is_fp_set1,
+            "is_fp_set1": is_buggy and (r_set1["pass_count"] == r_set1["total_count"]),
             
             "set2_pass": r_set2["pass_count"],
             "set2_total": r_set2["total_count"],
             "set2_tpr": r_set2["test_pass_rate"],
-            "is_fp_set2": is_fp_set2,
+            "is_fp_set2": is_buggy and (r_set2["pass_count"] == r_set2["total_count"]),
             
             "set3_pass": r_set3["pass_count"],
             "set3_total": r_set3["total_count"],
             "set3_tpr": r_set3["test_pass_rate"],
-            "is_fp_set3": is_fp_set3
+            "is_fp_set3": is_buggy and (r_set3["pass_count"] == r_set3["total_count"]),
+            
+            "set4_pass": r_set4["pass_count"],
+            "set4_total": r_set4["total_count"],
+            "set4_tpr": r_set4["test_pass_rate"],
+            "is_fp_set4": is_buggy and (r_set4["pass_count"] == r_set4["total_count"])
         })
 
-    # ── 3. Tính toán các metric trung bình ──────────────────────────────────────
-    n = len(submissions)
-    
-    stats = {
-        "tong_submissions": n,
-        "set1": {
-            "fp_count": set1_counts["FP"],
-            "fpr_pct": round(set1_counts["FP"] / n * 100, 2),
-            "avg_tpr": round(sum(set1_tprs) / n, 2),
-            "avg_latency": round(sum(set1_latencies) / n, 4),
-            "errors": {k: v for k, v in set1_counts.items() if k != "FP"}
-        },
-        "set2": {
-            "fp_count": set2_counts["FP"],
-            "fpr_pct": round(set2_counts["FP"] / n * 100, 2),
-            "avg_tpr": round(sum(set2_tprs) / n, 2),
-            "avg_latency": round(sum(set2_latencies) / n, 4),
-            "errors": {k: v for k, v in set2_counts.items() if k != "FP"}
-        },
-        "set3": {
-            "fp_count": set3_counts["FP"],
-            "fpr_pct": round(set3_counts["FP"] / n * 100, 2),
-            "avg_tpr": round(sum(set3_tprs) / n, 2),
-            "avg_latency": round(sum(set3_latencies) / n, 4),
-            "errors": {k: v for k, v in set3_counts.items() if k != "FP"}
+    # ── 3. Tính toán các metric tổng hợp ──────────────────────────────────────
+    final_stats = {}
+    for skey in set_keys:
+        sdata = stats_dict[skey]
+        fp_count = sdata["FP"]
+        
+        # FPR = FP / total_submissions
+        fpr_pct = round(fp_count / total_submissions * 100, 2)
+        # FAR = FP / buggy_submissions
+        far_pct = round(fp_count / buggy_submissions_count * 100, 2) if buggy_submissions_count > 0 else 0.0
+        
+        avg_tpr = round(sum(sdata["tprs"]) / total_submissions, 2)
+        avg_lat_test = round(sum(sdata["latencies_per_test"]) / total_submissions * 1000, 2) # ms
+        avg_lat_sub = round(sum(sdata["latencies_per_sub"]) / total_submissions * 1000, 2) # ms
+        p95_lat_sub = round(calculate_percentile(sdata["latencies_per_sub"], 95) * 1000, 2) # ms
+        
+        final_stats[skey] = {
+            "fp_count": fp_count,
+            "fpr_pct": fpr_pct,
+            "far_pct": far_pct,
+            "avg_tpr": avg_tpr,
+            "avg_latency_test_ms": avg_lat_test,
+            "avg_latency_sub_ms": avg_lat_sub,
+            "p95_latency_sub_ms": p95_lat_sub,
+            "total_latency_sub_s": round(sdata["total_time"], 4),
+            "errors": {
+                "SE": sdata["SE"],
+                "WA": sdata["WA"],
+                "RE": sdata["RE"],
+                "TLE": sdata["TLE"],
+                "MLE": sdata["MLE"],
+                "IndexError": sdata["IndexError"],
+                "ZeroDivisionError": sdata["ZeroDivisionError"],
+                "TypeError": sdata["TypeError"],
+                "ValueError": sdata["ValueError"],
+                "NameError": sdata["NameError"],
+                "AttributeError": sdata["AttributeError"],
+                "KeyError": sdata["KeyError"],
+                "RecursionError": sdata["RecursionError"],
+                "SKIPPED": sdata["SKIPPED"]
+            }
         }
-    }
 
-    # ── 4. In bảng so sánh RQ1 ──────────────────────────────────────────────────
-    print("\n" + "=" * 80)
-    print("  KẾT QUẢ SO SÁNH 3 TẬP TEST CASES (RQ1)")
-    print("=" * 80)
+    # ── 4. In bảng so sánh kết quả Week 4 ──────────────────────────────────────
+    print("\n" + "=" * 90)
+    print("  KET QUA SO SANH CAC CAU HINH CHAM BAI (WEEK 4 EVALUATION)")
+    print("=" * 90)
     
     avg_t1 = sum(r["set1_total"] for r in results) / len(results)
     avg_t2 = sum(r["set2_total"] for r in results) / len(results)
     avg_t3 = sum(r["set3_total"] for r in results) / len(results)
+    avg_t4 = sum(r["set4_total"] for r in results) / len(results)
     
-    print(f"  {'Metric':<32} | {f'Set 1 (Avg {avg_t1:.1f}t)':<15} | {f'Set 2 (Avg {avg_t2:.1f}t)':<15} | {f'Set 3 (Avg {avg_t3:.1f}t)'}")
-    print("  " + "-" * 78)
-    print(f"  {'Số bài nộp mô phỏng':<32} | {n:<15} | {n:<15} | {n}")
-    print(f"  {'Số lượng False Positives':<32} | {stats['set1']['fp_count']:<15} | {stats['set2']['fp_count']:<15} | {stats['set3']['fp_count']}")
-    print(f"  {'False Positive Rate (FPR)':<32} | {stats['set1']['fpr_pct']}%{''*10:<11} | {stats['set2']['fpr_pct']}%{''*10:<11} | {stats['set3']['fpr_pct']}%")
-    print(f"  {'Tỉ lệ pass trung bình (Avg TPR)':<32} | {stats['set1']['avg_tpr']}%{''*10:<11} | {stats['set2']['avg_tpr']}%{''*10:<11} | {stats['set3']['avg_tpr']}%")
-    print(f"  {'Lỗi WA phát hiện':<32} | {stats['set1']['errors']['WA']:<15} | {stats['set2']['errors']['WA']:<15} | {stats['set3']['errors']['WA']}")
-    print(f"  {'Lỗi RE phát hiện':<32} | {stats['set1']['errors']['RE']:<15} | {stats['set2']['errors']['RE']:<15} | {stats['set3']['errors']['RE']}")
-    print(f"  {'Lỗi TLE phát hiện':<32} | {stats['set1']['errors']['TLE']:<15} | {stats['set2']['errors']['TLE']:<15} | {stats['set3']['errors']['TLE']}")
-    print(f"  {'Lỗi MLE phát hiện':<32} | {stats['set1']['errors']['MLE']:<15} | {stats['set2']['errors']['MLE']:<15} | {stats['set3']['errors']['MLE']}")
-    print(f"  {'Lỗi SE phát hiện':<32} | {stats['set1']['errors']['SE']:<15} | {stats['set2']['errors']['SE']:<15} | {stats['set3']['errors']['SE']}")
-    print(f"  {'Độ trễ trung bình/test (s)':<32} | {stats['set1']['avg_latency']}s{''*10:<12} | {stats['set2']['avg_latency']}s{''*10:<12} | {stats['set3']['avg_latency']}s")
-    print("=" * 80)
+    cols = ["Metric", "Set 1 (3t)", "Set 2 (9t)", "Set 3 (13t)", "Set 4 (13t+FF)"]
+    print(f"  {cols[0]:<35} | {cols[1]:<12} | {cols[2]:<12} | {cols[3]:<12} | {cols[4]}")
+    print("  " + "-" * 88)
+    
+    print(f"  {'Tong so submissions':<35} | {total_submissions:<12} | {total_submissions:<12} | {total_submissions:<12} | {total_submissions}")
+    print(f"  {'So bai False Positive (FP)':<35} | {final_stats['set1']['fp_count']:<12} | {final_stats['set2']['fp_count']:<12} | {final_stats['set3']['fp_count']:<12} | {final_stats['set4']['fp_count']}")
+    print(f"  {'False Positive Rate (FPR)':<35} | {final_stats['set1']['fpr_pct']}%{''*5:<7} | {final_stats['set2']['fpr_pct']}%{''*5:<7} | {final_stats['set3']['fpr_pct']}%{''*5:<7} | {final_stats['set4']['fpr_pct']}%")
+    print(f"  {'False Acceptance Rate (FAR)':<35} | {final_stats['set1']['far_pct']}%{''*5:<7} | {final_stats['set2']['far_pct']}%{''*5:<7} | {final_stats['set3']['far_pct']}%{''*5:<7} | {final_stats['set4']['far_pct']}%")
+    print(f"  {'Avg Test Pass Rate (Avg TPR)':<35} | {final_stats['set1']['avg_tpr']}%{''*5:<7} | {final_stats['set2']['avg_tpr']}%{''*5:<7} | {final_stats['set3']['avg_tpr']}%{''*5:<7} | {final_stats['set4']['avg_tpr']}%")
+    print(f"  {'Do tre trung binh/test (ms)':<35} | {final_stats['set1']['avg_latency_test_ms']:<12} | {final_stats['set2']['avg_latency_test_ms']:<12} | {final_stats['set3']['avg_latency_test_ms']:<12} | {final_stats['set4']['avg_latency_test_ms']}")
+    print(f"  {'Do tre trung binh/submission (ms)':<35} | {final_stats['set1']['avg_latency_sub_ms']:<12} | {final_stats['set2']['avg_latency_sub_ms']:<12} | {final_stats['set3']['avg_latency_sub_ms']:<12} | {final_stats['set4']['avg_latency_sub_ms']}")
+    print(f"  {'Do tre P95/submission (ms)':<35} | {final_stats['set1']['p95_latency_sub_ms']:<12} | {final_stats['set2']['p95_latency_sub_ms']:<12} | {final_stats['set3']['p95_latency_sub_ms']:<12} | {final_stats['set4']['p95_latency_sub_ms']}")
+    print(f"  {'Tong thoi gian graded 50 subs (s)':<35} | {final_stats['set1']['total_latency_sub_s']:<12} | {final_stats['set2']['total_latency_sub_s']:<12} | {final_stats['set3']['total_latency_sub_s']:<12} | {final_stats['set4']['total_latency_sub_s']}")
+    
+    print("  " + "-" * 88)
+    print("  THONG KE CAC LOAI LOI PHAT HIEN DUOC:")
+    print("  " + "-" * 88)
+    
+    for err in ["SE", "WA", "RE", "TLE", "MLE", "IndexError", "ZeroDivisionError", "TypeError", "ValueError", "NameError", "AttributeError", "KeyError", "SKIPPED"]:
+        print(f"  {f'Loi {err}':<35} | {final_stats['set1']['errors'][err]:<12} | {final_stats['set2']['errors'][err]:<12} | {final_stats['set3']['errors'][err]:<12} | {final_stats['set4']['errors'][err]}")
+        
+    print("=" * 90)
     print()
 
     # ── 5. In chi tiết danh sách False Positives ────────────────────────────────
-    print("  CHI TIẾT CÁC BÀI FALSE POSITIVE:")
-    print("  " + "-" * 78)
+    print("  DANH SACH CHI TIET CAC BAI FALSE POSITIVE CON LOT:")
+    print("  " + "-" * 80)
     
-    print(f"  * Tập 1 (3 Public Tests) có {len(fp_details_set1)} bài FP:")
-    for fp in fp_details_set1:
-        print(f"    - [{fp['sv_id']}] Task {fp['task_id']} {fp['func']}() ({fp['topic']}) | Lỗi: {fp['note']}")
-        
-    print(f"\n  * Tập 2 (3 Public + 6 Hidden) có {len(fp_details_set2)} bài FP:")
-    for fp in fp_details_set2:
-        print(f"    - [{fp['sv_id']}] Task {fp['task_id']} {fp['func']}() ({fp['topic']}) | Lỗi: {fp['note']}")
-        
-    print(f"\n  * Tập 3 (3 Public + 6-10 Hidden) có {len(fp_details_set3)} bài FP:")
-    for fp in fp_details_set3:
-        print(f"    - [{fp['sv_id']}] Task {fp['task_id']} {fp['func']}() ({fp['topic']}) | Lỗi: {fp['note']}")
-    print("-" * 80 + "\n")
+    for skey in set_keys:
+        fps = stats_dict[skey]["fp_details"]
+        print(f"  * {skey.upper()} co {len(fps)} ca False Positive:")
+        for fp in fps:
+            print(f"    - [{fp['sv_id']}] Task {fp['task_id']} {fp['func']}() ({fp['topic']}) | Loi that: {fp['note']}")
+        print()
+    print("-" * 82 + "\n")
 
     # ── 6. Lưu kết quả ra CSV & JSON ───────────────────────────────────────────
-    csv_path = os.path.join(OUT_DIR, "comparison_3sets.csv")
+    csv_path = os.path.join(OUT_DIR, "comparison_week4.csv")
     fieldnames = [
         "sv_id", "task_id", "func", "topic", "mo_ta_loi", "actual_error_type",
         "set1_pass", "set1_total", "set1_tpr", "is_fp_set1",
         "set2_pass", "set2_total", "set2_tpr", "is_fp_set2",
-        "set3_pass", "set3_total", "set3_tpr", "is_fp_set3"
+        "set3_pass", "set3_total", "set3_tpr", "is_fp_set3",
+        "set4_pass", "set4_total", "set4_tpr", "is_fp_set4"
     ]
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(results)
-    print(f"✓ Lưu kết quả chi tiết CSV tại: {csv_path}")
+    print(f"[OK] Luu CSV ket qua chi tiet: {csv_path}")
 
-    json_path = os.path.join(OUT_DIR, "comparison_3sets.json")
+    json_path = os.path.join(OUT_DIR, "comparison_week4.json")
     with open(json_path, "w", encoding="utf-8") as f:
-        json.dump({"stats": stats, "results": results}, f, ensure_ascii=False, indent=2)
-    print(f"✓ Lưu kết quả chi tiết JSON tại: {json_path}")
+        json.dump({"stats": final_stats, "results": results}, f, ensure_ascii=False, indent=2)
+    print(f"[OK] Luu JSON ket qua chi tiet: {json_path}")
     print()
 
 if __name__ == "__main__":

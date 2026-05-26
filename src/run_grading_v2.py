@@ -24,7 +24,7 @@ SUBMISSIONS_FILE = BASE / "data" / "processed" / "submissions_50.json"
 DATASET_FILE     = BASE / "data" / "processed" / "hidden_v2.json"
 OUTPUT_CSV       = BASE / "results" / "error_analysis_v2.csv"
 OUTPUT_JSON      = BASE / "results" / "error_analysis_v2.json"
-TARGET_SUBMISSIONS = 50
+TARGET_SUBMISSIONS = 100
 
 # Đồng bộ hệ thống file để hiển thị được tiếng Việt có dấu trên Windows console
 # try:

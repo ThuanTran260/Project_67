@@ -25,7 +25,7 @@ else:
     BASE = Path(cwd)
 
 sys.path.insert(0, str(BASE / "src"))
-from runner_v2 import grade_submission
+from runner_v3 import grade_submission
 
 # try:
 #     sys.stdout.reconfigure(encoding="utf-8")
