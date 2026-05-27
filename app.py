@@ -1,7 +1,9 @@
 import streamlit as st
 import sys
 import json
+import autopep8
 from pathlib import Path
+from streamlit_ace import st_ace
 
 # Thêm thư mục src vào sys.path để import các runner
 BASE = Path(__file__).resolve().parent
@@ -95,15 +97,60 @@ else:
             if line.strip().startswith("def "):
                 default_code = line + "\n    # Viết mã nguồn xử lý tại đây\n    pass\n"
                 break
-                
-        student_code = st.text_area(
-            label="Nhập mã nguồn Python của bạn:",
-            value=default_code,
-            height=280,
-            key=f"editor_{selected_task_id}"
+
+        # Lấy code từ session_state nếu đã fix, ngược lại dùng default
+        ace_key = f"ace_editor_{selected_task_id}"
+        fixed_key = f"fixed_code_{selected_task_id}"
+        initial_code = st.session_state.get(fixed_key, default_code)
+
+        # --- ACE EDITOR (LeetCode-style) ---
+        st.markdown(
+            """
+            <style>
+            .ace-editor-label {
+                font-size: 0.85rem;
+                color: #aaa;
+                margin-bottom: 4px;
+            }
+            </style>
+            <div class="ace-editor-label">📝 Trình soạn thảo Python (Tab = 4 spaces | Enter = tự căn lề):</div>
+            """,
+            unsafe_allow_html=True
         )
-        
-        btn_grade = st.button("🚀 Bấm chấm bài (Grade Submission)", type="primary")
+        student_code = st_ace(
+            value=initial_code,
+            language="python",
+            theme="monokai",
+            key=ace_key,
+            height=320,
+            font_size=14,
+            tab_size=4,
+            show_gutter=True,
+            show_print_margin=False,
+            wrap=False,
+            auto_update=True,
+            readonly=False,
+            annotations=None,
+            placeholder="Nhập mã nguồn Python tại đây...",
+        )
+
+        # Nút auto-fix + chấm bài
+        col_fix, col_grade = st.columns([1, 2])
+        with col_fix:
+            if st.button("🔧 Auto-fix thụt lề",
+                         help="Dùng autopep8 tự động sửa lỗi indentation khi paste code từ nơi khác"):
+                try:
+                    fixed = autopep8.fix_code(
+                        student_code or "",
+                        options={"aggressive": 1}
+                    )
+                    st.session_state[fixed_key] = fixed
+                    st.success("✅ Đã căn lề xong! Editor sẽ cập nhật.")
+                    st.rerun()
+                except Exception as e:
+                    st.error(f"❌ Không thể sửa: {e}")
+        with col_grade:
+            btn_grade = st.button("🚀 Bấm chấm bài (Grade Submission)", type="primary", use_container_width=True)
 
     with col2:
         st.subheader("📊 Kết quả chấm & Phản hồi sư phạm")
