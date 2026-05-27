@@ -57,7 +57,7 @@ def main():
     print("=" * 65)
     
     tests = [
-        # 1. Tan cong import thu vien cam
+        # 1. Tan cong import thu vien cam (os)
         (
             "def test_func(x):\n    import os\n    return os.getcwd()",
             "Tan cong Import thu vien he thong cam (os)",
@@ -81,13 +81,13 @@ def main():
             "Tan cong thuc thi chuoi lenh dong eval()",
             "SE"
         ),
-        # 5. Gay loi TLE
+        # 5. Gay loi TLE - vong lap vo han
         (
             "def test_func(x):\n    while True:\n        pass\n    return x",
             "Qua gioi han thoi gian (Time Limit Exceeded - TLE)",
             "TLE"
         ),
-        # 6. Gay loi MLE
+        # 6. Gay loi MLE - cap phat 200MB
         (
             "def test_func(x):\n    arr = ' ' * (200 * 1024 * 1024) # 200MB\n    return len(arr)",
             "Qua gioi han bo nho (Memory Limit Exceeded - MLE)",
@@ -98,6 +98,42 @@ def main():
             "def test_func(x):\n    return x / 0",
             "Phan loai loi runtime cu the (ZeroDivisionError)",
             "ZeroDivisionError"
+        ),
+        # 8. Tan cong import subprocess (thuc thi lenh he dieu hanh)
+        (
+            "def test_func(x):\n    import subprocess\n    subprocess.run(['whoami'], capture_output=True)\n    return x",
+            "Tan cong Import subprocess (thuc thi lenh shell)",
+            "SE"
+        ),
+        # 9. Tan cong import socket (ket noi mang)
+        (
+            "def test_func(x):\n    import socket\n    s = socket.socket()\n    s.connect(('google.com', 80))\n    return x",
+            "Tan cong Import socket (ket noi mang ngoai)",
+            "SE"
+        ),
+        # 10. Tan cong bypass whitelist qua importlib
+        (
+            "def test_func(x):\n    import importlib\n    os = importlib.import_module('os')\n    return os.getcwd()",
+            "Tan cong bypass whitelist bang importlib.import_module",
+            "SE"
+        ),
+        # 11. Tan cong import ctypes (truong hop yeu cau thao tac bo nho thap cap)
+        (
+            "def test_func(x):\n    import ctypes\n    return ctypes.CDLL(None)",
+            "Tan cong Import ctypes (thao tac bo nho thap cap)",
+            "SE"
+        ),
+        # 12. Recursion bomb (stack overflow / RecursionError)
+        (
+            "def test_func(x):\n    return test_func(x + 1)",
+            "Recursion bomb (gay tran stack - RecursionError)",
+            "RecursionError"
+        ),
+        # 13. Generator memory bomb (tao iterator vo han roi ep list)
+        (
+            "def test_func(x):\n    import itertools\n    return list(itertools.repeat(0, 10**9))",
+            "Generator memory bomb (list(itertools.repeat) qua lon - MLE/TLE)",
+            "MLE"
         ),
     ]
     

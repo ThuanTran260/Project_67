@@ -166,4 +166,4 @@ else:
             
 # Footer bản quyền nhóm 67
 st.markdown("---")
-st.markdown("<center>Đồ án Tiến độ Tuần 4 - Nhóm 67 | Đại học Quốc gia | 2026</center>", unsafe_allow_html=True)
+st.markdown("<center>Đồ án Tiến độ Tuần 4 - Nhóm 67 | Đại học Sài Gòn | 2026</center>", unsafe_allow_html=True)

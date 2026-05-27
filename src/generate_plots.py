@@ -128,15 +128,35 @@ def plot_fpr_vs_ntest(df, stats, out_dir):
 def plot_error_types_comparison(df, stats, out_dir):
     """
     Biểu đồ 2: So sánh số lỗi SE/WA/RE/TLE/MLE phát hiện được qua 4 bộ test.
+    Lưu ý: runner_v3 phân loại RE thành các subtype cụ thể (IndexError, TypeError, ...)
+    nên RE trong JSON luôn = 0. Cần cộng tổng các subtype để có giá trị RE thực.
     """
     if not stats:
         return
-        
+
+    # Các subtype của Runtime Error (RE) được runner_v3 phân loại riêng
+    RE_SUBTYPES = [
+        "IndexError", "ZeroDivisionError", "TypeError",
+        "ValueError", "NameError", "AttributeError",
+        "KeyError", "RecursionError"
+    ]
+
+    def get_re_total(set_errors):
+        """Tính tổng RE = RE thuần + tất cả các subtype RE cụ thể."""
+        return set_errors.get("RE", 0) + sum(set_errors.get(sub, 0) for sub in RE_SUBTYPES)
+
     err_types = ["SE", "WA", "RE", "TLE", "MLE"]
-    set1_vals = [stats["set1"]["errors"].get(e, 0) for e in err_types]
-    set2_vals = [stats["set2"]["errors"].get(e, 0) for e in err_types]
-    set3_vals = [stats["set3"]["errors"].get(e, 0) for e in err_types]
-    set4_vals = [stats["set4"]["errors"].get(e, 0) for e in err_types]
+
+    def get_val(set_key, err):
+        errs = stats[set_key]["errors"]
+        if err == "RE":
+            return get_re_total(errs)
+        return errs.get(err, 0)
+
+    set1_vals = [get_val("set1", e) for e in err_types]
+    set2_vals = [get_val("set2", e) for e in err_types]
+    set3_vals = [get_val("set3", e) for e in err_types]
+    set4_vals = [get_val("set4", e) for e in err_types]
     
     x = np.arange(len(err_types))
     width = 0.2

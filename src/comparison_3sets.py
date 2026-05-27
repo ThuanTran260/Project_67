@@ -74,18 +74,19 @@ def main():
     set_keys = ["set1", "set2", "set3", "set4"]
     stats_dict = {
         k: {
-            "SE": 0, "WA": 0, "RE": 0, "TLE": 0, "MLE": 0, "FP": 0,
+            "SE": 0, "WA": 0, "RE": 0, "TLE": 0, "MLE": 0, "FP": 0, "FN": 0,
             "IndexError": 0, "ZeroDivisionError": 0, "TypeError": 0, 
             "ValueError": 0, "NameError": 0, "AttributeError": 0, "KeyError": 0, "RecursionError": 0, "SKIPPED": 0,
             "tprs": [], "latencies_per_test": [], "latencies_per_sub": [], "total_time": 0.0,
-            "fp_details": []
+            "fp_details": [], "fn_details": []
         } for k in set_keys
     }
 
     # Đếm số lượng buggy submissions thật sự
     total_submissions = len(submissions)
-    buggy_submissions_count = sum(1 for s in submissions if s.get("error_type", "") != "AC")
-    print(f"  So submissions AC: {total_submissions - buggy_submissions_count}")
+    ac_submissions_count = sum(1 for s in submissions if s.get("error_type", "") == "AC")
+    buggy_submissions_count = total_submissions - ac_submissions_count
+    print(f"  So submissions AC (dung): {ac_submissions_count}")
     print(f"  So submissions Buggy (Faulty): {buggy_submissions_count}")
     print("-" * 80)
 
@@ -141,7 +142,11 @@ def main():
         runs = [("set1", r_set1), ("set2", r_set2), ("set3", r_set3), ("set4", r_set4)]
         
         for skey, r_set in runs:
+            # FP: bài lỗi nhưng pass hết
             is_fp = is_buggy and (r_set["pass_count"] == r_set["total_count"])
+            # FN: bài đúng (AC) nhưng bị chấm fail (False Rejection)
+            is_fn = (not is_buggy) and (r_set["pass_count"] < r_set["total_count"])
+            
             stats_dict[skey]["tprs"].append(r_set["test_pass_rate"])
             stats_dict[skey]["latencies_per_test"].append(r_set["avg_latency"])
             stats_dict[skey]["latencies_per_sub"].append(sub_latencies[skey])
@@ -160,6 +165,16 @@ def main():
                     "topic": topic,
                     "note": note
                 })
+            if is_fn:
+                stats_dict[skey]["FN"] += 1
+                stats_dict[skey]["fn_details"].append({
+                    "sv_id": sv_id,
+                    "task_id": tid,
+                    "func": func_name,
+                    "topic": topic,
+                    "pass_count": r_set["pass_count"],
+                    "total_count": r_set["total_count"]
+                })
 
         # In tiến trình chạy ra console
         fp_flag = ""
@@ -167,6 +182,8 @@ def main():
         if is_buggy and r_set2["pass_count"] == r_set2["total_count"]: fp_flag += "[FP S2]"
         if is_buggy and r_set3["pass_count"] == r_set3["total_count"]: fp_flag += "[FP S3]"
         if is_buggy and r_set4["pass_count"] == r_set4["total_count"]: fp_flag += "[FP S4]"
+        if not is_buggy and r_set3["pass_count"] < r_set3["total_count"]: fp_flag += "[FN S3]"
+        if not is_buggy and r_set4["pass_count"] < r_set4["total_count"]: fp_flag += "[FN S4]"
         
         print(f"  [{sv_id}] {func_name:<20} | Act: {err_type_actual:<4} | S1: {r_set1['pass_count']}/{r_set1['total_count']} | S3: {r_set3['pass_count']}/{r_set3['total_count']} | S4 (FF): {r_set4['pass_count']}/{r_set4['total_count']} {fp_flag}")
 
@@ -182,21 +199,25 @@ def main():
             "set1_total": r_set1["total_count"],
             "set1_tpr": r_set1["test_pass_rate"],
             "is_fp_set1": is_buggy and (r_set1["pass_count"] == r_set1["total_count"]),
+            "is_fn_set1": (not is_buggy) and (r_set1["pass_count"] < r_set1["total_count"]),
             
             "set2_pass": r_set2["pass_count"],
             "set2_total": r_set2["total_count"],
             "set2_tpr": r_set2["test_pass_rate"],
             "is_fp_set2": is_buggy and (r_set2["pass_count"] == r_set2["total_count"]),
+            "is_fn_set2": (not is_buggy) and (r_set2["pass_count"] < r_set2["total_count"]),
             
             "set3_pass": r_set3["pass_count"],
             "set3_total": r_set3["total_count"],
             "set3_tpr": r_set3["test_pass_rate"],
             "is_fp_set3": is_buggy and (r_set3["pass_count"] == r_set3["total_count"]),
+            "is_fn_set3": (not is_buggy) and (r_set3["pass_count"] < r_set3["total_count"]),
             
             "set4_pass": r_set4["pass_count"],
             "set4_total": r_set4["total_count"],
             "set4_tpr": r_set4["test_pass_rate"],
-            "is_fp_set4": is_buggy and (r_set4["pass_count"] == r_set4["total_count"])
+            "is_fp_set4": is_buggy and (r_set4["pass_count"] == r_set4["total_count"]),
+            "is_fn_set4": (not is_buggy) and (r_set4["pass_count"] < r_set4["total_count"])
         })
 
     # ── 3. Tính toán các metric tổng hợp ──────────────────────────────────────
@@ -204,11 +225,14 @@ def main():
     for skey in set_keys:
         sdata = stats_dict[skey]
         fp_count = sdata["FP"]
+        fn_count = sdata["FN"]
         
         # FPR = FP / total_submissions
         fpr_pct = round(fp_count / total_submissions * 100, 2)
-        # FAR = FP / buggy_submissions
+        # FAR (False Acceptance Rate) = FP / buggy_submissions — bài lỗi lọt qua
         far_pct = round(fp_count / buggy_submissions_count * 100, 2) if buggy_submissions_count > 0 else 0.0
+        # FRR (False Rejection Rate) = FN / ac_submissions — bài đúng bị chấm oan
+        frr_pct = round(fn_count / ac_submissions_count * 100, 2) if ac_submissions_count > 0 else 0.0
         
         avg_tpr = round(sum(sdata["tprs"]) / total_submissions, 2)
         avg_lat_test = round(sum(sdata["latencies_per_test"]) / total_submissions * 1000, 2) # ms
@@ -217,8 +241,10 @@ def main():
         
         final_stats[skey] = {
             "fp_count": fp_count,
+            "fn_count": fn_count,
             "fpr_pct": fpr_pct,
             "far_pct": far_pct,
+            "frr_pct": frr_pct,
             "avg_tpr": avg_tpr,
             "avg_latency_test_ms": avg_lat_test,
             "avg_latency_sub_ms": avg_lat_sub,
@@ -239,7 +265,8 @@ def main():
                 "KeyError": sdata["KeyError"],
                 "RecursionError": sdata["RecursionError"],
                 "SKIPPED": sdata["SKIPPED"]
-            }
+            },
+            "fn_details": sdata["fn_details"]
         }
 
     # ── 4. In bảng so sánh kết quả Week 4 ──────────────────────────────────────
@@ -257,14 +284,18 @@ def main():
     print("  " + "-" * 88)
     
     print(f"  {'Tong so submissions':<35} | {total_submissions:<12} | {total_submissions:<12} | {total_submissions:<12} | {total_submissions}")
+    print(f"  {'  - So bai AC (dung)':<35} | {ac_submissions_count:<12} | {ac_submissions_count:<12} | {ac_submissions_count:<12} | {ac_submissions_count}")
+    print(f"  {'  - So bai Buggy (loi)':<35} | {buggy_submissions_count:<12} | {buggy_submissions_count:<12} | {buggy_submissions_count:<12} | {buggy_submissions_count}")
     print(f"  {'So bai False Positive (FP)':<35} | {final_stats['set1']['fp_count']:<12} | {final_stats['set2']['fp_count']:<12} | {final_stats['set3']['fp_count']:<12} | {final_stats['set4']['fp_count']}")
+    print(f"  {'So bai False Negative (FN/FR)':<35} | {final_stats['set1']['fn_count']:<12} | {final_stats['set2']['fn_count']:<12} | {final_stats['set3']['fn_count']:<12} | {final_stats['set4']['fn_count']}")
     print(f"  {'False Positive Rate (FPR)':<35} | {final_stats['set1']['fpr_pct']}%{''*5:<7} | {final_stats['set2']['fpr_pct']}%{''*5:<7} | {final_stats['set3']['fpr_pct']}%{''*5:<7} | {final_stats['set4']['fpr_pct']}%")
     print(f"  {'False Acceptance Rate (FAR)':<35} | {final_stats['set1']['far_pct']}%{''*5:<7} | {final_stats['set2']['far_pct']}%{''*5:<7} | {final_stats['set3']['far_pct']}%{''*5:<7} | {final_stats['set4']['far_pct']}%")
+    print(f"  {'False Rejection Rate (FRR)':<35} | {final_stats['set1']['frr_pct']}%{''*5:<7} | {final_stats['set2']['frr_pct']}%{''*5:<7} | {final_stats['set3']['frr_pct']}%{''*5:<7} | {final_stats['set4']['frr_pct']}%")
     print(f"  {'Avg Test Pass Rate (Avg TPR)':<35} | {final_stats['set1']['avg_tpr']}%{''*5:<7} | {final_stats['set2']['avg_tpr']}%{''*5:<7} | {final_stats['set3']['avg_tpr']}%{''*5:<7} | {final_stats['set4']['avg_tpr']}%")
     print(f"  {'Do tre trung binh/test (ms)':<35} | {final_stats['set1']['avg_latency_test_ms']:<12} | {final_stats['set2']['avg_latency_test_ms']:<12} | {final_stats['set3']['avg_latency_test_ms']:<12} | {final_stats['set4']['avg_latency_test_ms']}")
     print(f"  {'Do tre trung binh/submission (ms)':<35} | {final_stats['set1']['avg_latency_sub_ms']:<12} | {final_stats['set2']['avg_latency_sub_ms']:<12} | {final_stats['set3']['avg_latency_sub_ms']:<12} | {final_stats['set4']['avg_latency_sub_ms']}")
     print(f"  {'Do tre P95/submission (ms)':<35} | {final_stats['set1']['p95_latency_sub_ms']:<12} | {final_stats['set2']['p95_latency_sub_ms']:<12} | {final_stats['set3']['p95_latency_sub_ms']:<12} | {final_stats['set4']['p95_latency_sub_ms']}")
-    print(f"  {'Tong thoi gian graded 50 subs (s)':<35} | {final_stats['set1']['total_latency_sub_s']:<12} | {final_stats['set2']['total_latency_sub_s']:<12} | {final_stats['set3']['total_latency_sub_s']:<12} | {final_stats['set4']['total_latency_sub_s']}")
+    print(f"  {'Tong thoi gian graded 100 subs (s)':<35} | {final_stats['set1']['total_latency_sub_s']:<12} | {final_stats['set2']['total_latency_sub_s']:<12} | {final_stats['set3']['total_latency_sub_s']:<12} | {final_stats['set4']['total_latency_sub_s']}")
     
     print("  " + "-" * 88)
     print("  THONG KE CAC LOAI LOI PHAT HIEN DUOC:")
@@ -276,15 +307,24 @@ def main():
     print("=" * 90)
     print()
 
-    # ── 5. In chi tiết danh sách False Positives ────────────────────────────────
-    print("  DANH SACH CHI TIET CAC BAI FALSE POSITIVE CON LOT:")
+    # ── 5. In chi tiết danh sách False Positives & False Negatives ────────────────
+    print("  DANH SACH CHI TIET CAC BAI FALSE POSITIVE (BAI LOI LOT QUA):")
     print("  " + "-" * 80)
-    
     for skey in set_keys:
         fps = stats_dict[skey]["fp_details"]
         print(f"  * {skey.upper()} co {len(fps)} ca False Positive:")
         for fp in fps:
             print(f"    - [{fp['sv_id']}] Task {fp['task_id']} {fp['func']}() ({fp['topic']}) | Loi that: {fp['note']}")
+        print()
+    print("-" * 82)
+
+    print("  DANH SACH CHI TIET CAC BAI FALSE NEGATIVE (BAI DUNG BI CHAM OAN):")
+    print("  " + "-" * 80)
+    for skey in set_keys:
+        fns = stats_dict[skey]["fn_details"]
+        print(f"  * {skey.upper()} co {len(fns)} ca False Negative (False Rejection):")
+        for fn in fns:
+            print(f"    - [{fn['sv_id']}] Task {fn['task_id']} {fn['func']}() | Pass: {fn['pass_count']}/{fn['total_count']}")
         print()
     print("-" * 82 + "\n")
 
@@ -292,10 +332,10 @@ def main():
     csv_path = os.path.join(OUT_DIR, "comparison_week4.csv")
     fieldnames = [
         "sv_id", "task_id", "func", "topic", "mo_ta_loi", "actual_error_type",
-        "set1_pass", "set1_total", "set1_tpr", "is_fp_set1",
-        "set2_pass", "set2_total", "set2_tpr", "is_fp_set2",
-        "set3_pass", "set3_total", "set3_tpr", "is_fp_set3",
-        "set4_pass", "set4_total", "set4_tpr", "is_fp_set4"
+        "set1_pass", "set1_total", "set1_tpr", "is_fp_set1", "is_fn_set1",
+        "set2_pass", "set2_total", "set2_tpr", "is_fp_set2", "is_fn_set2",
+        "set3_pass", "set3_total", "set3_tpr", "is_fp_set3", "is_fn_set3",
+        "set4_pass", "set4_total", "set4_tpr", "is_fp_set4", "is_fn_set4"
     ]
     with open(csv_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
