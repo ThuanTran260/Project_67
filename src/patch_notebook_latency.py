@@ -1,83 +1,33 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "id": "baseline_title",
-   "metadata": {},
-   "source": [
-    "# Notebook 06 — Baseline Evaluation (v3)\n",
-    "**Nhóm 67 | Tuần 4 | Ngôn ngữ Lập trình Python**\n",
-    "\n",
-    "Notebook này thực hiện đánh giá **Baseline** bằng cách chạy code chuẩn (AC) của **100 bài toán** để xác nhận độ đúng đắn của dữ liệu và hệ thống máy chấm."
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "baseline_run",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "import os\n",
-    "import sys\n",
-    "from pathlib import Path\n",
-    "\n",
-    "cwd = os.getcwd()\n",
-    "if os.path.basename(cwd) in ['notebookes', 'src', 'data', 'results']:\n",
-    "    BASE = Path(cwd).parent\n",
-    "else:\n",
-    "    BASE = Path(cwd)\n",
-    "\n",
-    "sys.path.insert(0, str(BASE / 'src'))\n",
-    "os.chdir(BASE)\n",
-    "\n",
-    "import run_baseline\n",
-    "print(\"✓ Bắt đầu chạy Baseline trên 100 bài toán...\\n\")\n",
-    "run_baseline.main()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "baseline_show",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "import pandas as pd\n",
-    "df_bl = pd.read_csv(BASE / 'results' / 'baseline_summary.csv')\n",
-    "\n",
-    "print(f\"Số bài toán: {len(df_bl)}\")\n",
-    "print(f\"Baseline OK (pass 100%): {df_bl['baseline_ok'].sum()}/{len(df_bl)}\")\n",
-    "print(f\"Latency public trung bình : {df_bl['pub_latency'].mean():.4f}s/test\")\n",
-    "print(f\"Latency hidden trung bình  : {df_bl['hid_latency'].mean():.4f}s/test\")\n",
-    "print(f\"Latency tổng trung bình    : {df_bl['avg_latency_total'].mean():.4f}s/test\\n\")\n",
-    "\n",
-    "print(\"Mẫu bảng kết quả baseline (10 dòng đầu):\")\n",
-    "display(df_bl[['task_id', 'func_name', 'topic', 'pub_pass', 'pub_total', 'hid_pass', 'hid_total', 'baseline_ok', 'avg_latency_total']].head(10))"
-   ]
-  },
-  {
-   "cell_type": "markdown",
-   "id": "latency_title",
-   "metadata": {},
-   "source": [
-    "---\n",
-    "## So sánh Latency theo các bộ test (Set 1 → Set 4)\n",
-    "\n",
-    "Phân tích thời gian chấm bài thực tế trên **50 submissions** với 4 cấu hình:\n",
-    "- **Set 1** — 3 public tests\n",
-    "- **Set 2** — 3 public + 6 hidden = 9 tests\n",
-    "- **Set 3** — 3 public + 6–10 hidden = 13 tests (Full-run)\n",
-    "- **Set 4** — Set 3 + **Fail-Fast** (dừng sớm khi gặp lỗi đầu tiên)\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "latency_comparison",
-   "metadata": {},
-   "outputs": [],
-   "source": [
+"""
+patch_notebook_latency.py
+Thêm cell so sánh latency vào cuối notebook 06_baseline_v3.ipynb
+"""
+import json
+import os
+from pathlib import Path
+
+BASE = Path(__file__).parent.parent
+NB_PATH = BASE / "notebookes" / "06_baseline_v3.ipynb"
+
+# ── Markdown cell (tiêu đề) ───────────────────────────────────────────────────
+md_cell = {
+    "cell_type": "markdown",
+    "id": "latency_title",
+    "metadata": {},
+    "source": [
+        "---\n",
+        "## So sánh Latency theo các bộ test (Set 1 → Set 4)\n",
+        "\n",
+        "Phân tích thời gian chấm bài thực tế trên **50 submissions** với 4 cấu hình:\n",
+        "- **Set 1** — 3 public tests\n",
+        "- **Set 2** — 3 public + 6 hidden = 9 tests\n",
+        "- **Set 3** — 3 public + 6–10 hidden = 13 tests (Full-run)\n",
+        "- **Set 4** — Set 3 + **Fail-Fast** (dừng sớm khi gặp lỗi đầu tiên)\n"
+    ]
+}
+
+# ── Code cell chính ───────────────────────────────────────────────────────────
+code_lines = [
     "import json\n",
     "import os\n",
     "import pandas as pd\n",
@@ -205,28 +155,31 @@
     "plt.savefig(out_path, dpi=130, bbox_inches='tight')\n",
     "plt.show()\n",
     "print(f'✓ Đã lưu biểu đồ: {out_path}')\n"
-   ]
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.10.0"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
+]
+
+code_cell = {
+    "cell_type": "code",
+    "execution_count": None,
+    "id": "latency_comparison",
+    "metadata": {},
+    "outputs": [],
+    "source": code_lines
 }
+
+# ── Đọc notebook hiện tại ─────────────────────────────────────────────────────
+with open(NB_PATH, "r", encoding="utf-8") as f:
+    nb = json.load(f)
+
+# ── Xóa các cell latency cũ nếu đã tồn tại (idempotent) ─────────────────────
+nb["cells"] = [c for c in nb["cells"] if c.get("id") not in ("latency_title", "latency_comparison")]
+
+# ── Thêm 2 cell mới vào cuối ──────────────────────────────────────────────────
+nb["cells"].append(md_cell)
+nb["cells"].append(code_cell)
+
+# ── Ghi lại notebook ──────────────────────────────────────────────────────────
+with open(NB_PATH, "w", encoding="utf-8") as f:
+    json.dump(nb, f, ensure_ascii=False, indent=1)
+
+print(f"[OK] Đã thêm cell so sánh latency vào: {NB_PATH}")
+print(f"     Tổng số cell: {len(nb['cells'])}")
