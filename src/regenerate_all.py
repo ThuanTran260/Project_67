@@ -299,6 +299,13 @@ def main():
     print("\nDescription length distribution:")
     len_counts = Counter(len(t['text'].split()) for t in hidden_tasks)
     print(f"  Word count frequency: {dict(sorted(len_counts.items()))}")
+
+    print("\nApplying hidden-test hardening pass...")
+    try:
+        from harden_hidden_tests import main as harden_hidden_tests_main
+        harden_hidden_tests_main()
+    except Exception as e:
+        print(f"[WARN] Hidden-test hardening skipped: {e}")
         
     print("\nRegeneration completed successfully!")
 

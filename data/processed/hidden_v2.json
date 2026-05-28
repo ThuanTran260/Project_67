@@ -24,23 +24,23 @@
         "expected": "0"
       },
       {
-        "input": "[-1, -2, -3]",
-        "expected": "-6"
-      },
-      {
-        "input": "[100]",
-        "expected": "100"
-      },
-      {
-        "input": "[-5, 5]",
+        "input": "[0]",
         "expected": "0"
       },
       {
-        "input": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
-        "expected": "55"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "0"
       },
       {
-        "input": "[0]",
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "25"
+      },
+      {
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "0"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
         "expected": "0"
       }
     ],
@@ -67,15 +67,7 @@
     ],
     "hidden_tests": [
       {
-        "input": "-2",
-        "expected": "True"
-      },
-      {
-        "input": "-3",
-        "expected": "False"
-      },
-      {
-        "input": "1000000",
+        "input": "0",
         "expected": "True"
       },
       {
@@ -88,6 +80,14 @@
       },
       {
         "input": "2",
+        "expected": "True"
+      },
+      {
+        "input": "3",
+        "expected": "False"
+      },
+      {
+        "input": "10",
         "expected": "True"
       }
     ],
@@ -118,24 +118,24 @@
         "expected": ""
       },
       {
-        "input": "\"a\"",
-        "expected": "a"
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "  !321 ESAC dexiM  "
       },
       {
-        "input": "\"abba\"",
-        "expected": "abba"
+        "input": "\"naïve café\"",
+        "expected": "éfac evïan"
       },
       {
-        "input": "\"12345\"",
-        "expected": "54321"
-      },
-      {
-        "input": "\" hi \"",
-        "expected": " ih "
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "!@# CBA cba #@!"
       },
       {
         "input": "\"racecar\"",
         "expected": "racecar"
+      },
+      {
+        "input": "\"ababa\"",
+        "expected": "ababa"
       }
     ],
     "func_name": "reverse_string"
@@ -165,24 +165,24 @@
         "expected": "None"
       },
       {
-        "input": "[1]",
-        "expected": "1"
-      },
-      {
-        "input": "[0, 0, 0]",
+        "input": "[0]",
         "expected": "0"
       },
       {
-        "input": "[-100, 0, 100]",
-        "expected": "100"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "1"
       },
       {
-        "input": "[7, 7, 7]",
-        "expected": "7"
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "5"
       },
       {
-        "input": "[-5, -1, -10]",
-        "expected": "-1"
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "10"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "1000"
       }
     ],
     "func_name": "find_max"
@@ -208,28 +208,28 @@
     ],
     "hidden_tests": [
       {
-        "input": "\"\", \"a\"",
-        "expected": "0"
-      },
-      {
-        "input": "\"hello\", \"z\"",
-        "expected": "0"
-      },
-      {
-        "input": "\"aAbBaA\", \"a\"",
-        "expected": "2"
-      },
-      {
-        "input": "\"   \", \" \"",
+        "input": "'hello world', 'l'",
         "expected": "3"
       },
       {
-        "input": "\"abcabc\", \"c\"",
-        "expected": "2"
+        "input": "'aAaAaA', 'a'",
+        "expected": "3"
       },
       {
-        "input": "\"x\", \"x\"",
-        "expected": "1"
+        "input": "'  spaced  ', ' '",
+        "expected": "4"
+      },
+      {
+        "input": "'emoji🙂🙂🙂', '🙂'",
+        "expected": "3"
+      },
+      {
+        "input": "'no-match-here', 'z'",
+        "expected": "0"
+      },
+      {
+        "input": "'banana', 'a'",
+        "expected": "3"
       }
     ],
     "func_name": "count_char"
@@ -259,24 +259,24 @@
         "expected": "1"
       },
       {
-        "input": "2",
-        "expected": "2"
+        "input": "1",
+        "expected": "1"
       },
       {
-        "input": "6",
-        "expected": "720"
+        "input": "5",
+        "expected": "120"
+      },
+      {
+        "input": "8",
+        "expected": "40320"
       },
       {
         "input": "10",
         "expected": "3628800"
       },
       {
-        "input": "4",
-        "expected": "24"
-      },
-      {
-        "input": "7",
-        "expected": "5040"
+        "input": "12",
+        "expected": "479001600"
       }
     ],
     "func_name": "factorial"
@@ -306,23 +306,23 @@
         "expected": "True"
       },
       {
-        "input": "\"a\"",
-        "expected": "True"
-      },
-      {
-        "input": "\"ab\"",
+        "input": "\"  Mixed CASE 123!  \"",
         "expected": "False"
       },
       {
-        "input": "\"aba\"",
+        "input": "\"naïve café\"",
+        "expected": "False"
+      },
+      {
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "False"
+      },
+      {
+        "input": "\"racecar\"",
         "expected": "True"
       },
       {
-        "input": "\"abba\"",
-        "expected": "True"
-      },
-      {
-        "input": "\"abcba\"",
+        "input": "\"ababa\"",
         "expected": "True"
       }
     ],
@@ -353,24 +353,24 @@
         "expected": "[]"
       },
       {
-        "input": "[5]",
-        "expected": "[5]"
-      },
-      {
-        "input": "[3, 1, 3, 2, 1]",
-        "expected": "[3, 1, 2]"
-      },
-      {
-        "input": "[0, 0, 0, 0]",
+        "input": "[0]",
         "expected": "[0]"
       },
       {
-        "input": "[-1, -1, 2, 2]",
-        "expected": "[-1, 2]"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "[1, -1, 0]"
       },
       {
-        "input": "[1, 2, 1, 2, 3]",
-        "expected": "[1, 2, 3]"
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "[5]"
+      },
+      {
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "[-10, 0, 10]"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "[1000, -1000, 500, -500, 0]"
       }
     ],
     "func_name": "remove_duplicates"
@@ -396,6 +396,10 @@
     ],
     "hidden_tests": [
       {
+        "input": "0",
+        "expected": "0"
+      },
+      {
         "input": "[1, 2]",
         "expected": "1.5"
       },
@@ -414,10 +418,6 @@
       {
         "input": "[100, 200, 300]",
         "expected": "200.0"
-      },
-      {
-        "input": "[-5, -10, -15]",
-        "expected": "-10.0"
       }
     ],
     "func_name": "average"
@@ -447,24 +447,24 @@
         "expected": ""
       },
       {
-        "input": "\"HELLO\"",
-        "expected": "HELLO"
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "  MIXED CASE 123!  "
       },
       {
-        "input": "\"Hello World\"",
-        "expected": "HELLO WORLD"
+        "input": "\"naïve café\"",
+        "expected": "NAÏVE CAFÉ"
       },
       {
-        "input": "\"123abc\"",
-        "expected": "123ABC"
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "!@# ABC ABC #@!"
       },
       {
-        "input": "\"a1b2c3\"",
-        "expected": "A1B2C3"
+        "input": "\"racecar\"",
+        "expected": "RACECAR"
       },
       {
-        "input": "\" \"",
-        "expected": " "
+        "input": "\"ababa\"",
+        "expected": "ABABA"
       }
     ],
     "func_name": "to_uppercase"
@@ -498,20 +498,20 @@
         "expected": "False"
       },
       {
-        "input": "3",
+        "input": "2",
         "expected": "True"
       },
       {
-        "input": "9",
-        "expected": "False"
-      },
-      {
-        "input": "13",
+        "input": "3",
         "expected": "True"
       },
       {
         "input": "25",
         "expected": "False"
+      },
+      {
+        "input": "97",
+        "expected": "True"
       }
     ],
     "func_name": "is_prime"
@@ -545,20 +545,20 @@
         "expected": "0"
       },
       {
-        "input": "[-2, -4, 1]",
-        "expected": "-6"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "0"
       },
       {
-        "input": "[10, 11, 12, 13]",
-        "expected": "22"
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "0"
       },
       {
-        "input": "[-1, -2, -3, -4]",
-        "expected": "-6"
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "0"
       },
       {
-        "input": "[100, 200, 301]",
-        "expected": "300"
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "0"
       }
     ],
     "func_name": "sum_even"
@@ -588,24 +588,24 @@
         "expected": "0"
       },
       {
+        "input": "1",
+        "expected": "1"
+      },
+      {
         "input": "2",
         "expected": "1"
       },
       {
-        "input": "3",
-        "expected": "2"
-      },
-      {
-        "input": "4",
-        "expected": "3"
+        "input": "5",
+        "expected": "5"
       },
       {
         "input": "10",
         "expected": "55"
       },
       {
-        "input": "7",
-        "expected": "13"
+        "input": "15",
+        "expected": "610"
       }
     ],
     "func_name": "fibonacci"
@@ -631,28 +631,28 @@
     ],
     "hidden_tests": [
       {
-        "input": "\"\"",
-        "expected": "0"
+        "input": "'  one   two   three  '",
+        "expected": "3"
       },
       {
-        "input": "\"   \"",
-        "expected": "0"
+        "input": "'line1\\nline2\\tline3'",
+        "expected": "3"
       },
       {
-        "input": "\"a b c d\"",
-        "expected": "4"
+        "input": "'a  b\\n\\n c'",
+        "expected": "3"
       },
       {
-        "input": "\"  hello  world  \"",
-        "expected": "2"
-      },
-      {
-        "input": "\"single\"",
+        "input": "'single'",
         "expected": "1"
       },
       {
-        "input": "\"one two three four five\"",
-        "expected": "5"
+        "input": "'  leading trailing  '",
+        "expected": "2"
+      },
+      {
+        "input": "'many    spaces here'",
+        "expected": "3"
       }
     ],
     "func_name": "count_words"
@@ -682,24 +682,24 @@
         "expected": "[]"
       },
       {
-        "input": "[0, 0, 0]",
-        "expected": "[0, 0, 0]"
+        "input": "[0]",
+        "expected": "[0]"
       },
       {
-        "input": "[-3, -1, -2]",
-        "expected": "[-3, -2, -1]"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "[-1, -1, 0, 1, 1]"
       },
       {
-        "input": "[-1, 0, 1]",
-        "expected": "[-1, 0, 1]"
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "[5, 5, 5, 5, 5]"
       },
       {
-        "input": "[5, 5, 1]",
-        "expected": "[1, 5, 5]"
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "[-10, -10, 0, 0, 10, 10]"
       },
       {
-        "input": "[100, 50, 75, 25]",
-        "expected": "[25, 50, 75, 100]"
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "[-1000, -500, 0, 500, 1000]"
       }
     ],
     "func_name": "sort_list"
@@ -725,28 +725,28 @@
     ],
     "hidden_tests": [
       {
-        "input": "[1]",
-        "expected": "1"
-      },
-      {
-        "input": "[0, 0]",
-        "expected": "0"
-      },
-      {
-        "input": "[-100, 0, 100]",
-        "expected": "-100"
-      },
-      {
-        "input": "[7, 7]",
-        "expected": "7"
-      },
-      {
         "input": "[0]",
         "expected": "0"
       },
       {
-        "input": "[-1]",
+        "input": "[1, -1, 1, -1, 0]",
         "expected": "-1"
+      },
+      {
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "5"
+      },
+      {
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "-10"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "-1000"
+      },
+      {
+        "input": "[1]",
+        "expected": "1"
       }
     ],
     "func_name": "find_min"
@@ -780,20 +780,20 @@
         "expected": "False"
       },
       {
-        "input": "[0, 0, 0]",
-        "expected": "False"
-      },
-      {
-        "input": "[-1, -2]",
+        "input": "[1, -1, 1, -1, 0]",
         "expected": "True"
       },
       {
-        "input": "[1, 0, -1]",
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "False"
+      },
+      {
+        "input": "[-10, 0, 10, -10, 0, 10]",
         "expected": "True"
       },
       {
-        "input": "[100]",
-        "expected": "False"
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "True"
       }
     ],
     "func_name": "has_negative"
@@ -823,24 +823,24 @@
         "expected": "1"
       },
       {
-        "input": "[0, 1, 2]",
+        "input": "[0]",
         "expected": "0"
       },
       {
-        "input": "[-1, -1]",
-        "expected": "1"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "0"
       },
       {
-        "input": "[-1, 2]",
-        "expected": "-2"
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "3125"
       },
       {
-        "input": "[1, 1, 1]",
-        "expected": "1"
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "0"
       },
       {
-        "input": "[10, 10]",
-        "expected": "100"
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "0"
       }
     ],
     "func_name": "product_list"
@@ -870,24 +870,24 @@
         "expected": "[]"
       },
       {
-        "input": "\" \"",
-        "expected": "[' ']"
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "[' ', ' ', 'M', 'i', 'x', 'e', 'd', ' ', 'C', 'A', 'S', 'E', ' ', '1', '2', '3', '!', ' ', ' ']"
       },
       {
-        "input": "\"ab\"",
-        "expected": "['a', 'b']"
+        "input": "\"naïve café\"",
+        "expected": "['n', 'a', 'ï', 'v', 'e', ' ', 'c', 'a', 'f', 'é']"
       },
       {
-        "input": "\"123\"",
-        "expected": "['1', '2', '3']"
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "['!', '@', '#', ' ', 'a', 'b', 'c', ' ', 'A', 'B', 'C', ' ', '#', '@', '!']"
       },
       {
-        "input": "\"a b\"",
-        "expected": "['a', ' ', 'b']"
+        "input": "\"racecar\"",
+        "expected": "['r', 'a', 'c', 'e', 'c', 'a', 'r']"
       },
       {
-        "input": "\"AA\"",
-        "expected": "['A', 'A']"
+        "input": "\"ababa\"",
+        "expected": "['a', 'b', 'a', 'b', 'a']"
       }
     ],
     "func_name": "string_to_list"
@@ -913,27 +913,27 @@
     ],
     "hidden_tests": [
       {
-        "input": "\"\", \"\"",
+        "input": "'listen', 'silent'",
         "expected": "True"
       },
       {
-        "input": "\"a\", \"a\"",
+        "input": "'triangle', 'integral'",
         "expected": "True"
       },
       {
-        "input": "\"a\", \"b\"",
-        "expected": "False"
-      },
-      {
-        "input": "\"ab\", \"ba\"",
+        "input": "'aabbcc', 'abcabc'",
         "expected": "True"
       },
       {
-        "input": "\"abc\", \"abcd\"",
-        "expected": "False"
+        "input": "'evil', 'vile'",
+        "expected": "True"
       },
       {
-        "input": "\"aab\", \"aba\"",
+        "input": "'state', 'taste'",
+        "expected": "True"
+      },
+      {
+        "input": "'binary', 'brainy'",
         "expected": "True"
       }
     ],
@@ -968,20 +968,20 @@
         "expected": "0"
       },
       {
-        "input": "[0, 0, 0]",
-        "expected": "0"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "2"
       },
       {
-        "input": "[-1, 0, 1]",
-        "expected": "1"
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "5"
       },
       {
-        "input": "[1]",
-        "expected": "1"
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "2"
       },
       {
-        "input": "[-5, -3, -1]",
-        "expected": "0"
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "2"
       }
     ],
     "func_name": "count_positive"
@@ -1007,6 +1007,10 @@
     ],
     "hidden_tests": [
       {
+        "input": "\"\"",
+        "expected": "[]"
+      },
+      {
         "input": "[]",
         "expected": "[]"
       },
@@ -1025,10 +1029,6 @@
       {
         "input": "[1]",
         "expected": "[]"
-      },
-      {
-        "input": "[0, 1, 2]",
-        "expected": "[0, 2]"
       }
     ],
     "func_name": "get_evens"
@@ -1058,24 +1058,24 @@
         "expected": "1"
       },
       {
-        "input": "0, 5",
-        "expected": "0"
-      },
-      {
-        "input": "1, 100",
+        "input": "1, 2",
         "expected": "1"
       },
       {
-        "input": "-2, 2",
-        "expected": "4"
+        "input": "-5, 5",
+        "expected": "-3125"
       },
       {
-        "input": "-2, 3",
-        "expected": "-8"
+        "input": "100, 7",
+        "expected": "100000000000000"
       },
       {
-        "input": "10, 1",
-        "expected": "10"
+        "input": "12, 18",
+        "expected": "26623333280885243904"
+      },
+      {
+        "input": "0, 5",
+        "expected": "0"
       }
     ],
     "func_name": "power"
@@ -1105,23 +1105,23 @@
         "expected": "True"
       },
       {
-        "input": "[1]",
+        "input": "[0]",
         "expected": "True"
       },
       {
-        "input": "[-1, 0, 1]",
-        "expected": "True"
-      },
-      {
-        "input": "[2, 1]",
+        "input": "[1, -1, 1, -1, 0]",
         "expected": "False"
       },
       {
-        "input": "[1, 1, 1]",
+        "input": "[5, 5, 5, 5, 5]",
         "expected": "True"
       },
       {
-        "input": "[0, -1]",
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "False"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
         "expected": "False"
       }
     ],
@@ -1203,20 +1203,20 @@
         "expected": "0"
       },
       {
-        "input": "[-1, -2, -3]",
-        "expected": "3"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "2"
       },
       {
-        "input": "[0, -1]",
-        "expected": "1"
-      },
-      {
-        "input": "[-1, 0, 1]",
-        "expected": "1"
-      },
-      {
-        "input": "[1]",
+        "input": "[5, 5, 5, 5, 5]",
         "expected": "0"
+      },
+      {
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "2"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "2"
       }
     ],
     "func_name": "count_negative"
@@ -1250,20 +1250,20 @@
         "expected": "0"
       },
       {
-        "input": "[-1]",
-        "expected": "-1"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "0"
       },
       {
-        "input": "[1, 2]",
-        "expected": "2"
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "5"
       },
       {
-        "input": "[100]",
-        "expected": "100"
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "10"
       },
       {
-        "input": "[1, 1, 1]",
-        "expected": "1"
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "0"
       }
     ],
     "func_name": "last_element"
@@ -1293,24 +1293,24 @@
         "expected": ""
       },
       {
-        "input": "\"a\"",
-        "expected": "A"
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "  mIXED case 123!  "
       },
       {
-        "input": "\"A\"",
-        "expected": "a"
+        "input": "\"naïve café\"",
+        "expected": "NAÏVE CAFÉ"
       },
       {
-        "input": "\"aAbB\"",
-        "expected": "AaBb"
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "!@# ABC abc #@!"
       },
       {
-        "input": "\"123\"",
-        "expected": "123"
+        "input": "\"racecar\"",
+        "expected": "RACECAR"
       },
       {
-        "input": "\" \"",
-        "expected": " "
+        "input": "\"ababa\"",
+        "expected": "ABABA"
       }
     ],
     "func_name": "swap_case"
@@ -1344,20 +1344,20 @@
         "expected": "[0]"
       },
       {
-        "input": "[-1]",
-        "expected": "[1]"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "[1, 1, 1, 1, 0]"
       },
       {
-        "input": "[-1, -1]",
-        "expected": "[1, 1]"
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "[5, 5, 5, 5, 5]"
       },
       {
-        "input": "[100, -100]",
-        "expected": "[100, 100]"
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "[10, 0, 10, 10, 0, 10]"
       },
       {
-        "input": "[-2, 2]",
-        "expected": "[2, 2]"
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "[1000, 1000, 500, 500, 0]"
       }
     ],
     "func_name": "abs_list"
@@ -1387,24 +1387,24 @@
         "expected": "0"
       },
       {
-        "input": "\" \"",
-        "expected": "0"
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "13"
       },
       {
-        "input": "\"   \"",
-        "expected": "0"
+        "input": "\"naïve café\"",
+        "expected": "9"
       },
       {
-        "input": "\"a\"",
-        "expected": "1"
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "12"
       },
       {
-        "input": "\" a \"",
-        "expected": "1"
+        "input": "\"racecar\"",
+        "expected": "7"
       },
       {
-        "input": "\"ab\"",
-        "expected": "2"
+        "input": "\"ababa\"",
+        "expected": "5"
       }
     ],
     "func_name": "count_non_space"
@@ -1430,28 +1430,28 @@
     ],
     "hidden_tests": [
       {
-        "input": "1, 1",
+        "input": "0, 5",
+        "expected": "5"
+      },
+      {
+        "input": "12, 18",
+        "expected": "6"
+      },
+      {
+        "input": "17, 19",
         "expected": "1"
       },
       {
-        "input": "100, 10",
-        "expected": "10"
-      },
-      {
-        "input": "6, 9",
-        "expected": "3"
-      },
-      {
-        "input": "17, 13",
-        "expected": "1"
-      },
-      {
-        "input": "36, 24",
+        "input": "48, 180",
         "expected": "12"
       },
       {
-        "input": "48, 18",
-        "expected": "6"
+        "input": "-24, 36",
+        "expected": "12"
+      },
+      {
+        "input": "100, 250",
+        "expected": "50"
       }
     ],
     "func_name": "gcd"
@@ -1481,6 +1481,14 @@
         "expected": "[]"
       },
       {
+        "input": "1",
+        "expected": "[1]"
+      },
+      {
+        "input": "-1",
+        "expected": "[]"
+      },
+      {
         "input": "2",
         "expected": "[1]"
       },
@@ -1489,16 +1497,8 @@
         "expected": "[1, 3]"
       },
       {
-        "input": "4",
-        "expected": "[1, 3]"
-      },
-      {
-        "input": "7",
-        "expected": "[1, 3, 5, 7]"
-      },
-      {
-        "input": "8",
-        "expected": "[1, 3, 5, 7]"
+        "input": "10",
+        "expected": "[1, 3, 5, 7, 9]"
       }
     ],
     "func_name": "odd_numbers"
@@ -1532,8 +1532,12 @@
         "expected": "1"
       },
       {
-        "input": "9",
-        "expected": "9"
+        "input": "2",
+        "expected": "2"
+      },
+      {
+        "input": "3",
+        "expected": "3"
       },
       {
         "input": "10",
@@ -1542,10 +1546,6 @@
       {
         "input": "11",
         "expected": "2"
-      },
-      {
-        "input": "99",
-        "expected": "18"
       }
     ],
     "func_name": "digit_sum"
@@ -1626,20 +1626,20 @@
         "expected": "0"
       },
       {
-        "input": "[1]",
-        "expected": "1"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "4"
       },
       {
-        "input": "[-1]",
-        "expected": "1"
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "125"
       },
       {
-        "input": "[-2, 2]",
-        "expected": "8"
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "400"
       },
       {
-        "input": "[3, 4]",
-        "expected": "25"
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "2500000"
       }
     ],
     "func_name": "sum_squares"
@@ -1665,6 +1665,10 @@
     ],
     "hidden_tests": [
       {
+        "input": "0, 0",
+        "expected": "0"
+      },
+      {
         "input": "[], 1",
         "expected": "[]"
       },
@@ -1683,10 +1687,6 @@
       {
         "input": "[1, 2, 3, 4], 4",
         "expected": "[1, 2, 3, 4]"
-      },
-      {
-        "input": "[1, 2, 3, 4], 1",
-        "expected": "[4, 1, 2, 3]"
       }
     ],
     "func_name": "rotate_right"
@@ -1810,24 +1810,24 @@
         "expected": "[]"
       },
       {
-        "input": "[[]]",
-        "expected": "[]"
+        "input": "[0]",
+        "expected": "[0]"
       },
       {
-        "input": "[[1]]",
-        "expected": "[1]"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "[1, -1, 1, -1, 0]"
       },
       {
-        "input": "[1, 2, 3]",
-        "expected": "[1, 2, 3]"
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "[5, 5, 5, 5, 5]"
       },
       {
-        "input": "[[1, 2], 3]",
-        "expected": "[1, 2, 3]"
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "[-10, 0, 10, -10, 0, 10]"
       },
       {
-        "input": "[[], [1]]",
-        "expected": "[1]"
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "[1000, -1000, 500, -500, 0]"
       }
     ],
     "func_name": "flatten"
@@ -1951,24 +1951,24 @@
         "expected": "[]"
       },
       {
-        "input": "[1]",
-        "expected": "[1]"
-      },
-      {
-        "input": "[1, 1]",
-        "expected": "[]"
-      },
-      {
-        "input": "[1, 2, 1]",
-        "expected": "[2]"
-      },
-      {
-        "input": "[-1, -1, 0]",
+        "input": "[0]",
         "expected": "[0]"
       },
       {
-        "input": "[1, 2, 3, 1]",
-        "expected": "[2, 3]"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "[0]"
+      },
+      {
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "[]"
+      },
+      {
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "[]"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "[1000, -1000, 500, -500, 0]"
       }
     ],
     "func_name": "unique_elements"
@@ -2002,20 +2002,20 @@
         "expected": "0"
       },
       {
-        "input": "[-1]",
-        "expected": "-1"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "1,-1,1,-1,0"
       },
       {
-        "input": "[-1, 0, 1]",
-        "expected": "-1,0,1"
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "5,5,5,5,5"
       },
       {
-        "input": "[1, 2, 3, 4]",
-        "expected": "1,2,3,4"
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "-10,0,10,-10,0,10"
       },
       {
-        "input": "[100]",
-        "expected": "100"
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "1000,-1000,500,-500,0"
       }
     ],
     "func_name": "list_to_string"
@@ -2045,24 +2045,24 @@
         "expected": "0"
       },
       {
-        "input": "\" \"",
-        "expected": "0"
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "4"
       },
       {
-        "input": "\"xyz\"",
-        "expected": "0"
+        "input": "\"naïve café\"",
+        "expected": "3"
       },
       {
-        "input": "\"a\"",
-        "expected": "1"
-      },
-      {
-        "input": "\"A\"",
-        "expected": "1"
-      },
-      {
-        "input": "\"aA\"",
+        "input": "\"!@# abc ABC #@!\"",
         "expected": "2"
+      },
+      {
+        "input": "\"racecar\"",
+        "expected": "3"
+      },
+      {
+        "input": "\"ababa\"",
+        "expected": "3"
       }
     ],
     "func_name": "count_vowels"
@@ -2088,28 +2088,28 @@
     ],
     "hidden_tests": [
       {
-        "input": "1, 1",
-        "expected": "1"
+        "input": "0, 5",
+        "expected": "0"
       },
       {
-        "input": "1, 10",
-        "expected": "10"
+        "input": "12, 18",
+        "expected": "36"
       },
       {
-        "input": "5, 10",
-        "expected": "10"
+        "input": "17, 19",
+        "expected": "323"
       },
       {
-        "input": "7, 3",
-        "expected": "21"
+        "input": "48, 180",
+        "expected": "720"
       },
       {
-        "input": "6, 4",
-        "expected": "12"
+        "input": "-24, 36",
+        "expected": "-72"
       },
       {
-        "input": "2, 3",
-        "expected": "6"
+        "input": "100, 250",
+        "expected": "500"
       }
     ],
     "func_name": "lcm"
@@ -2143,20 +2143,20 @@
         "expected": "[0]"
       },
       {
-        "input": "[-1]",
-        "expected": "[-1]"
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "[0, -1, 1, -1, 1]"
       },
       {
-        "input": "[1, 2]",
-        "expected": "[2, 1]"
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "[5, 5, 5, 5, 5]"
       },
       {
-        "input": "[-1, 0, 1]",
-        "expected": "[1, 0, -1]"
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "[10, 0, -10, 10, 0, -10]"
       },
       {
-        "input": "[1, 1]",
-        "expected": "[1, 1]"
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "[0, -500, 500, -1000, 1000]"
       }
     ],
     "func_name": "reverse_list"
@@ -2186,23 +2186,23 @@
         "expected": "False"
       },
       {
-        "input": "[1]",
-        "expected": "True"
-      },
-      {
-        "input": "[-1]",
-        "expected": "False"
-      },
-      {
         "input": "[0]",
         "expected": "False"
       },
       {
-        "input": "[1, 2, 3, 4]",
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "False"
+      },
+      {
+        "input": "[5, 5, 5, 5, 5]",
         "expected": "True"
       },
       {
-        "input": "[1, 2, -3]",
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "False"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
         "expected": "False"
       }
     ],
@@ -2280,24 +2280,24 @@
         "expected": "False"
       },
       {
-        "input": "\" \"",
+        "input": "\"  Mixed CASE 123!  \"",
         "expected": "False"
       },
       {
-        "input": "\"A\"",
-        "expected": "True"
-      },
-      {
-        "input": "\"a\"",
+        "input": "\"naïve café\"",
         "expected": "False"
       },
       {
-        "input": "\"1abc\"",
+        "input": "\"!@# abc ABC #@!\"",
         "expected": "False"
       },
       {
-        "input": "\"Ab\"",
-        "expected": "True"
+        "input": "\"racecar\"",
+        "expected": "False"
+      },
+      {
+        "input": "\"ababa\"",
+        "expected": "False"
       }
     ],
     "func_name": "starts_with_upper"
@@ -2323,6 +2323,10 @@
     ],
     "hidden_tests": [
       {
+        "input": "0, 0",
+        "expected": "[]"
+      },
+      {
         "input": "[], 0",
         "expected": "[]"
       },
@@ -2341,10 +2345,6 @@
       {
         "input": "[1, 2, 3], 2",
         "expected": "[2, 3]"
-      },
-      {
-        "input": "[1, 2, 3], 3",
-        "expected": "[1, 2, 3]"
       }
     ],
     "func_name": "last_n"
@@ -2479,36 +2479,36 @@
     ],
     "hidden_tests": [
       {
+        "input": "[]",
+        "expected": "[]"
+      },
+      {
+        "input": "[0]",
+        "expected": "[0]"
+      },
+      {
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "[1, 1, 1, 1, 0]"
+      },
+      {
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "[25, 25, 25, 25, 25]"
+      },
+      {
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "[100, 0, 100, 100, 0, 100]"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "[1000000, 1000000, 250000, 250000, 0]"
+      },
+      {
         "input": "[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]",
         "expected": "[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]"
       },
       {
         "input": "[10, 20, 30]",
         "expected": "[100, 400, 900]"
-      },
-      {
-        "input": "[12, 15]",
-        "expected": "[144, 225]"
-      },
-      {
-        "input": "[1]",
-        "expected": "[1]"
-      },
-      {
-        "input": "[22, 43, 3]",
-        "expected": "[484, 1849, 9]"
-      },
-      {
-        "input": "[44, 45]",
-        "expected": "[1936, 2025]"
-      },
-      {
-        "input": "[3, 20, 24, 25, 38, 19, 47, 15]",
-        "expected": "[9, 400, 576, 625, 1444, 361, 2209, 225]"
-      },
-      {
-        "input": "[49, 17, 26, 1, 49, 24, 41, 1]",
-        "expected": "[2401, 289, 676, 1, 2401, 576, 1681, 1]"
       }
     ],
     "task_id": 53,
@@ -2534,16 +2534,8 @@
     ],
     "hidden_tests": [
       {
-        "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
-        "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]"
-      },
-      {
-        "input": "[[1, 2, 3], [-2, 4, -5], [1, -1, 1]]",
-        "expected": "[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]"
-      },
-      {
-        "input": "[[5, 8, 9], [6, 4, 3], [2, 1, 4]]",
-        "expected": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]"
+        "input": "[]",
+        "expected": "[]"
       },
       {
         "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
@@ -2558,8 +2550,16 @@
         "expected": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]"
       },
       {
+        "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
+        "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]"
+      },
+      {
         "input": "[[1, 2, 3], [-2, 4, -5], [1, -1, 1]]",
         "expected": "[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]"
+      },
+      {
+        "input": "[[5, 8, 9], [6, 4, 3], [2, 1, 4]]",
+        "expected": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]"
       },
       {
         "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
@@ -2589,36 +2589,36 @@
     ],
     "hidden_tests": [
       {
+        "input": "[]",
+        "expected": "False"
+      },
+      {
+        "input": "[0]",
+        "expected": "False"
+      },
+      {
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "True"
+      },
+      {
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "True"
+      },
+      {
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "True"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "False"
+      },
+      {
         "input": "[1, 2, 3, 4, 5]",
         "expected": "False"
       },
       {
         "input": "[1, 2, 3, 4, 4]",
         "expected": "True"
-      },
-      {
-        "input": "[1, 1, 2, 2, 3, 3, 4, 4, 5]",
-        "expected": "True"
-      },
-      {
-        "input": "[20, 24, 28, 18, 41, 41]",
-        "expected": "True"
-      },
-      {
-        "input": "[31]",
-        "expected": "False"
-      },
-      {
-        "input": "[4, 21, 13, 21, 23, 1, 46, 7]",
-        "expected": "True"
-      },
-      {
-        "input": "[1, 7, 26]",
-        "expected": "False"
-      },
-      {
-        "input": "[6, 50, 32, 5]",
-        "expected": "False"
       }
     ],
     "task_id": 55,
@@ -2644,6 +2644,26 @@
     ],
     "hidden_tests": [
       {
+        "input": "[0]",
+        "expected": "0"
+      },
+      {
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "10989"
+      },
+      {
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "55555"
+      },
+      {
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "1099890"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "10494000"
+      },
+      {
         "input": "[1, 2, 3]",
         "expected": "321"
       },
@@ -2654,26 +2674,6 @@
       {
         "input": "[1, 2, 3, 9]",
         "expected": "9321"
-      },
-      {
-        "input": "[16, 36]",
-        "expected": "376"
-      },
-      {
-        "input": "[13, 37, 42, 35, 21, 34]",
-        "expected": "4608623"
-      },
-      {
-        "input": "[23, 2, 1, 28, 14, 42, 32]",
-        "expected": "45504421"
-      },
-      {
-        "input": "[30, 42, 19, 31, 34, 2, 16, 29]",
-        "expected": "457431062"
-      },
-      {
-        "input": "[50, 4, 48, 49, 8]",
-        "expected": "553884"
       }
     ],
     "task_id": 56,
@@ -2699,36 +2699,36 @@
     ],
     "hidden_tests": [
       {
+        "input": "[]",
+        "expected": "0"
+      },
+      {
+        "input": "\"\"",
+        "expected": "0"
+      },
+      {
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "1"
+      },
+      {
+        "input": "\"naïve café\"",
+        "expected": "0"
+      },
+      {
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "0"
+      },
+      {
+        "input": "\"racecar\"",
+        "expected": "0"
+      },
+      {
+        "input": "\"ababa\"",
+        "expected": "0"
+      },
+      {
         "input": "'112112'",
         "expected": "6"
-      },
-      {
-        "input": "'111'",
-        "expected": "6"
-      },
-      {
-        "input": "'1101112'",
-        "expected": "12"
-      },
-      {
-        "input": "'ZHmPtD'",
-        "expected": "0"
-      },
-      {
-        "input": "'tXI'",
-        "expected": "0"
-      },
-      {
-        "input": "'dBuk'",
-        "expected": "0"
-      },
-      {
-        "input": "'Qylu'",
-        "expected": "0"
-      },
-      {
-        "input": "'GlXcqNsc'",
-        "expected": "0"
       }
     ],
     "task_id": 57,
@@ -2754,6 +2754,26 @@
     ],
     "hidden_tests": [
       {
+        "input": "[0]",
+        "expected": "0"
+      },
+      {
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "-1"
+      },
+      {
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "5"
+      },
+      {
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "-10"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "-1000"
+      },
+      {
         "input": "[10, 20, 1, 45, 99]",
         "expected": "1"
       },
@@ -2764,26 +2784,6 @@
       {
         "input": "[45, 46, 50, 60]",
         "expected": "45"
-      },
-      {
-        "input": "[12, 34, 48, 37, 29, 8, 35, 4]",
-        "expected": "4"
-      },
-      {
-        "input": "[35, 19, 49, 21, 31, 23]",
-        "expected": "19"
-      },
-      {
-        "input": "[45]",
-        "expected": "45"
-      },
-      {
-        "input": "[15, 48]",
-        "expected": "15"
-      },
-      {
-        "input": "[50, 1, 18, 35, 5, 46]",
-        "expected": "1"
       }
     ],
     "task_id": 58,
@@ -2829,8 +2829,8 @@
         "expected": "15"
       },
       {
-        "input": "[(4, 6), (2, 17), (9, 13), (11, 12)]",
-        "expected": "15"
+        "input": "[(12, 35), (21, 27), (13, 23), (41, 22)]",
+        "expected": "23"
       },
       {
         "input": "[(3, 5), (1, 7), (10, 3), (1, 2)]",
@@ -2864,6 +2864,10 @@
     ],
     "hidden_tests": [
       {
+        "input": "[]",
+        "expected": "[]"
+      },
+      {
         "input": "[('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]",
         "expected": "[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]"
       },
@@ -2876,20 +2880,16 @@
         "expected": "[('Biology', 45), ('Physics', 96), ('Chemistry', 97)]"
       },
       {
+        "input": "[('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]",
+        "expected": "[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]"
+      },
+      {
         "input": "[('Telugu', 49), ('Hindhi', 54), ('Social', 33)]",
         "expected": "[('Social', 33), ('Telugu', 49), ('Hindhi', 54)]"
       },
       {
         "input": "[('Physics', 96), ('Chemistry', 97), ('Biology', 45)]",
         "expected": "[('Biology', 45), ('Physics', 96), ('Chemistry', 97)]"
-      },
-      {
-        "input": "[('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]",
-        "expected": "[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]"
-      },
-      {
-        "input": "[('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]",
-        "expected": "[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]"
       },
       {
         "input": "[('Telugu', 49), ('Hindhi', 54), ('Social', 33)]",
@@ -2919,35 +2919,35 @@
     ],
     "hidden_tests": [
       {
+        "input": "[]",
+        "expected": "0"
+      },
+      {
+        "input": "[0]",
+        "expected": "1"
+      },
+      {
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "3"
+      },
+      {
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "5"
+      },
+      {
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "4"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "3"
+      },
+      {
         "input": "[1, -2, 3, -4]",
         "expected": "2"
       },
       {
         "input": "[3, 4, 5, -1]",
-        "expected": "3"
-      },
-      {
-        "input": "[1, 2, 3, 4]",
-        "expected": "4"
-      },
-      {
-        "input": "[36, 37, 40]",
-        "expected": "3"
-      },
-      {
-        "input": "[22]",
-        "expected": "1"
-      },
-      {
-        "input": "[44, 42, 15, 35, 14, 38]",
-        "expected": "6"
-      },
-      {
-        "input": "[1, 4, 22]",
-        "expected": "3"
-      },
-      {
-        "input": "[19, 11, 19]",
         "expected": "3"
       }
     ],
@@ -2974,36 +2974,36 @@
     ],
     "hidden_tests": [
       {
+        "input": "[]",
+        "expected": "True"
+      },
+      {
+        "input": "[0]",
+        "expected": "True"
+      },
+      {
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "False"
+      },
+      {
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "True"
+      },
+      {
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "False"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "False"
+      },
+      {
         "input": "[6, 5, 4, 4]",
         "expected": "True"
       },
       {
         "input": "[1, 2, 2, 3]",
         "expected": "True"
-      },
-      {
-        "input": "[1, 3, 2]",
-        "expected": "False"
-      },
-      {
-        "input": "[15, 4, 14, 49, 21, 36, 7, 46]",
-        "expected": "False"
-      },
-      {
-        "input": "[43, 8, 40, 35, 32]",
-        "expected": "False"
-      },
-      {
-        "input": "[19, 34, 25, 22]",
-        "expected": "False"
-      },
-      {
-        "input": "[4, 30, 38, 10, 35, 7, 36]",
-        "expected": "False"
-      },
-      {
-        "input": "[30, 40, 9, 15]",
-        "expected": "False"
       }
     ],
     "task_id": 62,
@@ -3108,12 +3108,12 @@
         "expected": "[]"
       },
       {
-        "input": "[(5, 25, 30), (4, 2, 3), (7, 8, 9)], 5",
-        "expected": "[(5, 25, 30)]"
-      },
-      {
         "input": "[(7, 9, 16), (8, 16, 4), (19, 17, 18)], 11",
         "expected": "[]"
+      },
+      {
+        "input": "[(6, 24, 12), (7, 9, 6), (12, 18, 21)], 6",
+        "expected": "[(6, 24, 12)]"
       }
     ],
     "task_id": 64,
@@ -3139,36 +3139,36 @@
     ],
     "hidden_tests": [
       {
+        "input": "\"\"",
+        "expected": "False"
+      },
+      {
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "False"
+      },
+      {
+        "input": "\"naïve café\"",
+        "expected": "True"
+      },
+      {
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "True"
+      },
+      {
+        "input": "\"racecar\"",
+        "expected": "True"
+      },
+      {
+        "input": "\"ababa\"",
+        "expected": "True"
+      },
+      {
         "input": "'Hadoop'",
         "expected": "False"
       },
       {
         "input": "'great'",
         "expected": "True"
-      },
-      {
-        "input": "'structure'",
-        "expected": "True"
-      },
-      {
-        "input": "'HTk'",
-        "expected": "True"
-      },
-      {
-        "input": "'xqcj'",
-        "expected": "False"
-      },
-      {
-        "input": "'myfGkE'",
-        "expected": "False"
-      },
-      {
-        "input": "'bTvPc'",
-        "expected": "True"
-      },
-      {
-        "input": "'clXf'",
-        "expected": "False"
       }
     ],
     "task_id": 65,
@@ -3194,36 +3194,36 @@
     ],
     "hidden_tests": [
       {
+        "input": "{'a': 1, 'b': 2}, {'b': 3, 'c': 4}, {'a': 9, 'd': 5}",
+        "expected": "{'a': 1, 'd': 5, 'b': 2, 'c': 4}"
+      },
+      {
+        "input": "{'x': 'X', 'y': 'Y'}, {'y': 'YY', 'z': 'Z'}, {'x': 'XX', 'w': 'W'}",
+        "expected": "{'x': 'X', 'w': 'W', 'y': 'Y', 'z': 'Z'}"
+      },
+      {
+        "input": "{'R': 'Red', 'B': 'Black'}, {'B': 'Blue', 'G': 'Green'}, {'G': 'Gold', 'Y': 'Yellow'}",
+        "expected": "{'G': 'Green', 'Y': 'Yellow', 'B': 'Black', 'R': 'Red'}"
+      },
+      {
+        "input": "{}, {'k': 1}, {'k': 2, 'm': 3}",
+        "expected": "{'k': 1, 'm': 3}"
+      },
+      {
+        "input": "{'a': 1, 'b': 2}, {'b': 3}, {'c': 4}",
+        "expected": "{'c': 4, 'b': 2, 'a': 1}"
+      },
+      {
+        "input": "{'x': 'X'}, {'x': 'XX', 'y': 'Y'}, {'z': 'Z'}",
+        "expected": "{'z': 'Z', 'x': 'X', 'y': 'Y'}"
+      },
+      {
         "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'G': 'Green', 'W': 'White'}, {'O': 'Orange', 'W': 'White', 'B': 'Black'}",
         "expected": "{'O': 'Orange', 'W': 'White', 'B': 'Black', 'G': 'Green', 'R': 'Red', 'P': 'Pink'}"
       },
       {
         "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'G': 'Green', 'W': 'White'}, {'L': 'lavender', 'B': 'Blue'}",
         "expected": "{'L': 'lavender', 'B': 'Black', 'G': 'Green', 'W': 'White', 'R': 'Red', 'P': 'Pink'}"
-      },
-      {
-        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'L': 'lavender', 'B': 'Blue'}, {'G': 'Green', 'W': 'White'}",
-        "expected": "{'G': 'Green', 'W': 'White', 'L': 'lavender', 'B': 'Black', 'R': 'Red', 'P': 'Pink'}"
-      },
-      {
-        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'G': 'Green', 'W': 'White'}, {'L': 'lavender', 'B': 'Blue'}",
-        "expected": "{'L': 'lavender', 'B': 'Black', 'G': 'Green', 'W': 'White', 'R': 'Red', 'P': 'Pink'}"
-      },
-      {
-        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'G': 'Green', 'W': 'White'}, {'L': 'lavender', 'B': 'Blue'}",
-        "expected": "{'L': 'lavender', 'B': 'Black', 'G': 'Green', 'W': 'White', 'R': 'Red', 'P': 'Pink'}"
-      },
-      {
-        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'L': 'lavender', 'B': 'Blue'}, {'G': 'Green', 'W': 'White'}",
-        "expected": "{'G': 'Green', 'W': 'White', 'L': 'lavender', 'B': 'Black', 'R': 'Red', 'P': 'Pink'}"
-      },
-      {
-        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'G': 'Green', 'W': 'White'}, {'O': 'Orange', 'W': 'White', 'B': 'Black'}",
-        "expected": "{'O': 'Orange', 'W': 'White', 'B': 'Black', 'G': 'Green', 'R': 'Red', 'P': 'Pink'}"
-      },
-      {
-        "input": "{'R': 'Red', 'B': 'Black', 'P': 'Pink'}, {'L': 'lavender', 'B': 'Blue'}, {'G': 'Green', 'W': 'White'}",
-        "expected": "{'G': 'Green', 'W': 'White', 'L': 'lavender', 'B': 'Black', 'R': 'Red', 'P': 'Pink'}"
       }
     ],
     "task_id": 66,
@@ -3249,36 +3249,36 @@
     ],
     "hidden_tests": [
       {
+        "input": "[]",
+        "expected": "Counter()"
+      },
+      {
+        "input": "[0]",
+        "expected": "Counter({0: 1})"
+      },
+      {
+        "input": "[1, -1, 1, -1, 0]",
+        "expected": "Counter({1: 2, -1: 2, 0: 1})"
+      },
+      {
+        "input": "[5, 5, 5, 5, 5]",
+        "expected": "Counter({5: 5})"
+      },
+      {
+        "input": "[-10, 0, 10, -10, 0, 10]",
+        "expected": "Counter({-10: 2, 0: 2, 10: 2})"
+      },
+      {
+        "input": "[1000, -1000, 500, -500, 0]",
+        "expected": "Counter({1000: 1, -1000: 1, 500: 1, -500: 1, 0: 1})"
+      },
+      {
         "input": "[10, 10, 10, 10, 20, 20, 20, 20, 40, 40, 50, 50, 30]",
         "expected": "Counter({10: 4, 20: 4, 40: 2, 50: 2, 30: 1})"
       },
       {
         "input": "[1, 2, 3, 4, 3, 2, 4, 1, 3, 1, 4]",
         "expected": "Counter({1: 3, 3: 3, 4: 3, 2: 2})"
-      },
-      {
-        "input": "[5, 6, 7, 4, 9, 10, 4, 5, 6, 7, 9, 5]",
-        "expected": "Counter({5: 3, 6: 2, 7: 2, 4: 2, 9: 2, 10: 1})"
-      },
-      {
-        "input": "[10, 16, 39, 12, 49]",
-        "expected": "Counter({10: 1, 16: 1, 39: 1, 12: 1, 49: 1})"
-      },
-      {
-        "input": "[7, 29, 39, 16, 48, 28, 9]",
-        "expected": "Counter({7: 1, 29: 1, 39: 1, 16: 1, 48: 1, 28: 1, 9: 1})"
-      },
-      {
-        "input": "[37, 16, 17, 15, 25, 10, 6, 1]",
-        "expected": "Counter({37: 1, 16: 1, 17: 1, 15: 1, 25: 1, 10: 1, 6: 1, 1: 1})"
-      },
-      {
-        "input": "[32, 35, 43, 17, 45, 8]",
-        "expected": "Counter({32: 1, 35: 1, 43: 1, 17: 1, 45: 1, 8: 1})"
-      },
-      {
-        "input": "[25, 2, 19, 41, 38]",
-        "expected": "Counter({25: 1, 2: 1, 19: 1, 41: 1, 38: 1})"
       }
     ],
     "task_id": 67,
@@ -3359,35 +3359,35 @@
     ],
     "hidden_tests": [
       {
+        "input": "'banana', 'a'",
+        "expected": "True"
+      },
+      {
+        "input": "'abracadabra', 'a'",
+        "expected": "True"
+      },
+      {
+        "input": "'  spaced  words  ', ' '",
+        "expected": "True"
+      },
+      {
+        "input": "'aabbccddeeff', 'c'",
+        "expected": "True"
+      },
+      {
+        "input": "'listen', 'silent'",
+        "expected": "False"
+      },
+      {
+        "input": "'aaaaab', 'b'",
+        "expected": "True"
+      },
+      {
         "input": "['red', 'black', 'white', 'green', 'orange'], 'ack'",
         "expected": "True"
       },
       {
         "input": "['red', 'black', 'white', 'green', 'orange'], 'abc'",
-        "expected": "False"
-      },
-      {
-        "input": "['red', 'black', 'white', 'green', 'orange'], 'ange'",
-        "expected": "True"
-      },
-      {
-        "input": "['nok', 'uxy', 'ofu', 'lnx', 'krm', 'ont', 'ynn'], 'GkDymIOT'",
-        "expected": "False"
-      },
-      {
-        "input": "['fpc', 'mil', 'dyf'], 'qpq'",
-        "expected": "False"
-      },
-      {
-        "input": "['qqb', 'evz', 'qjp', 'wmm', 'gbx', 'cju', 'euu'], 'LymBzJ'",
-        "expected": "False"
-      },
-      {
-        "input": "['mdk', 'dds', 'eog', 'tuv', 'hcb', 'afo'], 'MFNFdwGJ'",
-        "expected": "False"
-      },
-      {
-        "input": "['pmz', 'xgz', 'ayy', 'xvv', 'wtb'], 'OKYtB'",
         "expected": "False"
       }
     ],
@@ -3415,35 +3415,35 @@
     "hidden_tests": [
       {
         "input": "[('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]",
-        "expected": "'Varsha'"
+        "expected": "Varsha"
       },
       {
         "input": "[('Yash', 185), ('Dawood', 125), ('Sanya', 175)]",
-        "expected": "'Dawood'"
+        "expected": "Dawood"
       },
       {
         "input": "[('Sai', 345), ('Salman', 145), ('Ayesha', 96)]",
-        "expected": "'Ayesha'"
+        "expected": "Ayesha"
       },
       {
         "input": "[('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]",
-        "expected": "'Varsha'"
+        "expected": "Varsha"
       },
       {
         "input": "[('Yash', 185), ('Dawood', 125), ('Sanya', 175)]",
-        "expected": "'Dawood'"
+        "expected": "Dawood"
+      },
+      {
+        "input": "[('Sai', 345), ('Salman', 145), ('Ayesha', 96)]",
+        "expected": "Ayesha"
       },
       {
         "input": "[('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]",
-        "expected": "'Varsha'"
+        "expected": "Varsha"
       },
       {
-        "input": "[('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]",
-        "expected": "'Varsha'"
-      },
-      {
-        "input": "[('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]",
-        "expected": "'Varsha'"
+        "input": "[('Yash', 185), ('Dawood', 125), ('Sanya', 175)]",
+        "expected": "Dawood"
       }
     ],
     "task_id": 70,
@@ -3469,39 +3469,39 @@
     ],
     "hidden_tests": [
       {
+        "input": "0",
+        "expected": "False"
+      },
+      {
+        "input": "1",
+        "expected": "False"
+      },
+      {
         "input": "2",
         "expected": "False"
-      },
-      {
-        "input": "10",
-        "expected": "True"
-      },
-      {
-        "input": "35",
-        "expected": "True"
-      },
-      {
-        "input": "37",
-        "expected": "False"
-      },
-      {
-        "input": "11",
-        "expected": "False"
-      },
-      {
-        "input": "6",
-        "expected": "True"
-      },
-      {
-        "input": "10",
-        "expected": "True"
       },
       {
         "input": "3",
         "expected": "False"
       },
       {
-        "input": "19",
+        "input": "25",
+        "expected": "True"
+      },
+      {
+        "input": "97",
+        "expected": "False"
+      },
+      {
+        "input": "99",
+        "expected": "True"
+      },
+      {
+        "input": "9973",
+        "expected": "False"
+      },
+      {
+        "input": "10007",
         "expected": "False"
       }
     ],
@@ -3595,32 +3595,32 @@
         "expected": "6.0"
       },
       {
+        "input": "1.5, 2, 3",
+        "expected": "4.5"
+      },
+      {
+        "input": "7, 11, 13",
+        "expected": "500.5"
+      },
+      {
+        "input": "100, 1, 1",
+        "expected": "50.0"
+      },
+      {
+        "input": "2.5, 4.0, 1.2",
+        "expected": "6.0"
+      },
+      {
+        "input": "3.5, 2, 1.5",
+        "expected": "5.25"
+      },
+      {
+        "input": "1, 1, 1",
+        "expected": "0.5"
+      },
+      {
         "input": "1, 2, 1",
         "expected": "1.0"
-      },
-      {
-        "input": "10, 5, 20",
-        "expected": "500.0"
-      },
-      {
-        "input": "1, 13, 16",
-        "expected": "104.0"
-      },
-      {
-        "input": "2, 9, 12",
-        "expected": "108.0"
-      },
-      {
-        "input": "20, 5, 16",
-        "expected": "800.0"
-      },
-      {
-        "input": "4, 7, 2",
-        "expected": "28.0"
-      },
-      {
-        "input": "9, 15, 19",
-        "expected": "1282.5"
       }
     ],
     "task_id": 73,
@@ -3646,40 +3646,40 @@
     ],
     "hidden_tests": [
       {
+        "input": "0",
+        "expected": "0"
+      },
+      {
+        "input": "1",
+        "expected": "4"
+      },
+      {
+        "input": "-1",
+        "expected": "-4"
+      },
+      {
+        "input": "2",
+        "expected": "8"
+      },
+      {
+        "input": "3",
+        "expected": "12"
+      },
+      {
         "input": "10",
         "expected": "40"
-      },
-      {
-        "input": "5",
-        "expected": "20"
-      },
-      {
-        "input": "4",
-        "expected": "16"
-      },
-      {
-        "input": "13",
-        "expected": "52"
-      },
-      {
-        "input": "10",
-        "expected": "40"
-      },
-      {
-        "input": "7",
-        "expected": "28"
-      },
-      {
-        "input": "20",
-        "expected": "80"
       },
       {
         "input": "11",
         "expected": "44"
       },
       {
-        "input": "2",
-        "expected": "8"
+        "input": "97",
+        "expected": "388"
+      },
+      {
+        "input": "1001",
+        "expected": "4004"
       }
     ],
     "task_id": 74,
@@ -3705,6 +3705,26 @@
     ],
     "hidden_tests": [
       {
+        "input": "0, 0",
+        "expected": "False"
+      },
+      {
+        "input": "1, 2",
+        "expected": "False"
+      },
+      {
+        "input": "-5, 5",
+        "expected": "True"
+      },
+      {
+        "input": "100, 7",
+        "expected": "False"
+      },
+      {
+        "input": "12, 18",
+        "expected": "False"
+      },
+      {
         "input": "1, -2",
         "expected": "True"
       },
@@ -3719,26 +3739,6 @@
       {
         "input": "-2, 2",
         "expected": "True"
-      },
-      {
-        "input": "18, 7",
-        "expected": "False"
-      },
-      {
-        "input": "1, 17",
-        "expected": "False"
-      },
-      {
-        "input": "5, 2",
-        "expected": "False"
-      },
-      {
-        "input": "13, 6",
-        "expected": "False"
-      },
-      {
-        "input": "11, 5",
-        "expected": "False"
       }
     ],
     "task_id": 75,
@@ -3764,40 +3764,40 @@
     ],
     "hidden_tests": [
       {
-        "input": "5",
-        "expected": "65"
+        "input": "0",
+        "expected": "0"
+      },
+      {
+        "input": "1",
+        "expected": "1"
+      },
+      {
+        "input": "-1",
+        "expected": "5"
+      },
+      {
+        "input": "2",
+        "expected": "8"
+      },
+      {
+        "input": "3",
+        "expected": "21"
       },
       {
         "input": "10",
         "expected": "280"
       },
       {
-        "input": "15",
-        "expected": "645"
+        "input": "11",
+        "expected": "341"
       },
       {
-        "input": "5",
-        "expected": "65"
+        "input": "97",
+        "expected": "28033"
       },
       {
-        "input": "18",
-        "expected": "936"
-      },
-      {
-        "input": "5",
-        "expected": "65"
-      },
-      {
-        "input": "10",
-        "expected": "280"
-      },
-      {
-        "input": "9",
-        "expected": "225"
-      },
-      {
-        "input": "6",
-        "expected": "96"
+        "input": "1001",
+        "expected": "3004001"
       }
     ],
     "task_id": 76,
@@ -3823,40 +3823,40 @@
     ],
     "hidden_tests": [
       {
+        "input": "0",
+        "expected": "1"
+      },
+      {
+        "input": "1",
+        "expected": "1"
+      },
+      {
         "input": "2",
         "expected": "2"
-      },
-      {
-        "input": "10",
-        "expected": "115975"
-      },
-      {
-        "input": "56",
-        "expected": "6775685320645824322581483068371419745979053216268760300"
-      },
-      {
-        "input": "9",
-        "expected": "21147"
-      },
-      {
-        "input": "9",
-        "expected": "21147"
-      },
-      {
-        "input": "10",
-        "expected": "115975"
-      },
-      {
-        "input": "16",
-        "expected": "10480142147"
       },
       {
         "input": "3",
         "expected": "5"
       },
       {
-        "input": "9",
-        "expected": "21147"
+        "input": "10",
+        "expected": "115975"
+      },
+      {
+        "input": "11",
+        "expected": "678570"
+      },
+      {
+        "input": "97",
+        "expected": "1917593350464112616752757157565032460248311804906650215954187246738986739924580790084847891233423398173059771233"
+      },
+      {
+        "input": "1001",
+        "expected": "5697492444115640567019894551104670441887299377750507814832444287926548135718473989226588854619753277510989274111676929692326431287618427310429582702977943038547017853355169794677009999499509861681899321968731930210135649901785457588766404775126937125611263472591313549188438026236033591872298348685643218248241070987660997425907418288387275147845263902339896466018359704524245195016745897754780382300203294562228377896692763732958184343775039748327698415424025308756823742420148882433562953027102837867911477639037585208366685314172195537690238959242306817150938556185832335855995015759334885174930844705452991077010968826351497269690858586310286157147154401951939033849823242617007318222428724549954943072169004072771543622374463897209533330061764895629649123036090509137412038517628631165285326584555770205021512246002316877241418174991101575125343281763357174743748101531005859909241011474145112949707419209559359616627380948596364438907789126583642834462967543326715559133569076242236078651038860331687811412073839855154286849808912642379301084872605249913598691500675084714134464095557689534788703003980391116862275247009887775189860301529355607704289107027916934469748847227811504563141975787082519475996829463825789464119427651612443714908488004967583700648597724989437859032403084787644952069973133048909445504340769181989705955391458501176785431274189154776796083000536931705071737173266463068055643513818128845764959395902766699546562439518052481964324258693258243111749175641519668345197095883803099905581019443851774623476349209750406511329366102857875647405746756464302322676618281356637824622448568516268684229839982650331442481077413722890060944002409346530273212953371966446117988097815140383386658329854722435176476568759331515750398973030325620915308793797103275508744084195077859650072584756720525886206113882610780611400655728548997864611758085470239474795626811763535347752489904986818946011595325092664416060"
+      },
+      {
+        "input": "56",
+        "expected": "6775685320645824322581483068371419745979053216268760300"
       }
     ],
     "task_id": 77,
@@ -3882,7 +3882,23 @@
     ],
     "hidden_tests": [
       {
-        "input": "5",
+        "input": "0",
+        "expected": "True"
+      },
+      {
+        "input": "1",
+        "expected": "True"
+      },
+      {
+        "input": "-1",
+        "expected": "True"
+      },
+      {
+        "input": "2",
+        "expected": "False"
+      },
+      {
+        "input": "3",
         "expected": "True"
       },
       {
@@ -3890,31 +3906,15 @@
         "expected": "False"
       },
       {
-        "input": "15",
-        "expected": "True"
-      },
-      {
-        "input": "7",
-        "expected": "True"
-      },
-      {
         "input": "11",
         "expected": "True"
       },
       {
-        "input": "8",
+        "input": "97",
         "expected": "True"
       },
       {
-        "input": "12",
-        "expected": "True"
-      },
-      {
-        "input": "11",
-        "expected": "True"
-      },
-      {
-        "input": "4",
+        "input": "1001",
         "expected": "True"
       }
     ],
@@ -3941,27 +3941,15 @@
     ],
     "hidden_tests": [
       {
-        "input": "12345",
-        "expected": "False"
-      },
-      {
-        "input": "1212112",
+        "input": "0",
         "expected": "True"
       },
       {
-        "input": "1212",
+        "input": "1",
         "expected": "False"
       },
       {
-        "input": "4",
-        "expected": "False"
-      },
-      {
-        "input": "5",
-        "expected": "False"
-      },
-      {
-        "input": "9",
+        "input": "-1",
         "expected": "False"
       },
       {
@@ -3969,12 +3957,24 @@
         "expected": "False"
       },
       {
-        "input": "15",
+        "input": "3",
         "expected": "False"
       },
       {
-        "input": "9",
+        "input": "10",
         "expected": "False"
+      },
+      {
+        "input": "11",
+        "expected": "True"
+      },
+      {
+        "input": "97",
+        "expected": "False"
+      },
+      {
+        "input": "1001",
+        "expected": "True"
       }
     ],
     "task_id": 79,
@@ -4000,40 +4000,40 @@
     ],
     "hidden_tests": [
       {
-        "input": "5",
-        "expected": "35.0"
-      },
-      {
-        "input": "6",
-        "expected": "56.0"
-      },
-      {
-        "input": "7",
-        "expected": "84.0"
-      },
-      {
-        "input": "8",
-        "expected": "120.0"
-      },
-      {
-        "input": "18",
-        "expected": "1140.0"
+        "input": "0",
+        "expected": "0.0"
       },
       {
         "input": "1",
         "expected": "1.0"
       },
       {
-        "input": "13",
-        "expected": "455.0"
+        "input": "-1",
+        "expected": "0.0"
       },
       {
-        "input": "8",
-        "expected": "120.0"
+        "input": "2",
+        "expected": "4.0"
       },
       {
-        "input": "17",
-        "expected": "969.0"
+        "input": "3",
+        "expected": "10.0"
+      },
+      {
+        "input": "10",
+        "expected": "220.0"
+      },
+      {
+        "input": "11",
+        "expected": "286.0"
+      },
+      {
+        "input": "97",
+        "expected": "156849.0"
+      },
+      {
+        "input": "1001",
+        "expected": "167668501.0"
       }
     ],
     "task_id": 80,
@@ -4059,40 +4059,40 @@
     ],
     "hidden_tests": [
       {
-        "input": "10",
-        "expected": "271"
-      },
-      {
-        "input": "2",
-        "expected": "7"
-      },
-      {
-        "input": "9",
-        "expected": "217"
-      },
-      {
-        "input": "7",
-        "expected": "127"
-      },
-      {
-        "input": "3",
-        "expected": "19"
+        "input": "0",
+        "expected": "1"
       },
       {
         "input": "1",
         "expected": "1"
       },
       {
+        "input": "-1",
+        "expected": "7"
+      },
+      {
+        "input": "2",
+        "expected": "7"
+      },
+      {
+        "input": "3",
+        "expected": "19"
+      },
+      {
+        "input": "10",
+        "expected": "271"
+      },
+      {
         "input": "11",
         "expected": "331"
       },
       {
-        "input": "5",
-        "expected": "61"
+        "input": "97",
+        "expected": "27937"
       },
       {
-        "input": "7",
-        "expected": "127"
+        "input": "1001",
+        "expected": "3003001"
       }
     ],
     "task_id": 81,
@@ -4118,40 +4118,40 @@
     ],
     "hidden_tests": [
       {
-        "input": "11",
-        "expected": "10"
-      },
-      {
-        "input": "7",
-        "expected": "6"
-      },
-      {
-        "input": "12",
-        "expected": "11"
-      },
-      {
-        "input": "14",
-        "expected": "13"
-      },
-      {
-        "input": "20",
-        "expected": "19"
-      },
-      {
-        "input": "14",
-        "expected": "13"
-      },
-      {
-        "input": "17",
-        "expected": "16"
+        "input": "0",
+        "expected": "-1"
       },
       {
         "input": "1",
         "expected": "0"
       },
       {
-        "input": "12",
-        "expected": "11"
+        "input": "-1",
+        "expected": "-2"
+      },
+      {
+        "input": "2",
+        "expected": "1"
+      },
+      {
+        "input": "3",
+        "expected": "2"
+      },
+      {
+        "input": "10",
+        "expected": "9"
+      },
+      {
+        "input": "11",
+        "expected": "10"
+      },
+      {
+        "input": "97",
+        "expected": "96"
+      },
+      {
+        "input": "1001",
+        "expected": "1000"
       }
     ],
     "task_id": 82,
@@ -4177,31 +4177,19 @@
     ],
     "hidden_tests": [
       {
-        "input": "1212121",
-        "expected": "True"
-      },
-      {
-        "input": "1991",
+        "input": "0",
         "expected": "False"
       },
       {
-        "input": "121",
-        "expected": "True"
-      },
-      {
-        "input": "20",
+        "input": "1",
         "expected": "False"
       },
       {
-        "input": "6",
+        "input": "-1",
         "expected": "False"
       },
       {
-        "input": "11",
-        "expected": "False"
-      },
-      {
-        "input": "16",
+        "input": "2",
         "expected": "False"
       },
       {
@@ -4209,7 +4197,19 @@
         "expected": "False"
       },
       {
-        "input": "8",
+        "input": "10",
+        "expected": "False"
+      },
+      {
+        "input": "11",
+        "expected": "False"
+      },
+      {
+        "input": "97",
+        "expected": "False"
+      },
+      {
+        "input": "1001",
         "expected": "False"
       }
     ],
@@ -4236,36 +4236,36 @@
     ],
     "hidden_tests": [
       {
-        "input": "15",
-        "expected": "4"
+        "input": "1",
+        "expected": "1"
       },
       {
-        "input": "12",
-        "expected": "6"
-      },
-      {
-        "input": "9",
-        "expected": "3"
+        "input": "2",
+        "expected": "2"
       },
       {
         "input": "3",
         "expected": "2"
       },
       {
-        "input": "4",
-        "expected": "3"
+        "input": "10",
+        "expected": "4"
       },
       {
-        "input": "13",
+        "input": "11",
         "expected": "2"
       },
       {
-        "input": "16",
-        "expected": "5"
+        "input": "97",
+        "expected": "2"
       },
       {
-        "input": "9",
-        "expected": "3"
+        "input": "1001",
+        "expected": "8"
+      },
+      {
+        "input": "15",
+        "expected": "4"
       },
       {
         "input": "12",
@@ -4295,40 +4295,40 @@
     ],
     "hidden_tests": [
       {
-        "input": "8",
-        "expected": "'1000'"
-      },
-      {
-        "input": "18",
-        "expected": "'10010'"
-      },
-      {
-        "input": "7",
-        "expected": "'111'"
-      },
-      {
-        "input": "18",
-        "expected": "'10010'"
-      },
-      {
-        "input": "13",
-        "expected": "'1101'"
-      },
-      {
-        "input": "3",
-        "expected": "'11'"
+        "input": "0",
+        "expected": "0"
       },
       {
         "input": "1",
-        "expected": "'1'"
+        "expected": "1"
       },
       {
         "input": "2",
-        "expected": "'10'"
+        "expected": "10"
       },
       {
-        "input": "4",
-        "expected": "'100'"
+        "input": "10",
+        "expected": "1010"
+      },
+      {
+        "input": "31",
+        "expected": "11111"
+      },
+      {
+        "input": "255",
+        "expected": "11111111"
+      },
+      {
+        "input": "1024",
+        "expected": "10000000000"
+      },
+      {
+        "input": "-1",
+        "expected": "-1"
+      },
+      {
+        "input": "3",
+        "expected": "11"
       }
     ],
     "task_id": 85,
@@ -4362,32 +4362,32 @@
         "expected": "True"
       },
       {
+        "input": "'00123'",
+        "expected": "True"
+      },
+      {
+        "input": "'0'",
+        "expected": "True"
+      },
+      {
+        "input": "' 42'",
+        "expected": "True"
+      },
+      {
+        "input": "'12a'",
+        "expected": "False"
+      },
+      {
+        "input": "'-0'",
+        "expected": "True"
+      },
+      {
         "input": "'python'",
         "expected": "False"
       },
       {
         "input": "'1'",
         "expected": "True"
-      },
-      {
-        "input": "'12345'",
-        "expected": "True"
-      },
-      {
-        "input": "'REaIOW'",
-        "expected": "False"
-      },
-      {
-        "input": "'JHc'",
-        "expected": "False"
-      },
-      {
-        "input": "'IshQbB'",
-        "expected": "False"
-      },
-      {
-        "input": "'IRDFKW'",
-        "expected": "False"
       }
     ],
     "task_id": 86,
@@ -4413,6 +4413,30 @@
     ],
     "hidden_tests": [
       {
+        "input": "\"\"",
+        "expected": "[]"
+      },
+      {
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "['Mixed', 'CASE']"
+      },
+      {
+        "input": "\"naïve café\"",
+        "expected": "['naïve', 'café']"
+      },
+      {
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "[]"
+      },
+      {
+        "input": "\"racecar\"",
+        "expected": "['racecar']"
+      },
+      {
+        "input": "\"ababa\"",
+        "expected": "['ababa']"
+      },
+      {
         "input": "'Please move back to stream'",
         "expected": "['Please', 'move', 'back', 'stream']"
       },
@@ -4423,30 +4447,6 @@
       {
         "input": "'Jhingai wulu road Zone 3'",
         "expected": "['Jhingai', 'wulu', 'road', 'Zone']"
-      },
-      {
-        "input": "'WKynVZbk'",
-        "expected": "['WKynVZbk']"
-      },
-      {
-        "input": "'aDTE'",
-        "expected": "['aDTE']"
-      },
-      {
-        "input": "'bnFMpE'",
-        "expected": "['bnFMpE']"
-      },
-      {
-        "input": "'LfMuRKCk'",
-        "expected": "['LfMuRKCk']"
-      },
-      {
-        "input": "'bzD'",
-        "expected": "[]"
-      },
-      {
-        "input": "'VPZBUZM'",
-        "expected": "['VPZBUZM']"
       }
     ],
     "task_id": 87,
@@ -4472,40 +4472,40 @@
     ],
     "hidden_tests": [
       {
+        "input": "'banana', 'a'",
+        "expected": "bnan"
+      },
+      {
+        "input": "'abracadabra', 'a'",
+        "expected": "bracadabr"
+      },
+      {
+        "input": "'  spaced  words  ', ' '",
+        "expected": " spaced  words "
+      },
+      {
+        "input": "'aabbccddeeff', 'c'",
+        "expected": "aabbddeeff"
+      },
+      {
+        "input": "'listen', 'silent'",
+        "expected": "listen"
+      },
+      {
+        "input": "'aaaaab', 'b'",
+        "expected": "aaaaa"
+      },
+      {
         "input": "'hello', 'l'",
-        "expected": "'heo'"
+        "expected": "heo"
       },
       {
         "input": "'abcda', 'a'",
-        "expected": "'bcd'"
+        "expected": "bcd"
       },
       {
         "input": "'PHP', 'P'",
-        "expected": "'H'"
-      },
-      {
-        "input": "'jjUFxmx', 'znJH'",
-        "expected": "'jjUFxmx'"
-      },
-      {
-        "input": "'Fhk', 'VFckc'",
-        "expected": "'Fhk'"
-      },
-      {
-        "input": "'JAfY', 'pOzHLtr'",
-        "expected": "'JAfY'"
-      },
-      {
-        "input": "'RGw', 'HWShO'",
-        "expected": "'RGw'"
-      },
-      {
-        "input": "'wBh', 'cwP'",
-        "expected": "'wBh'"
-      },
-      {
-        "input": "'MeqKxMk', 'HJKwoZCy'",
-        "expected": "'MeqKxMk'"
+        "expected": "H"
       }
     ],
     "task_id": 88,
@@ -4531,6 +4531,30 @@
     ],
     "hidden_tests": [
       {
+        "input": "\"\"",
+        "expected": "False"
+      },
+      {
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "False"
+      },
+      {
+        "input": "\"naïve café\"",
+        "expected": "False"
+      },
+      {
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "False"
+      },
+      {
+        "input": "\"racecar\"",
+        "expected": "False"
+      },
+      {
+        "input": "\"ababa\"",
+        "expected": "False"
+      },
+      {
         "input": "'aab_cbbbc'",
         "expected": "True"
       },
@@ -4540,30 +4564,6 @@
       },
       {
         "input": "'Aaab_abbbc'",
-        "expected": "False"
-      },
-      {
-        "input": "'oZCSTaIy'",
-        "expected": "False"
-      },
-      {
-        "input": "'Ute'",
-        "expected": "False"
-      },
-      {
-        "input": "'ADsLgRqa'",
-        "expected": "False"
-      },
-      {
-        "input": "'OFpfwwMW'",
-        "expected": "False"
-      },
-      {
-        "input": "'uizdj'",
-        "expected": "False"
-      },
-      {
-        "input": "'QKMsxmXG'",
         "expected": "False"
       }
     ],
@@ -4590,40 +4590,40 @@
     ],
     "hidden_tests": [
       {
+        "input": "\"\"",
+        "expected": "122"
+      },
+      {
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "n"
+      },
+      {
+        "input": "\"naïve café\"",
+        "expected": "h"
+      },
+      {
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "j"
+      },
+      {
+        "input": "\"racecar\"",
+        "expected": "w"
+      },
+      {
+        "input": "\"ababa\"",
+        "expected": "g"
+      },
+      {
         "input": "'abc'",
-        "expected": "'f'"
+        "expected": "f"
       },
       {
         "input": "'gfg'",
-        "expected": "'t'"
+        "expected": "t"
       },
       {
         "input": "'ab'",
-        "expected": "'c'"
-      },
-      {
-        "input": "'KVN'",
-        "expected": "'c'"
-      },
-      {
-        "input": "'nlIYtN'",
-        "expected": "'x'"
-      },
-      {
-        "input": "'KBvfq'",
-        "expected": "'t'"
-      },
-      {
-        "input": "'Llx'",
-        "expected": "'p'"
-      },
-      {
-        "input": "'jida'",
-        "expected": "'x'"
-      },
-      {
-        "input": "'UQzkb'",
-        "expected": "'m'"
+        "expected": "c"
       }
     ],
     "task_id": 90,
@@ -4649,44 +4649,44 @@
     ],
     "hidden_tests": [
       {
+        "input": "\"\"",
+        "expected": "_"
+      },
+      {
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "  mixed case 123!  "
+      },
+      {
+        "input": "\"naïve café\"",
+        "expected": "Naïve café"
+      },
+      {
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "!@# abc abc #@!"
+      },
+      {
+        "input": "\"racecar\"",
+        "expected": "Racecar"
+      },
+      {
+        "input": "\"ababa\"",
+        "expected": "Ababa"
+      },
+      {
         "input": "'python_program'",
-        "expected": "'PythonProgram'"
+        "expected": "PythonProgram"
       },
       {
         "input": "'python_language'",
-        "expected": "'PythonLanguage'"
+        "expected": "PythonLanguage"
       },
       {
         "input": "'programming_language'",
-        "expected": "'ProgrammingLanguage'"
+        "expected": "ProgrammingLanguage"
       },
       {
         "input": "'hAn'",
-        "expected": "'Han'"
-      },
-      {
-        "input": "'xPk'",
-        "expected": "'Xpk'"
-      },
-      {
-        "input": "'wgqH'",
-        "expected": "'Wgqh'"
-      },
-      {
-        "input": "'KccLTzCn'",
-        "expected": "'Kccltzcn'"
-      },
-      {
-        "input": "'earOk'",
-        "expected": "'Earok'"
-      },
-      {
-        "input": "'wMaHWO'",
-        "expected": "'Wmahwo'"
-      },
-      {
-        "input": "'jRoWkHTc'",
-        "expected": "'Jrowkhtc'"
+        "expected": "Han"
       }
     ],
     "task_id": 91,
@@ -4712,6 +4712,10 @@
     ],
     "hidden_tests": [
       {
+        "input": "0, 0",
+        "expected": "0"
+      },
+      {
         "input": "'011001', 6",
         "expected": "3"
       },
@@ -4736,20 +4740,16 @@
         "expected": "3"
       },
       {
-        "input": "'011001', 6",
-        "expected": "3"
+        "input": "'11011', 5",
+        "expected": "4"
       },
       {
-        "input": "'011001', 6",
-        "expected": "3"
+        "input": "'1010', 4",
+        "expected": "2"
       },
       {
-        "input": "'011001', 6",
-        "expected": "3"
-      },
-      {
-        "input": "'011001', 6",
-        "expected": "3"
+        "input": "'NAwCQB', 4",
+        "expected": "0"
       }
     ],
     "task_id": 92,
@@ -4775,6 +4775,30 @@
     ],
     "hidden_tests": [
       {
+        "input": "\"\"",
+        "expected": "0"
+      },
+      {
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "0"
+      },
+      {
+        "input": "\"naïve café\"",
+        "expected": "0"
+      },
+      {
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "0"
+      },
+      {
+        "input": "\"racecar\"",
+        "expected": "0"
+      },
+      {
+        "input": "\"ababa\"",
+        "expected": "0"
+      },
+      {
         "input": "'11000010001'",
         "expected": "6"
       },
@@ -4788,30 +4812,6 @@
       },
       {
         "input": "'HkqjAWsT'",
-        "expected": "0"
-      },
-      {
-        "input": "'mTwVc'",
-        "expected": "0"
-      },
-      {
-        "input": "'RCwgY'",
-        "expected": "0"
-      },
-      {
-        "input": "'QXcZcMMX'",
-        "expected": "0"
-      },
-      {
-        "input": "'GfQpl'",
-        "expected": "0"
-      },
-      {
-        "input": "'bNpQsGj'",
-        "expected": "0"
-      },
-      {
-        "input": "'igZn'",
         "expected": "0"
       }
     ],
@@ -4901,44 +4901,44 @@
     ],
     "hidden_tests": [
       {
+        "input": "\"\"",
+        "expected": ""
+      },
+      {
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "  MExAd CeSi 123!  "
+      },
+      {
+        "input": "\"naïve café\"",
+        "expected": "naïve café"
+      },
+      {
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "!@# Abc aBC #@!"
+      },
+      {
+        "input": "\"racecar\"",
+        "expected": "racecar"
+      },
+      {
+        "input": "\"ababa\"",
+        "expected": "ababa"
+      },
+      {
         "input": "'Python'",
-        "expected": "'Python'"
+        "expected": "Python"
       },
       {
         "input": "'USA'",
-        "expected": "'ASU'"
+        "expected": "ASU"
       },
       {
         "input": "'ab'",
-        "expected": "'ab'"
+        "expected": "ab"
       },
       {
         "input": "'dvtphj'",
-        "expected": "'dvtphj'"
-      },
-      {
-        "input": "'aBbQY'",
-        "expected": "'aBbQY'"
-      },
-      {
-        "input": "'sZZx'",
-        "expected": "'sZZx'"
-      },
-      {
-        "input": "'uyQxL'",
-        "expected": "'uyQxL'"
-      },
-      {
-        "input": "'fjY'",
-        "expected": "'fjY'"
-      },
-      {
-        "input": "'LdC'",
-        "expected": "'LdC'"
-      },
-      {
-        "input": "'PfZXhusM'",
-        "expected": "'PfZXhusM'"
+        "expected": "dvtphj"
       }
     ],
     "task_id": 95,
@@ -4964,6 +4964,34 @@
     ],
     "hidden_tests": [
       {
+        "input": "[]",
+        "expected": "0"
+      },
+      {
+        "input": "\"\"",
+        "expected": "0"
+      },
+      {
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "0"
+      },
+      {
+        "input": "\"naïve café\"",
+        "expected": "1"
+      },
+      {
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "0"
+      },
+      {
+        "input": "\"racecar\"",
+        "expected": "1"
+      },
+      {
+        "input": "\"ababa\"",
+        "expected": "2"
+      },
+      {
         "input": "'xbcefg'",
         "expected": "2"
       },
@@ -4974,34 +5002,6 @@
       {
         "input": "'AbgdeF'",
         "expected": "5"
-      },
-      {
-        "input": "'JWims'",
-        "expected": "0"
-      },
-      {
-        "input": "'ZUT'",
-        "expected": "0"
-      },
-      {
-        "input": "'nZtmjfw'",
-        "expected": "1"
-      },
-      {
-        "input": "'AAthZKa'",
-        "expected": "1"
-      },
-      {
-        "input": "'eCAS'",
-        "expected": "0"
-      },
-      {
-        "input": "'yLMUiwd'",
-        "expected": "0"
-      },
-      {
-        "input": "'rTu'",
-        "expected": "0"
       }
     ],
     "task_id": 96,
@@ -5027,44 +5027,44 @@
     ],
     "hidden_tests": [
       {
+        "input": "\"\"",
+        "expected": ""
+      },
+      {
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": " MxdCS 2! "
+      },
+      {
+        "input": "\"naïve café\"",
+        "expected": "nïecf"
+      },
+      {
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "!#acAC#!"
+      },
+      {
+        "input": "\"racecar\"",
+        "expected": "rccr"
+      },
+      {
+        "input": "\"ababa\"",
+        "expected": "aaa"
+      },
+      {
         "input": "'abcdef'",
-        "expected": "'ace'"
+        "expected": "ace"
       },
       {
         "input": "'python'",
-        "expected": "'pto'"
+        "expected": "pto"
       },
       {
         "input": "'data'",
-        "expected": "'dt'"
+        "expected": "dt"
       },
       {
         "input": "'lambs'",
-        "expected": "'lms'"
-      },
-      {
-        "input": "'iGWEiLVL'",
-        "expected": "'iWiV'"
-      },
-      {
-        "input": "'rbPKUAZ'",
-        "expected": "'rPUZ'"
-      },
-      {
-        "input": "'OIY'",
-        "expected": "'OY'"
-      },
-      {
-        "input": "'WCAmqBn'",
-        "expected": "'WAqn'"
-      },
-      {
-        "input": "'OgMOxz'",
-        "expected": "'OMx'"
-      },
-      {
-        "input": "'bpeQ'",
-        "expected": "'be'"
+        "expected": "lms"
       }
     ],
     "task_id": 97,
@@ -5091,43 +5091,43 @@
     "hidden_tests": [
       {
         "input": "'hello people', '@'",
-        "expected": "'hello@people'"
+        "expected": "hello@people"
       },
       {
         "input": "'python program language', '$'",
-        "expected": "'python$program$language'"
+        "expected": "python$program$language"
       },
       {
         "input": "'blank space', '-'",
-        "expected": "'blank-space'"
+        "expected": "blank-space"
       },
       {
         "input": "'ecw', 'iWBxOmEf'",
-        "expected": "'ecw'"
+        "expected": "ecw"
       },
       {
         "input": "'WhbzzF', 'Cays'",
-        "expected": "'WhbzzF'"
+        "expected": "WhbzzF"
       },
       {
         "input": "'btNM', 'ibhy'",
-        "expected": "'btNM'"
+        "expected": "btNM"
       },
       {
         "input": "'ZiLR', 'NnwBoR'",
-        "expected": "'ZiLR'"
+        "expected": "ZiLR"
       },
       {
         "input": "'WvJjSh', 'EFZAdC'",
-        "expected": "'WvJjSh'"
+        "expected": "WvJjSh"
       },
       {
         "input": "'vkoBkV', 'gqooUL'",
-        "expected": "'vkoBkV'"
+        "expected": "vkoBkV"
       },
       {
         "input": "'PCRo', 'VUD'",
-        "expected": "'PCRo'"
+        "expected": "PCRo"
       }
     ],
     "task_id": 98,
@@ -5153,6 +5153,30 @@
     ],
     "hidden_tests": [
       {
+        "input": "\"\"",
+        "expected": "0"
+      },
+      {
+        "input": "\"  Mixed CASE 123!  \"",
+        "expected": "19"
+      },
+      {
+        "input": "\"naïve café\"",
+        "expected": "10"
+      },
+      {
+        "input": "\"!@# abc ABC #@!\"",
+        "expected": "15"
+      },
+      {
+        "input": "\"racecar\"",
+        "expected": "7"
+      },
+      {
+        "input": "\"ababa\"",
+        "expected": "5"
+      },
+      {
         "input": "'python programming'",
         "expected": "18"
       },
@@ -5167,30 +5191,6 @@
       {
         "input": "'RFXdX'",
         "expected": "5"
-      },
-      {
-        "input": "'vkrD'",
-        "expected": "4"
-      },
-      {
-        "input": "'vvMuCWh'",
-        "expected": "7"
-      },
-      {
-        "input": "'xlzi'",
-        "expected": "4"
-      },
-      {
-        "input": "'KGgFedP'",
-        "expected": "7"
-      },
-      {
-        "input": "'QdYx'",
-        "expected": "4"
-      },
-      {
-        "input": "'rUPu'",
-        "expected": "4"
       }
     ],
     "task_id": 99,
@@ -5220,40 +5220,32 @@
         "expected": "65"
       },
       {
-        "input": "'R'",
-        "expected": "82"
+        "input": "'z'",
+        "expected": "122"
       },
       {
-        "input": "'S'",
-        "expected": "83"
+        "input": "'0'",
+        "expected": "48"
       },
       {
-        "input": "'A'",
-        "expected": "65"
+        "input": "' '",
+        "expected": "32"
       },
       {
-        "input": "'A'",
-        "expected": "65"
+        "input": "'\\n'",
+        "expected": "10"
       },
       {
-        "input": "'A'",
-        "expected": "65"
+        "input": "'!'",
+        "expected": "33"
       },
       {
-        "input": "'A'",
-        "expected": "65"
+        "input": "'ñ'",
+        "expected": "241"
       },
       {
-        "input": "'A'",
-        "expected": "65"
-      },
-      {
-        "input": "'A'",
-        "expected": "65"
-      },
-      {
-        "input": "'A'",
-        "expected": "65"
+        "input": "'€'",
+        "expected": "8364"
       }
     ],
     "task_id": 100,
