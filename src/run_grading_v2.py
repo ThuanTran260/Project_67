@@ -168,6 +168,7 @@ def main():
                 "task_id":  tid,
                 "func":     func_name,
                 "topic":    topic,
+                "actual_error_type": err_type,
                 "mo_ta_loi": sub.get("note", ""),
                 "public": {
                     "pass_count":    pub_r["pass_count"],

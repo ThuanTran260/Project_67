@@ -87,8 +87,12 @@ def compute_stats(results: List[Dict]) -> Dict:
             stats["per_topic"][topic]["hid_err"][err_type] += hid.get("error_counts", {}).get(err_type, 0)
 
     n = len(results)
+    buggy_count = sum(1 for r in results if r.get("actual_error_type", "") != "AC" and r.get("actual_error_type", "") != "")
+    if buggy_count == 0:
+        buggy_count = sum(1 for r in results if r.get("hidden", {}).get("pass_count", 0) < r.get("hidden", {}).get("total_count", 1))
+    
     if n > 0:
-        stats["fpr_pct"]           = round(stats["fp_count"] / n * 100, 2)
+        stats["fpr_pct"]           = round(stats["fp_count"] / buggy_count * 100, 2) if buggy_count > 0 else 0.0
         stats["leakage_rate_pct"]   = round(stats["leakage_count"] / n * 100, 2)
         stats["avg_tpr_public"]    = round(stats["avg_tpr_public"] / n, 2)
         stats["avg_tpr_hidden"]    = round(stats["avg_tpr_hidden"] / n, 2)

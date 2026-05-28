@@ -89,10 +89,11 @@ def plot_fpr_vs_ntest(df, stats, out_dir):
     ax.fill_between(x_tests[:3], y_fpr[:3], alpha=0.1, color="#E24B4A")
     
     # Annotate từng điểm
+    num_subs = len(df) if df is not None else 100
     for i, (x, y, fp_count) in enumerate(zip(x_tests, y_fpr, [stats["set1"]["fp_count"], stats["set2"]["fp_count"], stats["set3"]["fp_count"], stats["set4"]["fp_count"]])):
         offset = (0, 10) if i != 3 else (25, -5)
         ax.annotate(
-            f"{y}% ({fp_count}/50)",
+            f"{y}% ({fp_count}/{num_subs})",
             xy=(x, y),
             xytext=offset,
             textcoords="offset points",
@@ -269,13 +270,14 @@ def plot_latency_comparison(stats, out_dir):
     
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 5.5), dpi=150)
     
-    # Subplot 1: Tổng thời gian chấm 50 submissions (giây)
+    # Subplot 1: Tổng thời gian chấm các submissions (giây)
     bars1 = ax1.bar(sets, total_times, color=["#5C9BD1", "#F29C38", "#3CB371", "#E55B5B"], width=0.4)
     for bar in bars1:
         h = bar.get_height()
         ax1.text(bar.get_x() + bar.get_width() / 2, h + (max(total_times)*0.02),
                  f"{h:.3f} s", ha="center", va="bottom", fontsize=8.5, fontweight="bold")
-    ax1.set_title("Tổng thời gian chấm 50 bài nộp (giây)", fontsize=11, fontweight="bold", pad=10)
+    num_subs = len(stats["set1"]["latencies_per_sub"]) if stats and "set1" in stats and "latencies_per_sub" in stats["set1"] else 100
+    ax1.set_title(f"Tổng thời gian chấm {num_subs} bài nộp (giây)", fontsize=11, fontweight="bold", pad=10)
     ax1.set_ylabel("Thời gian (giây)", fontsize=9.5)
     ax1.set_ylim(0, max(total_times) * 1.15)
     apply_styling(ax1)

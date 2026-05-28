@@ -227,10 +227,10 @@ def main():
         fp_count = sdata["FP"]
         fn_count = sdata["FN"]
         
-        # FPR = FP / total_submissions
-        fpr_pct = round(fp_count / total_submissions * 100, 2)
-        # FAR (False Acceptance Rate) = FP / buggy_submissions — bài lỗi lọt qua
-        far_pct = round(fp_count / buggy_submissions_count * 100, 2) if buggy_submissions_count > 0 else 0.0
+        # FPR (False Positive Rate) = FP / buggy_submissions (số mẫu âm thật - bài lỗi lọt qua)
+        fpr_pct = round(fp_count / buggy_submissions_count * 100, 2) if buggy_submissions_count > 0 else 0.0
+        # FAR (False Acceptance Rate) = FP / total_submissions (tỷ lệ chấp nhận trên tổng số submissions)
+        far_pct = round(fp_count / total_submissions * 100, 2)
         # FRR (False Rejection Rate) = FN / ac_submissions — bài đúng bị chấm oan
         frr_pct = round(fn_count / ac_submissions_count * 100, 2) if ac_submissions_count > 0 else 0.0
         
