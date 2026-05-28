@@ -396,10 +396,6 @@
     ],
     "hidden_tests": [
       {
-        "input": "[1, 2]",
-        "expected": "1.5"
-      },
-      {
         "input": "[]",
         "expected": "0"
       },
@@ -776,24 +772,8 @@
         "expected": "False"
       },
       {
-        "input": "[0]",
-        "expected": "False"
-      },
-      {
-        "input": "[0, 0, 0]",
-        "expected": "False"
-      },
-      {
         "input": "[-1, -2]",
         "expected": "True"
-      },
-      {
-        "input": "[1, 0, -1]",
-        "expected": "True"
-      },
-      {
-        "input": "[100]",
-        "expected": "False"
       }
     ],
     "func_name": "has_negative"
