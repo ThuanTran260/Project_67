@@ -67,9 +67,9 @@
     "task_id": 4,
     "func_name": "find_max",
     "topic": "list",
-    "error_type": "RE",
+    "error_type": "IndexError",
     "submitted_code": "def find_max(lst):\n    m=lst[0]\n    for x in lst:\n        if x>m: m=x\n    return m\n",
-    "note": "RE khi list rỗng — hidden test bắt được"
+    "note": "IndexError khi list rỗng — hidden test bắt được"
   },
   {
     "submission_id": "SV009",
@@ -112,7 +112,7 @@
     "task_id": 9,
     "func_name": "average",
     "topic": "math",
-    "error_type": "RE",
+    "error_type": "ZeroDivisionError",
     "submitted_code": "def average(lst):\n    return sum(lst)/len(lst)\n",
     "note": "Không xử lý danh sách rỗng — ZeroDivisionError"
   },
@@ -157,9 +157,9 @@
     "task_id": 13,
     "func_name": "fibonacci",
     "topic": "math",
-    "error_type": "RE",
+    "error_type": "RecursionError",
     "submitted_code": "def fibonacci(n):\n    if n==1: return 1\n    return fibonacci(n-1)+fibonacci(n-2)\n",
-    "note": "Đệ quy thiếu base case n=0 — RE"
+    "note": "Đệ quy thiếu base case n=0 — RecursionError"
   },
   {
     "submission_id": "SV019",
@@ -265,9 +265,9 @@
     "task_id": 27,
     "func_name": "last_element",
     "topic": "list",
-    "error_type": "RE",
+    "error_type": "IndexError",
     "submitted_code": "def last_element(lst):\n    return lst[-1]\n",
-    "note": "Không xử lý list rỗng — RE"
+    "note": "Không xử lý list rỗng — IndexError"
   },
   {
     "submission_id": "SV031",
@@ -409,9 +409,9 @@
     "task_id": 49,
     "func_name": "starts_with_upper",
     "topic": "list",
-    "error_type": "RE",
+    "error_type": "IndexError",
     "submitted_code": "def starts_with_upper(s):\n    return s[0].isupper()\n",
-    "note": "Không xử lý chuỗi rỗng — RE"
+    "note": "Không xử lý chuỗi rỗng — IndexError"
   },
   {
     "submission_id": "SV047",
@@ -481,9 +481,9 @@
     "task_id": 54,
     "func_name": "sort_matrix",
     "topic": "list",
-    "error_type": "RE",
+    "error_type": "AttributeError",
     "submitted_code": "def sort_matrix(M):\n    x = None.append(1)\n    result = sorted(M, key=sum)\n    return result",
-    "note": "Lỗi thực thi (RE) - AttributeError - gọi thuộc tính không tồn tại trong sort_matrix"
+    "note": "Lỗi thực thi (AttributeError) - gọi thuộc tính không tồn tại trong sort_matrix"
   },
   {
     "submission_id": "SV055",
@@ -661,9 +661,9 @@
     "task_id": 74,
     "func_name": "square_perimeter",
     "topic": "math",
-    "error_type": "RE",
+    "error_type": "IndexError",
     "submitted_code": "def square_perimeter(a):\n    x = [][99]\n  perimeter=4*a\n  return perimeter",
-    "note": "Lỗi thực thi (RE) - IndexError - vượt quá chỉ mục mảng trong square_perimeter"
+    "note": "Lỗi thực thi (IndexError) - vượt quá chỉ mục mảng trong square_perimeter"
   },
   {
     "submission_id": "SV075",
@@ -688,9 +688,9 @@
     "task_id": 77,
     "func_name": "bell_number",
     "topic": "math",
-    "error_type": "RE",
+    "error_type": "NameError",
     "submitted_code": "def bell_number(n):   \n    x = undefined_variable\n    bell = [[0 for i in range(n+1)] for j in range(n+1)] \n    bell[0][0] = 1\n    for i in range(1, n+1): \n        bell[i][0] = bell[i-1][i-1]  \n        for j in range(1, i+1): \n            bell[i][j] = bell[i-1][j-1] + bell[i][j-1]   \n    return bell[n][0] ",
-    "note": "Lỗi thực thi (RE) - NameError - gọi biến chưa định nghĩa trong bell_number"
+    "note": "Lỗi thực thi (NameError) - gọi biến chưa định nghĩa trong bell_number"
   },
   {
     "submission_id": "SV078",
@@ -787,9 +787,9 @@
     "task_id": 88,
     "func_name": "remove_Occ",
     "topic": "string",
-    "error_type": "RE",
+    "error_type": "ValueError",
     "submitted_code": "def remove_Occ(s,ch): \n    x = int('abc')\n    for i in range(len(s)): \n        if (s[i] == ch): \n            s = s[0 : i] + s[i + 1:] \n            break\n    for i in range(len(s) - 1,-1,-1):  \n        if (s[i] == ch): \n            s = s[0 : i] + s[i + 1:] \n            break\n    return s ",
-    "note": "Lỗi thực thi (RE) - ValueError - ép kiểu sai trong remove_Occ"
+    "note": "Lỗi thực thi (ValueError) - ép kiểu sai trong remove_Occ"
   },
   {
     "submission_id": "SV089",

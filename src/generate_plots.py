@@ -112,9 +112,9 @@ def plot_fpr_vs_ntest(df, stats, out_dir):
     ax.set_xticks(sorted(list(set(x_tests))))
     
     labels = [
-        f"{int(avg_t1)} tests\n(S1: Public)",
-        f"{int(avg_t2)} tests\n(S2: 3P+6H)",
-        f"{int(avg_t3)} tests\n(S3: 3P+6-10H)\n& (S4: FailFast)"
+        f"{round(avg_t1)} tests\n(S1: Public)",
+        f"{round(avg_t2)} tests\n(S2: 3P+6H)",
+        f"{round(avg_t3)} tests\n(S3: 3P+6-10H)\n& (S4: FailFast)"
     ]
     ax.set_xticklabels(labels, fontsize=8.5)
     ax.legend(loc="upper right", fontsize=8.5)
@@ -146,12 +146,14 @@ def plot_error_types_comparison(df, stats, out_dir):
         """Tính tổng RE = RE thuần + tất cả các subtype RE cụ thể."""
         return set_errors.get("RE", 0) + sum(set_errors.get(sub, 0) for sub in RE_SUBTYPES)
 
-    err_types = ["SE", "WA", "RE", "TLE", "MLE"]
+    err_types = [
+        "SE", "WA", "IndexError", "TypeError", "ZeroDivisionError", 
+        "ValueError", "NameError", "AttributeError", "RecursionError", 
+        "TLE", "MLE"
+    ]
 
     def get_val(set_key, err):
         errs = stats[set_key]["errors"]
-        if err == "RE":
-            return get_re_total(errs)
         return errs.get(err, 0)
 
     set1_vals = [get_val("set1", e) for e in err_types]
@@ -162,7 +164,7 @@ def plot_error_types_comparison(df, stats, out_dir):
     x = np.arange(len(err_types))
     width = 0.2
     
-    fig, ax = plt.subplots(figsize=(10, 6), dpi=150)
+    fig, ax = plt.subplots(figsize=(12, 6.5), dpi=150)
     
     rects1 = ax.bar(x - 1.5*width, set1_vals, width, label="Set 1 (3 Public)", color="#5C9BD1")
     rects2 = ax.bar(x - 0.5*width, set2_vals, width, label="Set 2 (3P+6H)", color="#F29C38")
@@ -177,7 +179,7 @@ def plot_error_types_comparison(df, stats, out_dir):
                             xy=(rect.get_x() + rect.get_width() / 2, height),
                             xytext=(0, 3),
                             textcoords="offset points",
-                            ha="center", va="bottom", fontsize=7.5, fontweight="bold")
+                            ha="center", va="bottom", fontsize=7.0, fontweight="bold")
                              
     autolabel(rects1)
     autolabel(rects2)
@@ -188,7 +190,7 @@ def plot_error_types_comparison(df, stats, out_dir):
     ax.set_xlabel("Loại lỗi", fontsize=9.5, labelpad=8)
     ax.set_ylabel("Số lỗi phát hiện", fontsize=9.5, labelpad=8)
     ax.set_xticks(x)
-    ax.set_xticklabels(err_types, fontsize=9)
+    ax.set_xticklabels(err_types, fontsize=8.5, rotation=25, ha="right")
     ax.set_ylim(0, max(max(set1_vals), max(set2_vals), max(set3_vals), max(set4_vals)) + 15)
     ax.legend(loc="upper right", frameon=True, facecolor="white", edgecolor="#DDDDDD", fontsize=8.5)
     apply_styling(ax)

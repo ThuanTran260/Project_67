@@ -570,7 +570,7 @@ def main():
             "task_id": tid,
             "func_name": func_name,
             "topic": topic,
-            "error_type": err,
+            "error_type": (error_note.split()[0] if err == "RE" else err),
             "submitted_code": submitted_code,
             "note": note
         })
