@@ -66,7 +66,7 @@ SV064,64,find_tuples,list,Sai logic - thay đổi toán tử so sánh == thành 
 SV065,65,word_len,list,Sai logic - trả về None thay vì kết quả đúng trong word_len,WA,0,3,0.0,False,False,0,9,0.0,False,False,0,11,0.0,False,False,0,11,0.0,False,False
 SV066,66,merge_dictionaries_three,list,merge_dictionaries_three - Solution đúng hoàn toàn,AC,3,3,100.0,False,False,9,9,100.0,False,False,11,11,100.0,False,False,11,11,100.0,False,False
 SV067,67,freq_count,list,Sai logic - trả về None thay vì kết quả đúng trong freq_count,WA,0,3,0.0,False,False,0,9,0.0,False,False,0,11,0.0,False,False,0,11,0.0,False,False
-SV068,68,len_log,list,Vượt quá bộ nhớ (MLE) - cấp phát mảng 200MB trong len_log,MLE,0,3,0.0,False,False,0,9,0.0,False,False,0,11,0.0,False,False,0,11,0.0,False,False
+SV068,68,len_log,list,Vượt quá bộ nhớ (MLE) - cấp phát mảng 200MB trong len_log,MLE,0,3,0.0,False,False,0,9,0.0,False,False,2,11,18.18,False,False,0,11,0.0,False,False
 SV069,69,find_substring,list,Sai logic - trả về None thay vì kết quả đúng trong find_substring,WA,0,3,0.0,False,False,0,9,0.0,False,False,0,11,0.0,False,False,0,11,0.0,False,False
 SV070,70,index_minimum,list,Sai logic - trả về None thay vì kết quả đúng trong index_minimum,WA,0,3,0.0,False,False,0,9,0.0,False,False,0,11,0.0,False,False,0,11,0.0,False,False
 SV071,71,is_not_prime,math,Sai logic - thay đổi dấu cộng thành dấu trừ trong is_not_prime,WA,1,3,33.33,False,False,4,9,44.44,False,False,6,12,50.0,False,False,1,12,8.33,False,False

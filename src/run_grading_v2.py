@@ -26,12 +26,11 @@ OUTPUT_CSV       = BASE / "results" / "error_analysis_v2.csv"
 OUTPUT_JSON      = BASE / "results" / "error_analysis_v2.json"
 TARGET_SUBMISSIONS = 100
 
-# Đồng bộ hệ thống file để hiển thị được tiếng Việt có dấu trên Windows console
-# try:
-#     sys.stdout.reconfigure(encoding='utf-8')
-#     sys.stderr.reconfigure(encoding='utf-8')
-# except AttributeError:
-#     pass
+# Thiết lập encoding UTF-8 để hiển thị an toàn trên Windows console
+if sys.stdout.encoding != 'utf-8':
+    import io
+    if hasattr(sys.stdout, 'buffer'):
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 def main():
     print("=" * 65)
