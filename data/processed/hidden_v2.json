@@ -2550,6 +2550,10 @@
         "expected": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]"
       },
       {
+        "input": "[]",
+        "expected": "[]"
+      },
+      {
         "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
         "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]"
       },
@@ -2560,10 +2564,6 @@
       {
         "input": "[[5, 8, 9], [6, 4, 3], [2, 1, 4]]",
         "expected": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]"
-      },
-      {
-        "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
-        "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]"
       }
     ],
     "task_id": 54,
@@ -2880,6 +2880,10 @@
         "expected": "[('Biology', 45), ('Physics', 96), ('Chemistry', 97)]"
       },
       {
+        "input": "[]",
+        "expected": "[]"
+      },
+      {
         "input": "[('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]",
         "expected": "[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]"
       },
@@ -2890,10 +2894,6 @@
       {
         "input": "[('Physics', 96), ('Chemistry', 97), ('Biology', 45)]",
         "expected": "[('Biology', 45), ('Physics', 96), ('Chemistry', 97)]"
-      },
-      {
-        "input": "[('Telugu', 49), ('Hindhi', 54), ('Social', 33)]",
-        "expected": "[('Social', 33), ('Telugu', 49), ('Hindhi', 54)]"
       }
     ],
     "task_id": 60,
@@ -4736,6 +4736,10 @@
         "expected": "0"
       },
       {
+        "input": "0, 0",
+        "expected": "0"
+      },
+      {
         "input": "'011001', 6",
         "expected": "3"
       },
@@ -4746,10 +4750,6 @@
       {
         "input": "'1010', 4",
         "expected": "2"
-      },
-      {
-        "input": "'NAwCQB', 4",
-        "expected": "0"
       }
     ],
     "task_id": 92,

@@ -302,6 +302,8 @@ def main():
 
     print("\nApplying hidden-test hardening pass...")
     try:
+        # Đảm bảo import được từ thư mục chứa file hiện tại
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
         from harden_hidden_tests import main as harden_hidden_tests_main
         harden_hidden_tests_main()
     except Exception as e:

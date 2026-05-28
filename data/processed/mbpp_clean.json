@@ -400,10 +400,6 @@
         "expected": "0"
       },
       {
-        "input": "[1, 2]",
-        "expected": "1.5"
-      },
-      {
         "input": "[]",
         "expected": "0"
       },
@@ -776,24 +772,8 @@
         "expected": "False"
       },
       {
-        "input": "[0]",
-        "expected": "False"
-      },
-      {
-        "input": "[1, -1, 1, -1, 0]",
-        "expected": "True"
-      },
-      {
         "input": "[5, 5, 5, 5, 5]",
         "expected": "False"
-      },
-      {
-        "input": "[-10, 0, 10, -10, 0, 10]",
-        "expected": "True"
-      },
-      {
-        "input": "[1000, -1000, 500, -500, 0]",
-        "expected": "True"
       }
     ],
     "func_name": "has_negative"
@@ -2526,12 +2506,12 @@
         "expected": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]"
       },
       {
-        "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
-        "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]"
+        "input": "[]",
+        "expected": "[]"
       },
       {
-        "input": "[[1, 2, 3], [-2, 4, -5], [1, -1, 1]]",
-        "expected": "[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]"
+        "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
+        "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]"
       }
     ],
     "task_id": 54,
@@ -2808,12 +2788,12 @@
         "expected": "[('Biology', 45), ('Physics', 96), ('Chemistry', 97)]"
       },
       {
-        "input": "[('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]",
-        "expected": "[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]"
+        "input": "[]",
+        "expected": "[]"
       },
       {
-        "input": "[('Telugu', 49), ('Hindhi', 54), ('Social', 33)]",
-        "expected": "[('Social', 33), ('Telugu', 49), ('Hindhi', 54)]"
+        "input": "[('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]",
+        "expected": "[('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]"
       }
     ],
     "task_id": 60,
@@ -4694,14 +4674,6 @@
       {
         "input": "'!'",
         "expected": "33"
-      },
-      {
-        "input": "'ñ'",
-        "expected": "241"
-      },
-      {
-        "input": "'€'",
-        "expected": "8364"
       }
     ],
     "task_id": 100,
