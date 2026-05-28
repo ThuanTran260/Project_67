@@ -135,7 +135,7 @@ code_lines = [
     "ax2.legend(handles=[avg_patch, p95_patch], fontsize=8.5, loc='upper left')\n",
     "style(ax2)\n",
     "\n",
-    "# ── Subplot 3: Tổng thời gian chấm 50 submissions (s) ──────────────────────\n",
+    "# ── Subplot 3: Tổng thời gian chấm 100 submissions (s) ──────────────────────\n",
     "ax3 = axes[2]\n",
     "b3 = ax3.bar(SETS, total_s, color=COLORS, width=0.5, edgecolor='white', linewidth=0.8)\n",
     "add_bar_labels(ax3, b3, fmt='{:.3f}', suffix=' s')\n",

@@ -20,7 +20,8 @@ import math
 from typing import Dict, List, Tuple
 
 # ── Cấu hình ─────────────────────────────────────────────────────────────────
-TIMEOUT_SECONDS   = 1.0    # 1.0 giây mỗi test case
+TIMEOUT_SECONDS   = 1.0    # 1.0 giây mỗi test case (Process sandbox)
+TIMEOUT_DOCKER_S  = 5.0    # 5.0 giây cho Docker (1s code + ~4s container overhead)
 MAX_OUTPUT_BYTES  = 4096
 MEMORY_LIMIT_MB   = 128    # Giới hạn 128MB RAM mỗi test case
 
@@ -365,7 +366,7 @@ except Exception as e:
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
-            timeout=TIMEOUT_SECONDS
+            timeout=TIMEOUT_DOCKER_S  # Bao gồm cả thời gian khởi động container
         )
         
         latency = round(time.perf_counter() - start, 4)
@@ -410,7 +411,7 @@ except Exception as e:
             "expected": expected,
             "latency": latency,
             "docker_mode": "Official Docker Container (Alpine-Python)",
-            "error_msg": f"Time Limit Exceeded in Docker Container (>{TIMEOUT_SECONDS}s)"
+            "error_msg": f"Time Limit Exceeded in Docker Container (>{TIMEOUT_SECONDS}s code limit)"
         }
     except Exception as e:
         latency = round(time.perf_counter() - start, 4)

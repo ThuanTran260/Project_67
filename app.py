@@ -64,6 +64,12 @@ else:
     st.sidebar.subheader("⚙️ Cấu hình Sandbox")
     fail_fast = st.sidebar.checkbox("Fail-Fast (Dừng khi gặp lỗi đầu tiên)", value=False)
     use_docker = st.sidebar.checkbox("Sử dụng Docker Alpine Sandbox", value=False)
+    if use_docker:
+        st.sidebar.info(
+            "🐳 **Docker mode**: timeout = **5s/test**\n"
+            "(1s giới hạn code + ~4s khởi động container)\n\n"
+            "**Process mode**: timeout = 1s/test"
+        )
     
     # --- MÀN HÌNH CHÍNH ---
     col1, col2 = st.columns([1, 1])
