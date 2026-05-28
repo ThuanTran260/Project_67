@@ -158,6 +158,7 @@ except Exception as e:
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
+            encoding="utf-8",
             cwd=tmpdir if tmpdir else "."
         )
 

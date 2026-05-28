@@ -211,6 +211,7 @@ except Exception as e:
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
+            encoding="utf-8",
             cwd=tmpdir if tmpdir else "."
         )
 
@@ -366,6 +367,7 @@ except Exception as e:
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             text=True,
+            encoding="utf-8",
             timeout=TIMEOUT_DOCKER_S  # Bao gồm cả thời gian khởi động container
         )
         
