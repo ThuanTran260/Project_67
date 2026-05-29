@@ -27,11 +27,10 @@ else:
 sys.path.insert(0, str(BASE / "src"))
 from runner_v3 import grade_submission
 
-# try:
-#     sys.stdout.reconfigure(encoding="utf-8")
-#     sys.stderr.reconfigure(encoding="utf-8")
-# except AttributeError:
-#     pass
+if sys.stdout.encoding != 'utf-8':
+    import io
+    if hasattr(sys.stdout, 'buffer'):
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
 # ── Cấu hình ────────────────────────────────────────────────────────────────
 DATASET_FILE = BASE / "data" / "processed" / "hidden_v2.json"
