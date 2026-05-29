@@ -17,7 +17,7 @@ else:
     BASE = Path(cwd)
 
 sys.path.insert(0, str(BASE / "src"))
-from runner_v2 import grade_submission, compute_leakage
+from runner_v3 import grade_submission, compute_leakage
 from error_stats import compute_stats, save_stats_csv, print_summary
 
 SUBMISSIONS_FILE = BASE / "data" / "processed" / "submissions_50.json"
@@ -92,13 +92,20 @@ def main():
                 ec_hid = hid_r["error_counts"]
                 ec_pub = pub_r["error_counts"]
 
+                # runner_v3 phân loại RE thành sub-types — cộng lại để xác định status
+                RE_SUBTYPES = ["RE", "IndexError", "ZeroDivisionError", "TypeError",
+                               "ValueError", "NameError", "AttributeError",
+                               "KeyError", "RecursionError"]
+                re_hid = sum(ec_hid.get(k, 0) for k in RE_SUBTYPES)
+                re_pub = sum(ec_pub.get(k, 0) for k in RE_SUBTYPES)
+
                 if ec_hid.get("MLE", 0) > 0 or ec_pub.get("MLE", 0) > 0:
                     status = "MLE"
-                elif ec_hid["TLE"] > 0 or ec_pub["TLE"] > 0:
+                elif ec_hid.get("TLE", 0) > 0 or ec_pub.get("TLE", 0) > 0:
                     status = "TLE"
-                elif ec_hid["RE"] > 0 or ec_pub["RE"] > 0:
+                elif re_hid > 0 or re_pub > 0:
                     status = "RE"
-                elif ec_hid["WA"] > 0 or ec_pub["WA"] > 0:
+                elif ec_hid.get("WA", 0) > 0 or ec_pub.get("WA", 0) > 0:
                     status = "WA"
                 else:
                     status = "PASS"
@@ -141,7 +148,7 @@ def main():
                 "pub_tpr":         pub_r["test_pass_rate"],
                 "pub_SE":          pub_r["error_counts"]["SE"],
                 "pub_WA":          pub_r["error_counts"]["WA"],
-                "pub_RE":          pub_r["error_counts"]["RE"],
+                "pub_RE":          sum(pub_r["error_counts"].get(k, 0) for k in ["RE", "IndexError", "ZeroDivisionError", "TypeError", "ValueError", "NameError", "AttributeError", "KeyError", "RecursionError"]),
                 "pub_TLE":         pub_r["error_counts"]["TLE"],
                 "pub_MLE":         pub_r["error_counts"].get("MLE", 0),
 
@@ -150,7 +157,7 @@ def main():
                 "hid_tpr":         hid_r["test_pass_rate"],
                 "hid_SE":          hid_r["error_counts"]["SE"],
                 "hid_WA":          hid_r["error_counts"]["WA"],
-                "hid_RE":          hid_r["error_counts"]["RE"],
+                "hid_RE":          sum(hid_r["error_counts"].get(k, 0) for k in ["RE", "IndexError", "ZeroDivisionError", "TypeError", "ValueError", "NameError", "AttributeError", "KeyError", "RecursionError"]),
                 "hid_TLE":         hid_r["error_counts"]["TLE"],
                 "hid_MLE":         hid_r["error_counts"].get("MLE", 0),
 
@@ -176,7 +183,7 @@ def main():
                     "error_counts":  {
                         "SE": pub_r["error_counts"]["SE"],
                         "WA": pub_r["error_counts"]["WA"],
-                        "RE": pub_r["error_counts"]["RE"],
+                        "RE": sum(pub_r["error_counts"].get(k, 0) for k in ["RE", "IndexError", "ZeroDivisionError", "TypeError", "ValueError", "NameError", "AttributeError", "KeyError", "RecursionError"]),
                         "TLE": pub_r["error_counts"]["TLE"],
                         "MLE": pub_r["error_counts"].get("MLE", 0),
                     },
@@ -189,7 +196,7 @@ def main():
                     "error_counts":  {
                         "SE": hid_r["error_counts"]["SE"],
                         "WA": hid_r["error_counts"]["WA"],
-                        "RE": hid_r["error_counts"]["RE"],
+                        "RE": sum(hid_r["error_counts"].get(k, 0) for k in ["RE", "IndexError", "ZeroDivisionError", "TypeError", "ValueError", "NameError", "AttributeError", "KeyError", "RecursionError"]),
                         "TLE": hid_r["error_counts"]["TLE"],
                         "MLE": hid_r["error_counts"].get("MLE", 0),
                     },
