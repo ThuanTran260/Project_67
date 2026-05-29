@@ -44,7 +44,7 @@ SV042,43,list_to_string,list,Dùng khoảng trắng thay vì dấu phẩy,WA,1,3
 SV043,44,count_vowels,list,Không lowercase — bỏ sót nguyên âm hoa,WA,2,3,66.67,False,False,6,9,66.67,False,False,6,9,66.67,False,False,1,9,11.11,False,False
 SV044,46,reverse_list,string,Không đảo ngược — trả nguyên list,WA,1,3,33.33,False,False,4,9,44.44,False,False,4,9,44.44,False,False,0,9,0.0,False,False
 SV045,47,all_positive,math,Không xử lý list rỗng — sai với [],WA,3,3,100.0,True,False,8,9,88.89,False,False,8,9,88.89,False,False,3,9,33.33,False,False
-SV046,49,starts_with_upper,list,Tràn bộ nhớ (MLE) — Khai báo chuỗi 200MB,MLE,1,3,33.33,False,False,0,9,0.0,False,False,0,9,0.0,False,False,0,9,0.0,False,False
+SV046,49,starts_with_upper,list,Tràn bộ nhớ (MLE) — Khai báo chuỗi 200MB,MLE,0,3,0.0,False,False,0,9,0.0,False,False,0,9,0.0,False,False,0,9,0.0,False,False
 SV047,50,last_n,list,Quá thời gian (TLE) — Vòng lặp vô hạn,TLE,0,3,0.0,False,False,0,9,0.0,False,False,0,9,0.0,False,False,0,9,0.0,False,False
 SV048,10,to_uppercase,string,(Solution đúng — dùng làm điểm so sánh),AC,3,3,100.0,False,False,9,9,100.0,False,False,9,9,100.0,False,False,9,9,100.0,False,False
 SV049,15,sort_list,list,(Solution đúng),AC,3,3,100.0,False,False,9,9,100.0,False,False,9,9,100.0,False,False,9,9,100.0,False,False

@@ -24,7 +24,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0284,
+    "avg_latency_s": 0.0419,
     "error_details": [
       {
         "set": "public",
@@ -116,7 +116,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0281,
+    "avg_latency_s": 0.04,
     "error_details": [
       {
         "set": "public",
@@ -226,7 +226,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0257,
+    "avg_latency_s": 0.0411,
     "error_details": [
       {
         "set": "hidden",
@@ -374,7 +374,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0315,
+    "avg_latency_s": 0.0409,
     "error_details": [
       {
         "set": "public",
@@ -439,7 +439,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0276,
+    "avg_latency_s": 0.0423,
     "error_details": [
       {
         "set": "public",
@@ -531,7 +531,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0334,
+    "avg_latency_s": 0.0503,
     "error_details": [
       {
         "set": "public",
@@ -566,8 +566,8 @@
         "input": "[]",
         "expected": "None",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_g2wwe8jy\\solution.py\", line 8, in <module>\n    result = find_max([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_g2wwe8jy\\solution.py\", line 4, in find_max\n    return sorted(lst)[0]\n           ~~~~~~~~~~~^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_xteodokh/solution.py\", line 8, in <module>\n    result = find_max([])\n             ^^^^^^^^^^^^\n  File \"/tmp/runner_xteodokh/solution.py\", line 4, in find_max\n    return sorted(lst)[0]\n           ~~~~~~~~~~~^^^\nIndexError: list index out of range"
       },
       {
         "set": "hidden",
@@ -623,7 +623,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0299,
+    "avg_latency_s": 0.0686,
     "error_details": [
       {
         "set": "hidden",
@@ -631,8 +631,8 @@
         "input": "[]",
         "expected": "None",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1hdh0yjh\\solution.py\", line 11, in <module>\n    result = find_max([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1hdh0yjh\\solution.py\", line 4, in find_max\n    m=lst[0]\n      ~~~^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_1coxfcg4/solution.py\", line 11, in <module>\n    result = find_max([])\n             ^^^^^^^^^^^^\n  File \"/tmp/runner_1coxfcg4/solution.py\", line 4, in find_max\n    m=lst[0]\n      ~~~^^^\nIndexError: list index out of range"
       }
     ]
   },
@@ -661,7 +661,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0281,
+    "avg_latency_s": 0.0672,
     "error_details": []
   },
   {
@@ -689,7 +689,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0266,
+    "avg_latency_s": 0.0623,
     "error_details": [
       {
         "set": "public",
@@ -763,7 +763,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0265,
+    "avg_latency_s": 0.0622,
     "error_details": [
       {
         "set": "public",
@@ -828,7 +828,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0283,
+    "avg_latency_s": 0.0612,
     "error_details": [
       {
         "set": "hidden",
@@ -884,7 +884,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0369,
+    "avg_latency_s": 0.0715,
     "error_details": [
       {
         "set": "hidden",
@@ -892,8 +892,8 @@
         "input": "0",
         "expected": "0",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_pgk_2o98\\solution.py\", line 8, in <module>\n    result = average(0)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_pgk_2o98\\solution.py\", line 4, in average\n    return sum(lst)/len(lst)\n           ~~~^^^^^\nTypeError: 'int' object is not iterable"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner__vm8_nb4/solution.py\", line 8, in <module>\n    result = average(0)\n             ^^^^^^^^^^\n  File \"/tmp/runner__vm8_nb4/solution.py\", line 4, in average\n    return sum(lst)/len(lst)\n           ^^^^^^^^\nTypeError: 'int' object is not iterable"
       },
       {
         "set": "hidden",
@@ -901,8 +901,8 @@
         "input": "[]",
         "expected": "0",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_wy94dtzc\\solution.py\", line 8, in <module>\n    result = average([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_wy94dtzc\\solution.py\", line 4, in average\n    return sum(lst)/len(lst)\n           ~~~~~~~~^~~~~~~~~\nZeroDivisionError: division by zero"
+        "status": "ZeroDivisionError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_hvmjrr7n/solution.py\", line 8, in <module>\n    result = average([])\n             ^^^^^^^^^^^\n  File \"/tmp/runner_hvmjrr7n/solution.py\", line 4, in average\n    return sum(lst)/len(lst)\n           ~~~~~~~~^~~~~~~~~\nZeroDivisionError: division by zero"
       }
     ]
   },
@@ -931,7 +931,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0265,
+    "avg_latency_s": 0.0592,
     "error_details": [
       {
         "set": "hidden",
@@ -969,7 +969,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.023,
+    "avg_latency_s": 0.061,
     "error_details": [
       {
         "set": "hidden",
@@ -1016,7 +1016,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0264,
+    "avg_latency_s": 0.0411,
     "error_details": [
       {
         "set": "hidden",
@@ -1063,7 +1063,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0319,
+    "avg_latency_s": 0.0469,
     "error_details": [
       {
         "set": "public",
@@ -1128,7 +1128,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.078,
+    "avg_latency_s": 0.0786,
     "error_details": [
       {
         "set": "public",
@@ -1136,8 +1136,8 @@
         "input": "5",
         "expected": "5",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_dbi057x9\\solution.py\", line 9, in <module>\n    result = fibonacci(5)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_dbi057x9\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_dbi057x9\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_dbi057x9\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded"
+        "status": "RecursionError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_c6rolhvm/solution.py\", line 9, in <module>\n    result = fibonacci(5)\n             ^^^^^^^^^^^^\n  File \"/tmp/runner_c6rolhvm/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  File \"/tmp/runner_c6rolhvm/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  File \"/tmp/runner_c6rolhvm/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded"
       },
       {
         "set": "public",
@@ -1145,8 +1145,8 @@
         "input": "6",
         "expected": "8",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_mjvehtkk\\solution.py\", line 9, in <module>\n    result = fibonacci(6)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_mjvehtkk\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_mjvehtkk\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_mjvehtkk\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded"
+        "status": "RecursionError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_pxuxpgi9/solution.py\", line 9, in <module>\n    result = fibonacci(6)\n             ^^^^^^^^^^^^\n  File \"/tmp/runner_pxuxpgi9/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  File \"/tmp/runner_pxuxpgi9/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  File \"/tmp/runner_pxuxpgi9/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded"
       },
       {
         "set": "hidden",
@@ -1154,8 +1154,8 @@
         "input": "0",
         "expected": "0",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rp5x218h\\solution.py\", line 9, in <module>\n    result = fibonacci(0)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rp5x218h\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rp5x218h\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rp5x218h\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded"
+        "status": "RecursionError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_r24ngicz/solution.py\", line 9, in <module>\n    result = fibonacci(0)\n             ^^^^^^^^^^^^\n  File \"/tmp/runner_r24ngicz/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  File \"/tmp/runner_r24ngicz/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  File \"/tmp/runner_r24ngicz/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded"
       },
       {
         "set": "hidden",
@@ -1163,8 +1163,8 @@
         "input": "2",
         "expected": "1",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_cfkrdsi1\\solution.py\", line 9, in <module>\n    result = fibonacci(2)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_cfkrdsi1\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n                          ~~~~~~~~~^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_cfkrdsi1\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_cfkrdsi1\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded"
+        "status": "RecursionError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_e07vd2xk/solution.py\", line 9, in <module>\n    result = fibonacci(2)\n             ^^^^^^^^^^^^\n  File \"/tmp/runner_e07vd2xk/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n                          ^^^^^^^^^^^^^^\n  File \"/tmp/runner_e07vd2xk/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  File \"/tmp/runner_e07vd2xk/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded"
       },
       {
         "set": "hidden",
@@ -1172,8 +1172,8 @@
         "input": "5",
         "expected": "5",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_2pmyrhjz\\solution.py\", line 9, in <module>\n    result = fibonacci(5)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_2pmyrhjz\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_2pmyrhjz\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_2pmyrhjz\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded"
+        "status": "RecursionError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_vhyxb4d4/solution.py\", line 9, in <module>\n    result = fibonacci(5)\n             ^^^^^^^^^^^^\n  File \"/tmp/runner_vhyxb4d4/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  File \"/tmp/runner_vhyxb4d4/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  File \"/tmp/runner_vhyxb4d4/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded"
       },
       {
         "set": "hidden",
@@ -1181,8 +1181,8 @@
         "input": "10",
         "expected": "55",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_g81rs_yx\\solution.py\", line 9, in <module>\n    result = fibonacci(10)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_g81rs_yx\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_g81rs_yx\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_g81rs_yx\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded"
+        "status": "RecursionError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_gs03bl8r/solution.py\", line 9, in <module>\n    result = fibonacci(10)\n             ^^^^^^^^^^^^^\n  File \"/tmp/runner_gs03bl8r/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  File \"/tmp/runner_gs03bl8r/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  File \"/tmp/runner_gs03bl8r/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded"
       },
       {
         "set": "hidden",
@@ -1190,8 +1190,8 @@
         "input": "15",
         "expected": "610",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_huvrboxl\\solution.py\", line 9, in <module>\n    result = fibonacci(15)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_huvrboxl\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_huvrboxl\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_huvrboxl\\solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ~~~~~~~~~^^^^^\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded"
+        "status": "RecursionError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_e22llcmd/solution.py\", line 9, in <module>\n    result = fibonacci(15)\n             ^^^^^^^^^^^^^\n  File \"/tmp/runner_e22llcmd/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  File \"/tmp/runner_e22llcmd/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  File \"/tmp/runner_e22llcmd/solution.py\", line 5, in fibonacci\n    return fibonacci(n-1)+fibonacci(n-2)\n           ^^^^^^^^^^^^^^\n  [Previous line repeated 996 more times]\nRecursionError: maximum recursion depth exceeded"
       }
     ]
   },
@@ -1220,7 +1220,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0249,
+    "avg_latency_s": 0.049,
     "error_details": [
       {
         "set": "hidden",
@@ -1294,7 +1294,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0302,
+    "avg_latency_s": 0.0411,
     "error_details": [
       {
         "set": "public",
@@ -1368,7 +1368,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0264,
+    "avg_latency_s": 0.0397,
     "error_details": [
       {
         "set": "public",
@@ -1451,7 +1451,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0247,
+    "avg_latency_s": 0.0409,
     "error_details": [
       {
         "set": "hidden",
@@ -1489,7 +1489,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0284,
+    "avg_latency_s": 0.0397,
     "error_details": [
       {
         "set": "public",
@@ -1545,7 +1545,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0265,
+    "avg_latency_s": 0.0384,
     "error_details": [
       {
         "set": "public",
@@ -1583,7 +1583,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0296,
+    "avg_latency_s": 0.0386,
     "error_details": [
       {
         "set": "hidden",
@@ -1648,7 +1648,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0266,
+    "avg_latency_s": 0.0392,
     "error_details": [
       {
         "set": "public",
@@ -1740,7 +1740,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0292,
+    "avg_latency_s": 0.0416,
     "error_details": [
       {
         "set": "public",
@@ -1841,7 +1841,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0284,
+    "avg_latency_s": 0.0425,
     "error_details": [
       {
         "set": "hidden",
@@ -1888,7 +1888,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0291,
+    "avg_latency_s": 0.0409,
     "error_details": [
       {
         "set": "hidden",
@@ -1953,7 +1953,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0338,
+    "avg_latency_s": 0.0453,
     "error_details": [
       {
         "set": "hidden",
@@ -1961,8 +1961,8 @@
         "input": "[]",
         "expected": "None",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_tk46sl4u\\solution.py\", line 8, in <module>\n    result = last_element([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_tk46sl4u\\solution.py\", line 4, in last_element\n    return lst[-1]\n           ~~~^^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_kktqrtlr/solution.py\", line 8, in <module>\n    result = last_element([])\n             ^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_kktqrtlr/solution.py\", line 4, in last_element\n    return lst[-1]\n           ~~~^^^^\nIndexError: list index out of range"
       }
     ]
   },
@@ -1991,7 +1991,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.023,
+    "avg_latency_s": 0.0411,
     "error_details": [
       {
         "set": "public",
@@ -2065,7 +2065,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0285,
+    "avg_latency_s": 0.0399,
     "error_details": [
       {
         "set": "public",
@@ -2139,7 +2139,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0229,
+    "avg_latency_s": 0.0501,
     "error_details": [
       {
         "set": "public",
@@ -2249,7 +2249,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0249,
+    "avg_latency_s": 0.0426,
     "error_details": [
       {
         "set": "public",
@@ -2323,7 +2323,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0331,
+    "avg_latency_s": 0.047,
     "error_details": [
       {
         "set": "public",
@@ -2397,7 +2397,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0272,
+    "avg_latency_s": 0.0408,
     "error_details": [
       {
         "set": "public",
@@ -2480,7 +2480,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0286,
+    "avg_latency_s": 0.0387,
     "error_details": [
       {
         "set": "public",
@@ -2527,7 +2527,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0247,
+    "avg_latency_s": 0.0404,
     "error_details": [
       {
         "set": "public",
@@ -2619,7 +2619,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0249,
+    "avg_latency_s": 0.0383,
     "error_details": [
       {
         "set": "hidden",
@@ -2657,7 +2657,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0281,
+    "avg_latency_s": 0.04,
     "error_details": [
       {
         "set": "public",
@@ -2713,7 +2713,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0283,
+    "avg_latency_s": 0.058,
     "error_details": [
       {
         "set": "hidden",
@@ -2751,7 +2751,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0247,
+    "avg_latency_s": 0.0618,
     "error_details": [
       {
         "set": "public",
@@ -2834,7 +2834,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0265,
+    "avg_latency_s": 0.0646,
     "error_details": [
       {
         "set": "public",
@@ -2890,7 +2890,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.03,
+    "avg_latency_s": 0.0597,
     "error_details": [
       {
         "set": "public",
@@ -2964,7 +2964,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0265,
+    "avg_latency_s": 0.0638,
     "error_details": [
       {
         "set": "hidden",
@@ -3002,7 +3002,7 @@
     "hid_MLE": 6,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0627,
+    "avg_latency_s": 0.1751,
     "error_details": [
       {
         "set": "public",
@@ -3112,7 +3112,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 1.0061,
+    "avg_latency_s": 1.0032,
     "error_details": [
       {
         "set": "public",
@@ -3222,7 +3222,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.032,
+    "avg_latency_s": 0.0552,
     "error_details": []
   },
   {
@@ -3250,7 +3250,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0268,
+    "avg_latency_s": 0.0662,
     "error_details": []
   },
   {
@@ -3278,7 +3278,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0325,
+    "avg_latency_s": 0.0568,
     "error_details": []
   },
   {
@@ -3306,7 +3306,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 1.0082,
+    "avg_latency_s": 1.0057,
     "error_details": [
       {
         "set": "public",
@@ -3434,7 +3434,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0288,
+    "avg_latency_s": 0.0386,
     "error_details": [
       {
         "set": "public",
@@ -3562,7 +3562,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0332,
+    "avg_latency_s": 0.0424,
     "error_details": []
   },
   {
@@ -3590,7 +3590,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0551,
+    "avg_latency_s": 0.0625,
     "error_details": [
       {
         "set": "public",
@@ -3598,8 +3598,8 @@
         "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
         "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_alu4b34u\\solution.py\", line 9, in <module>\n    result = sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_alu4b34u\\solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
+        "status": "AttributeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_pa6rgrt7/solution.py\", line 9, in <module>\n    result = sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_pa6rgrt7/solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
       },
       {
         "set": "public",
@@ -3607,8 +3607,8 @@
         "input": "[[1, 2, 3], [-2, 4, -5], [1, -1, 1]]",
         "expected": "[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_l0t318nc\\solution.py\", line 9, in <module>\n    result = sort_matrix([[1, 2, 3], [-2, 4, -5], [1, -1, 1]])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_l0t318nc\\solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
+        "status": "AttributeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_4eu9gv1h/solution.py\", line 9, in <module>\n    result = sort_matrix([[1, 2, 3], [-2, 4, -5], [1, -1, 1]])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_4eu9gv1h/solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
       },
       {
         "set": "public",
@@ -3616,8 +3616,8 @@
         "input": "[[5, 8, 9], [6, 4, 3], [2, 1, 4]]",
         "expected": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_beqeiiqo\\solution.py\", line 9, in <module>\n    result = sort_matrix([[5, 8, 9], [6, 4, 3], [2, 1, 4]])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_beqeiiqo\\solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
+        "status": "AttributeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_38fuo_zs/solution.py\", line 9, in <module>\n    result = sort_matrix([[5, 8, 9], [6, 4, 3], [2, 1, 4]])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_38fuo_zs/solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
       },
       {
         "set": "hidden",
@@ -3625,8 +3625,8 @@
         "input": "[]",
         "expected": "[]",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_001caqsw\\solution.py\", line 9, in <module>\n    result = sort_matrix([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_001caqsw\\solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
+        "status": "AttributeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_bqupi1qs/solution.py\", line 9, in <module>\n    result = sort_matrix([])\n             ^^^^^^^^^^^^^^^\n  File \"/tmp/runner_bqupi1qs/solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
       },
       {
         "set": "hidden",
@@ -3634,8 +3634,8 @@
         "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
         "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8b7p__uj\\solution.py\", line 9, in <module>\n    result = sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8b7p__uj\\solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
+        "status": "AttributeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_vxtl_40q/solution.py\", line 9, in <module>\n    result = sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_vxtl_40q/solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
       },
       {
         "set": "hidden",
@@ -3643,8 +3643,8 @@
         "input": "[[1, 2, 3], [-2, 4, -5], [1, -1, 1]]",
         "expected": "[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_3_9f_qby\\solution.py\", line 9, in <module>\n    result = sort_matrix([[1, 2, 3], [-2, 4, -5], [1, -1, 1]])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_3_9f_qby\\solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
+        "status": "AttributeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_mxp0w1tk/solution.py\", line 9, in <module>\n    result = sort_matrix([[1, 2, 3], [-2, 4, -5], [1, -1, 1]])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_mxp0w1tk/solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
       },
       {
         "set": "hidden",
@@ -3652,8 +3652,8 @@
         "input": "[[5, 8, 9], [6, 4, 3], [2, 1, 4]]",
         "expected": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_0r0dsrsa\\solution.py\", line 9, in <module>\n    result = sort_matrix([[5, 8, 9], [6, 4, 3], [2, 1, 4]])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_0r0dsrsa\\solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
+        "status": "AttributeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_4rzrxh7t/solution.py\", line 9, in <module>\n    result = sort_matrix([[5, 8, 9], [6, 4, 3], [2, 1, 4]])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_4rzrxh7t/solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
       },
       {
         "set": "hidden",
@@ -3661,8 +3661,8 @@
         "input": "[]",
         "expected": "[]",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1vj5n7_k\\solution.py\", line 9, in <module>\n    result = sort_matrix([])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1vj5n7_k\\solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
+        "status": "AttributeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_ujl3heu6/solution.py\", line 9, in <module>\n    result = sort_matrix([])\n             ^^^^^^^^^^^^^^^\n  File \"/tmp/runner_ujl3heu6/solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
       },
       {
         "set": "hidden",
@@ -3670,8 +3670,8 @@
         "input": "[[1, 2, 3], [2, 4, 5], [1, 1, 1]]",
         "expected": "[[1, 1, 1], [1, 2, 3], [2, 4, 5]]",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_njw13gvb\\solution.py\", line 9, in <module>\n    result = sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_njw13gvb\\solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
+        "status": "AttributeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_nnddylmh/solution.py\", line 9, in <module>\n    result = sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_nnddylmh/solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
       },
       {
         "set": "hidden",
@@ -3679,8 +3679,8 @@
         "input": "[[1, 2, 3], [-2, 4, -5], [1, -1, 1]]",
         "expected": "[[-2, 4, -5], [1, -1, 1], [1, 2, 3]]",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_klx5ek_7\\solution.py\", line 9, in <module>\n    result = sort_matrix([[1, 2, 3], [-2, 4, -5], [1, -1, 1]])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_klx5ek_7\\solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
+        "status": "AttributeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_txgi_h26/solution.py\", line 9, in <module>\n    result = sort_matrix([[1, 2, 3], [-2, 4, -5], [1, -1, 1]])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_txgi_h26/solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
       },
       {
         "set": "hidden",
@@ -3688,8 +3688,8 @@
         "input": "[[5, 8, 9], [6, 4, 3], [2, 1, 4]]",
         "expected": "[[2, 1, 4], [6, 4, 3], [5, 8, 9]]",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hz4mlxhs\\solution.py\", line 9, in <module>\n    result = sort_matrix([[5, 8, 9], [6, 4, 3], [2, 1, 4]])\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hz4mlxhs\\solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
+        "status": "AttributeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_ry4zr2k1/solution.py\", line 9, in <module>\n    result = sort_matrix([[5, 8, 9], [6, 4, 3], [2, 1, 4]])\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_ry4zr2k1/solution.py\", line 4, in sort_matrix\n    x = None.append(1)\n        ^^^^^^^^^^^\nAttributeError: 'NoneType' object has no attribute 'append'"
       }
     ]
   },
@@ -3718,7 +3718,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0333,
+    "avg_latency_s": 0.0393,
     "error_details": [
       {
         "set": "public",
@@ -3846,7 +3846,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0311,
+    "avg_latency_s": 0.0422,
     "error_details": [
       {
         "set": "public",
@@ -3965,7 +3965,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0382,
+    "avg_latency_s": 0.0396,
     "error_details": [
       {
         "set": "public",
@@ -4039,7 +4039,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0281,
+    "avg_latency_s": 0.043,
     "error_details": []
   },
   {
@@ -4067,7 +4067,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0279,
+    "avg_latency_s": 0.0412,
     "error_details": [
       {
         "set": "public",
@@ -4195,7 +4195,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0258,
+    "avg_latency_s": 0.0431,
     "error_details": [
       {
         "set": "public",
@@ -4323,7 +4323,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0302,
+    "avg_latency_s": 0.0404,
     "error_details": []
   },
   {
@@ -4351,7 +4351,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0302,
+    "avg_latency_s": 0.0751,
     "error_details": [
       {
         "set": "public",
@@ -4416,7 +4416,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0348,
+    "avg_latency_s": 0.0643,
     "error_details": []
   },
   {
@@ -4444,7 +4444,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0325,
+    "avg_latency_s": 0.067,
     "error_details": [
       {
         "set": "public",
@@ -4572,7 +4572,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0327,
+    "avg_latency_s": 0.0726,
     "error_details": [
       {
         "set": "public",
@@ -4700,7 +4700,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0352,
+    "avg_latency_s": 0.0635,
     "error_details": []
   },
   {
@@ -4728,7 +4728,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0327,
+    "avg_latency_s": 0.062,
     "error_details": [
       {
         "set": "public",
@@ -4856,7 +4856,7 @@
     "hid_MLE": 8,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0668,
+    "avg_latency_s": 0.121,
     "error_details": [
       {
         "set": "public",
@@ -4984,7 +4984,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0288,
+    "avg_latency_s": 0.0439,
     "error_details": [
       {
         "set": "public",
@@ -5112,7 +5112,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0283,
+    "avg_latency_s": 0.0457,
     "error_details": [
       {
         "set": "public",
@@ -5240,7 +5240,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0325,
+    "avg_latency_s": 0.0411,
     "error_details": [
       {
         "set": "public",
@@ -5296,7 +5296,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0555,
+    "avg_latency_s": 0.0557,
     "error_details": [
       {
         "set": "public",
@@ -5304,8 +5304,8 @@
         "input": "'aaaa'",
         "expected": "1",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1p4jqbvi\\solution.py\", line 13, in <module>\n    result = find_Rotations('aaaa')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1p4jqbvi\\solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_y071_dwo/solution.py\", line 13, in <module>\n    result = find_Rotations('aaaa')\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_y071_dwo/solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "public",
@@ -5313,8 +5313,8 @@
         "input": "'ab'",
         "expected": "2",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_wkjtgo5s\\solution.py\", line 13, in <module>\n    result = find_Rotations('ab')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_wkjtgo5s\\solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_obcme8wg/solution.py\", line 13, in <module>\n    result = find_Rotations('ab')\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_obcme8wg/solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "public",
@@ -5322,8 +5322,8 @@
         "input": "'abc'",
         "expected": "3",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_yysltdbb\\solution.py\", line 13, in <module>\n    result = find_Rotations('abc')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_yysltdbb\\solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_o8jqcblp/solution.py\", line 13, in <module>\n    result = find_Rotations('abc')\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_o8jqcblp/solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -5331,8 +5331,8 @@
         "input": "'aaaa'",
         "expected": "1",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_sy8w3mor\\solution.py\", line 13, in <module>\n    result = find_Rotations('aaaa')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_sy8w3mor\\solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_ljtssilm/solution.py\", line 13, in <module>\n    result = find_Rotations('aaaa')\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_ljtssilm/solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -5340,8 +5340,8 @@
         "input": "'ab'",
         "expected": "2",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_lwte_x57\\solution.py\", line 13, in <module>\n    result = find_Rotations('ab')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_lwte_x57\\solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_funeqal3/solution.py\", line 13, in <module>\n    result = find_Rotations('ab')\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_funeqal3/solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -5349,8 +5349,8 @@
         "input": "'abc'",
         "expected": "3",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_sqqftdhv\\solution.py\", line 13, in <module>\n    result = find_Rotations('abc')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_sqqftdhv\\solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_46ae20zn/solution.py\", line 13, in <module>\n    result = find_Rotations('abc')\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_46ae20zn/solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -5358,8 +5358,8 @@
         "input": "'HILRhNe'",
         "expected": "7",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_poudjry9\\solution.py\", line 13, in <module>\n    result = find_Rotations('HILRhNe')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_poudjry9\\solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner__8fc5e5s/solution.py\", line 13, in <module>\n    result = find_Rotations('HILRhNe')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner__8fc5e5s/solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -5367,8 +5367,8 @@
         "input": "'xyQREHNu'",
         "expected": "8",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1vgqxz6x\\solution.py\", line 13, in <module>\n    result = find_Rotations('xyQREHNu')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1vgqxz6x\\solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_037gkh5b/solution.py\", line 13, in <module>\n    result = find_Rotations('xyQREHNu')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_037gkh5b/solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -5376,8 +5376,8 @@
         "input": "'CTe'",
         "expected": "3",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_eu3j0cz9\\solution.py\", line 13, in <module>\n    result = find_Rotations('CTe')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_eu3j0cz9\\solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_90jdftb1/solution.py\", line 13, in <module>\n    result = find_Rotations('CTe')\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_90jdftb1/solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -5385,8 +5385,8 @@
         "input": "'kGC'",
         "expected": "3",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5pca8itr\\solution.py\", line 13, in <module>\n    result = find_Rotations('kGC')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5pca8itr\\solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_qfktevmq/solution.py\", line 13, in <module>\n    result = find_Rotations('kGC')\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_qfktevmq/solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -5394,8 +5394,8 @@
         "input": "'yCvNpaO'",
         "expected": "7",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_az056t5c\\solution.py\", line 13, in <module>\n    result = find_Rotations('yCvNpaO')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_az056t5c\\solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_civ_qyqr/solution.py\", line 13, in <module>\n    result = find_Rotations('yCvNpaO')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_civ_qyqr/solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -5403,8 +5403,8 @@
         "input": "'XYmXFR'",
         "expected": "6",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qkmoj6x4\\solution.py\", line 13, in <module>\n    result = find_Rotations('XYmXFR')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qkmoj6x4\\solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_6pbr5pc1/solution.py\", line 13, in <module>\n    result = find_Rotations('XYmXFR')\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_6pbr5pc1/solution.py\", line 4, in find_Rotations\n    tmp = str - str\n          ~~~~^~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       }
     ]
   },
@@ -5433,7 +5433,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0335,
+    "avg_latency_s": 0.0408,
     "error_details": [
       {
         "set": "public",
@@ -5570,7 +5570,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0545,
+    "avg_latency_s": 0.0569,
     "error_details": [
       {
         "set": "public",
@@ -5578,8 +5578,8 @@
         "input": "10",
         "expected": "40",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6ybd0vsn\\solution.py\", line 9, in <module>\n    result = square_perimeter(10)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6ybd0vsn\\solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_fvzos7_5/solution.py\", line 9, in <module>\n    result = square_perimeter(10)\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_fvzos7_5/solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
       },
       {
         "set": "public",
@@ -5587,8 +5587,8 @@
         "input": "5",
         "expected": "20",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ns6k9721\\solution.py\", line 9, in <module>\n    result = square_perimeter(5)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ns6k9721\\solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_kjv82goe/solution.py\", line 9, in <module>\n    result = square_perimeter(5)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_kjv82goe/solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
       },
       {
         "set": "public",
@@ -5596,8 +5596,8 @@
         "input": "4",
         "expected": "16",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rq27v68e\\solution.py\", line 9, in <module>\n    result = square_perimeter(4)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rq27v68e\\solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_6rrw1cqp/solution.py\", line 9, in <module>\n    result = square_perimeter(4)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_6rrw1cqp/solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
       },
       {
         "set": "hidden",
@@ -5605,8 +5605,8 @@
         "input": "0",
         "expected": "0",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8jk4_e3m\\solution.py\", line 9, in <module>\n    result = square_perimeter(0)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8jk4_e3m\\solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner__kpq8h31/solution.py\", line 9, in <module>\n    result = square_perimeter(0)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner__kpq8h31/solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
       },
       {
         "set": "hidden",
@@ -5614,8 +5614,8 @@
         "input": "1",
         "expected": "4",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hsgzz7g1\\solution.py\", line 9, in <module>\n    result = square_perimeter(1)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_hsgzz7g1\\solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_t24uk5fv/solution.py\", line 9, in <module>\n    result = square_perimeter(1)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_t24uk5fv/solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
       },
       {
         "set": "hidden",
@@ -5623,8 +5623,8 @@
         "input": "-1",
         "expected": "-4",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_mfvlafm2\\solution.py\", line 9, in <module>\n    result = square_perimeter(-1)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_mfvlafm2\\solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_77fo2x2h/solution.py\", line 9, in <module>\n    result = square_perimeter(-1)\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_77fo2x2h/solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
       },
       {
         "set": "hidden",
@@ -5632,8 +5632,8 @@
         "input": "2",
         "expected": "8",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ihshsx9z\\solution.py\", line 9, in <module>\n    result = square_perimeter(2)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ihshsx9z\\solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_jitxc4iz/solution.py\", line 9, in <module>\n    result = square_perimeter(2)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_jitxc4iz/solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
       },
       {
         "set": "hidden",
@@ -5641,8 +5641,8 @@
         "input": "3",
         "expected": "12",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__tpnx24u\\solution.py\", line 9, in <module>\n    result = square_perimeter(3)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__tpnx24u\\solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_957byj4p/solution.py\", line 9, in <module>\n    result = square_perimeter(3)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_957byj4p/solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
       },
       {
         "set": "hidden",
@@ -5650,8 +5650,8 @@
         "input": "10",
         "expected": "40",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_k9a7o6ur\\solution.py\", line 9, in <module>\n    result = square_perimeter(10)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_k9a7o6ur\\solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_2yoveno4/solution.py\", line 9, in <module>\n    result = square_perimeter(10)\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_2yoveno4/solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
       },
       {
         "set": "hidden",
@@ -5659,8 +5659,8 @@
         "input": "11",
         "expected": "44",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_cvfhyce_\\solution.py\", line 9, in <module>\n    result = square_perimeter(11)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_cvfhyce_\\solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_tl4pp528/solution.py\", line 9, in <module>\n    result = square_perimeter(11)\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_tl4pp528/solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
       },
       {
         "set": "hidden",
@@ -5668,8 +5668,8 @@
         "input": "97",
         "expected": "388",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8r46irtn\\solution.py\", line 9, in <module>\n    result = square_perimeter(97)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_8r46irtn\\solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_6lnjj22u/solution.py\", line 9, in <module>\n    result = square_perimeter(97)\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_6lnjj22u/solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
       },
       {
         "set": "hidden",
@@ -5677,8 +5677,8 @@
         "input": "1001",
         "expected": "4004",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_yi3c6bia\\solution.py\", line 9, in <module>\n    result = square_perimeter(1001)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_yi3c6bia\\solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_ui6l8wy1/solution.py\", line 9, in <module>\n    result = square_perimeter(1001)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_ui6l8wy1/solution.py\", line 4, in square_perimeter\n    x = [][99]\n        ~~^^^^\nIndexError: list index out of range"
       }
     ]
   },
@@ -5707,7 +5707,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0343,
+    "avg_latency_s": 0.044,
     "error_details": []
   },
   {
@@ -5735,7 +5735,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0307,
+    "avg_latency_s": 0.0475,
     "error_details": [
       {
         "set": "public",
@@ -5863,7 +5863,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0544,
+    "avg_latency_s": 0.0641,
     "error_details": [
       {
         "set": "public",
@@ -5871,8 +5871,8 @@
         "input": "2",
         "expected": "2",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_oq4m4m37\\solution.py\", line 14, in <module>\n    result = bell_number(2)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_oq4m4m37\\solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
+        "status": "NameError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_d9qvw31g/solution.py\", line 14, in <module>\n    result = bell_number(2)\n             ^^^^^^^^^^^^^^\n  File \"/tmp/runner_d9qvw31g/solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
       },
       {
         "set": "public",
@@ -5880,8 +5880,8 @@
         "input": "10",
         "expected": "115975",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__etx93sq\\solution.py\", line 14, in <module>\n    result = bell_number(10)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner__etx93sq\\solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
+        "status": "NameError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_al5_c5q6/solution.py\", line 14, in <module>\n    result = bell_number(10)\n             ^^^^^^^^^^^^^^^\n  File \"/tmp/runner_al5_c5q6/solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
       },
       {
         "set": "public",
@@ -5889,8 +5889,8 @@
         "input": "56",
         "expected": "6775685320645824322581483068371419745979053216268760300",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_dtckd4fj\\solution.py\", line 14, in <module>\n    result = bell_number(56)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_dtckd4fj\\solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
+        "status": "NameError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_gigbyiiq/solution.py\", line 14, in <module>\n    result = bell_number(56)\n             ^^^^^^^^^^^^^^^\n  File \"/tmp/runner_gigbyiiq/solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
       },
       {
         "set": "hidden",
@@ -5898,8 +5898,8 @@
         "input": "0",
         "expected": "1",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_v0pei184\\solution.py\", line 14, in <module>\n    result = bell_number(0)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_v0pei184\\solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
+        "status": "NameError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_9164990h/solution.py\", line 14, in <module>\n    result = bell_number(0)\n             ^^^^^^^^^^^^^^\n  File \"/tmp/runner_9164990h/solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
       },
       {
         "set": "hidden",
@@ -5907,8 +5907,8 @@
         "input": "1",
         "expected": "1",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_x6k1b8no\\solution.py\", line 14, in <module>\n    result = bell_number(1)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_x6k1b8no\\solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
+        "status": "NameError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_qsfnl92y/solution.py\", line 14, in <module>\n    result = bell_number(1)\n             ^^^^^^^^^^^^^^\n  File \"/tmp/runner_qsfnl92y/solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
       },
       {
         "set": "hidden",
@@ -5916,8 +5916,8 @@
         "input": "2",
         "expected": "2",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_x5933qq0\\solution.py\", line 14, in <module>\n    result = bell_number(2)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_x5933qq0\\solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
+        "status": "NameError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_5hlqscvf/solution.py\", line 14, in <module>\n    result = bell_number(2)\n             ^^^^^^^^^^^^^^\n  File \"/tmp/runner_5hlqscvf/solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
       },
       {
         "set": "hidden",
@@ -5925,8 +5925,8 @@
         "input": "3",
         "expected": "5",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_z8jbgnix\\solution.py\", line 14, in <module>\n    result = bell_number(3)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_z8jbgnix\\solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
+        "status": "NameError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_btfjpex0/solution.py\", line 14, in <module>\n    result = bell_number(3)\n             ^^^^^^^^^^^^^^\n  File \"/tmp/runner_btfjpex0/solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
       },
       {
         "set": "hidden",
@@ -5934,8 +5934,8 @@
         "input": "10",
         "expected": "115975",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_4ydd8iq9\\solution.py\", line 14, in <module>\n    result = bell_number(10)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_4ydd8iq9\\solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
+        "status": "NameError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_vh39jgft/solution.py\", line 14, in <module>\n    result = bell_number(10)\n             ^^^^^^^^^^^^^^^\n  File \"/tmp/runner_vh39jgft/solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
       },
       {
         "set": "hidden",
@@ -5943,8 +5943,8 @@
         "input": "11",
         "expected": "678570",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_p2x7wja0\\solution.py\", line 14, in <module>\n    result = bell_number(11)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_p2x7wja0\\solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
+        "status": "NameError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_163c1mk2/solution.py\", line 14, in <module>\n    result = bell_number(11)\n             ^^^^^^^^^^^^^^^\n  File \"/tmp/runner_163c1mk2/solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
       },
       {
         "set": "hidden",
@@ -5952,8 +5952,8 @@
         "input": "97",
         "expected": "1917593350464112616752757157565032460248311804906650215954187246738986739924580790084847891233423398173059771233",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_pdvu98os\\solution.py\", line 14, in <module>\n    result = bell_number(97)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_pdvu98os\\solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
+        "status": "NameError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_s42te3b5/solution.py\", line 14, in <module>\n    result = bell_number(97)\n             ^^^^^^^^^^^^^^^\n  File \"/tmp/runner_s42te3b5/solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
       },
       {
         "set": "hidden",
@@ -5961,8 +5961,8 @@
         "input": "1001",
         "expected": "5697492444115640567019894551104670441887299377750507814832444287926548135718473989226588854619753277510989274111676929692326431287618427310429582702977943038547017853355169794677009999499509861681899321968731930210135649901785457588766404775126937125611263472591313549188438026236033591872298348685643218248241070987660997425907418288387275147845263902339896466018359704524245195016745897754780382300203294562228377896692763732958184343775039748327698415424025308756823742420148882433562953027102837867911477639037585208366685314172195537690238959242306817150938556185832335855995015759334885174930844705452991077010968826351497269690858586310286157147154401951939033849823242617007318222428724549954943072169004072771543622374463897209533330061764895629649123036090509137412038517628631165285326584555770205021512246002316877241418174991101575125343281763357174743748101531005859909241011474145112949707419209559359616627380948596364438907789126583642834462967543326715559133569076242236078651038860331687811412073839855154286849808912642379301084872605249913598691500675084714134464095557689534788703003980391116862275247009887775189860301529355607704289107027916934469748847227811504563141975787082519475996829463825789464119427651612443714908488004967583700648597724989437859032403084787644952069973133048909445504340769181989705955391458501176785431274189154776796083000536931705071737173266463068055643513818128845764959395902766699546562439518052481964324258693258243111749175641519668345197095883803099905581019443851774623476349209750406511329366102857875647405746756464302322676618281356637824622448568516268684229839982650331442481077413722890060944002409346530273212953371966446117988097815140383386658329854722435176476568759331515750398973030325620915308793797103275508744084195077859650072584756720525886206113882610780611400655728548997864611758085470239474795626811763535347752489904986818946011595325092664416060",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_zdhr0gkg\\solution.py\", line 14, in <module>\n    result = bell_number(1001)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_zdhr0gkg\\solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
+        "status": "NameError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_boyjq308/solution.py\", line 14, in <module>\n    result = bell_number(1001)\n             ^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_boyjq308/solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
       },
       {
         "set": "hidden",
@@ -5970,8 +5970,8 @@
         "input": "56",
         "expected": "6775685320645824322581483068371419745979053216268760300",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_tyhti5mm\\solution.py\", line 14, in <module>\n    result = bell_number(56)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_tyhti5mm\\solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
+        "status": "NameError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_vmc9_bmy/solution.py\", line 14, in <module>\n    result = bell_number(56)\n             ^^^^^^^^^^^^^^^\n  File \"/tmp/runner_vmc9_bmy/solution.py\", line 4, in bell_number\n    x = undefined_variable\n        ^^^^^^^^^^^^^^^^^^\nNameError: name 'undefined_variable' is not defined"
       }
     ]
   },
@@ -6000,7 +6000,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0331,
+    "avg_latency_s": 0.0446,
     "error_details": [
       {
         "set": "public",
@@ -6137,7 +6137,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0349,
+    "avg_latency_s": 0.0452,
     "error_details": [
       {
         "set": "public",
@@ -6274,7 +6274,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0313,
+    "avg_latency_s": 0.0433,
     "error_details": [
       {
         "set": "public",
@@ -6539,7 +6539,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0354,
+    "avg_latency_s": 0.0444,
     "error_details": [
       {
         "set": "public",
@@ -6676,7 +6676,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0358,
+    "avg_latency_s": 0.0506,
     "error_details": [
       {
         "set": "public",
@@ -6684,8 +6684,8 @@
         "input": "1212121",
         "expected": "True",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_y5ipneze\\solution.py\", line 13, in <module>\n    result = is_undulating(1212121)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_y5ipneze\\solution.py\", line 8, in is_undulating\n    if (n[i + 2] != n[i]):\n        ~^^^^^^^\nIndexError: string index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_k6oqu1qf/solution.py\", line 13, in <module>\n    result = is_undulating(1212121)\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_k6oqu1qf/solution.py\", line 8, in is_undulating\n    if (n[i + 2] != n[i]):\n       ~^^^^^^^\nIndexError: string index out of range"
       },
       {
         "set": "public",
@@ -6693,8 +6693,8 @@
         "input": "1991",
         "expected": "False",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_zob0zkge\\solution.py\", line 13, in <module>\n    result = is_undulating(1991)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_zob0zkge\\solution.py\", line 8, in is_undulating\n    if (n[i + 2] != n[i]):\n        ~^^^^^^^\nIndexError: string index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_g0y06wqf/solution.py\", line 13, in <module>\n    result = is_undulating(1991)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_g0y06wqf/solution.py\", line 8, in is_undulating\n    if (n[i + 2] != n[i]):\n       ~^^^^^^^\nIndexError: string index out of range"
       },
       {
         "set": "public",
@@ -6702,8 +6702,8 @@
         "input": "121",
         "expected": "True",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_k3sdc3d1\\solution.py\", line 13, in <module>\n    result = is_undulating(121)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_k3sdc3d1\\solution.py\", line 8, in is_undulating\n    if (n[i + 2] != n[i]):\n        ~^^^^^^^\nIndexError: string index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_ji5jde42/solution.py\", line 13, in <module>\n    result = is_undulating(121)\n             ^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_ji5jde42/solution.py\", line 8, in is_undulating\n    if (n[i + 2] != n[i]):\n       ~^^^^^^^\nIndexError: string index out of range"
       },
       {
         "set": "hidden",
@@ -6711,8 +6711,8 @@
         "input": "1001",
         "expected": "False",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5u2fs3ht\\solution.py\", line 13, in <module>\n    result = is_undulating(1001)\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_5u2fs3ht\\solution.py\", line 8, in is_undulating\n    if (n[i + 2] != n[i]):\n        ~^^^^^^^\nIndexError: string index out of range"
+        "status": "IndexError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_2x56wa_m/solution.py\", line 13, in <module>\n    result = is_undulating(1001)\n             ^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_2x56wa_m/solution.py\", line 8, in is_undulating\n    if (n[i + 2] != n[i]):\n       ~^^^^^^^\nIndexError: string index out of range"
       }
     ]
   },
@@ -6741,7 +6741,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.037,
+    "avg_latency_s": 0.0528,
     "error_details": [
       {
         "set": "public",
@@ -6878,7 +6878,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0339,
+    "avg_latency_s": 0.0613,
     "error_details": [
       {
         "set": "public",
@@ -7015,7 +7015,7 @@
     "hid_MLE": 0,
     "is_false_positive": true,
     "is_public_test_leakage": true,
-    "avg_latency_s": 0.0331,
+    "avg_latency_s": 0.0613,
     "error_details": [
       {
         "set": "hidden",
@@ -7053,7 +7053,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0462,
+    "avg_latency_s": 0.0636,
     "error_details": [
       {
         "set": "public",
@@ -7190,7 +7190,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0525,
+    "avg_latency_s": 0.086,
     "error_details": [
       {
         "set": "public",
@@ -7198,8 +7198,8 @@
         "input": "'hello', 'l'",
         "expected": "'heo'",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_9o01xxr9\\solution.py\", line 16, in <module>\n    result = remove_Occ('hello', 'l')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_9o01xxr9\\solution.py\", line 4, in remove_Occ\n    x = int('abc')\nValueError: invalid literal for int() with base 10: 'abc'"
+        "status": "ValueError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_i0o_mbec/solution.py\", line 16, in <module>\n    result = remove_Occ('hello', 'l')\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_i0o_mbec/solution.py\", line 4, in remove_Occ\n    x = int('abc')\n        ^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'abc'"
       },
       {
         "set": "public",
@@ -7207,8 +7207,8 @@
         "input": "'abcda', 'a'",
         "expected": "'bcd'",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1waxj1jq\\solution.py\", line 16, in <module>\n    result = remove_Occ('abcda', 'a')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1waxj1jq\\solution.py\", line 4, in remove_Occ\n    x = int('abc')\nValueError: invalid literal for int() with base 10: 'abc'"
+        "status": "ValueError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner__3a6chfa/solution.py\", line 16, in <module>\n    result = remove_Occ('abcda', 'a')\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner__3a6chfa/solution.py\", line 4, in remove_Occ\n    x = int('abc')\n        ^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'abc'"
       },
       {
         "set": "public",
@@ -7216,8 +7216,8 @@
         "input": "'PHP', 'P'",
         "expected": "'H'",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_l6xcfrej\\solution.py\", line 16, in <module>\n    result = remove_Occ('PHP', 'P')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_l6xcfrej\\solution.py\", line 4, in remove_Occ\n    x = int('abc')\nValueError: invalid literal for int() with base 10: 'abc'"
+        "status": "ValueError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_c4mz190j/solution.py\", line 16, in <module>\n    result = remove_Occ('PHP', 'P')\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_c4mz190j/solution.py\", line 4, in remove_Occ\n    x = int('abc')\n        ^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'abc'"
       },
       {
         "set": "hidden",
@@ -7225,8 +7225,8 @@
         "input": "'banana', 'a'",
         "expected": "bnan",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_bmyv_d9s\\solution.py\", line 16, in <module>\n    result = remove_Occ('banana', 'a')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_bmyv_d9s\\solution.py\", line 4, in remove_Occ\n    x = int('abc')\nValueError: invalid literal for int() with base 10: 'abc'"
+        "status": "ValueError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_fpfdngy_/solution.py\", line 16, in <module>\n    result = remove_Occ('banana', 'a')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_fpfdngy_/solution.py\", line 4, in remove_Occ\n    x = int('abc')\n        ^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'abc'"
       },
       {
         "set": "hidden",
@@ -7234,8 +7234,8 @@
         "input": "'abracadabra', 'a'",
         "expected": "bracadabr",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_4dbin5t6\\solution.py\", line 16, in <module>\n    result = remove_Occ('abracadabra', 'a')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_4dbin5t6\\solution.py\", line 4, in remove_Occ\n    x = int('abc')\nValueError: invalid literal for int() with base 10: 'abc'"
+        "status": "ValueError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_5gfn794w/solution.py\", line 16, in <module>\n    result = remove_Occ('abracadabra', 'a')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_5gfn794w/solution.py\", line 4, in remove_Occ\n    x = int('abc')\n        ^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'abc'"
       },
       {
         "set": "hidden",
@@ -7243,8 +7243,8 @@
         "input": "'  spaced  words  ', ' '",
         "expected": " spaced  words ",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_nm16_a1s\\solution.py\", line 16, in <module>\n    result = remove_Occ('  spaced  words  ', ' ')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_nm16_a1s\\solution.py\", line 4, in remove_Occ\n    x = int('abc')\nValueError: invalid literal for int() with base 10: 'abc'"
+        "status": "ValueError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_ehmcou2h/solution.py\", line 16, in <module>\n    result = remove_Occ('  spaced  words  ', ' ')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_ehmcou2h/solution.py\", line 4, in remove_Occ\n    x = int('abc')\n        ^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'abc'"
       },
       {
         "set": "hidden",
@@ -7252,8 +7252,8 @@
         "input": "'aabbccddeeff', 'c'",
         "expected": "aabbddeeff",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_lhdx7v1y\\solution.py\", line 16, in <module>\n    result = remove_Occ('aabbccddeeff', 'c')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_lhdx7v1y\\solution.py\", line 4, in remove_Occ\n    x = int('abc')\nValueError: invalid literal for int() with base 10: 'abc'"
+        "status": "ValueError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_lb5kh_b3/solution.py\", line 16, in <module>\n    result = remove_Occ('aabbccddeeff', 'c')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_lb5kh_b3/solution.py\", line 4, in remove_Occ\n    x = int('abc')\n        ^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'abc'"
       },
       {
         "set": "hidden",
@@ -7261,8 +7261,8 @@
         "input": "'listen', 'silent'",
         "expected": "listen",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_nyhdd98h\\solution.py\", line 16, in <module>\n    result = remove_Occ('listen', 'silent')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_nyhdd98h\\solution.py\", line 4, in remove_Occ\n    x = int('abc')\nValueError: invalid literal for int() with base 10: 'abc'"
+        "status": "ValueError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_tvcgv9j4/solution.py\", line 16, in <module>\n    result = remove_Occ('listen', 'silent')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_tvcgv9j4/solution.py\", line 4, in remove_Occ\n    x = int('abc')\n        ^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'abc'"
       },
       {
         "set": "hidden",
@@ -7270,8 +7270,8 @@
         "input": "'aaaaab', 'b'",
         "expected": "aaaaa",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_u9d6qu73\\solution.py\", line 16, in <module>\n    result = remove_Occ('aaaaab', 'b')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_u9d6qu73\\solution.py\", line 4, in remove_Occ\n    x = int('abc')\nValueError: invalid literal for int() with base 10: 'abc'"
+        "status": "ValueError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_oklx5okt/solution.py\", line 16, in <module>\n    result = remove_Occ('aaaaab', 'b')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_oklx5okt/solution.py\", line 4, in remove_Occ\n    x = int('abc')\n        ^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'abc'"
       },
       {
         "set": "hidden",
@@ -7279,8 +7279,8 @@
         "input": "'hello', 'l'",
         "expected": "heo",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_efvilflz\\solution.py\", line 16, in <module>\n    result = remove_Occ('hello', 'l')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_efvilflz\\solution.py\", line 4, in remove_Occ\n    x = int('abc')\nValueError: invalid literal for int() with base 10: 'abc'"
+        "status": "ValueError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_nk80mlkt/solution.py\", line 16, in <module>\n    result = remove_Occ('hello', 'l')\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_nk80mlkt/solution.py\", line 4, in remove_Occ\n    x = int('abc')\n        ^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'abc'"
       },
       {
         "set": "hidden",
@@ -7288,8 +7288,8 @@
         "input": "'abcda', 'a'",
         "expected": "bcd",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_18svl_tv\\solution.py\", line 16, in <module>\n    result = remove_Occ('abcda', 'a')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_18svl_tv\\solution.py\", line 4, in remove_Occ\n    x = int('abc')\nValueError: invalid literal for int() with base 10: 'abc'"
+        "status": "ValueError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_wi1y3gif/solution.py\", line 16, in <module>\n    result = remove_Occ('abcda', 'a')\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_wi1y3gif/solution.py\", line 4, in remove_Occ\n    x = int('abc')\n        ^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'abc'"
       },
       {
         "set": "hidden",
@@ -7297,8 +7297,8 @@
         "input": "'PHP', 'P'",
         "expected": "H",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1w6scdol\\solution.py\", line 16, in <module>\n    result = remove_Occ('PHP', 'P')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1w6scdol\\solution.py\", line 4, in remove_Occ\n    x = int('abc')\nValueError: invalid literal for int() with base 10: 'abc'"
+        "status": "ValueError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_f1900gbg/solution.py\", line 16, in <module>\n    result = remove_Occ('PHP', 'P')\n             ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_f1900gbg/solution.py\", line 4, in remove_Occ\n    x = int('abc')\n        ^^^^^^^^^^\nValueError: invalid literal for int() with base 10: 'abc'"
       }
     ]
   },
@@ -7327,7 +7327,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0417,
+    "avg_latency_s": 0.066,
     "error_details": [
       {
         "set": "public",
@@ -7374,7 +7374,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.03,
+    "avg_latency_s": 0.0897,
     "error_details": [
       {
         "set": "public",
@@ -7502,7 +7502,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0422,
+    "avg_latency_s": 0.0547,
     "error_details": [
       {
         "set": "public",
@@ -7648,7 +7648,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.028,
+    "avg_latency_s": 0.0473,
     "error_details": [
       {
         "set": "public",
@@ -7758,7 +7758,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0381,
+    "avg_latency_s": 0.0415,
     "error_details": [
       {
         "set": "public",
@@ -7895,7 +7895,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0294,
+    "avg_latency_s": 0.0427,
     "error_details": [
       {
         "set": "public",
@@ -8041,7 +8041,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0544,
+    "avg_latency_s": 0.0547,
     "error_details": [
       {
         "set": "public",
@@ -8049,8 +8049,8 @@
         "input": "'Python'",
         "expected": "'Python'",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_idbpfy_l\\solution.py\", line 18, in <module>\n    result = reverse_vowels('Python')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_idbpfy_l\\solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_byprmuol/solution.py\", line 18, in <module>\n    result = reverse_vowels('Python')\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_byprmuol/solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
       },
       {
         "set": "public",
@@ -8058,8 +8058,8 @@
         "input": "'USA'",
         "expected": "'ASU'",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qmksm_76\\solution.py\", line 18, in <module>\n    result = reverse_vowels('USA')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qmksm_76\\solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_qop5ukeu/solution.py\", line 18, in <module>\n    result = reverse_vowels('USA')\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_qop5ukeu/solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
       },
       {
         "set": "public",
@@ -8067,8 +8067,8 @@
         "input": "'ab'",
         "expected": "'ab'",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_45cibe03\\solution.py\", line 18, in <module>\n    result = reverse_vowels('ab')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_45cibe03\\solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_0qmldijn/solution.py\", line 18, in <module>\n    result = reverse_vowels('ab')\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_0qmldijn/solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8076,8 +8076,8 @@
         "input": "\"  Mixed CASE 123!  \"",
         "expected": "  MExAd CeSi 123!  ",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_01g4e1ji\\solution.py\", line 18, in <module>\n    result = reverse_vowels(\"  Mixed CASE 123!  \")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_01g4e1ji\\solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_ned02ye4/solution.py\", line 18, in <module>\n    result = reverse_vowels(\"  Mixed CASE 123!  \")\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_ned02ye4/solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8085,8 +8085,8 @@
         "input": "\"naïve café\"",
         "expected": "naïve café",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_01t6b7yc\\solution.py\", line 18, in <module>\n    result = reverse_vowels(\"naïve café\")\n             ~~~~~~~~~~~~~~^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_01t6b7yc\\solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_ykqakplu/solution.py\", line 18, in <module>\n    result = reverse_vowels(\"naïve café\")\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_ykqakplu/solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8094,8 +8094,8 @@
         "input": "\"!@# abc ABC #@!\"",
         "expected": "!@# Abc aBC #@!",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_kfw_3376\\solution.py\", line 18, in <module>\n    result = reverse_vowels(\"!@# abc ABC #@!\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_kfw_3376\\solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_spbpika6/solution.py\", line 18, in <module>\n    result = reverse_vowels(\"!@# abc ABC #@!\")\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_spbpika6/solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8103,8 +8103,8 @@
         "input": "\"racecar\"",
         "expected": "racecar",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1pz8nege\\solution.py\", line 18, in <module>\n    result = reverse_vowels(\"racecar\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_1pz8nege\\solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_8nf0i4at/solution.py\", line 18, in <module>\n    result = reverse_vowels(\"racecar\")\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_8nf0i4at/solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8112,8 +8112,8 @@
         "input": "\"ababa\"",
         "expected": "ababa",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_nv03cmcz\\solution.py\", line 18, in <module>\n    result = reverse_vowels(\"ababa\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_nv03cmcz\\solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_m__bvtk4/solution.py\", line 18, in <module>\n    result = reverse_vowels(\"ababa\")\n             ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_m__bvtk4/solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8121,8 +8121,8 @@
         "input": "'Python'",
         "expected": "Python",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rthcc3vg\\solution.py\", line 18, in <module>\n    result = reverse_vowels('Python')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_rthcc3vg\\solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_t4jj_3u4/solution.py\", line 18, in <module>\n    result = reverse_vowels('Python')\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_t4jj_3u4/solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8130,8 +8130,8 @@
         "input": "'USA'",
         "expected": "ASU",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_2vevo43s\\solution.py\", line 18, in <module>\n    result = reverse_vowels('USA')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_2vevo43s\\solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_c5ffl_f6/solution.py\", line 18, in <module>\n    result = reverse_vowels('USA')\n             ^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_c5ffl_f6/solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8139,8 +8139,8 @@
         "input": "'ab'",
         "expected": "ab",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ft9445jd\\solution.py\", line 18, in <module>\n    result = reverse_vowels('ab')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ft9445jd\\solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_ty12k9u2/solution.py\", line 18, in <module>\n    result = reverse_vowels('ab')\n             ^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_ty12k9u2/solution.py\", line 7, in reverse_vowels\n    vowels -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8148,8 +8148,8 @@
         "input": "'dvtphj'",
         "expected": "dvtphj",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_mghb3fjz\\solution.py\", line 18, in <module>\n    result = reverse_vowels('dvtphj')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_mghb3fjz\\solution.py\", line 14, in reverse_vowels\n    result_string -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_68fnia3m/solution.py\", line 18, in <module>\n    result = reverse_vowels('dvtphj')\n             ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_68fnia3m/solution.py\", line 14, in reverse_vowels\n    result_string -= char\nTypeError: unsupported operand type(s) for -=: 'str' and 'str'"
       }
     ]
   },
@@ -8178,7 +8178,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0317,
+    "avg_latency_s": 0.0402,
     "error_details": [
       {
         "set": "public",
@@ -8288,7 +8288,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0453,
+    "avg_latency_s": 0.0581,
     "error_details": [
       {
         "set": "public",
@@ -8296,8 +8296,8 @@
         "input": "'abcdef'",
         "expected": "'ace'",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_c42b15v1\\solution.py\", line 11, in <module>\n    result = odd_values_string('abcdef')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_c42b15v1\\solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_8upr145d/solution.py\", line 11, in <module>\n    result = odd_values_string('abcdef')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_8upr145d/solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "public",
@@ -8305,8 +8305,8 @@
         "input": "'python'",
         "expected": "'pto'",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_in2ru676\\solution.py\", line 11, in <module>\n    result = odd_values_string('python')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_in2ru676\\solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_49oma3gj/solution.py\", line 11, in <module>\n    result = odd_values_string('python')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_49oma3gj/solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "public",
@@ -8314,8 +8314,8 @@
         "input": "'data'",
         "expected": "'dt'",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_61uzsrrh\\solution.py\", line 11, in <module>\n    result = odd_values_string('data')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_61uzsrrh\\solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_dfo_zioz/solution.py\", line 11, in <module>\n    result = odd_values_string('data')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_dfo_zioz/solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8323,8 +8323,8 @@
         "input": "\"  Mixed CASE 123!  \"",
         "expected": " MxdCS 2! ",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_0wfrdrio\\solution.py\", line 11, in <module>\n    result = odd_values_string(\"  Mixed CASE 123!  \")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_0wfrdrio\\solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_zli40dfq/solution.py\", line 11, in <module>\n    result = odd_values_string(\"  Mixed CASE 123!  \")\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_zli40dfq/solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8332,8 +8332,8 @@
         "input": "\"naïve café\"",
         "expected": "nïecf",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_vezpkhi9\\solution.py\", line 11, in <module>\n    result = odd_values_string(\"naïve café\")\n             ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_vezpkhi9\\solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_rf7d67r1/solution.py\", line 11, in <module>\n    result = odd_values_string(\"naïve café\")\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_rf7d67r1/solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8341,8 +8341,8 @@
         "input": "\"!@# abc ABC #@!\"",
         "expected": "!#acAC#!",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ggk_50tm\\solution.py\", line 11, in <module>\n    result = odd_values_string(\"!@# abc ABC #@!\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_ggk_50tm\\solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_sdheb4sa/solution.py\", line 11, in <module>\n    result = odd_values_string(\"!@# abc ABC #@!\")\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_sdheb4sa/solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8350,8 +8350,8 @@
         "input": "\"racecar\"",
         "expected": "rccr",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qvaau20q\\solution.py\", line 11, in <module>\n    result = odd_values_string(\"racecar\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_qvaau20q\\solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_2ymh11s5/solution.py\", line 11, in <module>\n    result = odd_values_string(\"racecar\")\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_2ymh11s5/solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8359,8 +8359,8 @@
         "input": "\"ababa\"",
         "expected": "aaa",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6xoqh2x3\\solution.py\", line 11, in <module>\n    result = odd_values_string(\"ababa\")\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_6xoqh2x3\\solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_jslg6pfy/solution.py\", line 11, in <module>\n    result = odd_values_string(\"ababa\")\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_jslg6pfy/solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8368,8 +8368,8 @@
         "input": "'abcdef'",
         "expected": "ace",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_a9t6wbbx\\solution.py\", line 11, in <module>\n    result = odd_values_string('abcdef')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_a9t6wbbx\\solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_7r_m6kuo/solution.py\", line 11, in <module>\n    result = odd_values_string('abcdef')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_7r_m6kuo/solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8377,8 +8377,8 @@
         "input": "'python'",
         "expected": "pto",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_etllo3oa\\solution.py\", line 11, in <module>\n    result = odd_values_string('python')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_etllo3oa\\solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_eo63rjg0/solution.py\", line 11, in <module>\n    result = odd_values_string('python')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_eo63rjg0/solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8386,8 +8386,8 @@
         "input": "'data'",
         "expected": "dt",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_i24t7pfg\\solution.py\", line 11, in <module>\n    result = odd_values_string('data')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_i24t7pfg\\solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_9hftn4m3/solution.py\", line 11, in <module>\n    result = odd_values_string('data')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_9hftn4m3/solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       },
       {
         "set": "hidden",
@@ -8395,8 +8395,8 @@
         "input": "'lambs'",
         "expected": "lms",
         "actual": null,
-        "status": "RE",
-        "error_msg": "Traceback (most recent call last):\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_fvf5awy2\\solution.py\", line 11, in <module>\n    result = odd_values_string('lambs')\n  File \"C:\\Users\\Admin\\AppData\\Local\\Temp\\runner_fvf5awy2\\solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
+        "status": "TypeError",
+        "error_msg": "Traceback (most recent call last):\n  File \"/tmp/runner_jz_8fhk1/solution.py\", line 11, in <module>\n    result = odd_values_string('lambs')\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/tmp/runner_jz_8fhk1/solution.py\", line 7, in odd_values_string\n    result = result - str[i]\n             ~~~~~~~^~~~~~~~\nTypeError: unsupported operand type(s) for -: 'str' and 'str'"
       }
     ]
   },
@@ -8571,7 +8571,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0334,
+    "avg_latency_s": 0.0419,
     "error_details": [
       {
         "set": "public",
@@ -8708,7 +8708,7 @@
     "hid_MLE": 0,
     "is_false_positive": false,
     "is_public_test_leakage": false,
-    "avg_latency_s": 0.0336,
+    "avg_latency_s": 0.048,
     "error_details": [
       {
         "set": "public",

@@ -1,101 +1,101 @@
 sv_id,task_id,func,topic,mo_ta_loi,pub_pass,pub_total,pub_tpr,pub_SE,pub_WA,pub_RE,pub_TLE,pub_MLE,hid_pass,hid_total,hid_tpr,hid_SE,hid_WA,hid_RE,hid_TLE,hid_MLE,is_false_positive,is_public_test_leakage,avg_latency_pub,avg_latency_hid
-SV001,1,sum_list,list,Cộng index thay vì giá trị — WA với mọi input,0,3,0.0,0,3,0,0,0,2,6,33.33,0,4,0,0,0,False,False,0.0271,0.0284
-SV002,1,sum_list,list,Quên return — trả None,0,3,0.0,0,3,0,0,0,0,6,0.0,0,6,0,0,0,False,False,0.0346,0.0281
-SV003,1,sum_list,list,Hard-code kết quả bài test đầu tiên,3,3,100.0,0,0,0,0,0,5,6,83.33,0,1,0,0,0,True,True,0.0238,0.0257
+SV001,1,sum_list,list,Cộng index thay vì giá trị — WA với mọi input,0,3,0.0,0,3,0,0,0,2,6,33.33,0,4,0,0,0,False,False,0.0431,0.0419
+SV002,1,sum_list,list,Quên return — trả None,0,3,0.0,0,3,0,0,0,0,6,0.0,0,6,0,0,0,False,False,0.0392,0.04
+SV003,1,sum_list,list,Hard-code kết quả bài test đầu tiên,3,3,100.0,0,0,0,0,0,5,6,83.33,0,1,0,0,0,True,True,0.0383,0.0411
 SV004,2,is_even,math,Syntax Error — thiếu dấu :,0,3,0.0,3,0,0,0,0,0,6,0.0,6,0,0,0,0,False,False,0.0,0.0
-SV005,2,is_even,math,Luôn trả True — pass public test chẵn,2,3,66.67,0,1,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0244,0.0315
-SV006,3,reverse_string,string,Đảo ngược sai — thiếu -1 trong range,0,3,0.0,0,3,0,0,0,2,6,33.33,0,4,0,0,0,False,False,0.0277,0.0276
-SV007,4,find_max,list,Lấy phần tử đầu sorted thay vì cuối,0,3,0.0,0,3,0,0,0,2,6,33.33,0,3,1,0,0,False,False,0.0265,0.0334
-SV008,4,find_max,list,IndexError khi list rỗng — hidden test bắt được,3,3,100.0,0,0,0,0,0,5,6,83.33,0,0,1,0,0,True,True,0.0232,0.0299
-SV009,6,factorial,math,factorial - Solution đúng hoàn toàn,3,3,100.0,0,0,0,0,0,6,6,100.0,0,0,0,0,0,False,False,0.0299,0.0281
-SV010,6,factorial,math,"Hard-code n<=3, sai với n>=4",2,3,66.67,0,1,0,0,0,2,6,33.33,0,4,0,0,0,False,False,0.0266,0.0266
-SV011,7,is_palindrome,string,Luôn trả True — FP với public test,2,3,66.67,0,1,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0264,0.0265
-SV012,8,remove_duplicates,list,set mất thứ tự — FP với public test đơn giản,3,3,100.0,0,0,0,0,0,3,6,50.0,0,3,0,0,0,True,True,0.0267,0.0283
-SV013,9,average,math,Không xử lý danh sách rỗng — ZeroDivisionError,3,3,100.0,0,0,0,0,0,4,6,66.67,0,0,2,0,0,True,True,0.0335,0.0369
-SV014,9,average,math,Trả int thay vì float,3,3,100.0,0,0,0,0,0,5,6,83.33,0,1,0,0,0,True,True,0.0301,0.0265
-SV015,11,is_prime,math,"Không xử lý n=0,n=1 — FP với public",3,3,100.0,0,0,0,0,0,4,6,66.67,0,2,0,0,0,True,True,0.0263,0.023
-SV016,11,is_prime,math,Thiếu kiểm tra n<2 nhưng có range đúng,3,3,100.0,0,0,0,0,0,4,6,66.67,0,2,0,0,0,True,True,0.0305,0.0264
-SV017,12,sum_even,list,Tính tổng số lẻ thay vì chẵn,0,3,0.0,0,3,0,0,0,5,6,83.33,0,1,0,0,0,False,False,0.0231,0.0319
-SV018,13,fibonacci,math,Đệ quy thiếu base case n=0 — RecursionError,1,3,33.33,0,0,2,0,0,1,6,16.67,0,0,5,0,0,False,False,0.071,0.078
-SV019,14,count_words,string,Không xử lý chuỗi có khoảng trắng liên tiếp hoặc đầu/cuối - WA,3,3,100.0,0,0,0,0,0,1,6,16.67,0,5,0,0,0,True,True,0.0227,0.0249
-SV020,15,sort_list,list,Sắp xếp giảm dần thay vì tăng dần,1,3,33.33,0,2,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0267,0.0302
-SV021,16,find_min,list,Trả max thay vì min,0,3,0.0,0,3,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0233,0.0264
-SV022,17,has_negative,math,"Kiểm tra <=0 thay vì <0, sai với 0",3,3,100.0,0,0,0,0,0,5,6,83.33,0,1,0,0,0,True,True,0.0234,0.0247
-SV023,18,product_list,string,Tính tổng thay vì tích,2,3,66.67,0,1,0,0,0,4,6,66.67,0,2,0,0,0,False,False,0.0232,0.0284
-SV024,20,is_anagram,list,So sánh len thay vì ký tự,2,3,66.67,0,1,0,0,0,6,6,100.0,0,0,0,0,0,False,False,0.0229,0.0265
-SV025,21,count_positive,math,"Đếm >=0 thay vì >0, sai với 0",3,3,100.0,0,0,0,0,0,2,6,33.33,0,4,0,0,0,True,True,0.0421,0.0296
-SV026,22,get_evens,string,Lấy số lẻ thay vì số chẵn,0,3,0.0,0,3,0,0,0,2,6,33.33,0,4,0,0,0,False,False,0.0237,0.0266
-SV027,23,power,math,Nhân n thay vì lũy thừa,0,3,0.0,0,3,0,0,0,1,6,16.67,0,5,0,0,0,False,False,0.0228,0.0292
-SV028,24,is_sorted,string,Trả về False cho danh sách rỗng hoặc có 1 phần tử - WA,3,3,100.0,0,0,0,0,0,4,6,66.67,0,2,0,0,0,True,True,0.0265,0.0284
-SV029,26,count_negative,list,Đếm <=0 thay vì <0,3,3,100.0,0,0,0,0,0,2,6,33.33,0,4,0,0,0,True,True,0.0256,0.0291
-SV030,27,last_element,list,Không xử lý list rỗng — IndexError,3,3,100.0,0,0,0,0,0,5,6,83.33,0,0,1,0,0,True,True,0.0299,0.0338
-SV031,29,abs_list,list,Quên abs() — trả nguyên giá trị,1,3,33.33,0,2,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.031,0.023
-SV032,30,count_non_space,string,Trả len(s) thay vì đếm không phải khoảng trắng,1,3,33.33,0,2,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0266,0.0285
-SV033,31,gcd,string,Trả a thay vì GCD,0,3,0.0,0,3,0,0,0,0,6,0.0,0,6,0,0,0,False,False,0.0375,0.0229
-SV034,33,digit_sum,math,Trả n thay vì tổng chữ số,0,3,0.0,0,3,0,0,0,4,6,66.67,0,2,0,0,0,False,False,0.03,0.0249
-SV035,34,has_digit,math,Luôn trả False,1,3,33.33,0,2,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0358,0.0331
-SV036,35,sum_squares,string,Tính tổng thay vì tổng bình phương,1,3,33.33,0,2,0,0,0,2,6,33.33,0,4,0,0,0,False,False,0.0296,0.0272
-SV037,36,rotate_right,string,Xoay trái thay vì phải,1,3,33.33,0,2,0,0,0,6,6,100.0,0,0,0,0,0,False,False,0.0228,0.0286
-SV038,37,most_frequent,math,Trả phần tử ít nhất thay vì nhiều nhất,1,3,33.33,0,2,0,0,0,1,6,16.67,0,5,0,0,0,False,False,0.0269,0.0247
-SV039,38,is_all_digits,list,Không kiểm tra chuỗi rỗng — sai với '',3,3,100.0,0,0,0,0,0,5,6,83.33,0,1,0,0,0,True,True,0.0264,0.0249
-SV040,40,first_n,string,Lấy n phần tử cuối thay vì đầu,2,3,66.67,0,1,0,0,0,4,6,66.67,0,2,0,0,0,False,False,0.0263,0.0281
-SV041,41,is_perfect,list,"Không xử lý n<=1 — sai với 0,1",3,3,100.0,0,0,0,0,0,5,6,83.33,0,1,0,0,0,True,True,0.0269,0.0283
-SV042,43,list_to_string,list,Dùng khoảng trắng thay vì dấu phẩy,1,3,33.33,0,2,0,0,0,2,6,33.33,0,4,0,0,0,False,False,0.0228,0.0247
-SV043,44,count_vowels,list,Không lowercase — bỏ sót nguyên âm hoa,2,3,66.67,0,1,0,0,0,4,6,66.67,0,2,0,0,0,False,False,0.0301,0.0265
-SV044,46,reverse_list,string,Không đảo ngược — trả nguyên list,1,3,33.33,0,2,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0271,0.03
-SV045,47,all_positive,math,Không xử lý list rỗng — sai với [],3,3,100.0,0,0,0,0,0,5,6,83.33,0,1,0,0,0,True,True,0.0249,0.0265
-SV046,49,starts_with_upper,list,Tràn bộ nhớ (MLE) — Khai báo chuỗi 200MB,0,3,0.0,0,0,0,0,3,0,6,0.0,0,0,0,0,6,False,False,0.0664,0.0627
-SV047,50,last_n,list,Quá thời gian (TLE) — Vòng lặp vô hạn,0,3,0.0,0,0,0,3,0,0,6,0.0,0,0,0,6,0,False,False,1.0067,1.0061
-SV048,10,to_uppercase,string,(Solution đúng — dùng làm điểm so sánh),3,3,100.0,0,0,0,0,0,6,6,100.0,0,0,0,0,0,False,False,0.0375,0.032
-SV049,15,sort_list,list,(Solution đúng),3,3,100.0,0,0,0,0,0,6,6,100.0,0,0,0,0,0,False,False,0.0233,0.0268
-SV050,5,count_char,string,(Solution đúng),3,3,100.0,0,0,0,0,0,6,6,100.0,0,0,0,0,0,False,False,0.0233,0.0325
-SV051,51,similar_elements,list,Quá thời gian (TLE) - vòng lặp vô hạn trong similar_elements,0,3,0.0,0,0,0,3,0,0,8,0.0,0,0,0,8,0,False,False,1.0107,1.0082
-SV052,52,heap_queue_largest,list,Sai logic - trả về None thay vì kết quả đúng trong heap_queue_largest,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0282,0.0288
-SV053,53,square_nums,list,square_nums - Solution đúng hoàn toàn,3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,False,0.0319,0.0332
-SV054,54,sort_matrix,list,Lỗi thực thi (AttributeError) - gọi thuộc tính không tồn tại trong sort_matrix,0,3,0.0,0,0,3,0,0,0,8,0.0,0,0,8,0,0,False,False,0.0516,0.0551
-SV055,55,test_duplicate,list,Sai logic - trả về None thay vì kết quả đúng trong test_duplicate,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0367,0.0333
-SV056,56,find_Max_Num,list,Sai logic - thay đổi dấu cộng thành dấu trừ trong find_Max_Num,0,3,0.0,0,3,0,0,0,1,8,12.5,0,7,0,0,0,False,False,0.0381,0.0311
-SV057,57,count_Substrings,list,Sai logic - thay đổi dấu cộng thành dấu trừ trong count_Substrings,0,3,0.0,0,3,0,0,0,6,8,75.0,0,2,0,0,0,False,False,0.0353,0.0382
-SV058,58,smallest_num,list,smallest_num - Solution đúng hoàn toàn,3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,False,0.0352,0.0281
-SV059,59,max_difference,list,Sai logic - thay đổi dấu trừ thành dấu cộng trong max_difference,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0344,0.0279
-SV060,60,subject_marks,list,Sai logic - trả về None thay vì kết quả đúng trong subject_marks,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0321,0.0258
-SV061,61,pos_count,list,pos_count - Solution đúng hoàn toàn,3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,False,0.0268,0.0302
-SV062,62,is_Monotonic,list,Sai logic - thay đổi dấu cộng thành dấu trừ trong is_Monotonic,1,3,33.33,0,2,0,0,0,6,8,75.0,0,2,0,0,0,False,False,0.0365,0.0302
-SV063,63,is_samepatterns,list,is_samepatterns - Solution đúng mặc dù có thay đổi dấu cộng thành dấu trừ (do tính chất đối xứng và chỉ mục âm),3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,False,0.032,0.0348
-SV064,64,find_tuples,list,Sai logic - thay đổi toán tử so sánh == thành != trong find_tuples,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0339,0.0325
-SV065,65,word_len,list,Sai logic - trả về None thay vì kết quả đúng trong word_len,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0343,0.0327
-SV066,66,merge_dictionaries_three,list,merge_dictionaries_three - Solution đúng hoàn toàn,3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,False,0.033,0.0352
-SV067,67,freq_count,list,Sai logic - trả về None thay vì kết quả đúng trong freq_count,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0339,0.0327
-SV068,68,len_log,list,Vượt quá bộ nhớ (MLE) - cấp phát mảng 200MB trong len_log,0,3,0.0,0,0,0,0,3,0,8,0.0,0,0,0,0,8,False,False,0.0651,0.0668
-SV069,69,find_substring,list,Sai logic - trả về None thay vì kết quả đúng trong find_substring,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0264,0.0288
-SV070,70,index_minimum,list,Sai logic - trả về None thay vì kết quả đúng trong index_minimum,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0296,0.0283
-SV071,71,is_not_prime,math,Sai logic - thay đổi dấu cộng thành dấu trừ trong is_not_prime,1,3,33.33,0,2,0,0,0,8,9,88.89,0,1,0,0,0,False,False,0.032,0.0325
-SV072,72,find_Rotations,math,Sai logic - thay đổi dấu cộng thành dấu trừ trong find_Rotations,0,3,0.0,0,0,3,0,0,0,9,0.0,0,0,9,0,0,False,False,0.0575,0.0555
-SV073,73,find_Volume,math,Sai logic - trả về None thay vì kết quả đúng trong find_Volume,0,3,0.0,0,3,0,0,0,0,9,0.0,0,9,0,0,0,False,False,0.0363,0.0335
-SV074,74,square_perimeter,math,Lỗi thực thi (IndexError) - vượt quá chỉ mục mảng trong square_perimeter,0,3,0.0,0,0,3,0,0,0,9,0.0,0,0,9,0,0,False,False,0.0581,0.0545
-SV075,75,opposite_Signs,math,opposite_Signs - Solution đúng hoàn toàn,3,3,100.0,0,0,0,0,0,9,9,100.0,0,0,0,0,0,False,False,0.0354,0.0343
-SV076,76,is_octagonal,math,Sai logic - thay đổi dấu trừ thành dấu cộng trong is_octagonal,0,3,0.0,0,3,0,0,0,1,9,11.11,0,8,0,0,0,False,False,0.0286,0.0307
-SV077,77,bell_number,math,Lỗi thực thi (NameError) - gọi biến chưa định nghĩa trong bell_number,0,3,0.0,0,0,3,0,0,0,9,0.0,0,0,9,0,0,False,False,0.0515,0.0544
-SV078,78,dif_Square,math,Sai logic - trả về None thay vì kết quả đúng trong dif_Square,0,3,0.0,0,3,0,0,0,0,9,0.0,0,9,0,0,0,False,False,0.0248,0.0331
-SV079,79,is_Diff,math,Sai logic - thay đổi toán tử so sánh == thành != trong is_Diff,0,3,0.0,0,3,0,0,0,0,9,0.0,0,9,0,0,0,False,False,0.0317,0.0349
-SV080,80,tetrahedral_number,math,Sai logic - thay đổi dấu cộng thành dấu trừ trong tetrahedral_number,0,3,0.0,0,3,0,0,0,1,9,11.11,0,8,0,0,0,False,False,0.0352,0.0313
+SV005,2,is_even,math,Luôn trả True — pass public test chẵn,2,3,66.67,0,1,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.041,0.0409
+SV006,3,reverse_string,string,Đảo ngược sai — thiếu -1 trong range,0,3,0.0,0,3,0,0,0,2,6,33.33,0,4,0,0,0,False,False,0.0384,0.0423
+SV007,4,find_max,list,Lấy phần tử đầu sorted thay vì cuối,0,3,0.0,0,3,0,0,0,2,6,33.33,0,3,1,0,0,False,False,0.0387,0.0503
+SV008,4,find_max,list,IndexError khi list rỗng — hidden test bắt được,3,3,100.0,0,0,0,0,0,5,6,83.33,0,0,1,0,0,True,True,0.0568,0.0686
+SV009,6,factorial,math,factorial - Solution đúng hoàn toàn,3,3,100.0,0,0,0,0,0,6,6,100.0,0,0,0,0,0,False,False,0.0638,0.0672
+SV010,6,factorial,math,"Hard-code n<=3, sai với n>=4",2,3,66.67,0,1,0,0,0,2,6,33.33,0,4,0,0,0,False,False,0.0648,0.0623
+SV011,7,is_palindrome,string,Luôn trả True — FP với public test,2,3,66.67,0,1,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0614,0.0622
+SV012,8,remove_duplicates,list,set mất thứ tự — FP với public test đơn giản,3,3,100.0,0,0,0,0,0,3,6,50.0,0,3,0,0,0,True,True,0.0606,0.0612
+SV013,9,average,math,Không xử lý danh sách rỗng — ZeroDivisionError,3,3,100.0,0,0,0,0,0,4,6,66.67,0,0,2,0,0,True,True,0.06,0.0715
+SV014,9,average,math,Trả int thay vì float,3,3,100.0,0,0,0,0,0,5,6,83.33,0,1,0,0,0,True,True,0.0618,0.0592
+SV015,11,is_prime,math,"Không xử lý n=0,n=1 — FP với public",3,3,100.0,0,0,0,0,0,4,6,66.67,0,2,0,0,0,True,True,0.0718,0.061
+SV016,11,is_prime,math,Thiếu kiểm tra n<2 nhưng có range đúng,3,3,100.0,0,0,0,0,0,4,6,66.67,0,2,0,0,0,True,True,0.0388,0.0411
+SV017,12,sum_even,list,Tính tổng số lẻ thay vì chẵn,0,3,0.0,0,3,0,0,0,5,6,83.33,0,1,0,0,0,False,False,0.0391,0.0469
+SV018,13,fibonacci,math,Đệ quy thiếu base case n=0 — RecursionError,1,3,33.33,0,0,2,0,0,1,6,16.67,0,0,5,0,0,False,False,0.0687,0.0786
+SV019,14,count_words,string,Không xử lý chuỗi có khoảng trắng liên tiếp hoặc đầu/cuối - WA,3,3,100.0,0,0,0,0,0,1,6,16.67,0,5,0,0,0,True,True,0.0472,0.049
+SV020,15,sort_list,list,Sắp xếp giảm dần thay vì tăng dần,1,3,33.33,0,2,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0457,0.0411
+SV021,16,find_min,list,Trả max thay vì min,0,3,0.0,0,3,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0387,0.0397
+SV022,17,has_negative,math,"Kiểm tra <=0 thay vì <0, sai với 0",3,3,100.0,0,0,0,0,0,5,6,83.33,0,1,0,0,0,True,True,0.0445,0.0409
+SV023,18,product_list,string,Tính tổng thay vì tích,2,3,66.67,0,1,0,0,0,4,6,66.67,0,2,0,0,0,False,False,0.0383,0.0397
+SV024,20,is_anagram,list,So sánh len thay vì ký tự,2,3,66.67,0,1,0,0,0,6,6,100.0,0,0,0,0,0,False,False,0.0383,0.0384
+SV025,21,count_positive,math,"Đếm >=0 thay vì >0, sai với 0",3,3,100.0,0,0,0,0,0,2,6,33.33,0,4,0,0,0,True,True,0.0445,0.0386
+SV026,22,get_evens,string,Lấy số lẻ thay vì số chẵn,0,3,0.0,0,3,0,0,0,2,6,33.33,0,4,0,0,0,False,False,0.0428,0.0392
+SV027,23,power,math,Nhân n thay vì lũy thừa,0,3,0.0,0,3,0,0,0,1,6,16.67,0,5,0,0,0,False,False,0.0383,0.0416
+SV028,24,is_sorted,string,Trả về False cho danh sách rỗng hoặc có 1 phần tử - WA,3,3,100.0,0,0,0,0,0,4,6,66.67,0,2,0,0,0,True,True,0.0414,0.0425
+SV029,26,count_negative,list,Đếm <=0 thay vì <0,3,3,100.0,0,0,0,0,0,2,6,33.33,0,4,0,0,0,True,True,0.0462,0.0409
+SV030,27,last_element,list,Không xử lý list rỗng — IndexError,3,3,100.0,0,0,0,0,0,5,6,83.33,0,0,1,0,0,True,True,0.0408,0.0453
+SV031,29,abs_list,list,Quên abs() — trả nguyên giá trị,1,3,33.33,0,2,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0384,0.0411
+SV032,30,count_non_space,string,Trả len(s) thay vì đếm không phải khoảng trắng,1,3,33.33,0,2,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0445,0.0399
+SV033,31,gcd,string,Trả a thay vì GCD,0,3,0.0,0,3,0,0,0,0,6,0.0,0,6,0,0,0,False,False,0.0387,0.0501
+SV034,33,digit_sum,math,Trả n thay vì tổng chữ số,0,3,0.0,0,3,0,0,0,4,6,66.67,0,2,0,0,0,False,False,0.0485,0.0426
+SV035,34,has_digit,math,Luôn trả False,1,3,33.33,0,2,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0388,0.047
+SV036,35,sum_squares,string,Tính tổng thay vì tổng bình phương,1,3,33.33,0,2,0,0,0,2,6,33.33,0,4,0,0,0,False,False,0.0463,0.0408
+SV037,36,rotate_right,string,Xoay trái thay vì phải,1,3,33.33,0,2,0,0,0,6,6,100.0,0,0,0,0,0,False,False,0.0384,0.0387
+SV038,37,most_frequent,math,Trả phần tử ít nhất thay vì nhiều nhất,1,3,33.33,0,2,0,0,0,1,6,16.67,0,5,0,0,0,False,False,0.0386,0.0404
+SV039,38,is_all_digits,list,Không kiểm tra chuỗi rỗng — sai với '',3,3,100.0,0,0,0,0,0,5,6,83.33,0,1,0,0,0,True,True,0.0383,0.0383
+SV040,40,first_n,string,Lấy n phần tử cuối thay vì đầu,2,3,66.67,0,1,0,0,0,4,6,66.67,0,2,0,0,0,False,False,0.0384,0.04
+SV041,41,is_perfect,list,"Không xử lý n<=1 — sai với 0,1",3,3,100.0,0,0,0,0,0,5,6,83.33,0,1,0,0,0,True,True,0.0404,0.058
+SV042,43,list_to_string,list,Dùng khoảng trắng thay vì dấu phẩy,1,3,33.33,0,2,0,0,0,2,6,33.33,0,4,0,0,0,False,False,0.0605,0.0618
+SV043,44,count_vowels,list,Không lowercase — bỏ sót nguyên âm hoa,2,3,66.67,0,1,0,0,0,4,6,66.67,0,2,0,0,0,False,False,0.0589,0.0646
+SV044,46,reverse_list,string,Không đảo ngược — trả nguyên list,1,3,33.33,0,2,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0594,0.0597
+SV045,47,all_positive,math,Không xử lý list rỗng — sai với [],3,3,100.0,0,0,0,0,0,5,6,83.33,0,1,0,0,0,True,True,0.0606,0.0638
+SV046,49,starts_with_upper,list,Tràn bộ nhớ (MLE) — Khai báo chuỗi 200MB,0,3,0.0,0,0,0,0,3,0,6,0.0,0,0,0,0,6,False,False,0.1708,0.1751
+SV047,50,last_n,list,Quá thời gian (TLE) — Vòng lặp vô hạn,0,3,0.0,0,0,0,3,0,0,6,0.0,0,0,0,6,0,False,False,1.0048,1.0032
+SV048,10,to_uppercase,string,(Solution đúng — dùng làm điểm so sánh),3,3,100.0,0,0,0,0,0,6,6,100.0,0,0,0,0,0,False,False,0.0434,0.0552
+SV049,15,sort_list,list,(Solution đúng),3,3,100.0,0,0,0,0,0,6,6,100.0,0,0,0,0,0,False,False,0.0429,0.0662
+SV050,5,count_char,string,(Solution đúng),3,3,100.0,0,0,0,0,0,6,6,100.0,0,0,0,0,0,False,False,0.0484,0.0568
+SV051,51,similar_elements,list,Quá thời gian (TLE) - vòng lặp vô hạn trong similar_elements,0,3,0.0,0,0,0,3,0,0,8,0.0,0,0,0,8,0,False,False,1.0131,1.0057
+SV052,52,heap_queue_largest,list,Sai logic - trả về None thay vì kết quả đúng trong heap_queue_largest,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0456,0.0386
+SV053,53,square_nums,list,square_nums - Solution đúng hoàn toàn,3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,False,0.0481,0.0424
+SV054,54,sort_matrix,list,Lỗi thực thi (AttributeError) - gọi thuộc tính không tồn tại trong sort_matrix,0,3,0.0,0,0,3,0,0,0,8,0.0,0,0,8,0,0,False,False,0.0627,0.0625
+SV055,55,test_duplicate,list,Sai logic - trả về None thay vì kết quả đúng trong test_duplicate,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0437,0.0393
+SV056,56,find_Max_Num,list,Sai logic - thay đổi dấu cộng thành dấu trừ trong find_Max_Num,0,3,0.0,0,3,0,0,0,1,8,12.5,0,7,0,0,0,False,False,0.048,0.0422
+SV057,57,count_Substrings,list,Sai logic - thay đổi dấu cộng thành dấu trừ trong count_Substrings,0,3,0.0,0,3,0,0,0,6,8,75.0,0,2,0,0,0,False,False,0.0409,0.0396
+SV058,58,smallest_num,list,smallest_num - Solution đúng hoàn toàn,3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,False,0.0387,0.043
+SV059,59,max_difference,list,Sai logic - thay đổi dấu trừ thành dấu cộng trong max_difference,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0388,0.0412
+SV060,60,subject_marks,list,Sai logic - trả về None thay vì kết quả đúng trong subject_marks,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0389,0.0431
+SV061,61,pos_count,list,pos_count - Solution đúng hoàn toàn,3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,False,0.0434,0.0404
+SV062,62,is_Monotonic,list,Sai logic - thay đổi dấu cộng thành dấu trừ trong is_Monotonic,1,3,33.33,0,2,0,0,0,6,8,75.0,0,2,0,0,0,False,False,0.0704,0.0751
+SV063,63,is_samepatterns,list,is_samepatterns - Solution đúng mặc dù có thay đổi dấu cộng thành dấu trừ (do tính chất đối xứng và chỉ mục âm),3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,False,0.0672,0.0643
+SV064,64,find_tuples,list,Sai logic - thay đổi toán tử so sánh == thành != trong find_tuples,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0696,0.067
+SV065,65,word_len,list,Sai logic - trả về None thay vì kết quả đúng trong word_len,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0987,0.0726
+SV066,66,merge_dictionaries_three,list,merge_dictionaries_three - Solution đúng hoàn toàn,3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,False,0.0627,0.0635
+SV067,67,freq_count,list,Sai logic - trả về None thay vì kết quả đúng trong freq_count,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0603,0.062
+SV068,68,len_log,list,Vượt quá bộ nhớ (MLE) - cấp phát mảng 200MB trong len_log,0,3,0.0,0,0,0,0,3,0,8,0.0,0,0,0,0,8,False,False,0.1593,0.121
+SV069,69,find_substring,list,Sai logic - trả về None thay vì kết quả đúng trong find_substring,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0393,0.0439
+SV070,70,index_minimum,list,Sai logic - trả về None thay vì kết quả đúng trong index_minimum,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0389,0.0457
+SV071,71,is_not_prime,math,Sai logic - thay đổi dấu cộng thành dấu trừ trong is_not_prime,1,3,33.33,0,2,0,0,0,8,9,88.89,0,1,0,0,0,False,False,0.0409,0.0411
+SV072,72,find_Rotations,math,Sai logic - thay đổi dấu cộng thành dấu trừ trong find_Rotations,0,3,0.0,0,0,3,0,0,0,9,0.0,0,0,9,0,0,False,False,0.0561,0.0557
+SV073,73,find_Volume,math,Sai logic - trả về None thay vì kết quả đúng trong find_Volume,0,3,0.0,0,3,0,0,0,0,9,0.0,0,9,0,0,0,False,False,0.0393,0.0408
+SV074,74,square_perimeter,math,Lỗi thực thi (IndexError) - vượt quá chỉ mục mảng trong square_perimeter,0,3,0.0,0,0,3,0,0,0,9,0.0,0,0,9,0,0,False,False,0.0514,0.0569
+SV075,75,opposite_Signs,math,opposite_Signs - Solution đúng hoàn toàn,3,3,100.0,0,0,0,0,0,9,9,100.0,0,0,0,0,0,False,False,0.0411,0.044
+SV076,76,is_octagonal,math,Sai logic - thay đổi dấu trừ thành dấu cộng trong is_octagonal,0,3,0.0,0,3,0,0,0,1,9,11.11,0,8,0,0,0,False,False,0.0432,0.0475
+SV077,77,bell_number,math,Lỗi thực thi (NameError) - gọi biến chưa định nghĩa trong bell_number,0,3,0.0,0,0,3,0,0,0,9,0.0,0,0,9,0,0,False,False,0.0658,0.0641
+SV078,78,dif_Square,math,Sai logic - trả về None thay vì kết quả đúng trong dif_Square,0,3,0.0,0,3,0,0,0,0,9,0.0,0,9,0,0,0,False,False,0.0412,0.0446
+SV079,79,is_Diff,math,Sai logic - thay đổi toán tử so sánh == thành != trong is_Diff,0,3,0.0,0,3,0,0,0,0,9,0.0,0,9,0,0,0,False,False,0.0419,0.0452
+SV080,80,tetrahedral_number,math,Sai logic - thay đổi dấu cộng thành dấu trừ trong tetrahedral_number,0,3,0.0,0,3,0,0,0,1,9,11.11,0,8,0,0,0,False,False,0.0412,0.0433
 SV081,81,centered_hexagonal_number,math,Syntax Error - thiếu dấu hoặc lỗi cú pháp trong centered_hexagonal_number,0,3,0.0,3,0,0,0,0,0,9,0.0,9,0,0,0,0,False,False,0.0,0.0
-SV082,82,closest_num,math,Sai logic - thay đổi dấu trừ thành dấu cộng trong closest_num,0,3,0.0,0,3,0,0,0,0,9,0.0,0,9,0,0,0,False,False,0.0402,0.0354
-SV083,83,is_undulating,math,Sai logic - thay đổi dấu trừ thành dấu cộng trong is_undulating,0,3,0.0,0,0,3,0,0,8,9,88.89,0,0,1,0,0,False,False,0.0543,0.0358
-SV084,84,divisor,math,Sai logic - thay đổi dấu cộng thành dấu trừ trong divisor,0,3,0.0,0,3,0,0,0,0,9,0.0,0,9,0,0,0,False,False,0.0362,0.037
-SV085,85,decimal_to_binary,math,Sai logic - trả về None thay vì kết quả đúng trong decimal_to_binary,0,3,0.0,0,3,0,0,0,0,9,0.0,0,9,0,0,0,False,False,0.0405,0.0339
-SV086,86,check_integer,math,Sai logic - thay đổi dấu cộng thành dấu trừ trong check_integer,3,3,100.0,0,0,0,0,0,8,9,88.89,0,1,0,0,0,True,True,0.0303,0.0331
-SV087,87,find_char_long,string,Sai logic - trả về None thay vì kết quả đúng trong find_char_long,0,3,0.0,0,3,0,0,0,0,9,0.0,0,9,0,0,0,False,False,0.0353,0.0462
-SV088,88,remove_Occ,string,Lỗi thực thi (ValueError) - ép kiểu sai trong remove_Occ,0,3,0.0,0,0,3,0,0,0,9,0.0,0,0,9,0,0,False,False,0.0617,0.0525
-SV089,89,text_lowercase_underscore,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong text_lowercase_underscore,2,3,66.67,0,1,0,0,0,8,9,88.89,0,1,0,0,0,False,False,0.0454,0.0417
-SV090,90,get_Char,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong get_Char,0,3,0.0,0,3,0,0,0,1,9,11.11,0,8,0,0,0,False,False,0.0248,0.03
-SV091,91,snake_to_camel,string,Sai logic - trả về None thay vì kết quả đúng trong snake_to_camel,0,3,0.0,0,3,0,0,0,0,10,0.0,0,10,0,0,0,False,False,0.0422,0.0422
-SV092,92,odd_Equivalent,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong odd_Equivalent,0,3,0.0,0,3,0,0,0,4,10,40.0,0,6,0,0,0,False,False,0.0232,0.028
-SV093,93,find_length,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong find_length,0,3,0.0,0,3,0,0,0,1,10,10.0,0,9,0,0,0,False,False,0.04,0.0381
-SV094,94,long_words,string,Sai logic - thay đổi toán tử so sánh > thành < trong long_words,0,3,0.0,0,3,0,0,0,0,10,0.0,0,10,0,0,0,False,False,0.0279,0.0294
-SV095,95,reverse_vowels,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong reverse_vowels,0,3,0.0,0,0,3,0,0,1,10,10.0,0,0,9,0,0,False,False,0.054,0.0544
-SV096,96,count_char_position,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong count_char_position,0,3,0.0,0,3,0,0,0,4,10,40.0,0,6,0,0,0,False,False,0.0248,0.0317
-SV097,97,odd_values_string,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong odd_values_string,0,3,0.0,0,0,3,0,0,1,10,10.0,0,0,9,0,0,False,False,0.0566,0.0453
+SV082,82,closest_num,math,Sai logic - thay đổi dấu trừ thành dấu cộng trong closest_num,0,3,0.0,0,3,0,0,0,0,9,0.0,0,9,0,0,0,False,False,0.0461,0.0444
+SV083,83,is_undulating,math,Sai logic - thay đổi dấu trừ thành dấu cộng trong is_undulating,0,3,0.0,0,0,3,0,0,8,9,88.89,0,0,1,0,0,False,False,0.1031,0.0506
+SV084,84,divisor,math,Sai logic - thay đổi dấu cộng thành dấu trừ trong divisor,0,3,0.0,0,3,0,0,0,0,9,0.0,0,9,0,0,0,False,False,0.0457,0.0528
+SV085,85,decimal_to_binary,math,Sai logic - trả về None thay vì kết quả đúng trong decimal_to_binary,0,3,0.0,0,3,0,0,0,0,9,0.0,0,9,0,0,0,False,False,0.0436,0.0613
+SV086,86,check_integer,math,Sai logic - thay đổi dấu cộng thành dấu trừ trong check_integer,3,3,100.0,0,0,0,0,0,8,9,88.89,0,1,0,0,0,True,True,0.0613,0.0613
+SV087,87,find_char_long,string,Sai logic - trả về None thay vì kết quả đúng trong find_char_long,0,3,0.0,0,3,0,0,0,0,9,0.0,0,9,0,0,0,False,False,0.0591,0.0636
+SV088,88,remove_Occ,string,Lỗi thực thi (ValueError) - ép kiểu sai trong remove_Occ,0,3,0.0,0,0,3,0,0,0,9,0.0,0,0,9,0,0,False,False,0.0819,0.086
+SV089,89,text_lowercase_underscore,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong text_lowercase_underscore,2,3,66.67,0,1,0,0,0,8,9,88.89,0,1,0,0,0,False,False,0.0632,0.066
+SV090,90,get_Char,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong get_Char,0,3,0.0,0,3,0,0,0,1,9,11.11,0,8,0,0,0,False,False,0.0659,0.0897
+SV091,91,snake_to_camel,string,Sai logic - trả về None thay vì kết quả đúng trong snake_to_camel,0,3,0.0,0,3,0,0,0,0,10,0.0,0,10,0,0,0,False,False,0.0554,0.0547
+SV092,92,odd_Equivalent,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong odd_Equivalent,0,3,0.0,0,3,0,0,0,4,10,40.0,0,6,0,0,0,False,False,0.0435,0.0473
+SV093,93,find_length,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong find_length,0,3,0.0,0,3,0,0,0,1,10,10.0,0,9,0,0,0,False,False,0.0414,0.0415
+SV094,94,long_words,string,Sai logic - thay đổi toán tử so sánh > thành < trong long_words,0,3,0.0,0,3,0,0,0,0,10,0.0,0,10,0,0,0,False,False,0.0466,0.0427
+SV095,95,reverse_vowels,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong reverse_vowels,0,3,0.0,0,0,3,0,0,1,10,10.0,0,0,9,0,0,False,False,0.0529,0.0547
+SV096,96,count_char_position,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong count_char_position,0,3,0.0,0,3,0,0,0,4,10,40.0,0,6,0,0,0,False,False,0.0413,0.0402
+SV097,97,odd_values_string,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong odd_values_string,0,3,0.0,0,0,3,0,0,1,10,10.0,0,0,9,0,0,False,False,0.0536,0.0581
 SV098,98,replace_blank,string,Syntax Error - thiếu dấu hoặc lỗi cú pháp trong replace_blank,0,3,0.0,3,0,0,0,0,0,10,0.0,10,0,0,0,0,False,False,0.0,0.0
-SV099,99,count_charac,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong count_charac,0,3,0.0,0,3,0,0,0,1,10,10.0,0,9,0,0,0,False,False,0.037,0.0334
-SV100,100,ascii_value,string,Sai logic - trả về None thay vì kết quả đúng trong ascii_value,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0306,0.0336
+SV099,99,count_charac,string,Sai logic - thay đổi dấu cộng thành dấu trừ trong count_charac,0,3,0.0,0,3,0,0,0,1,10,10.0,0,9,0,0,0,False,False,0.0385,0.0419
+SV100,100,ascii_value,string,Sai logic - trả về None thay vì kết quả đúng trong ascii_value,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0386,0.048
