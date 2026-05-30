@@ -91,17 +91,19 @@ Project_67/
 │   ├── generate_plots.py             # Vẽ biểu đồ từ CSV thực tế
 │   └── compare_topics.py             # Phân tích phân bố topic
 │
-└── results/
-    ├── comparison_3sets.csv/json     # FPR: 16% → 6% → 4%
-    ├── baseline_summary.csv/json     # 50/50 pass · elapsed=4.79s
-    ├── error_analysis_v2.csv/json    # Chi tiết chấm bài + traceback
-    ├── FPR_vs_ntest.png              # Đường cong FPR giảm dần (RQ1)
-    ├── error_types_comparison.png    # SE/WA/RE/TLE so sánh 3 bộ
-    ├── fpr_by_topic.png              # FPR theo topic
-    ├── description_lengths_distribution.png
-    ├── topic_distribution.png
-    └── baseline_latency.png
-```
+├── results/
+|   ├── comparison_3sets.csv/json     # FPR: 16% → 6% → 4%
+|   ├── baseline_summary.csv/json     # 50/50 pass · elapsed=4.79s
+|   ├── error_analysis_v2.csv/json    # Chi tiết chấm bài + traceback
+|   ├── FPR_vs_ntest.png              # Đường cong FPR giảm dần (RQ1)
+|   |── error_types_comparison.png    # SE/WA/RE/TLE so sánh 3 bộ
+|   ├── fpr_by_topic.png              # FPR theo topic
+|   ├── description_lengths_distribution.png
+|   ├── topic_distribution.png
+|   └── baseline_latency.png
+|
+├── Nhom67_Tuan3_18.docx
+└── Readme.md
 
 ---
 
