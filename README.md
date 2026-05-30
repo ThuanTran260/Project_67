@@ -22,7 +22,6 @@ Project/
 ├── report/                     # Báo cáo tuần 3 và tuần 4
 ├── src/                        # Mã nguồn lõi
 │   ├── runner_v3.py            # Sandbox v3: Fail-Fast + Docker + tách RE chi tiết
-│   ├── runner_v2.py            # Sandbox v2: psutil memory limit (tuần 3, giữ để tham chiếu)
 │   ├── feedback.py             # Sinh phản hồi tự động tiếng Việt
 │   ├── diff_testing.py         # Property-based differential testing (sinh input ngẫu nhiên)
 │   ├── harden_hidden_tests.py  # Làm khó hidden test cases tự động
