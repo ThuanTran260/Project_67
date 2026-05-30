@@ -1,13 +1,13 @@
 {
   "meta": {
-    "dataset": "/content/drive/MyDrive/Project/data/processed/hidden_v2.json",
+    "dataset": "E:\\Bao Cao Ha Dung\\Tuan 2\\Project\\data\\processed\\hidden_v2.json",
     "n_tasks": 100,
-    "n_pass": 95,
-    "n_fail": 5,
-    "elapsed_s": 65.44,
-    "avg_latency_pub_s": 0.4691,
-    "avg_latency_hid_s": 0.5233,
-    "avg_latency_total_s": 0.4962
+    "n_pass": 100,
+    "n_fail": 0,
+    "elapsed_s": 12.43,
+    "avg_latency_pub_s": 0.0939,
+    "avg_latency_hid_s": 0.0903,
+    "avg_latency_total_s": 0.0921
   },
   "results": [
     {
@@ -22,7 +22,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.339,
+      "pub_latency": 0.0935,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -31,11 +31,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4802,
+      "hid_latency": 0.0875,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4096
+      "avg_latency_total": 0.0905
     },
     {
       "task_id": 2,
@@ -49,7 +49,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.2825,
+      "pub_latency": 0.0934,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -58,11 +58,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4257,
+      "hid_latency": 0.0876,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3541
+      "avg_latency_total": 0.0905
     },
     {
       "task_id": 3,
@@ -76,7 +76,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3608,
+      "pub_latency": 0.0935,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -85,11 +85,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4853,
+      "hid_latency": 0.0873,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4231
+      "avg_latency_total": 0.0904
     },
     {
       "task_id": 4,
@@ -103,7 +103,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3089,
+      "pub_latency": 0.0933,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -112,11 +112,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4746,
+      "hid_latency": 0.088,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3918
+      "avg_latency_total": 0.0906
     },
     {
       "task_id": 5,
@@ -130,7 +130,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3038,
+      "pub_latency": 0.095,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -139,11 +139,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3828,
+      "hid_latency": 0.0866,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3433
+      "avg_latency_total": 0.0908
     },
     {
       "task_id": 6,
@@ -157,7 +157,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.2754,
+      "pub_latency": 0.093,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -166,11 +166,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.421,
+      "hid_latency": 0.0873,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3482
+      "avg_latency_total": 0.0902
     },
     {
       "task_id": 7,
@@ -184,7 +184,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.2817,
+      "pub_latency": 0.0929,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -193,11 +193,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4798,
+      "hid_latency": 0.0874,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3808
+      "avg_latency_total": 0.0902
     },
     {
       "task_id": 8,
@@ -211,7 +211,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3578,
+      "pub_latency": 0.0928,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -220,11 +220,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4235,
+      "hid_latency": 0.0872,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3906
+      "avg_latency_total": 0.09
     },
     {
       "task_id": 9,
@@ -238,7 +238,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3887,
+      "pub_latency": 0.0988,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -247,11 +247,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.8449,
+      "hid_latency": 0.0855,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6168
+      "avg_latency_total": 0.0922
     },
     {
       "task_id": 10,
@@ -265,7 +265,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4471,
+      "pub_latency": 0.0708,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -274,11 +274,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.831,
+      "hid_latency": 0.0867,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6391
+      "avg_latency_total": 0.0788
     },
     {
       "task_id": 11,
@@ -292,7 +292,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5115,
+      "pub_latency": 0.0972,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -301,11 +301,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.8163,
+      "hid_latency": 0.0862,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6639
+      "avg_latency_total": 0.0917
     },
     {
       "task_id": 12,
@@ -319,7 +319,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5655,
+      "pub_latency": 0.0968,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -328,11 +328,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.7988,
+      "hid_latency": 0.0862,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6822
+      "avg_latency_total": 0.0915
     },
     {
       "task_id": 13,
@@ -346,7 +346,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3366,
+      "pub_latency": 0.0695,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -355,11 +355,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.8059,
+      "hid_latency": 0.0863,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5713
+      "avg_latency_total": 0.0779
     },
     {
       "task_id": 14,
@@ -373,7 +373,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4158,
+      "pub_latency": 0.0971,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -382,11 +382,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.802,
+      "hid_latency": 0.0862,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6089
+      "avg_latency_total": 0.0917
     },
     {
       "task_id": 15,
@@ -400,7 +400,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.6906,
+      "pub_latency": 0.0966,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -409,11 +409,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.7752,
+      "hid_latency": 0.0868,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.7329
+      "avg_latency_total": 0.0917
     },
     {
       "task_id": 16,
@@ -427,7 +427,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.6588,
+      "pub_latency": 0.0683,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -436,11 +436,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.8223,
+      "hid_latency": 0.0868,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.7406
+      "avg_latency_total": 0.0776
     },
     {
       "task_id": 17,
@@ -454,7 +454,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5117,
+      "pub_latency": 0.0875,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -463,11 +463,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4927,
+      "hid_latency": 0.0852,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5022
+      "avg_latency_total": 0.0863
     },
     {
       "task_id": 18,
@@ -481,7 +481,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4272,
+      "pub_latency": 0.0866,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -490,11 +490,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4581,
+      "hid_latency": 0.0853,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4426
+      "avg_latency_total": 0.0859
     },
     {
       "task_id": 19,
@@ -508,7 +508,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5472,
+      "pub_latency": 0.0892,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -517,11 +517,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4234,
+      "hid_latency": 0.0857,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4853
+      "avg_latency_total": 0.0874
     },
     {
       "task_id": 20,
@@ -535,7 +535,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5434,
+      "pub_latency": 0.0891,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -544,11 +544,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4602,
+      "hid_latency": 0.0864,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5018
+      "avg_latency_total": 0.0877
     },
     {
       "task_id": 21,
@@ -562,7 +562,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5871,
+      "pub_latency": 0.0873,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -571,11 +571,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4661,
+      "hid_latency": 0.0809,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5266
+      "avg_latency_total": 0.0841
     },
     {
       "task_id": 22,
@@ -589,7 +589,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4915,
+      "pub_latency": 0.0872,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -598,11 +598,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4731,
+      "hid_latency": 0.0809,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4823
+      "avg_latency_total": 0.084
     },
     {
       "task_id": 23,
@@ -616,7 +616,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4967,
+      "pub_latency": 0.0885,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -625,11 +625,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.451,
+      "hid_latency": 0.0801,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4738
+      "avg_latency_total": 0.0843
     },
     {
       "task_id": 24,
@@ -643,7 +643,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4714,
+      "pub_latency": 0.0866,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -652,11 +652,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3913,
+      "hid_latency": 0.0809,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4314
+      "avg_latency_total": 0.0837
     },
     {
       "task_id": 25,
@@ -670,7 +670,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4227,
+      "pub_latency": 0.0876,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -679,11 +679,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4904,
+      "hid_latency": 0.1017,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4566
+      "avg_latency_total": 0.0946
     },
     {
       "task_id": 26,
@@ -697,7 +697,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4062,
+      "pub_latency": 0.0696,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -706,11 +706,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4607,
+      "hid_latency": 0.1021,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4335
+      "avg_latency_total": 0.0858
     },
     {
       "task_id": 27,
@@ -724,7 +724,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.419,
+      "pub_latency": 0.0933,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -733,11 +733,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4515,
+      "hid_latency": 0.0906,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4353
+      "avg_latency_total": 0.092
     },
     {
       "task_id": 28,
@@ -751,7 +751,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3287,
+      "pub_latency": 0.0953,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -760,11 +760,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4661,
+      "hid_latency": 0.0978,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3974
+      "avg_latency_total": 0.0965
     },
     {
       "task_id": 29,
@@ -778,7 +778,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.422,
+      "pub_latency": 0.0925,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -787,11 +787,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4218,
+      "hid_latency": 0.1084,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4219
+      "avg_latency_total": 0.1004
     },
     {
       "task_id": 30,
@@ -805,7 +805,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4783,
+      "pub_latency": 0.0742,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -814,11 +814,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.474,
+      "hid_latency": 0.0905,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4761
+      "avg_latency_total": 0.0824
     },
     {
       "task_id": 31,
@@ -832,7 +832,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3321,
+      "pub_latency": 0.0933,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -841,11 +841,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4157,
+      "hid_latency": 0.0979,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3739
+      "avg_latency_total": 0.0956
     },
     {
       "task_id": 32,
@@ -859,7 +859,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.452,
+      "pub_latency": 0.0916,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -868,11 +868,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.5137,
+      "hid_latency": 0.0979,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4829
+      "avg_latency_total": 0.0948
     },
     {
       "task_id": 33,
@@ -886,7 +886,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5146,
+      "pub_latency": 0.1064,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -895,11 +895,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.7718,
+      "hid_latency": 0.0964,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6432
+      "avg_latency_total": 0.1014
     },
     {
       "task_id": 34,
@@ -913,7 +913,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4319,
+      "pub_latency": 0.1051,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -922,11 +922,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.7663,
+      "hid_latency": 0.0954,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5991
+      "avg_latency_total": 0.1003
     },
     {
       "task_id": 35,
@@ -940,7 +940,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4136,
+      "pub_latency": 0.1032,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -949,11 +949,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.7701,
+      "hid_latency": 0.0829,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5918
+      "avg_latency_total": 0.093
     },
     {
       "task_id": 36,
@@ -967,7 +967,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5344,
+      "pub_latency": 0.1031,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -976,11 +976,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.8074,
+      "hid_latency": 0.0828,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6709
+      "avg_latency_total": 0.093
     },
     {
       "task_id": 37,
@@ -994,7 +994,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5123,
+      "pub_latency": 0.118,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -1003,11 +1003,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.8312,
+      "hid_latency": 0.084,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6718
+      "avg_latency_total": 0.101
     },
     {
       "task_id": 38,
@@ -1021,7 +1021,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4795,
+      "pub_latency": 0.1199,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -1030,11 +1030,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.8283,
+      "hid_latency": 0.0827,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6539
+      "avg_latency_total": 0.1013
     },
     {
       "task_id": 39,
@@ -1048,7 +1048,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5032,
+      "pub_latency": 0.1195,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -1057,11 +1057,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.8606,
+      "hid_latency": 0.0827,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6819
+      "avg_latency_total": 0.1011
     },
     {
       "task_id": 40,
@@ -1075,7 +1075,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.6691,
+      "pub_latency": 0.0871,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -1084,11 +1084,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.831,
+      "hid_latency": 0.0859,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.75
+      "avg_latency_total": 0.0865
     },
     {
       "task_id": 41,
@@ -1102,7 +1102,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.8361,
+      "pub_latency": 0.0843,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -1111,11 +1111,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.5531,
+      "hid_latency": 0.0896,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6946
+      "avg_latency_total": 0.0869
     },
     {
       "task_id": 42,
@@ -1129,7 +1129,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.793,
+      "pub_latency": 0.0839,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -1138,11 +1138,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.5491,
+      "hid_latency": 0.0889,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6711
+      "avg_latency_total": 0.0864
     },
     {
       "task_id": 43,
@@ -1156,7 +1156,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.723,
+      "pub_latency": 0.0868,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -1165,11 +1165,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.5637,
+      "hid_latency": 0.0902,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6433
+      "avg_latency_total": 0.0885
     },
     {
       "task_id": 44,
@@ -1183,7 +1183,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5931,
+      "pub_latency": 0.0867,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -1192,11 +1192,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.5085,
+      "hid_latency": 0.0902,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5508
+      "avg_latency_total": 0.0885
     },
     {
       "task_id": 45,
@@ -1210,7 +1210,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.7322,
+      "pub_latency": 0.0855,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -1219,11 +1219,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.5117,
+      "hid_latency": 0.0902,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.622
+      "avg_latency_total": 0.0879
     },
     {
       "task_id": 46,
@@ -1237,7 +1237,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5433,
+      "pub_latency": 0.0894,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -1246,11 +1246,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.5386,
+      "hid_latency": 0.0904,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.541
+      "avg_latency_total": 0.0899
     },
     {
       "task_id": 47,
@@ -1264,7 +1264,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.6007,
+      "pub_latency": 0.0894,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -1273,11 +1273,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.5353,
+      "hid_latency": 0.0904,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.568
+      "avg_latency_total": 0.0899
     },
     {
       "task_id": 48,
@@ -1291,7 +1291,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4811,
+      "pub_latency": 0.0882,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -1300,11 +1300,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4953,
+      "hid_latency": 0.0912,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4882
+      "avg_latency_total": 0.0897
     },
     {
       "task_id": 49,
@@ -1318,7 +1318,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5185,
+      "pub_latency": 0.0919,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -1327,11 +1327,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4931,
+      "hid_latency": 0.0934,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5058
+      "avg_latency_total": 0.0926
     },
     {
       "task_id": 50,
@@ -1345,7 +1345,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.531,
+      "pub_latency": 0.0893,
       "hid_pass": 6,
       "hid_total": 6,
       "hid_tpr": 100.0,
@@ -1354,11 +1354,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4557,
+      "hid_latency": 0.0933,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4934
+      "avg_latency_total": 0.0913
     },
     {
       "task_id": 51,
@@ -1372,7 +1372,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5684,
+      "pub_latency": 0.0923,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1381,11 +1381,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4267,
+      "hid_latency": 0.0949,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4976
+      "avg_latency_total": 0.0936
     },
     {
       "task_id": 52,
@@ -1399,7 +1399,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4616,
+      "pub_latency": 0.0911,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1408,11 +1408,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4469,
+      "hid_latency": 0.0955,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4543
+      "avg_latency_total": 0.0933
     },
     {
       "task_id": 53,
@@ -1426,7 +1426,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4904,
+      "pub_latency": 0.0908,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1435,11 +1435,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4128,
+      "hid_latency": 0.0955,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4516
+      "avg_latency_total": 0.0932
     },
     {
       "task_id": 54,
@@ -1453,7 +1453,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4868,
+      "pub_latency": 0.093,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1462,11 +1462,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.425,
+      "hid_latency": 0.0954,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4559
+      "avg_latency_total": 0.0942
     },
     {
       "task_id": 55,
@@ -1480,7 +1480,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4222,
+      "pub_latency": 0.0945,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1489,11 +1489,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4674,
+      "hid_latency": 0.0953,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4448
+      "avg_latency_total": 0.0949
     },
     {
       "task_id": 56,
@@ -1507,7 +1507,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4854,
+      "pub_latency": 0.0915,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1516,11 +1516,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4157,
+      "hid_latency": 0.0961,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4506
+      "avg_latency_total": 0.0938
     },
     {
       "task_id": 57,
@@ -1534,7 +1534,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3954,
+      "pub_latency": 0.1011,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1543,11 +1543,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.6009,
+      "hid_latency": 0.1054,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4981
+      "avg_latency_total": 0.1032
     },
     {
       "task_id": 58,
@@ -1561,7 +1561,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3369,
+      "pub_latency": 0.1,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1570,11 +1570,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.6166,
+      "hid_latency": 0.1049,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4768
+      "avg_latency_total": 0.1024
     },
     {
       "task_id": 59,
@@ -1588,7 +1588,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3343,
+      "pub_latency": 0.0909,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1597,11 +1597,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.6878,
+      "hid_latency": 0.1142,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5111
+      "avg_latency_total": 0.1026
     },
     {
       "task_id": 60,
@@ -1615,7 +1615,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.387,
+      "pub_latency": 0.0906,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1624,11 +1624,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.7261,
+      "hid_latency": 0.1149,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5565
+      "avg_latency_total": 0.1028
     },
     {
       "task_id": 61,
@@ -1642,7 +1642,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4205,
+      "pub_latency": 0.0921,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1651,11 +1651,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.6826,
+      "hid_latency": 0.1139,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5515
+      "avg_latency_total": 0.103
     },
     {
       "task_id": 62,
@@ -1669,7 +1669,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3987,
+      "pub_latency": 0.0924,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1678,11 +1678,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.7174,
+      "hid_latency": 0.117,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5581
+      "avg_latency_total": 0.1047
     },
     {
       "task_id": 63,
@@ -1696,7 +1696,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.545,
+      "pub_latency": 0.0908,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1705,11 +1705,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.6603,
+      "hid_latency": 0.1175,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6027
+      "avg_latency_total": 0.1041
     },
     {
       "task_id": 64,
@@ -1723,7 +1723,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5828,
+      "pub_latency": 0.0897,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1732,11 +1732,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.6751,
+      "hid_latency": 0.1176,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.629
+      "avg_latency_total": 0.1036
     },
     {
       "task_id": 65,
@@ -1750,7 +1750,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.6906,
+      "pub_latency": 0.1168,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1759,11 +1759,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4298,
+      "hid_latency": 0.1062,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5602
+      "avg_latency_total": 0.1115
     },
     {
       "task_id": 66,
@@ -1777,7 +1777,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.6969,
+      "pub_latency": 0.1145,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1786,11 +1786,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4477,
+      "hid_latency": 0.1072,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5723
+      "avg_latency_total": 0.1109
     },
     {
       "task_id": 67,
@@ -1804,7 +1804,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5425,
+      "pub_latency": 0.1153,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1813,11 +1813,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3941,
+      "hid_latency": 0.1023,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4683
+      "avg_latency_total": 0.1088
     },
     {
       "task_id": 68,
@@ -1831,7 +1831,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4595,
+      "pub_latency": 0.1171,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1840,11 +1840,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3758,
+      "hid_latency": 0.0981,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4177
+      "avg_latency_total": 0.1076
     },
     {
       "task_id": 69,
@@ -1858,7 +1858,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5311,
+      "pub_latency": 0.1131,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1867,11 +1867,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4221,
+      "hid_latency": 0.0959,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4766
+      "avg_latency_total": 0.1045
     },
     {
       "task_id": 70,
@@ -1885,7 +1885,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4616,
+      "pub_latency": 0.1185,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -1894,11 +1894,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3851,
+      "hid_latency": 0.0862,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4234
+      "avg_latency_total": 0.1023
     },
     {
       "task_id": 71,
@@ -1912,7 +1912,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4547,
+      "pub_latency": 0.1189,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -1921,11 +1921,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3636,
+      "hid_latency": 0.0839,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4092
+      "avg_latency_total": 0.1014
     },
     {
       "task_id": 72,
@@ -1939,7 +1939,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4443,
+      "pub_latency": 0.1178,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -1948,11 +1948,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3427,
+      "hid_latency": 0.0904,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3935
+      "avg_latency_total": 0.1041
     },
     {
       "task_id": 73,
@@ -1966,7 +1966,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4074,
+      "pub_latency": 0.1007,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -1975,11 +1975,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.37,
+      "hid_latency": 0.0833,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3887
+      "avg_latency_total": 0.092
     },
     {
       "task_id": 74,
@@ -1993,7 +1993,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3377,
+      "pub_latency": 0.1009,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -2002,11 +2002,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3743,
+      "hid_latency": 0.0825,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.356
+      "avg_latency_total": 0.0917
     },
     {
       "task_id": 75,
@@ -2020,7 +2020,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3717,
+      "pub_latency": 0.0983,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -2029,11 +2029,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.378,
+      "hid_latency": 0.0721,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3749
+      "avg_latency_total": 0.0852
     },
     {
       "task_id": 76,
@@ -2047,7 +2047,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3417,
+      "pub_latency": 0.0993,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -2056,11 +2056,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.359,
+      "hid_latency": 0.0676,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3503
+      "avg_latency_total": 0.0834
     },
     {
       "task_id": 77,
@@ -2074,20 +2074,20 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4078,
-      "hid_pass": 8,
+      "pub_latency": 0.1001,
+      "hid_pass": 9,
       "hid_total": 9,
-      "hid_tpr": 88.89,
+      "hid_tpr": 100.0,
       "hid_WA": 0,
       "hid_RE": 0,
-      "hid_TLE": 1,
+      "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4827,
+      "hid_latency": 0.0952,
       "pub_all_pass": true,
-      "hid_all_pass": false,
-      "baseline_ok": false,
-      "avg_latency_total": 0.4453
+      "hid_all_pass": true,
+      "baseline_ok": true,
+      "avg_latency_total": 0.0977
     },
     {
       "task_id": 78,
@@ -2101,7 +2101,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4114,
+      "pub_latency": 0.0982,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -2110,11 +2110,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3606,
+      "hid_latency": 0.0743,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.386
+      "avg_latency_total": 0.0862
     },
     {
       "task_id": 79,
@@ -2128,7 +2128,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4256,
+      "pub_latency": 0.0808,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -2137,11 +2137,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3424,
+      "hid_latency": 0.0858,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.384
+      "avg_latency_total": 0.0833
     },
     {
       "task_id": 80,
@@ -2155,7 +2155,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3769,
+      "pub_latency": 0.1014,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -2164,11 +2164,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3566,
+      "hid_latency": 0.0756,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3668
+      "avg_latency_total": 0.0885
     },
     {
       "task_id": 81,
@@ -2182,7 +2182,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4096,
+      "pub_latency": 0.0824,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -2191,11 +2191,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.7176,
+      "hid_latency": 0.0902,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5636
+      "avg_latency_total": 0.0863
     },
     {
       "task_id": 82,
@@ -2209,7 +2209,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4148,
+      "pub_latency": 0.082,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -2218,11 +2218,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.7211,
+      "hid_latency": 0.0911,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.5679
+      "avg_latency_total": 0.0866
     },
     {
       "task_id": 83,
@@ -2236,20 +2236,20 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3909,
-      "hid_pass": 8,
+      "pub_latency": 0.0821,
+      "hid_pass": 9,
       "hid_total": 9,
-      "hid_tpr": 88.89,
+      "hid_tpr": 100.0,
       "hid_WA": 0,
       "hid_RE": 0,
-      "hid_TLE": 1,
+      "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.7502,
+      "hid_latency": 0.0889,
       "pub_all_pass": true,
-      "hid_all_pass": false,
-      "baseline_ok": false,
-      "avg_latency_total": 0.5706
+      "hid_all_pass": true,
+      "baseline_ok": true,
+      "avg_latency_total": 0.0855
     },
     {
       "task_id": 84,
@@ -2263,20 +2263,20 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4111,
-      "hid_pass": 8,
+      "pub_latency": 0.0836,
+      "hid_pass": 9,
       "hid_total": 9,
-      "hid_tpr": 88.89,
+      "hid_tpr": 100.0,
       "hid_WA": 0,
       "hid_RE": 0,
-      "hid_TLE": 1,
+      "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.7826,
+      "hid_latency": 0.0889,
       "pub_all_pass": true,
-      "hid_all_pass": false,
-      "baseline_ok": false,
-      "avg_latency_total": 0.5968
+      "hid_all_pass": true,
+      "baseline_ok": true,
+      "avg_latency_total": 0.0862
     },
     {
       "task_id": 85,
@@ -2290,7 +2290,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5148,
+      "pub_latency": 0.0836,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -2299,25 +2299,25 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.7151,
+      "hid_latency": 0.0792,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6149
+      "avg_latency_total": 0.0814
     },
     {
       "task_id": 86,
       "func_name": "check_integer",
       "topic": "math",
-      "pub_pass": 2,
+      "pub_pass": 3,
       "pub_total": 3,
-      "pub_tpr": 66.67,
+      "pub_tpr": 100.0,
       "pub_WA": 0,
       "pub_RE": 0,
-      "pub_TLE": 1,
+      "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.7032,
+      "pub_latency": 0.0932,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -2326,11 +2326,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.6434,
-      "pub_all_pass": false,
+      "hid_latency": 0.0851,
+      "pub_all_pass": true,
       "hid_all_pass": true,
-      "baseline_ok": false,
-      "avg_latency_total": 0.6733
+      "baseline_ok": true,
+      "avg_latency_total": 0.0892
     },
     {
       "task_id": 87,
@@ -2344,7 +2344,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.5774,
+      "pub_latency": 0.1301,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -2353,25 +2353,25 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.6604,
+      "hid_latency": 0.0941,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.6189
+      "avg_latency_total": 0.1121
     },
     {
       "task_id": 88,
       "func_name": "remove_Occ",
       "topic": "string",
-      "pub_pass": 2,
+      "pub_pass": 3,
       "pub_total": 3,
-      "pub_tpr": 66.67,
+      "pub_tpr": 100.0,
       "pub_WA": 0,
       "pub_RE": 0,
-      "pub_TLE": 1,
+      "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.8853,
+      "pub_latency": 0.0973,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -2380,11 +2380,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.552,
-      "pub_all_pass": false,
+      "hid_latency": 0.085,
+      "pub_all_pass": true,
       "hid_all_pass": true,
-      "baseline_ok": false,
-      "avg_latency_total": 0.7187
+      "baseline_ok": true,
+      "avg_latency_total": 0.0912
     },
     {
       "task_id": 89,
@@ -2398,7 +2398,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4868,
+      "pub_latency": 0.1087,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -2407,11 +2407,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3649,
+      "hid_latency": 0.1016,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4259
+      "avg_latency_total": 0.1051
     },
     {
       "task_id": 90,
@@ -2425,7 +2425,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4267,
+      "pub_latency": 0.0764,
       "hid_pass": 9,
       "hid_total": 9,
       "hid_tpr": 100.0,
@@ -2434,11 +2434,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4271,
+      "hid_latency": 0.095,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.4269
+      "avg_latency_total": 0.0857
     },
     {
       "task_id": 91,
@@ -2452,7 +2452,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3626,
+      "pub_latency": 0.0861,
       "hid_pass": 10,
       "hid_total": 10,
       "hid_tpr": 100.0,
@@ -2461,11 +2461,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.4064,
+      "hid_latency": 0.0996,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3845
+      "avg_latency_total": 0.0928
     },
     {
       "task_id": 92,
@@ -2479,7 +2479,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3509,
+      "pub_latency": 0.0861,
       "hid_pass": 10,
       "hid_total": 10,
       "hid_tpr": 100.0,
@@ -2488,11 +2488,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3628,
+      "hid_latency": 0.0999,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3569
+      "avg_latency_total": 0.093
     },
     {
       "task_id": 93,
@@ -2506,7 +2506,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4127,
+      "pub_latency": 0.0876,
       "hid_pass": 10,
       "hid_total": 10,
       "hid_tpr": 100.0,
@@ -2515,11 +2515,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3677,
+      "hid_latency": 0.0827,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3902
+      "avg_latency_total": 0.0852
     },
     {
       "task_id": 94,
@@ -2533,7 +2533,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4412,
+      "pub_latency": 0.0874,
       "hid_pass": 10,
       "hid_total": 10,
       "hid_tpr": 100.0,
@@ -2542,11 +2542,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3439,
+      "hid_latency": 0.0811,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3925
+      "avg_latency_total": 0.0843
     },
     {
       "task_id": 95,
@@ -2560,7 +2560,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4393,
+      "pub_latency": 0.0868,
       "hid_pass": 10,
       "hid_total": 10,
       "hid_tpr": 100.0,
@@ -2569,11 +2569,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3385,
+      "hid_latency": 0.0942,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.3889
+      "avg_latency_total": 0.0905
     },
     {
       "task_id": 96,
@@ -2587,7 +2587,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3946,
+      "pub_latency": 0.0861,
       "hid_pass": 10,
       "hid_total": 10,
       "hid_tpr": 100.0,
@@ -2596,11 +2596,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.3513,
+      "hid_latency": 0.0762,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.373
+      "avg_latency_total": 0.0811
     },
     {
       "task_id": 97,
@@ -2614,7 +2614,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.2686,
+      "pub_latency": 0.1062,
       "hid_pass": 10,
       "hid_total": 10,
       "hid_tpr": 100.0,
@@ -2623,11 +2623,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.2161,
+      "hid_latency": 0.0677,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.2424
+      "avg_latency_total": 0.0869
     },
     {
       "task_id": 98,
@@ -2641,7 +2641,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.4042,
+      "pub_latency": 0.0787,
       "hid_pass": 10,
       "hid_total": 10,
       "hid_tpr": 100.0,
@@ -2650,11 +2650,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.1424,
+      "hid_latency": 0.0698,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.2733
+      "avg_latency_total": 0.0743
     },
     {
       "task_id": 99,
@@ -2668,7 +2668,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3182,
+      "pub_latency": 0.0722,
       "hid_pass": 10,
       "hid_total": 10,
       "hid_tpr": 100.0,
@@ -2677,11 +2677,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.1305,
+      "hid_latency": 0.0651,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.2243
+      "avg_latency_total": 0.0687
     },
     {
       "task_id": 100,
@@ -2695,7 +2695,7 @@
       "pub_TLE": 0,
       "pub_SE": 0,
       "pub_MLE": 0,
-      "pub_latency": 0.3506,
+      "pub_latency": 0.0975,
       "hid_pass": 8,
       "hid_total": 8,
       "hid_tpr": 100.0,
@@ -2704,11 +2704,11 @@
       "hid_TLE": 0,
       "hid_SE": 0,
       "hid_MLE": 0,
-      "hid_latency": 0.1374,
+      "hid_latency": 0.0654,
       "pub_all_pass": true,
       "hid_all_pass": true,
       "baseline_ok": true,
-      "avg_latency_total": 0.244
+      "avg_latency_total": 0.0814
     }
   ]
 }

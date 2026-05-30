@@ -9,12 +9,18 @@ import os
 import sys
 from pathlib import Path
 
-# Auto-resolve BASE path
-cwd = os.getcwd()
-if os.path.basename(cwd) in ["data", "src", "notebookes", "results"]:
-    BASE = Path(cwd).parent
-else:
-    BASE = Path(cwd)
+# Auto-resolve BASE path (robust)
+def _find_project_root(start_path: Path, max_up=6):
+    p = start_path.resolve()
+    for _ in range(max_up):
+        if (p / "data").exists() and (p / "src").exists():
+            return p
+        if p.parent == p:
+            break
+        p = p.parent
+    return start_path.resolve()
+
+BASE = _find_project_root(Path.cwd())
 
 sys.path.insert(0, str(BASE / "src"))
 from runner_v3 import grade_submission, compute_leakage

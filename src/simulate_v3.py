@@ -15,12 +15,18 @@ if sys.stdout.encoding != 'utf-8':
     if hasattr(sys.stdout, 'buffer'):
         sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
-# Auto-resolve BASE path
-cwd = os.getcwd()
-if os.path.basename(cwd) in ["data", "src", "notebookes", "results"]:
-    BASE = Path(cwd).parent
-else:
-    BASE = Path(cwd)
+# Auto-resolve BASE path (robust)
+def _find_project_root(start_path: Path, max_up=6):
+    p = start_path.resolve()
+    for _ in range(max_up):
+        if (p / "data").exists() and (p / "src").exists():
+            return p
+        if p.parent == p:
+            break
+        p = p.parent
+    return start_path.resolve()
+
+BASE = _find_project_root(Path.cwd())
 
 RAW_FILE = BASE / "data" / "raw" / "submissions_50.json"
 HIDDEN_FILE = BASE / "data" / "processed" / "hidden_v2.json"
