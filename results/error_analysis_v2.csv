@@ -1,0 +1,51 @@
+sv_id,task_id,func,topic,mo_ta_loi,pub_pass,pub_total,pub_tpr,pub_SE,pub_WA,pub_RE,pub_TLE,pub_MLE,hid_pass,hid_total,hid_tpr,hid_SE,hid_WA,hid_RE,hid_TLE,hid_MLE,is_false_positive,is_public_test_leakage,avg_latency_pub,avg_latency_hid
+SV001,1,sum_list,list,Cộng index thay vì giá trị — WA với mọi input,0,3,0.0,0,3,0,0,0,2,6,33.33,0,4,0,0,0,False,False,0.0408,0.0385
+SV002,1,sum_list,list,Quên return — trả None,0,3,0.0,0,3,0,0,0,0,6,0.0,0,6,0,0,0,False,False,0.0382,0.0393
+SV003,1,sum_list,list,Hard-code kết quả bài test đầu tiên,3,3,100.0,0,0,0,0,0,3,6,50.0,0,3,0,0,0,True,True,0.0394,0.0738
+SV004,2,is_even,math,Syntax Error — thiếu dấu :,0,3,0.0,3,0,0,0,0,0,6,0.0,6,0,0,0,0,False,False,0.0,0.0
+SV005,2,is_even,math,Luôn trả True — pass public test chẵn,2,3,66.67,0,1,0,0,0,3,6,50.0,0,3,0,0,0,False,False,0.0694,0.0736
+SV006,3,reverse_string,string,Đảo ngược sai — thiếu -1 trong range,0,3,0.0,0,3,0,0,0,2,6,33.33,0,4,0,0,0,False,False,0.0436,0.0382
+SV007,4,find_max,list,Lấy phần tử đầu sorted thay vì cuối,0,3,0.0,0,3,0,0,0,4,8,50.0,0,3,1,0,0,False,False,0.0383,0.0401
+SV008,4,find_max,list,RE khi list rỗng — hidden test bắt được,3,3,100.0,0,0,0,0,0,7,8,87.5,0,0,1,0,0,True,True,0.0387,0.0423
+SV009,6,factorial,math,Không xử lý n=0 — fail hidden test(0),3,3,100.0,0,0,0,0,0,7,7,100.0,0,0,0,0,0,False,False,0.0381,0.0389
+SV010,6,factorial,math,"Hard-code n<=3, sai với n>=4",2,3,66.67,0,1,0,0,0,2,7,28.57,0,5,0,0,0,False,False,0.0405,0.0383
+SV011,7,is_palindrome,string,Luôn trả True — FP với public test,2,3,66.67,0,1,0,0,0,6,7,85.71,0,1,0,0,0,False,False,0.0419,0.0396
+SV012,8,remove_duplicates,list,set mất thứ tự — FP với public test đơn giản,3,3,100.0,0,0,0,0,0,5,7,71.43,0,2,0,0,0,True,True,0.0382,0.038
+SV013,9,average,math,Không xử lý danh sách rỗng — ZeroDivisionError,3,3,100.0,0,0,0,0,0,6,7,85.71,0,0,1,0,0,True,True,0.0379,0.0417
+SV014,9,average,math,Trả int thay vì float,3,3,100.0,0,0,0,0,0,6,7,85.71,0,1,0,0,0,True,True,0.0381,0.0456
+SV015,11,is_prime,math,"Không xử lý n=0,n=1 — FP với public",3,3,100.0,0,0,0,0,0,5,7,71.43,0,2,0,0,0,True,True,0.0585,0.06
+SV016,11,is_prime,math,Thiếu kiểm tra n<2 nhưng có range đúng,3,3,100.0,0,0,0,0,0,5,7,71.43,0,2,0,0,0,True,True,0.0565,0.0586
+SV017,12,sum_even,list,Tính tổng số lẻ thay vì chẵn,0,3,0.0,0,3,0,0,0,2,7,28.57,0,5,0,0,0,False,False,0.0648,0.0647
+SV018,13,fibonacci,math,Đệ quy thiếu base case n=0 — RE,1,3,33.33,0,0,2,0,0,0,7,0.0,0,0,7,0,0,False,False,0.1029,0.1315
+SV019,14,count_words,string,Dùng split(' ') thay vì split() — fail với chuỗi có nhiều khoảng trắng liên tiếp,3,3,100.0,0,0,0,0,0,4,7,57.14,0,3,0,0,0,True,True,0.0593,0.0603
+SV020,15,sort_list,list,Sắp xếp giảm dần thay vì tăng dần,1,3,33.33,0,2,0,0,0,2,7,28.57,0,5,0,0,0,False,False,0.0576,0.063
+SV021,16,find_min,list,Trả max thay vì min,0,3,0.0,0,3,0,0,0,3,8,37.5,0,5,0,0,0,False,False,0.0599,0.0416
+SV022,17,is_leap_year,math,"Chỉ kiểm tra chia hết 4 — bỏ sót trường hợp năm thế kỷ (1900, 2100)",3,3,100.0,0,0,0,0,0,4,8,50.0,0,4,0,0,0,True,True,0.0414,0.0394
+SV023,18,count_vowels,string,"Không lowercase — bỏ sót nguyên âm hoa A, E, I, O, U",3,3,100.0,0,0,0,0,0,6,8,75.0,0,2,0,0,0,True,True,0.0387,0.0383
+SV024,20,all_positive,list,Kiểm tra >=0 thay vì >0 — sai với phần tử 0,3,3,100.0,0,0,0,0,0,6,8,75.0,0,2,0,0,0,True,True,0.0384,0.0398
+SV025,21,celsius_to_fahrenheit,math,Cộng 32.5 thay vì 32 — luôn sai 0.5 độ,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0407,0.0412
+SV026,22,replace_spaces,string,Thay bằng dấu '-' thay vì '_',1,3,33.33,0,2,0,0,0,3,8,37.5,0,5,0,0,0,False,False,0.0382,0.0391
+SV027,23,absolute_value,math,Không đổi dấu khi âm — trả nguyên giá trị âm,2,3,66.67,0,1,0,0,0,3,8,37.5,0,5,0,0,0,False,False,0.0392,0.0384
+SV028,24,is_anagram,string,So sánh độ dài thay vì ký tự — sai với anagram thật,2,3,66.67,0,1,0,0,0,6,8,75.0,0,2,0,0,0,False,False,0.042,0.0418
+SV029,26,multiply_list,list,Tính tổng thay vì tích,1,3,33.33,0,2,0,0,0,1,8,12.5,0,7,0,0,0,False,False,0.0442,0.0452
+SV030,27,is_sorted_ascending,list,So sánh với sorted giảm dần thay vì tăng dần,0,3,0.0,0,3,0,0,0,4,8,50.0,0,4,0,0,0,False,False,0.0407,0.0393
+SV031,29,find_common_elements,list,Không sort kết quả — thứ tự output sai với hidden test,3,3,100.0,0,0,0,0,0,8,8,100.0,0,0,0,0,0,False,False,0.0383,0.0394
+SV032,30,get_list_length,list,Trả len(lst)+1 — cộng thừa 1 vào kết quả,0,3,0.0,0,3,0,0,0,0,8,0.0,0,8,0,0,0,False,False,0.0382,0.0444
+SV033,31,remove_vowels,string,"Không lowercase khi kiểm tra — giữ lại nguyên âm hoa A, E, I, O, U",3,3,100.0,0,0,0,0,0,6,8,75.0,0,2,0,0,0,True,True,0.0449,0.0415
+SV034,33,find_perimeter_rectangle,math,Tính tổng 2 cạnh thay vì nhân 2 — thiếu hệ số 2,0,3,0.0,0,3,0,0,0,1,8,12.5,0,7,0,0,0,False,False,0.0451,0.0415
+SV035,34,cube_number,math,Tính bình phương thay vì lập phương,1,3,33.33,0,2,0,0,0,1,8,12.5,0,7,0,0,0,False,False,0.0381,0.0381
+SV036,35,count_consonants,string,Đếm nguyên âm thay vì phụ âm — logic ngược,0,3,0.0,0,3,0,0,0,3,8,37.5,0,5,0,0,0,False,False,0.0416,0.0385
+SV037,36,starts_with_uppercase,string,Không xử lý chuỗi rỗng — IndexError khi s='',3,3,100.0,0,0,0,0,0,8,9,88.89,0,0,1,0,0,True,True,0.0381,0.0405
+SV038,37,circle_area,math,Dùng pi=3.14 thay vì 3.14159 — kết quả sai từ hidden test,0,3,0.0,0,3,0,0,0,1,9,11.11,0,8,0,0,0,False,False,0.0516,0.0469
+SV039,38,reverse_list,list,Sửa trực tiếp list gốc (in-place) — sai khi list được dùng lại,3,3,100.0,0,0,0,0,0,9,9,100.0,0,0,0,0,0,False,False,0.038,0.0401
+SV040,40,trim_string,string,Chỉ xóa khoảng trắng bên trái — bỏ sót bên phải,3,3,100.0,0,0,0,0,0,9,9,100.0,0,0,0,0,0,False,False,0.0587,0.0402
+SV041,41,filter_positive,list,Lọc >=0 thay vì >0 — giữ lại số 0,3,3,100.0,0,0,0,0,0,5,9,55.56,0,4,0,0,0,True,True,0.0385,0.0383
+SV042,43,square_list,list,Nhân 2 thay vì bình phương — sai với x>=3,0,3,0.0,0,3,0,0,0,3,9,33.33,0,6,0,0,0,False,False,0.0381,0.0435
+SV043,44,count_negative,list,Đếm <=0 thay vì <0 — đếm thêm số 0,3,3,100.0,0,0,0,0,0,6,9,66.67,0,3,0,0,0,True,True,0.0564,0.055
+SV044,46,is_numeric_string,string,"Không xử lý chuỗi rỗng — sai với s='' (trả False thay vì False OK, nhưng isnumeric khác isdigit với ký tự đặc biệt)",3,3,100.0,0,0,0,0,0,10,10,100.0,0,0,0,0,0,False,False,0.065,0.0582
+SV045,47,lcm,math,Trả tích a*b thay vì LCM — sai khi GCD > 1,1,3,33.33,0,2,0,0,0,4,10,40.0,0,6,0,0,0,False,False,0.0592,0.0583
+SV046,49,get_first_n,list,Lấy n phần tử cuối thay vì đầu,1,3,33.33,0,2,0,0,0,5,10,50.0,0,5,0,0,0,False,False,0.0575,0.0605
+SV047,50,has_zero,list,Kiểm tra có hơn 1 số 0 thay vì ít nhất 1 — sai khi chỉ có đúng 1 số 0,2,3,66.67,0,1,0,0,0,6,10,60.0,0,4,0,0,0,False,False,0.0569,0.062
+SV048,10,to_uppercase,string,(Solution đúng — dùng làm điểm so sánh),3,3,100.0,0,0,0,0,0,7,7,100.0,0,0,0,0,0,False,False,0.06,0.0581
+SV049,15,sort_list,list,(Solution đúng),3,3,100.0,0,0,0,0,0,7,7,100.0,0,0,0,0,0,False,False,0.0567,0.0426
+SV050,5,count_char,string,(Solution đúng),3,3,100.0,0,0,0,0,0,6,6,100.0,0,0,0,0,0,False,False,0.0407,0.0397
