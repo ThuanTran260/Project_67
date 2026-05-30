@@ -11,9 +11,9 @@
 
 | MSSV | Họ tên | Vai trò |
 |---|---|---|
-| 3124410356 | Trần Bảo Tín (A) | EDA + Biểu đồ + Báo cáo |
-| 3124560085 | Nguyễn Lê Nhựt Thắng (B) | Runner + Kỹ thuật |
-| 3124410350 | Trần Vĩnh Thuận (C) | Dữ liệu + Môi trường |
+| 3124410356 | Trần Bảo Tín  | EDA + Biểu đồ + Báo cáo |
+| 3124560085 | Nguyễn Lê Nhựt Thắng  | Runner + Kỹ thuật |
+| 3124410350 | Trần Vĩnh Thuận  | Dữ liệu + Môi trường |
 
 ---
 
