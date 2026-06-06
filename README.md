@@ -19,7 +19,6 @@ Project/
 │       ├── mbpp_clean.json     # 100 bài toán + 6 hidden tests/bài (Set 2)
 │       └── submissions_50.json # 100 bài nộp mô phỏng (SV001–SV100, tên file giữ nguyên để tương thích)
 ├── results/                    # Biểu đồ PNG và kết quả CSV/JSON
-├── report/                     # Báo cáo tuần 3 và tuần 4
 ├── src/                        # Mã nguồn lõi
 │   ├── runner_v3.py            # Sandbox v3: Fail-Fast + Docker + tách RE chi tiết
 │   ├── feedback.py             # Sinh phản hồi tự động tiếng Việt
