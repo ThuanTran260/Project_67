@@ -18,6 +18,7 @@ import os
 from pathlib import Path
 from typing import Any, Dict, List, Sequence, Tuple
 
+from pathlib import Path
 BASE = Path(__file__).resolve().parent.parent
 HIDDEN_FILE = BASE / "data" / "processed" / "hidden_v2.json"
 MBPP_FILE = BASE / "data" / "processed" / "mbpp_clean.json"
@@ -130,6 +131,17 @@ def build_candidate_inputs(task: Dict[str, Any], func_name: str, arity: int, arg
             format_input({"R": "Red", "B": "Black"}, {"B": "Blue", "G": "Green"}, {"G": "Gold", "Y": "Yellow"}),
             format_input({}, {"k": 1}, {"k": 2, "m": 3}),
         ])
+    elif "ascii_value" == name:
+        candidates.extend([
+            format_input("A"),
+            format_input("z"),
+            format_input("0"),
+            format_input(" "),
+            format_input("\n"),
+            format_input("!"),
+            format_input("ñ"),
+            format_input("€"),
+        ])
     elif "find_volume" == name:
         candidates.extend([
             format_input(10, 8, 6),
@@ -155,6 +167,8 @@ def build_candidate_inputs(task: Dict[str, Any], func_name: str, arity: int, arg
         candidates.extend(["0", "1", "5", "8", "10", "12", "14"])
     elif "fibonacci" == name:
         candidates.extend(["0", "1", "2", "5", "10", "15", "20"])
+    elif "bell_number" == name:
+        candidates.extend(["0", "1", "2", "3", "4", "5", "6", "7"])
     elif any(k in name for k in ["prime", "not_prime"]):
         candidates.extend(["0", "1", "2", "3", "25", "97", "99", "9973", "10007"])
     elif any(k in name for k in ["gcd", "lcm"]):

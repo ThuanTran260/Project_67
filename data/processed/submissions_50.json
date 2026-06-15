@@ -410,8 +410,8 @@
     "func_name": "starts_with_upper",
     "topic": "list",
     "error_type": "MLE",
-    "submitted_code": "def starts_with_upper(s):\n    # Cố tình tạo chuỗi 200MB để kích hoạt MLE\n    x = ' ' * (200 * 1024 * 1024)\n    return s[0].isupper()\n",
-    "note": "Tràn bộ nhớ (MLE) — Khai báo chuỗi 200MB"
+    "submitted_code": "def starts_with_upper(s):\n    # Cố tình tạo chuỗi 500MB để kích hoạt MLE\n    x = ' ' * (500 * 1024 * 1024)\n    return s[0].isupper()\n",
+    "note": "Tràn bộ nhớ (MLE) — Khai báo chuỗi 500MB"
   },
   {
     "submission_id": "SV047",
@@ -608,8 +608,8 @@
     "func_name": "len_log",
     "topic": "list",
     "error_type": "MLE",
-    "submitted_code": "def len_log(list1):\n    x = ' ' * (200 * 1024 * 1024) # 200MB allocation\n    max=len(list1[0])\n    for i in list1:\n        if len(i)>max:\n            max=len(i)\n    return max",
-    "note": "Vượt quá bộ nhớ (MLE) - cấp phát mảng 200MB trong len_log"
+    "submitted_code": "def len_log(list1):\n    x = ' ' * (500 * 1024 * 1024) # 500MB allocation\n    max=len(list1[0])\n    for i in list1:\n        if len(i)>max:\n            max=len(i)\n    return max",
+    "note": "Vượt quá bộ nhớ (MLE) - cấp phát mảng 500MB trong len_log"
   },
   {
     "submission_id": "SV069",

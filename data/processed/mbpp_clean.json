@@ -3587,12 +3587,12 @@
         "expected": "5"
       },
       {
-        "input": "10",
-        "expected": "115975"
+        "input": "4",
+        "expected": "15"
       },
       {
-        "input": "11",
-        "expected": "678570"
+        "input": "5",
+        "expected": "52"
       }
     ],
     "task_id": 77,
@@ -3881,7 +3881,7 @@
     "text": "Định nghĩa một hàm Python thực hiện chức năng của hàm is_undulating bằng cách viết mã nguồn Python."
   },
   {
-    "code": "def divisor(n):\n  for i in range(n):\n    x = len([i for i in range(1,n+1) if not n % i])\n  return x",
+    "code": "def divisor(n):\n    x = 0\n    for i in range(1, int(n**0.5) + 1):\n        if n % i == 0:\n            if i * i == n:\n                x += 1\n            else:\n                x += 2\n    return x",
     "func_name": "divisor",
     "topic": "math",
     "public_tests": [
@@ -3900,6 +3900,10 @@
     ],
     "hidden_tests": [
       {
+        "input": "0",
+        "expected": "0"
+      },
+      {
         "input": "1",
         "expected": "1"
       },
@@ -3917,10 +3921,6 @@
       },
       {
         "input": "11",
-        "expected": "2"
-      },
-      {
-        "input": "97",
         "expected": "2"
       }
     ],

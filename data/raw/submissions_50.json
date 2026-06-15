@@ -608,8 +608,8 @@
     "func_name": "len_log",
     "topic": "list",
     "error_type": "MLE",
-    "submitted_code": "def len_log(list1):\n    x = ' ' * (200 * 1024 * 1024) # 200MB allocation\n    max=len(list1[0])\n    for i in list1:\n        if len(i)>max:\n            max=len(i)\n    return max",
-    "note": "Vượt quá bộ nhớ (MLE) - cấp phát mảng 200MB trong len_log"
+    "submitted_code": "def len_log(list1):\n    x = ' ' * (500 * 1024 * 1024) # 500MB allocation\n    max=len(list1[0])\n    for i in list1:\n        if len(i)>max:\n            max=len(i)\n    return max",
+    "note": "Vượt quá bộ nhớ (MLE) - cấp phát mảng 500MB trong len_log"
   },
   {
     "submission_id": "SV069",

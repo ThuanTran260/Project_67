@@ -44,7 +44,7 @@ SV042,43,list_to_string,list,Dùng khoảng trắng thay vì dấu phẩy,WA,1,3
 SV043,44,count_vowels,list,Không lowercase — bỏ sót nguyên âm hoa,WA,2,3,66.67,False,False,6,9,66.67,False,False,6,9,66.67,False,False,1,9,11.11,False,False
 SV044,46,reverse_list,string,Không đảo ngược — trả nguyên list,WA,1,3,33.33,False,False,4,9,44.44,False,False,4,9,44.44,False,False,0,9,0.0,False,False
 SV045,47,all_positive,math,Không xử lý list rỗng — sai với [],WA,3,3,100.0,True,False,8,9,88.89,False,False,8,9,88.89,False,False,3,9,33.33,False,False
-SV046,49,starts_with_upper,list,Tràn bộ nhớ (MLE) — Khai báo chuỗi 200MB,MLE,0,3,0.0,False,False,0,9,0.0,False,False,0,9,0.0,False,False,0,9,0.0,False,False
+SV046,49,starts_with_upper,list,Tràn bộ nhớ (MLE) — Khai báo chuỗi 500MB,MLE,0,3,0.0,False,False,0,9,0.0,False,False,0,9,0.0,False,False,0,9,0.0,False,False
 SV047,50,last_n,list,Quá thời gian (TLE) — Vòng lặp vô hạn,TLE,0,3,0.0,False,False,0,9,0.0,False,False,0,9,0.0,False,False,0,9,0.0,False,False
 SV048,10,to_uppercase,string,(Solution đúng — dùng làm điểm so sánh),AC,3,3,100.0,False,False,9,9,100.0,False,False,9,9,100.0,False,False,9,9,100.0,False,False
 SV049,15,sort_list,list,(Solution đúng),AC,3,3,100.0,False,False,9,9,100.0,False,False,9,9,100.0,False,False,9,9,100.0,False,False
@@ -66,7 +66,7 @@ SV064,64,find_tuples,list,Sai logic - thay đổi toán tử so sánh == thành 
 SV065,65,word_len,list,Sai logic - trả về None thay vì kết quả đúng trong word_len,WA,0,3,0.0,False,False,0,9,0.0,False,False,0,11,0.0,False,False,0,11,0.0,False,False
 SV066,66,merge_dictionaries_three,list,merge_dictionaries_three - Solution đúng hoàn toàn,AC,3,3,100.0,False,False,9,9,100.0,False,False,11,11,100.0,False,False,11,11,100.0,False,False
 SV067,67,freq_count,list,Sai logic - trả về None thay vì kết quả đúng trong freq_count,WA,0,3,0.0,False,False,0,9,0.0,False,False,0,11,0.0,False,False,0,11,0.0,False,False
-SV068,68,len_log,list,Vượt quá bộ nhớ (MLE) - cấp phát mảng 200MB trong len_log,MLE,0,3,0.0,False,False,0,9,0.0,False,False,0,11,0.0,False,False,0,11,0.0,False,False
+SV068,68,len_log,list,Vượt quá bộ nhớ (MLE) - cấp phát mảng 500MB trong len_log,MLE,0,3,0.0,False,False,0,9,0.0,False,False,0,11,0.0,False,False,0,11,0.0,False,False
 SV069,69,find_substring,list,Sai logic - trả về None thay vì kết quả đúng trong find_substring,WA,0,3,0.0,False,False,0,9,0.0,False,False,0,11,0.0,False,False,0,11,0.0,False,False
 SV070,70,index_minimum,list,Sai logic - trả về None thay vì kết quả đúng trong index_minimum,WA,0,3,0.0,False,False,0,9,0.0,False,False,0,11,0.0,False,False,0,11,0.0,False,False
 SV071,71,is_not_prime,math,Sai logic - thay đổi dấu cộng thành dấu trừ trong is_not_prime,WA,1,3,33.33,False,False,6,9,66.67,False,False,9,12,75.0,False,False,1,12,8.33,False,False
@@ -75,7 +75,7 @@ SV073,73,find_Volume,math,Sai logic - trả về None thay vì kết quả đún
 SV074,74,square_perimeter,math,Lỗi thực thi (IndexError) - vượt quá chỉ mục mảng trong square_perimeter,IndexError,0,3,0.0,False,False,0,9,0.0,False,False,0,12,0.0,False,False,0,12,0.0,False,False
 SV075,75,opposite_Signs,math,opposite_Signs - Solution đúng hoàn toàn,AC,3,3,100.0,False,False,9,9,100.0,False,False,12,12,100.0,False,False,12,12,100.0,False,False
 SV076,76,is_octagonal,math,Sai logic - thay đổi dấu trừ thành dấu cộng trong is_octagonal,WA,0,3,0.0,False,False,1,9,11.11,False,False,1,12,8.33,False,False,0,12,0.0,False,False
-SV077,77,bell_number,math,Lỗi thực thi (NameError) - gọi biến chưa định nghĩa trong bell_number,NameError,0,3,0.0,False,False,0,9,0.0,False,False,0,12,0.0,False,False,0,12,0.0,False,False
+SV077,77,bell_number,math,Lỗi thực thi (NameError) - gọi biến chưa định nghĩa trong bell_number,NameError,0,3,0.0,False,False,0,9,0.0,False,False,0,11,0.0,False,False,0,11,0.0,False,False
 SV078,78,dif_Square,math,Sai logic - trả về None thay vì kết quả đúng trong dif_Square,WA,0,3,0.0,False,False,0,9,0.0,False,False,0,12,0.0,False,False,0,12,0.0,False,False
 SV079,79,is_Diff,math,Sai logic - thay đổi toán tử so sánh == thành != trong is_Diff,WA,0,3,0.0,False,False,0,9,0.0,False,False,0,12,0.0,False,False,0,12,0.0,False,False
 SV080,80,tetrahedral_number,math,Sai logic - thay đổi dấu cộng thành dấu trừ trong tetrahedral_number,WA,0,3,0.0,False,False,1,9,11.11,False,False,1,12,8.33,False,False,0,12,0.0,False,False

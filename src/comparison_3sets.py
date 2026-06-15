@@ -16,7 +16,8 @@ if sys.stdout.encoding != 'utf-8':
     if hasattr(sys.stdout, 'buffer'):
         sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
 
-BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from pathlib import Path
+BASE = str(Path(__file__).resolve().parent.parent)
 SUBMISSIONS_FILE = os.path.join(BASE, 'data', 'processed', 'submissions_50.json')
 HIDDEN_V2_FILE = os.path.join(BASE, 'data', 'processed', 'hidden_v2.json')
 MBPP_CLEAN_FILE = os.path.join(BASE, 'data', 'processed', 'mbpp_clean.json')
@@ -227,9 +228,9 @@ def main():
         fp_count = sdata["FP"]
         fn_count = sdata["FN"]
         
-        # FPR (False Positive Rate) = FP / buggy_submissions (số mẫu âm thật - bài lỗi lọt qua)
+        # FPR (False Positive Rate) = FP / buggy_submissions (tỷ lệ báo động giả trên tổng số bài lỗi)
         fpr_pct = round(fp_count / buggy_submissions_count * 100, 2) if buggy_submissions_count > 0 else 0.0
-        # FAR (False Acceptance Rate) = FP / total_submissions (tỷ lệ chấp nhận trên tổng số submissions)
+        # FAR (False Acceptance Rate) = FP / total_submissions (tỷ lệ lọt lỗi trên tổng số bài nộp)
         far_pct = round(fp_count / total_submissions * 100, 2)
         # FRR (False Rejection Rate) = FN / ac_submissions — bài đúng bị chấm oan
         frr_pct = round(fn_count / ac_submissions_count * 100, 2) if ac_submissions_count > 0 else 0.0

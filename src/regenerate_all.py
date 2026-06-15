@@ -3,7 +3,14 @@ import os
 import sys
 from collections import Counter
 
-BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Thiết lập encoding UTF-8 để hiển thị an toàn trên Windows console
+if sys.stdout.encoding != 'utf-8':
+    import io
+    if hasattr(sys.stdout, 'buffer'):
+        sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+
+from pathlib import Path
+BASE = str(Path(__file__).resolve().parent.parent)
 RAW_TASKS_FILE = os.path.join(BASE, 'data', 'raw', 'mbpp_50.json')
 HIDDEN_FILE = os.path.join(BASE, 'data', 'processed', 'hidden_v2.json')
 MBPP_FILE = os.path.join(BASE, 'data', 'processed', 'mbpp_clean.json')
@@ -109,7 +116,7 @@ def adjust_descriptions(tasks):
     return adjusted
 
 # ──────────────────────────────────────────────────────────────────────────────
-# Part 2: Generate 50 Student Submissions with Realistic Error Distribution
+# Part 2: Generate 100 Student Submissions with Realistic Error Distribution
 # ──────────────────────────────────────────────────────────────────────────────
 
 def generate_submissions(tasks, topic_map):
@@ -146,8 +153,8 @@ def generate_submissions(tasks, topic_map):
         # 4. Update SV046 (MLE)
         if sid == "SV046":
             sub["error_type"] = "MLE"
-            sub["submitted_code"] = "def starts_with_upper(s):\n    # Cố tình tạo chuỗi 200MB để kích hoạt MLE\n    x = ' ' * (200 * 1024 * 1024)\n    return s[0].isupper()\n"
-            sub["note"] = "Tràn bộ nhớ (MLE) — Khai báo chuỗi 200MB"
+            sub["submitted_code"] = "def starts_with_upper(s):\n    # Cố tình tạo chuỗi 500MB để kích hoạt MLE\n    x = ' ' * (500 * 1024 * 1024)\n    return s[0].isupper()\n"
+            sub["note"] = "Tràn bộ nhớ (MLE) — Khai báo chuỗi 500MB"
             
         # 5. Update SV047 (TLE)
         if sid == "SV047":
@@ -238,6 +245,27 @@ def main():
                 "expected": "True"
             })
             print("OK Task 86 check_integer: Injected '+123' and '-123' expecting True edge cases.")
+            
+    # Optimize reference code of Task 84 (divisor) to run in O(sqrt(n)) and prevent TLE on slow environments
+    for t in hidden_tasks:
+        if t['task_id'] == 84:
+            t['code'] = "def divisor(n):\n    x = 0\n    for i in range(1, int(n**0.5) + 1):\n        if n % i == 0:\n            if i * i == n:\n                x += 1\n            else:\n                x += 2\n    return x"
+            print("OK Task 84 divisor: Optimized reference code to prevent TLE.")
+            
+    # 4. Overwrite Task 100 (ascii_value) hidden tests with the 8 unique character cases
+    for t in hidden_tasks:
+        if t['task_id'] == 100:
+            t['hidden_tests'] = [
+                {"input": "'A'", "expected": "65"},
+                {"input": "'z'", "expected": "122"},
+                {"input": "'0'", "expected": "48"},
+                {"input": "' '", "expected": "32"},
+                {"input": "'\\n'", "expected": "10"},
+                {"input": "'!'", "expected": "33"},
+                {"input": "'ñ'", "expected": "241"},
+                {"input": "'€'", "expected": "8364"}
+            ]
+            print("OK Task 100 ascii_value: Reset hidden tests to 8 unique character cases.")
             
     # Vary the number of hidden tests for Set 3 using a bell curve distribution
     for t in hidden_tasks:

@@ -1,0 +1,53 @@
+I. GIỚI THIỆU
+Trong thời đại số hóa, nhu cầu soạn thảo các tài liệu học thuật ngày càng tăng. Các công cụ xử lý văn bản truyền thống như Microsoft Word tuy phổ biến nhưng còn gặp nhiều khó khăn khi làm việc với công thức toán học, tài liệu dài hoặc quản lý tài liệu tham khảo.
+Overleaf ra đời nhằm giải quyết các vấn đề trên bằng cách cung cấp môi trường soạn thảo LaTeX trực tuyến. Người dùng có thể làm việc trên trình duyệt mà không cần cài đặt phần mềm phức tạp, đồng thời hỗ trợ cộng tác thời gian thực tương tự Google Docs.
+II. TỔNG QUAN VỀ OVERLEAF
+A. Khái niệm Overleaf
+Overleaf là nền tảng trực tuyến cho phép người dùng tạo và chỉnh sửa tài liệu bằng ngôn ngữ LaTeX. Đây là công cụ được sử dụng rộng rãi trong các trường đại học, viện nghiên cứu và các tổ chức khoa học trên toàn thế giới.
+Hệ thống cung cấp môi trường biên dịch trực tuyến, cho phép người dùng xem kết quả PDF ngay sau khi chỉnh sửa nội dung.
+B. Lịch sử phát triển
+Overleaf được phát triển vào năm 2012 bởi John Hammersley và John Lees-Miller. Mục tiêu ban đầu là giúp việc sử dụng LaTeX trở nên đơn giản hơn đối với sinh viên và nhà nghiên cứu.
+Hiện nay Overleaf đã trở thành một trong những nền tảng LaTeX phổ biến nhất thế giới với hàng triệu người dùng.
+III. CÁC TÍNH NĂNG NỔI BẬT
+A. Soạn thảo LaTeX trực tuyến
+Người dùng chỉ cần trình duyệt web để tạo và chỉnh sửa tài liệu. Không cần cài đặt TeX Live hoặc các công cụ hỗ trợ khác.
+B. Cộng tác thời gian thực
+Nhiều thành viên có thể cùng chỉnh sửa một tài liệu đồng thời. Các thay đổi được cập nhật ngay lập tức giúp tăng hiệu quả làm việc nhóm.
+C. Quản lý tài liệu tham khảo
+Overleaf hỗ trợ BibTeX và BibLaTeX giúp tự động quản lý trích dẫn và danh mục tài liệu tham khảo.
+D. Hệ thống mẫu (Template)
+Nền tảng cung cấp hàng nghìn mẫu có sẵn cho:
+Báo cáo học phần
+Luận văn tốt nghiệp
+CV chuyên nghiệp
+Bài báo IEEE
+Bài báo Springer
+Poster nghiên cứu
+E. Đồng bộ với GitHub
+Overleaf hỗ trợ kết nối với GitHub, giúp quản lý phiên bản tài liệu hiệu quả và thuận tiện cho các dự án lớn.
+IV. ƯU ĐIỂM VÀ HẠN CHẾ
+A. Ưu điểm
+Hoạt động hoàn toàn trên nền web.
+Hỗ trợ công thức toán học mạnh mẽ.
+Cộng tác thời gian thực.
+Nhiều mẫu tài liệu chuyên nghiệp.
+Quản lý tài liệu tham khảo tự động.
+Dễ dàng chia sẻ và xuất bản tài liệu.
+B. Hạn chế
+Người mới cần thời gian làm quen với cú pháp LaTeX.
+Một số tính năng nâng cao yêu cầu tài khoản trả phí.
+Phụ thuộc vào kết nối Internet khi làm việc trực tuyến.
+V. ỨNG DỤNG THỰC TẾ
+Overleaf được sử dụng rộng rãi trong:
+Viết luận văn đại học và sau đại học.
+Soạn thảo bài báo khoa học quốc tế.
+Chuẩn bị báo cáo nghiên cứu.
+Tạo CV học thuật.
+Viết sách và giáo trình kỹ thuật.
+Nhiều tạp chí khoa học và hội nghị quốc tế hiện nay cung cấp trực tiếp các mẫu LaTeX tương thích với Overleaf, giúp quá trình nộp bài trở nên thuận tiện hơn.
+VI. KẾT LUẬN
+Overleaf là một công cụ mạnh mẽ hỗ trợ soạn thảo tài liệu khoa học dựa trên LaTeX. Với khả năng cộng tác trực tuyến, quản lý tài liệu tham khảo và cung cấp nhiều mẫu chuyên nghiệp, Overleaf đã trở thành lựa chọn hàng đầu của sinh viên, giảng viên và các nhà nghiên cứu. Trong tương lai, nền tảng này được kỳ vọng sẽ tiếp tục phát triển và đóng vai trò quan trọng trong hoạt động học thuật và nghiên cứu khoa học.
+Tài Liệu Tham Khảo
+[1] Overleaf Team, "Overleaf Documentation," 2025.
+[2] Leslie Lamport, LaTeX: A Document Preparation System, Addison-Wesley, 1994.
+[3] Frank Mittelbach et al., The LaTeX Companion, Addison-Wesley, 2004.

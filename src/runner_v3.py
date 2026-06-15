@@ -6,7 +6,6 @@ Cải tiến:
   + Cơ chế Early-Exit (Fail-Fast) để tối ưu hóa latency chấm bài
   + Sandbox Docker chính chủ kèm theo bộ Giả lập Docker (Simulated Docker Sandbox) nếu Docker daemon tắt.
 """
-
 import subprocess
 import sys
 import os
@@ -17,41 +16,33 @@ import textwrap
 import tempfile
 import shutil
 import math
+import psutil
 from typing import Dict, List, Tuple
-
 # ── Cấu hình ─────────────────────────────────────────────────────────────────
-TIMEOUT_SECONDS   = 1.0    # 1.0 giây mỗi test case (Process sandbox)
-TIMEOUT_DOCKER_S  = 5.0    # 5.0 giây cho Docker (1s code + ~4s container overhead)
+TIMEOUT_SECONDS   = 5.0    # 5.0 giây mỗi test case (Process sandbox)
+TIMEOUT_DOCKER_S  = 10.0   # 10.0 giây cho Docker (1s code + ~9s container overhead)
 MAX_OUTPUT_BYTES  = 4096
 MEMORY_LIMIT_MB   = 128    # Giới hạn 128MB RAM mỗi test case
-
 # Whitelist các import được phép
 ALLOWED_IMPORTS = {
     "math", "string", "re", "collections", "itertools", "functools", "json", "datetime", "typing", "heapq", "operator"
 }
-
 # Ký từ cấm cho AST safety check
 BANNED_BUILTINS = {
     "eval", "exec", "open", "__import__", "globals", "locals", "compile", "getattr", "setattr"
 }
-
-# ── Kiểm tra syntax tĩnh ──────────────────────────────────────────────────────
-def check_syntax(code: str) -> Tuple[bool, str]:
-    try:
-        ast.parse(code)
-        return True, ""
-    except SyntaxError as e:
-        return False, f"SyntaxError dòng {e.lineno}: {e.msg}"
-
-# ── Kiểm tra bảo mật (AST Safety Check - Whitelist) ───────────────────────────
-def check_safety(code: str) -> Tuple[bool, List[str]]:
+# ── Kiểm tra cú pháp và bảo mật (AST Safety & Syntax Check) ────────────────────
+def check_safety_and_syntax(code: str) -> Tuple[bool, bool, str, List[str]]:
+    """
+    Kiểm tra cú pháp và bảo mật của code bằng AST (chỉ parse 1 lần duy nhất).
+    Trả về: (syntax_ok, safety_ok, error_msg, safety_violations)
+    """
     try:
         tree = ast.parse(code)
-    except SyntaxError:
-        return True, []
-
-    violations = []
+    except SyntaxError as e:
+        return False, False, f"SyntaxError dòng {e.lineno}: {e.msg}", []
     
+    violations = []
     for node in ast.walk(tree):
         # 1. Kiểm tra Import dựa trên Whitelist
         if isinstance(node, ast.Import):
@@ -77,8 +68,7 @@ def check_safety(code: str) -> Tuple[bool, List[str]]:
             if "__" in node.attr:
                 violations.append(f"Không được truy cập thuộc tính gạch dưới kép '{node.attr}' (Dòng {node.lineno})")
                 
-    return len(violations) == 0, violations
-
+    return True, len(violations) == 0, "", violations
 # ── Trích xuất loại exception cụ thể ──────────────────────────────────────────
 def get_exception_type(stderr_msg: str) -> str:
     if not stderr_msg:
@@ -109,7 +99,6 @@ def get_exception_type(stderr_msg: str) -> str:
                 return exc
                 
     return "RE"
-
 # ── Hỗ trợ so sánh cấu trúc chứa Floats ───────────────────────────────────────
 def compare_structures(val1, val2) -> bool:
     if isinstance(val1, (int, float)) and isinstance(val2, (int, float)):
@@ -130,7 +119,6 @@ def compare_structures(val1, val2) -> bool:
                 return False
         return True
     return val1 == val2
-
 def _compare(actual: str, expected: str) -> bool:
     actual_clean = actual.strip()
     expected_clean = expected.strip()
@@ -146,6 +134,11 @@ def _compare(actual: str, expected: str) -> bool:
         if actual_clean == unquoted_expected:
             return True
             
+    # Thử so sánh số nguyên trực tiếp (bao gồm cả số cực lớn)
+    try:
+        return int(actual_clean) == int(expected_clean)
+    except (ValueError, TypeError, OverflowError):
+        pass
     # Thử so sánh số thực đơn giản
     try:
         return math.isclose(float(actual_clean), float(expected_clean), rel_tol=1e-9, abs_tol=1e-9)
@@ -154,7 +147,6 @@ def _compare(actual: str, expected: str) -> bool:
         
     # Thử literal_eval cấu trúc phức tạp
     try:
-        import ast
         ev_val = ast.literal_eval(expected_clean)
         try:
             av_val = ast.literal_eval(actual_clean)
@@ -166,18 +158,14 @@ def _compare(actual: str, expected: str) -> bool:
         pass
         
     return False
-
-
 # ── Chạy một test case (Process-Based / Host Sandbox) ─────────────────────────
 def run_single_test_process(code: str, func_name: str,
                             test_input: str, expected: str,
                             use_tempdir: bool = True) -> Dict:
-    import psutil
     
     script = textwrap.dedent(f"""
 import sys
 {code}
-
 try:
     result = {func_name}({test_input})
     print(result)
@@ -189,7 +177,6 @@ except Exception as e:
     traceback.print_exc(file=sys.stderr)
     sys.exit(1)
 """)
-
     tmpdir = None
     start = time.perf_counter()
     tle_triggered = False
@@ -197,7 +184,6 @@ except Exception as e:
     stdout = ""
     stderr = ""
     latency = 0.0
-
     try:
         if use_tempdir:
             tmpdir = tempfile.mkdtemp(prefix="runner_")
@@ -205,7 +191,6 @@ except Exception as e:
         script_path = os.path.join(tmpdir if tmpdir else ".", "solution.py")
         with open(script_path, "w", encoding="utf-8") as f:
             f.write(script)
-
         proc = subprocess.Popen(
             [sys.executable, "-X", "utf8", "solution.py"],
             stdout=subprocess.PIPE,
@@ -214,48 +199,47 @@ except Exception as e:
             encoding="utf-8",
             cwd=tmpdir if tmpdir else "."
         )
-
         try:
             p = psutil.Process(proc.pid)
         except psutil.NoSuchProcess:
             p = None
-
+        last_mem_check = 0.0
         while True:
             ret = proc.poll()
             if ret is not None:
                 break
-
             elapsed = time.perf_counter() - start
             if elapsed > TIMEOUT_SECONDS:
                 tle_triggered = True
                 proc.kill()
                 break
-
             if p is not None:
-                try:
-                    total_rss = p.memory_info().rss
-                    for child in p.children(recursive=True):
-                        try:
-                            total_rss += child.memory_info().rss
-                        except (psutil.NoSuchProcess, psutil.AccessDenied):
-                            pass
-                    rss_mb = total_rss / (1024 * 1024)
-                    if rss_mb > MEMORY_LIMIT_MB:
-                        mle_triggered = True
-                        for child in p.children(recursive=True):
+                now = time.perf_counter()
+                if now - last_mem_check >= 0.05:  # Only check memory every 50ms (rate-limit)
+                    last_mem_check = now
+                    try:
+                        total_rss = p.memory_info().rss
+                        children = p.children(recursive=True)
+                        for child in children:
                             try:
-                                child.kill()
-                            except Exception:
+                                total_rss += child.memory_info().rss
+                            except (psutil.NoSuchProcess, psutil.AccessDenied):
                                 pass
-                        proc.kill()
-                        break
-                except (psutil.NoSuchProcess, psutil.AccessDenied):
-                    pass
+                        rss_mb = total_rss / (1024 * 1024)
+                        if rss_mb > MEMORY_LIMIT_MB:
+                            mle_triggered = True
+                            for child in children:
+                                try:
+                                    child.kill()
+                                except Exception:
+                                    pass
+                            proc.kill()
+                            break
+                    except (psutil.NoSuchProcess, psutil.AccessDenied):
+                        pass
             time.sleep(0.005)
-
         stdout, stderr = proc.communicate()
         latency = round(time.perf_counter() - start, 4)
-
         if tle_triggered:
             return {
                 "status": "TLE",
@@ -264,7 +248,6 @@ except Exception as e:
                 "latency": latency,
                 "error_msg": f"Time Limit Exceeded (>{TIMEOUT_SECONDS}s)"
             }
-
         if mle_triggered or proc.returncode == 2 or "MEMORY_LIMIT_EXCEEDED" in stderr:
             return {
                 "status": "MLE",
@@ -273,7 +256,6 @@ except Exception as e:
                 "latency": latency,
                 "error_msg": f"Memory Limit Exceeded (>{MEMORY_LIMIT_MB}MB)"
             }
-
         if proc.returncode != 0:
             exc_type = get_exception_type(stderr)
             return {
@@ -283,11 +265,9 @@ except Exception as e:
                 "latency": latency,
                 "error_msg": stderr.strip()
             }
-
         actual = stdout.strip()
         if len(actual) > MAX_OUTPUT_BYTES:
             actual = actual[:MAX_OUTPUT_BYTES]
-
         passed = _compare(actual, expected)
         return {
             "status": "PASS" if passed else "WA",
@@ -296,7 +276,6 @@ except Exception as e:
             "latency": latency,
             "error_msg": "" if passed else f"Expected '{expected}', got '{actual}'"
         }
-
     except Exception as e:
         latency = round(time.perf_counter() - start, 4)
         return {
@@ -309,7 +288,6 @@ except Exception as e:
     finally:
         if tmpdir and os.path.exists(tmpdir):
             shutil.rmtree(tmpdir, ignore_errors=True)
-
 # ── Chạy bằng Docker thật hoặc Giả lập Docker Sandbox ─────────────────────────
 def is_docker_available() -> bool:
     try:
@@ -318,7 +296,6 @@ def is_docker_available() -> bool:
         return res.returncode == 0
     except Exception:
         return False
-
 def run_single_test_docker(code: str, func_name: str,
                            test_input: str, expected: str) -> Dict:
     # Nếu không có Docker, chuyển ngay sang Giả lập Docker
@@ -336,7 +313,6 @@ def run_single_test_docker(code: str, func_name: str,
         script = textwrap.dedent(f"""
 import sys
 {code}
-
 try:
     result = {func_name}({test_input})
     print(result)
@@ -427,7 +403,6 @@ except Exception as e:
         }
     finally:
         shutil.rmtree(tmpdir, ignore_errors=True)
-
 # ── Hàm chấm điểm tổng hợp (hỗ trợ fail_fast & docker) ─────────────────────────
 def grade_submission(code: str, func_name: str,
                      tests: List[Dict],
@@ -453,10 +428,9 @@ def grade_submission(code: str, func_name: str,
         "avg_latency": 0.0,
         "early_exited": False
     }
-
-    # 1. Kiểm tra lỗi cú pháp
-    ok, msg = check_syntax(code)
-    if not ok:
+    # 1 & 2. Kiểm tra cú pháp và bảo mật (gộp chung chỉ parse AST 1 lần)
+    syntax_ok, safe, msg, violations = check_safety_and_syntax(code)
+    if not syntax_ok:
         result["syntax_ok"] = False
         result["error_counts"]["SE"] = len(tests)
         result["test_results"] = [
@@ -465,9 +439,6 @@ def grade_submission(code: str, func_name: str,
             for t in tests
         ]
         return result
-
-    # 2. Kiểm tra bảo mật
-    safe, violations = check_safety(code)
     if not safe:
         result["syntax_ok"] = False
         result["error_counts"]["SE"] = len(tests)
@@ -478,7 +449,6 @@ def grade_submission(code: str, func_name: str,
         ]
         result["banned_imports"] = [{"module": v, "reason": "AST Security Violation", "line": 0} for v in violations]
         return result
-
     # 3. Chạy từng test case
     exited_early = False
     for idx, test in enumerate(tests):
@@ -519,14 +489,12 @@ def grade_submission(code: str, func_name: str,
             if fail_fast:
                 exited_early = True
                 result["early_exited"] = True
-
     n = result["total_count"]
     # Số test thực tế đã chạy
     run_count = sum(1 for r in result["test_results"] if r["status"] != "SKIPPED")
     result["test_pass_rate"] = round(result["pass_count"] / n * 100, 2) if n > 0 else 0.0
     result["avg_latency"] = round(result["total_latency"] / run_count, 4) if run_count > 0 else 0.0
     return result
-
 # ── Tính Public Test Leakage / FPR ────────────────────────────────────────────
 def compute_leakage(public_result: Dict, hidden_result: Dict) -> Dict:
     pub_all_pass = public_result["pass_count"] == public_result["total_count"]

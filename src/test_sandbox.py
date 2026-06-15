@@ -8,7 +8,8 @@ import os
 import unicodedata
 from typing import Dict
 
-BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from pathlib import Path
+BASE = str(Path(__file__).resolve().parent.parent)
 sys.path.insert(0, os.path.join(BASE, 'src'))
 
 from runner_v3 import grade_submission

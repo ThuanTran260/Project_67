@@ -11,7 +11,8 @@ import os
 from typing import Dict, List, Tuple, Any
 
 # Thêm src vào path để import runner
-BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+from pathlib import Path
+BASE = str(Path(__file__).resolve().parent.parent)
 sys.path.insert(0, os.path.join(BASE, 'src'))
 from runner_v3 import run_single_test_process
 

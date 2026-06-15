@@ -17,19 +17,9 @@ import time
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# ── Auto-resolve BASE path (robust) ──────────────────────────────────────────
-def _find_project_root(start_path: Path, max_up=6):
-    p = start_path.resolve()
-    for _ in range(max_up):
-        # Project root must contain both `data` and `src` directories
-        if (p / "data").exists() and (p / "src").exists():
-            return p
-        if p.parent == p:
-            break
-        p = p.parent
-    return start_path.resolve()
-
-BASE = _find_project_root(Path.cwd())
+# ── Auto-resolve BASE path ───────────────────────────────────────────────────
+from pathlib import Path
+BASE = Path(__file__).resolve().parent.parent
 
 sys.path.insert(0, str(BASE / "src"))
 from runner_v3 import grade_submission
@@ -43,7 +33,7 @@ if sys.stdout.encoding != 'utf-8':
 DATASET_FILE = BASE / "data" / "processed" / "hidden_v2.json"
 OUT_CSV      = BASE / "results" / "baseline_summary.csv"
 OUT_JSON     = BASE / "results" / "baseline_summary.json"
-MAX_WORKERS  = 8   # Số luồng song song (tăng nếu máy mạnh)
+MAX_WORKERS  = 4   # Giảm luồng song song để tránh nghẽn CPU trên Colab (2-4 luồng là tối ưu)
 
 
 def run_one_task(task: dict) -> dict:
@@ -95,7 +85,7 @@ def run_one_task(task: dict) -> dict:
 def main():
     t_start = time.perf_counter()
     print("=" * 65)
-    print("  CHẠY BASELINE — Code chuẩn trên 100 bài toán")
+    print("  CHẠY BASELINE — Code chuẩn trên 50 bài toán")
     print(f"  Dataset: {DATASET_FILE.name}  |  Luồng song song: {MAX_WORKERS}")
     print("=" * 65)
 
